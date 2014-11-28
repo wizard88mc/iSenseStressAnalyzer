@@ -1,0 +1,41 @@
+/*********************************/
+ * Date: Monday, November 17, 2014 2:08:20 PM UTC *
+ * Manufacturer + Model: LGE Nexus 5 *
+ * Screen Pixels WxH: 1080x1776 *
+ * Language: en *
+/*********************************/
+** PROTOCOL: SURVEY,false - RELAX,false - SURVEY,false - SEARCH,false - WRITE,false - SURVEY,false - WAIT_SECOND_STEP,false - STRESSOR,true - SURVEY,false - SEARCH,true - WRITE,true - SURVEY,false -  **
+(1,SURVEY,false,1,1,5,4,2)
+(3,SURVEY,false,1,1,5,4,2)
+(4,SEARCH,false,1,1,315,30,26,4,0)
+(4,SEARCH,false,2,1,315,30,30,0,0)
+(4,SEARCH,false,3,1,315,30,30,0,0)
+(5,WRITE,false,1,1,44,43,1,26,The Great Pyramid of Giza is the oldest and largest of the three pyramids in the Giza Necropolis. There are three known chambers inside the Great Pyramid. The lowest chamber is cut into the bedrock upon which the pyramid was built and was unfinished.,The Great Pyramid of Giza is the oldest and largest of the three pyramids in the Giza Necropolis. There are three known chambers inside the Great Pyramid. The lowest chamber is cut into the bedrock upon which the pyramid was buult and was unfinished.)
+(5,WRITE,false,2,1,49,48,1,21,Pervasive Health Conference is a premier international forum with specific focus on technologies and human factors related to the use of ubiquitous computing in healthcare and for wellbeing. The overall goal of the Pervasive Health Conference is to take a multidisciplinary approach to Pervasive Healthcare Technology research and development.,Pervasive Health Conference is a premier international forum with specific focus on technologies and human factors related to the use of ubiquitous computing in healthcare and for wellbeing. The overall goal of the Pervasive Health Conference is to take a multidisciplinary approach to Pervasive Healthcare Technology research and developement.)
+(5,WRITE,false,3,1,41,40,1,42,In collaboration with Microsoft Research; we tested the ability to measure stress by using mouse and keyboard peripherals that include non invasive pressure sensitivity sensors. We show the efficacy of new peripherals including these sensors to further provide information about stress.,In collaboration with Microsoft Research; we tested the ability to measure stress by using mouse and keyboard peripherals that include non imvasive pressure sensitivity sensors. We show the efficacy of new peripherals including these sensors to further provide information about stress.)
+(6,SURVEY,false,1,1,4,4,2)
+(8,STRESSOR,true,1,1,5323,7,5316)
+(8,STRESSOR,true,1,2,5323,19,5297)
+(8,STRESSOR,true,1,3,5323,17,5280)
+(8,STRESSOR,true,1,4,5323,13,5267)
+(8,STRESSOR,true,1,5,5323,19,5252)
+(8,STRESSOR,true,2,1,5039,13,5026)
+(8,STRESSOR,true,2,2,5039,7,5019)
+(8,STRESSOR,true,2,3,5039,17,5002)
+(8,STRESSOR,true,2,4,5039,13,4987)
+(8,STRESSOR,true,3,1,9463,19,9444)
+(8,STRESSOR,true,3,2,9463,13,9431)
+(8,STRESSOR,true,3,3,9463,19,9412)
+(8,STRESSOR,true,3,4,9463,7,9405)
+(8,STRESSOR,true,3,5,9463,17,9390)
+(8,STRESSOR,true,4,1,9391,19,9372)
+(8,STRESSOR,true,4,2,9391,7,9365)
+(8,STRESSOR,true,4,3,9391,13,9352)
+(9,SURVEY,false,1,1,4,4,3)
+(10,SEARCH,true,1,1,315,30,17,13,0)
+(10,SEARCH,true,2,1,315,30,17,13,0)
+(10,SEARCH,true,3,1,315,30,26,4,1)
+(11,WRITE,true,1,1,49,39,10,14,The new iPhone is not simply bigger; it is better in every way. Larger; yet dramatically thinner. More powerful; but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display. It is one continuous form where hardware and software function in perfect unison.,The new iPhone is not simply bigger; it is better in every way. Larger; yet dramatically thinner. More powerful; but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display. It is one )
+(11,WRITE,true,2,1,49,32,17,32,The Nexus Player console is designed to fit beautifully alongside your current home entertainment setup. It comes with a voice activated remote; perfect for playing casual games and finding your favorite shows. Gamepad for Nexus Player; sold separately; is engineered for fine tuned control of your favorite Android games.,The Nexus Player console is designed to fit beautifully alongside your current home entertainment setup. It comes with a voice activates remote; perfect for playing casual games and finding your favorite shows. Gamepad fo)
+(11,WRITE,true,3,1,49,22,27,21,Pervasive Health Conference is a premier international forum with specific focus on technologies and human factors related to the use of ubiquitous computing in healthcare and for wellbeing. The overall goal of the Pervasive Health Conference is to take a multidisciplinary approach to Pervasive Healthcare Technology research and development.,Pervasive Health Conference is a premier international forum with specific focus on technologies and human factors related to the use of ubiquitous  computing in healthcare and for wellbeing. The overall )
+(12,SURVEY,false,1,1,4,4,3)

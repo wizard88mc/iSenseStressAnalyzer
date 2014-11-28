@@ -1,0 +1,28 @@
+/*********************************/
+ * Date: Monday, October 20, 2014 1:37:58 PM UTC *
+ * Manufacturer + Model: LGE Nexus 5 *
+ * Screen Pixels WxH: 1080x1776 *
+ * Language: en *
+/*********************************/
+** PROTOCOL: SURVEY,false - RELAX,false - SURVEY,false - SEARCH,false - WRITE,false - SURVEY,false - STRESSOR,true - SURVEY,false - SEARCH,true - WRITE,true - SURVEY,false -  **
+(1,SURVEY,false,1,1,3,2,3)
+(3,SURVEY,false,1,1,3,2,3)
+(4,SEARCH,false,1,1,315,30,23,7,0)
+(4,SEARCH,false,2,1,315,30,18,12,0)
+(4,SEARCH,false,3,1,315,30,1,29,8)
+(5,WRITE,false,1,1,46,9,37,25,The University of Geneva is a public research university located in Geneva; Switzerland. Today; the university is the second largest university in Switzerland by number of students. UNIGE has programs in various fields but is particularly acknowledged for its academic and research programs in international relations.,The University of Geneva is a public research university in Geneva; Switzerland. Today; the university is the second largest university in Switzerland by number of students. UNIGE has programs in various fields but is particularly acknowledged for its academic and research programs in international relations.)
+(5,WRITE,false,2,1,46,45,1,13,The University of Geneva is a public research university located in Geneva; Switzerland. Today; the university is the second largest university in Switzerland by number of students. UNIGE has programs in various fields but is particularly acknowledged for its academic and research programs in international relations.,The University of Geneva is a public research university located in Geneva; Switzerland. Today; the university is the second largest university in Switzerland by number of students. UNIGE has programs in various fields but is particularly acknowledged for its acadamic and research programs in international relations.)
+(5,WRITE,false,3,1,44,11,33,27,The Great Pyramid of Giza is the oldest and largest of the three pyramids in the Giza Necropolis. There are three known chambers inside the Great Pyramid. The lowest chamber is cut into the bedrock upon which the pyramid was built and was unfinished.,The Great Pyramid of Gaza is the oldet and largest of the three known chamber inside the Great Pyramid. The lowest chamber is cut into the bedrock upon which the pyramid was built and was unfinished.)
+(6,SURVEY,false,1,1,3,2,4)
+(7,STRESSOR,true,1,1,5449,13,5435)
+(7,STRESSOR,true,2,1,6173,13,6160)
+(7,STRESSOR,true,2,2,6173,13,5994)
+(7,STRESSOR,true,3,1,7151,7,7142)
+(8,SURVEY,false,1,1,3,2,3)
+(9,SEARCH,true,1,1,567,120,61,59,13)
+(9,SEARCH,true,2,1,567,120,33,87,24)
+(9,SEARCH,true,3,1,567,120,15,105,4)
+(10,WRITE,true,1,1,40,27,13,8,Angry Birds is a video game franchise inspired primarily by a sketch of stylized wingless birds; with two billion downloads across all platforms. Angry Birds has been praised for its successful combination of addictive gameplay; comical style; and low price.,Angry Birds is a video game franchise inspired primarly by a sketch of stylized wingless birds; with two billion downloads across all platforms. Angry Birds has been praised)
+(10,WRITE,true,2,1,51,38,13,17,The Eiffel Tower is an iron lattice tower located on the Champ de Mars in Paris. It was initially criticised by some of France leading artists and intellectuals for its design; but has become both a global cultural icon of France and one of the most recognizable structure in the world.,The Eiffel Tower is an iron lattice tower located on thr Champ de Mars in Paris. It was initially criticised by some of France leading artists and intellectuals for its design; but has become both a global cultural icon )
+(10,WRITE,true,3,1,42,24,18,21,The Space Needle is an observation tower in Seattle; Washington. Six parachutists have leaped from the tower since its opening; but this activity is only legal with prior consent. Four jumpers were part of various promotions; and the other two were arrested.,The Space Needle is an observation tower in Seattle; Washington. Six parachutists have leaped from the tower since its opening; but this activity is o)
+(11,SURVEY,false,1,1,2,2,4)

@@ -1,0 +1,40 @@
+/*********************************/
+ * Date: Monday, November 17, 2014 2:05:46 PM UTC *
+ * Manufacturer + Model: LGE Nexus 5 *
+ * Screen Pixels WxH: 1080x1776 *
+ * Language: en *
+/*********************************/
+** PROTOCOL: SURVEY,false - RELAX,false - SURVEY,false - SEARCH,false - WRITE,false - SURVEY,false - WAIT_SECOND_STEP,false - STRESSOR,true - SURVEY,false - SEARCH,true - WRITE,true - SURVEY,false -  **
+(1,SURVEY,false,1,1,4,4,2)
+(3,SURVEY,false,1,1,4,4,2)
+(4,SEARCH,false,1,1,315,30,30,0,0)
+(4,SEARCH,false,2,1,315,30,28,2,0)
+(4,SEARCH,false,3,1,315,30,24,6,0)
+(5,WRITE,false,1,1,46,46,0,40,The University of Geneva is a public research university located in Geneva; Switzerland. Today; the university is the second largest university in Switzerland by number of students. UNIGE has programs in various fields but is particularly acknowledged for its academic and research programs in international relations.,The University of Geneva is a public research university located in Geneva; Switzerland. Today; the university is the second largest university in Switzerland by number of students. UNIGE has programs in various fields but is particularly acknowledged for its academic and research programs in international relations.)
+(5,WRITE,false,2,1,45,19,26,32,MobiSys seeks to present innovative and significant research on the design; implementation; usage; and evaluation of mobile computing and wireless systems; applications; and services. This conference builds on the success of the previous twelve MobiSys conferences. It will be held in Florence; Italy; in May.,MobiSys seeks to present innovative and significant research on the design; implementation; usage; and evaluation of mobile systems; applications; and services. This conference builds on the success of the previous twelve MobiSys conferences. It will be held in Florence; Italy; in May.)
+(5,WRITE,false,3,1,36,36,0,62,Runtastic is an international mobile fitness company that combines traditional fitness with mobile applications; social networking and elements of gamification as a logical reaction to the Quantified Self movement. Runtastic develops apps; hardware products; and services.,Runtastic is an international mobile fitness company that combines traditional fitness with mobile applications; social networking and elements of gamification as a logical reaction to the Quantified Self movement. Runtastic develops apps; hardware products; and services.)
+(6,SURVEY,false,1,1,4,4,3)
+(8,STRESSOR,true,1,1,6473,7,0)
+(8,STRESSOR,true,2,1,6829,13,6816)
+(8,STRESSOR,true,2,2,6829,7,6809)
+(8,STRESSOR,true,2,3,6829,17,6782)
+(8,STRESSOR,true,3,1,7757,19,7742)
+(8,STRESSOR,true,4,1,8237,17,8220)
+(8,STRESSOR,true,4,2,8237,13,8207)
+(8,STRESSOR,true,4,3,8237,7,8200)
+(8,STRESSOR,true,4,4,8237,19,8181)
+(8,STRESSOR,true,4,5,8237,7,8174)
+(8,STRESSOR,true,4,6,8237,21,8153)
+(8,STRESSOR,true,4,7,8237,9,8144)
+(8,STRESSOR,true,4,8,8237,21,8123)
+(8,STRESSOR,true,4,9,8237,9,8114)
+(8,STRESSOR,true,4,10,8237,13,8101)
+(8,STRESSOR,true,4,11,8237,9,8092)
+(9,SURVEY,false,1,1,3,4,4)
+(10,SEARCH,true,1,1,315,30,18,12,1)
+(10,SEARCH,true,2,1,315,30,24,6,0)
+(10,SEARCH,true,3,1,315,30,29,1,0)
+(11,WRITE,true,1,1,45,22,23,20,MobiSys seeks to present innovative and significant research on the design; implementation; usage; and evaluation of mobile computing and wireless systems; applications; and services. This conference builds on the success of the previous twelve MobiSys conferences. It will be held in Florence; Italy; in May.,MobiSys seeks to present innovative and significant research on the design; implementation; usage; and evaluation of mobile computing and wireless systems; applicarions and services.This conf)
+(11,WRITE,true,2,1,40,9,31,12,Angry Birds is a video game franchise inspired primarily by a sketch of stylized wingless birds; with two billion downloads across all platforms. Angry Birds has been praised for its successful combination of addictive gameplay; comical style; and low price.,Angry Birds is a video game franchise inspired primarly by schetch of stylized wingless birds; with two bilion downloads across all platforms. Angry Birds has been praised for its suc)
+(11,WRITE,true,3,1,46,15,31,20,The University of Geneva is a public research university located in Geneva; Switzerland. Today; the university is the second largest university in Switzerland by number of students. UNIGE has programs in various fields but is particularly acknowledged for its academic and research programs in international relations.,The University of Geneva is a public researh university located in Geneva; SwitZerland. Today; the university is thesecond largest univrsity in Switzerland by number of studebts. UNiGE has programs in various fi)
+(12,SURVEY,false,1,1,4,3,3)

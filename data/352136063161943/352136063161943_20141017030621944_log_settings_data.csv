@@ -1,0 +1,41 @@
+/*********************************/
+ * Date: Monday, 17 November 2014 14:06:21 UTC *
+ * Manufacturer + Model: LGE Nexus 5 *
+ * Screen Pixels WxH: 1080x1776 *
+ * Language: en *
+/*********************************/
+** PROTOCOL: SURVEY,false - RELAX,false - SURVEY,false - SEARCH,false - WRITE,false - SURVEY,false - WAIT_SECOND_STEP,false - STRESSOR,true - SURVEY,false - SEARCH,true - WRITE,true - SURVEY,false -  **
+(1,SURVEY,false,1,1,3,3,2)
+(3,SURVEY,false,1,1,4,3,1)
+(4,SEARCH,false,1,1,315,30,21,9,1)
+(4,SEARCH,false,2,1,315,30,25,5,0)
+(4,SEARCH,false,3,1,315,30,30,0,0)
+(5,WRITE,false,1,1,41,16,25,3,The Walt Disney Company; commonly known as Disney; is an American diversified multinational mass media corporation headquartered at the Walt Disney Studios in Burbank; California. It is the world second largest broadcasting and cable company in terms of revenue; after Comcast.,The Walt Disney Company; commonly known as Disney; is an American divrsified multinational mass media corporation headquartered atthe Walt Disney Studios in Burbank; California. It is the world second largest broadcasting and cable company in terms of revenue; after Cimcast.)
+(5,WRITE,false,2,1,42,41,1,0,The key aim of the Quality of Life technologies research area is to establish quality research in mobile networking systems delivering accurate and timely services to their users. The QoL team currently contributes to research on mobile networking systems deployed in healthcare.,The key aim of the Quality of Life technologies research area is to establish quality research in mobile networking systems delivering accurate and timely services to their users. The QoL team currently contributes to research on mobile networking systems deplyed in healthcare.)
+(5,WRITE,false,3,1,42,40,2,5,The Space Needle is an observation tower in Seattle; Washington. Six parachutists have leaped from the tower since its opening; but this activity is only legal with prior consent. Four jumpers were part of various promotions; and the other two were arrested.,The Space Needle is an observation tower on Seattle; Washington. Six parachutists have leaped from the tower since its opening; but this activity is onl legal with prior consent. Four jumpers were part of various promotions; and the other two were arrested.)
+(6,SURVEY,false,1,1,3,3,3)
+(8,STRESSOR,true,1,1,6287,7,6280)
+(8,STRESSOR,true,1,2,6287,13,6267)
+(8,STRESSOR,true,1,3,6287,7,6260)
+(8,STRESSOR,true,1,4,6287,17,6247)
+(8,STRESSOR,true,2,1,5227,7,5220)
+(8,STRESSOR,true,2,2,5227,19,5201)
+(8,STRESSOR,true,2,3,5227,13,5188)
+(8,STRESSOR,true,2,4,5227,17,5171)
+(8,STRESSOR,true,2,5,5227,13,5158)
+(8,STRESSOR,true,2,6,5227,5,5153)
+(8,STRESSOR,true,2,7,5227,19,5143)
+(8,STRESSOR,true,3,1,8237,13,8224)
+(8,STRESSOR,true,3,2,8237,17,8207)
+(8,STRESSOR,true,3,3,8237,7,8200)
+(8,STRESSOR,true,3,4,8237,19,8181)
+(8,STRESSOR,true,3,5,8237,13,8179)
+(8,STRESSOR,true,4,1,9467,7,9460)
+(9,SURVEY,false,1,1,3,3,3)
+(10,SEARCH,true,1,1,315,30,17,13,0)
+(10,SEARCH,true,2,1,315,30,19,11,0)
+(10,SEARCH,true,3,1,315,30,29,1,0)
+(11,WRITE,true,1,1,40,39,1,3,Angry Birds is a video game franchise inspired primarily by a sketch of stylized wingless birds; with two billion downloads across all platforms. Angry Birds has been praised for its successful combination of addictive gameplay; comical style; and low price.,Angry Birds is a video game franchise inspired primarily by a sketch of stylized wingless birds; with two billiom downloads across all platforms. Angry Birds has been praised for its successful combination of addictive gameplay; comical style; and low price.)
+(11,WRITE,true,2,1,41,38,3,1,The Walt Disney Company; commonly known as Disney; is an American diversified multinational mass media corporation headquartered at the Walt Disney Studios in Burbank; California. It is the world second largest broadcasting and cable company in terms of revenue; after Comcast.,The Walt Disney Company; commonly known as Disney; is an American diversified multinational mass media corporation headquartred at the Walt Disney Studios in Burbank; California. It is the world second largest broadcasting and ccable compant in terms of revenue; after Comcast.)
+(11,WRITE,true,3,1,49,25,24,4,The new iPhone is not simply bigger; it is better in every way. Larger; yet dramatically thinner. More powerful; but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display. It is one continuous form where hardware and software function in perfect unison.,The new iPhone is not simply bigger; it is better in every way. Larger; yer dramatically thinner. More powrful; but remarkably power efficient. With a smoot metal surface hat seamlesslyeets the new Retina HD display. It is one continuous form where hardware and software functio in perfect unison.)
+(12,SURVEY,false,1,1,3,3,3)

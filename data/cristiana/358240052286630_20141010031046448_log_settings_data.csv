@@ -1,0 +1,43 @@
+/*********************************/
+ * Date: Monday, 10 November 2014 14:10:46 UTC *
+ * Manufacturer + Model: LGE Nexus 5 *
+ * Screen Pixels WxH: 1080x1776 *
+ * Language: en *
+/*********************************/
+** PROTOCOL: SURVEY,false - RELAX,false - SURVEY,false - SEARCH,false - WRITE,false - SURVEY,false - STRESSOR,true - SURVEY,false - SEARCH,false - WRITE,false - SURVEY,false -  **
+(1,SURVEY,false,1,1,5,3,1)
+(3,SURVEY,false,1,1,5,3,2)
+(4,SEARCH,false,1,1,315,30,23,7,0)
+(4,SEARCH,false,2,1,315,30,16,14,1)
+(4,SEARCH,false,3,1,315,30,18,12,0)
+(5,WRITE,false,1,1,44,18,26,46,The Great Pyramid of Giza is the oldest and largest of the three pyramids in the Giza Necropolis. There are three known chambers inside the Great Pyramid. The lowest chamber is cut into the bedrock upon which the pyramid was built and was unfinished.,tje grear pyranid of giza is tje oldeat abd largat of the three pyramids in the giza necropolis. there are three known chambera inide he great pyramind. the lpwest chbet i vut into three bedrocl upon which the pyramd was vuild and was infinoshed.)
+(5,WRITE,false,2,1,41,1,40,81,The Walt Disney Company; commonly known as Disney; is an American diversified multinational mass media corporation headquartered at the Walt Disney Studios in Burbank; California. It is the world second largest broadcasting and cable company in terms of revenue; after Comcast.,the walt disny comany; commonly kmownas Disney; is an American diversifird multinatopnal mass media coproration headquartered at the Walr Disney Studioa in Burbank; california.ot is tjj word scond largeat broadcaatingg and cable company in terms of revenyw aftwr comcast.)
+(5,WRITE,false,3,1,46,3,43,74,Geneva is the second most populous city in Switzerland; after Zurich; and is the most populous city of Romandy; the French speaking part of Switzerland. Geneva was ranked as the world ninth most important financial center for competitiveness and third in Europe behind London and Zurich.,Geneve is thw second most popilous coty on SwItzerland;after Zurich;anf the mosy populoi goty ot Romandy;the French speaking part of SwitZerland. Geneva was ranked as tge wokd ninth most impprtnat financial center for competitiveness abd third in Europe bwhond London and Zurich)
+(6,SURVEY,false,1,1,3,4,3)
+(7,STRESSOR,true,1,1,8117,7,8110)
+(7,STRESSOR,true,1,2,8117,13,8004)
+(7,STRESSOR,true,2,1,5981,7,5972)
+(7,STRESSOR,true,3,1,5303,7,5206)
+(7,STRESSOR,true,4,1,9677,13,9664)
+(7,STRESSOR,true,4,2,9677,13,9664)
+(7,STRESSOR,true,6,1,9277,13,8678)
+(7,STRESSOR,true,8,1,9817,13,6502)
+(7,STRESSOR,true,10,1,8929,7,5680)
+(7,STRESSOR,true,12,1,6967,13,7570)
+(7,STRESSOR,true,13,1,5399,13,5386)
+(7,STRESSOR,true,13,2,5399,13,5386)
+(7,STRESSOR,true,14,1,6709,13,6700)
+(7,STRESSOR,true,16,1,7517,7,5566)
+(7,STRESSOR,true,18,1,6907,13,1616)
+(7,STRESSOR,true,20,1,8663,13,6556)
+(7,STRESSOR,true,22,1,9601,13,6616)
+(7,STRESSOR,true,24,1,6709,7,7128)
+(7,STRESSOR,true,26,1,9049,13,4545)
+(7,STRESSOR,true,28,1,8629,7,6544)
+(7,STRESSOR,true,30,1,7243,7,5184)
+(7,STRESSOR,true,31,1,9601,13,8118)
+(7,STRESSOR,true,33,1,7417,7,7410)
+(7,STRESSOR,true,33,2,7417,7,7600)
+(7,STRESSOR,true,35,1,4987,7,4980)
+(7,STRESSOR,true,35,2,4987,7,4980)
+(7,STRESSOR,true,37,1,8231,13,8222)

@@ -1,0 +1,41 @@
+/*********************************/
+ * Date: Monday, October 20, 2014 1:07:05 PM UTC *
+ * Manufacturer + Model: LGE Nexus 5 *
+ * Screen Pixels WxH: 1080x1776 *
+ * Language: en *
+/*********************************/
+** PROTOCOL: SURVEY,false - RELAX,false - SURVEY,false - SEARCH,false - WRITE,false - SURVEY,false - STRESSOR,true - SURVEY,false - SEARCH,true - WRITE,true - SURVEY,false -  **
+(1,SURVEY,false,1,1,4,3,3)
+(3,SURVEY,false,1,1,4,3,2)
+(4,SEARCH,false,1,1,315,30,8,22,0)
+(4,SEARCH,false,2,1,315,30,9,21,1)
+(4,SEARCH,false,3,1,315,30,10,20,1)
+(5,WRITE,false,1,1,46,35,11,55,Geneva is the second most populous city in Switzerland; after Zurich; and is the most populous city of Romandy; the French speaking part of Switzerland. Geneva was ranked as the world ninth most important financial center for competitiveness and third in Europe behind London and Zurich.,geneva is the second most populous city in Switzerland after Zurich; and is the most populous city of Romandy; the French speaking part of Switzerland. Geneva was ranked as the world ninth most important financial center for competitivenessand third in Europe behind London and Zurich)
+(5,WRITE,false,2,1,39,39,0,16,Chicago Fire is an American television drama series that airs on NBC. The show explores the lives; both professional and personal; of the firefighters and paramedics of the Chicago Fire Department. NBC renewed the series for a third season.,Chicago Fire is an American television drama series that airs on NBC. The show explores the lives; both professional and personal; of the firefighters and paramedics of the Chicago Fire Department. NBC renewed the series for a third season.)
+(5,WRITE,false,3,1,46,46,0,45,The University of Geneva is a public research university located in Geneva; Switzerland. Today; the university is the second largest university in Switzerland by number of students. UNIGE has programs in various fields but is particularly acknowledged for its academic and research programs in international relations.,The University of Geneva is a public research university located in Geneva; Switzerland. Today; the university is the second largest university in Switzerland by number of students. UNIGE has programs in various fields but is particularly acknowledged for its academic and research programs in international relations.)
+(6,SURVEY,false,1,1,3,3,3)
+(7,STRESSOR,true,1,1,5303,7,5379)
+(7,STRESSOR,true,2,1,7457,13,7480)
+(7,STRESSOR,true,3,1,6389,7,6382)
+(7,STRESSOR,true,3,2,6389,7,6382)
+(7,STRESSOR,true,4,1,4999,13,4986)
+(7,STRESSOR,true,4,2,4999,13,4985)
+(7,STRESSOR,true,5,1,5101,13,5060)
+(7,STRESSOR,true,6,1,7331,13,7328)
+(7,STRESSOR,true,7,1,8849,13,8836)
+(7,STRESSOR,true,7,2,8849,13,0)
+(7,STRESSOR,true,8,1,9419,7,9412)
+(7,STRESSOR,true,8,2,9419,13,9405)
+(7,STRESSOR,true,9,1,7349,13,7338)
+(7,STRESSOR,true,10,1,9859,13,9846)
+(7,STRESSOR,true,10,2,9859,13,9846)
+(7,STRESSOR,true,11,1,7307,13,7290)
+(7,STRESSOR,true,12,1,9803,7,9794)
+(8,SURVEY,false,1,1,2,3,4)
+(9,SEARCH,true,1,1,567,120,39,81,0)
+(9,SEARCH,true,2,1,567,120,0,120,1)
+(9,SEARCH,true,3,1,567,120,111,9,0)
+(10,WRITE,true,1,1,46,28,18,23,The University of Geneva is a public research university located in Geneva; Switzerland. Today; the university is the second largest university in Switzerland by number of students. UNIGE has programs in various fields but is particularly acknowledged for its academic and research programs in international relations.,The University of Geneva is a public research university located in Geneva; Switzerland. Today; the university is the second largest universtlity in Switzerland by number of students. UNIGE has va)
+(10,WRITE,true,2,1,41,0,41,0,The Walt Disney Company; commonly known as Disney; is an American diversified multinational mass media corporation headquartered at the Walt Disney Studios in Burbank; California. It is the world second largest broadcasting and cable company in terms of revenue; after Comcast.,)
+(10,WRITE,true,3,1,41,23,18,16,The Walt Disney Company; commonly known as Disney; is an American diversified multinational mass media corporation headquartered at the Walt Disney Studios in Burbank; California. It is the world second largest broadcasting and cable company in terms of revenue; after Comcast.,The Walt Disney Company; commonly known as Disney; is an American diversified multiational madd media corporation headquartered at the Walt Disney Stiudios in Burbank; California. It )
+(11,SURVEY,false,1,1,3,3,4)

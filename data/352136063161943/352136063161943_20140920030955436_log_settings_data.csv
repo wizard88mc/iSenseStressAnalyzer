@@ -1,0 +1,42 @@
+/*********************************/
+ * Date: Monday, October 20, 2014 1:09:55 PM UTC *
+ * Manufacturer + Model: LGE Nexus 5 *
+ * Screen Pixels WxH: 1080x1776 *
+ * Language: en *
+/*********************************/
+** PROTOCOL: SURVEY,false - RELAX,false - SURVEY,false - SEARCH,false - WRITE,false - SURVEY,false - STRESSOR,true - SURVEY,false - SEARCH,true - WRITE,true - SURVEY,false -  **
+(1,SURVEY,false,1,1,4,3,2)
+(3,SURVEY,false,1,1,5,3,2)
+(4,SEARCH,false,1,1,315,30,4,26,1)
+(4,SEARCH,false,2,1,315,30,10,20,0)
+(4,SEARCH,false,3,1,315,30,20,10,0)
+(5,WRITE,false,1,1,40,28,12,10,Angry Birds is a video game franchise inspired primarily by a sketch of stylized wingless birds; with two billion downloads across all platforms. Angry Birds has been praised for its successful combination of addictive gameplay; comical style; and low price.,Abgry birds is a vudei game franchise unspired primarily by a skrtch of stylized wingless birds; with two billio dwnliads across all platforms. Angry Birds has bren praised for its successful combinatiin of addictive gameolay; comical style; and lo price)
+(5,WRITE,false,2,1,42,34,8,2,The Space Needle is an observation tower in Seattle; Washington. Six parachutists have leaped from the tower since its opening; but this activity is only legal with prior consent. Four jumpers were part of various promotions; and the other two were arrested.,The Space Needle is an observtiin tower in Seatte; Washington. Six parachutists have leaped from the tower since its apening; but this activity is only legal with prior consent. Four jumpers were part of various promotions; and other were arrested)
+(5,WRITE,false,3,1,41,38,3,1,The Walt Disney Company; commonly known as Disney; is an American diversified multinational mass media corporation headquartered at the Walt Disney Studios in Burbank; California. It is the world second largest broadcasting and cable company in terms of revenue; after Comcast.,The Walt Disney Comoany; commonly known as Disney; is an American diversified multinational mass media corporation headquartered at the Walt Disney Stdiis in Burbank; California. It is the world second largest broadcasting and cablr company in terms of revenue; after Comcast.)
+(6,SURVEY,false,1,1,3,3,3)
+(7,STRESSOR,true,1,1,5981,13,5970)
+(7,STRESSOR,true,2,1,8161,7,8153)
+(7,STRESSOR,true,3,1,5647,7,5680)
+(7,STRESSOR,true,4,1,8011,13,7998)
+(7,STRESSOR,true,4,2,8011,7,8087)
+(7,STRESSOR,true,5,1,6659,13,6652)
+(7,STRESSOR,true,6,1,9187,13,9177)
+(7,STRESSOR,true,7,1,6793,7,6780)
+(7,STRESSOR,true,8,1,5623,13,5610)
+(7,STRESSOR,true,8,2,5623,13,5697)
+(7,STRESSOR,true,9,1,9767,13,9867)
+(7,STRESSOR,true,10,1,9733,7,9726)
+(7,STRESSOR,true,10,2,9733,7,0)
+(7,STRESSOR,true,11,1,7717,13,7705)
+(7,STRESSOR,true,12,1,6673,13,6603)
+(7,STRESSOR,true,13,1,9437,7,9430)
+(7,STRESSOR,true,13,2,9437,7,9423)
+(7,STRESSOR,true,13,3,9437,7,9410)
+(8,SURVEY,false,1,1,2,3,4)
+(9,SEARCH,true,1,1,567,120,103,17,0)
+(9,SEARCH,true,2,1,567,120,112,8,3)
+(9,SEARCH,true,3,1,567,120,112,8,2)
+(10,WRITE,true,1,1,39,0,39,0,Chicago Fire is an American television drama series that airs on NBC. The show explores the lives; both professional and personal; of the firefighters and paramedics of the Chicago Fire Department. NBC renewed the series for a third season.,Xucago  Fire is an American televisio fdrama series that airs in NBC. The show rxplores the lives; both professional and prtdonal; of the firefighters and paramrics of thr Chicago Fire Department. NBC renewed th series for a third season.)
+(10,WRITE,true,2,1,51,41,10,1,The Eiffel Tower is an iron lattice tower located on the Champ de Mars in Paris. It was initially criticised by some of France leading artists and intellectuals for its design; but has become both a global cultural icon of France and one of the most recognizable structure in the world.,The Eiffel Tower is an iron lattice towrr locatr on the Chamo dr Mars in Paris. It was initially critisized by sme of France leading artists and intellectuals for its design; but has brcome both a global cultural icon of France and one of thr most recognizabl structure in te world.)
+(10,WRITE,true,3,1,40,31,9,1,Angry Birds is a video game franchise inspired primarily by a sketch of stylized wingless birds; with two billion downloads across all platforms. Angry Birds has been praised for its successful combination of addictive gameplay; comical style; and low price.,Angry Birds is a vidro game feanchised inspired primarily by a sketch of stylized wingless birds; with two billion downloads acrisd all platforms. Angry Birds jas been praised for its succrssful combinatin of addictivr gamrlay; comical style; and lo price.)
+(11,SURVEY,false,1,1,2,2,4)
