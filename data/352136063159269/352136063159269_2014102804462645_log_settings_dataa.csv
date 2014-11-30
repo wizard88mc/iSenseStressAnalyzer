@@ -1,0 +1,15 @@
+/*********************************/
+ * Date: vendredi 28 novembre 2014 15:46:26 UTC *
+ * Manufacturer + Model: LGE Nexus 5 *
+ * Screen Pixels WxH: 1080x1776 *
+ * Language: fr *
+/*********************************/
+** PROTOCOL: SURVEY,false - SEARCH,true - WRITE,true - SURVEY,false -  **
+(8,SURVEY,false,1,1,1,1,5)
+(9,SEARCH,true,1,1,315,30,9,21,10)
+(9,SEARCH,true,2,1,315,30,20,10,0)
+(9,SEARCH,true,3,1,315,30,10,20,7)
+(10,WRITE,true,1,1,42,28,14,28,The Space Needle is an observation tower in Seattle; Washington. Six parachutists have leaped from the tower since its opening; but this activity is only legal with prior consent. Four jumpers were part of various promotions; and the other two were arrested.,The Space Needle is an observation tower in Seattle; Washington. Six parachutists have leaped from the tower since its opening; but this activity is only legal with prior consent.f Fou)
+(10,WRITE,true,2,1,49,29,20,25,Tourism is an important part of the Hawaii economy. The summer months and major holidays are the most popular times for outsiders to visit; however; especially when residents of the rest of the United States are looking to escape from cold; winter weather. The Japanese are also principal tourists.,Tourism is an important part of the Hawaii economy. The summer months and major holidays are the most popular times for outsiders to visit; however especially when residents of the United States are looking to escape from cold; winter weather. The Japanese)
+(10,WRITE,true,3,1,45,25,20,22,MobiSys seeks to present innovative and significant research on the design; implementation; usage; and evaluation of mobile computing and wireless systems; applications; and services. This conference builds on the success of the previous twelve MobiSys conferences. It will be held in Florence; Italy; in May.,MobiSys seeks to present innovative and significant researxh on the design; implemementation; usage and evaluation of mobile computong and wireless systems; applications; and services. This conference builds on the )
+(11,SURVEY,false,1,1,1,1,5)

@@ -1,0 +1,8 @@
+(0,24902342,557.0,1338.0,0.40000004,0.675,24902342)
+(2,24902406,557.0,1336.0,0.33333334,0.5625,24902342)
+(1,24902414,557.0,1336.0,0.33333334,0.5625,24902342)
+** PROTOCOL: SURVEY,false - RELAX,false - SURVEY,false - SEARCH,false - WRITE,false - SURVEY,false - STRESSOR,true - SURVEY,false - SEARCH,true - WRITE,true - SURVEY,false -  **
+************************************
+Exercise 1: SURVEY(false) 
+************************************
+Exercise 2: RELAX(false) DURATION: 5'

@@ -1,0 +1,5 @@
+** PROTOCOL: SURVEY,false - RELAX,false - SURVEY,false - SEARCH,false - WRITE,false - SURVEY,false - STRESSOR,true - SURVEY,false - SEARCH,true - WRITE,true - SURVEY,false -  **
+************************************
+Exercise 1: SURVEY(false) 
+************************************
+Exercise 2: RELAX(false) DURATION: 5'

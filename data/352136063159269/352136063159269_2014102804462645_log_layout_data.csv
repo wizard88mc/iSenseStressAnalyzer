@@ -1,0 +1,4214 @@
+** PROTOCOL: SURVEY,false - SEARCH,true - WRITE,true - SURVEY,false -  **
+************************************
+Exercise 8: SURVEY(false) 
+(-1,class android.widget.TextView,48,24,930,140,0,How do you feel?)
+(-1,class android.widget.TextView,48,194,132,76,0,Negative valence)
+(2131165293,class android.widget.RadioButton,205,194,123,76,0,1)
+(2131165294,class android.widget.RadioButton,328,194,123,76,0,2)
+(2131165295,class android.widget.RadioButton,451,194,123,76,0,3)
+(2131165296,class android.widget.RadioButton,574,194,123,76,0,4)
+(2131165297,class android.widget.RadioButton,697,194,123,76,0,5)
+(-1,class android.widget.TextView,845,194,133,76,0,Positive valence)
+(-1,class android.view.View,141,300,744,3,0,null)
+(-1,class android.widget.TextView,48,333,132,76,0,Low energy)
+(2131165299,class android.widget.RadioButton,205,333,123,76,0,1)
+(2131165300,class android.widget.RadioButton,328,333,123,76,0,2)
+(2131165301,class android.widget.RadioButton,451,333,123,76,0,3)
+(2131165302,class android.widget.RadioButton,574,333,123,76,0,4)
+(2131165303,class android.widget.RadioButton,697,333,123,76,0,5)
+(-1,class android.widget.TextView,845,333,133,76,0,High energy)
+(-1,class android.view.View,141,439,744,3,0,null)
+(-1,class android.widget.TextView,48,472,132,41,0,Stressed)
+(2131165305,class android.widget.RadioButton,205,472,123,76,0,5)
+(2131165306,class android.widget.RadioButton,328,472,123,76,0,4)
+(2131165307,class android.widget.RadioButton,451,472,123,76,0,3)
+(2131165308,class android.widget.RadioButton,574,472,123,76,0,2)
+(2131165309,class android.widget.RadioButton,697,472,123,76,0,1)
+(-1,class android.widget.TextView,845,472,133,76,0,Not stressed)
+(-1,class android.view.View,141,578,744,3,0,null)
+(16908313,class android.widget.Button,48,613,930,144,0,Ok; I'm sure !!)
+************************************
+Exercise 9: SEARCH(true) DURATION: x3
+************ REPETITION 1 ************
+V_SCROLL,0,1260,0,0
+H_SCROLL,900,0,0,0
+(-1,class android.widget.TextView,389,105,301,67,0,Remaining time:)
+(2131165273,class android.widget.ProgressBar,30,232,1020,68,0,null)
+(2131165274,class ch.qol.unige.smartphonetest.searchtask.VerticalScrollViewWithInfo,30,330,1020,1130,0,null)
+(-1,class android.widget.ImageView,-851,-920,180,180,0,null)
+(-1,class android.widget.ImageView,-635,-920,180,180,0,null)
+(-1,class android.widget.ImageView,-419,-920,180,180,0,null)
+(-1,class android.widget.ImageView,-203,-920,180,180,0,null)
+(-1,class android.widget.ImageView,12,-920,180,180,0,null)
+(-1,class android.widget.ImageView,228,-920,180,180,0,null)
+(-1,class android.widget.ImageView,444,-920,180,180,0,null)
+(-1,class android.widget.ImageView,660,-920,180,180,0,null)
+(-1,class android.widget.ImageView,876,-920,180,180,0,null)
+(-1,class android.widget.ImageView,1092,-920,180,180,0,null)
+(-1,class android.widget.ImageView,1308,-920,180,180,0,null)
+(-1,class android.widget.ImageView,1524,-920,180,180,0,null)
+(-1,class android.widget.ImageView,1740,-920,180,180,0,null)
+(-1,class android.widget.ImageView,1956,-920,180,180,0,null)
+(-1,class android.widget.ImageView,2172,-920,180,180,0,null)
+(-1,class android.widget.ImageView,-851,-722,180,180,0,null)
+(-1,class android.widget.ImageView,-635,-722,180,180,0,null)
+(-1,class android.widget.ImageView,-419,-722,180,180,0,null)
+(-1,class android.widget.ImageView,-203,-722,180,180,0,null)
+(-1,class android.widget.ImageView,12,-722,180,180,0,null)
+(-1,class android.widget.ImageView,228,-722,180,180,0,null)
+(-1,class android.widget.ImageView,444,-722,180,180,0,null)
+(-1,class android.widget.ImageView,660,-722,180,180,0,null)
+(-1,class android.widget.ImageView,876,-722,180,180,0,null)
+(-1,class android.widget.ImageView,1092,-722,180,180,0,null)
+(-1,class android.widget.ImageView,1308,-722,180,180,0,null)
+(-1,class android.widget.ImageView,1524,-722,180,180,0,null)
+(-1,class android.widget.ImageView,1740,-722,180,180,0,null)
+(-1,class android.widget.ImageView,1956,-722,180,180,0,null)
+(-1,class android.widget.ImageView,2172,-722,180,180,0,null)
+(-1,class android.widget.ImageView,-851,-524,180,180,0,null)
+(-1,class android.widget.ImageView,-635,-524,180,180,0,null)
+(-1,class android.widget.ImageView,-419,-524,180,180,0,null)
+(-1,class android.widget.ImageView,-203,-524,180,180,0,null)
+(-1,class android.widget.ImageView,12,-524,180,180,0,null)
+(-1,class android.widget.ImageView,228,-524,180,180,0,null)
+(-1,class android.widget.ImageView,444,-524,180,180,0,null)
+(-1,class android.widget.ImageView,660,-524,180,180,0,null)
+(-1,class android.widget.ImageView,876,-524,180,180,0,null)
+(-1,class android.widget.ImageView,1092,-524,180,180,0,null)
+(-1,class android.widget.ImageView,1308,-524,180,180,0,null)
+(-1,class android.widget.ImageView,1524,-524,180,180,0,null)
+(-1,class android.widget.ImageView,1740,-524,180,180,0,null)
+(-1,class android.widget.ImageView,1956,-524,180,180,0,null)
+(-1,class android.widget.ImageView,2172,-524,180,180,0,null)
+(-1,class android.widget.ImageView,-851,-326,180,180,0,null)
+(-1,class android.widget.ImageView,-635,-326,180,180,0,null)
+(-1,class android.widget.ImageView,-419,-326,180,180,0,null)
+(-1,class android.widget.ImageView,-203,-326,180,180,0,null)
+(-1,class android.widget.ImageView,12,-326,180,180,0,null)
+(-1,class android.widget.ImageView,228,-326,180,180,0,null)
+(-1,class android.widget.ImageView,444,-326,180,180,0,null)
+(-1,class android.widget.ImageView,660,-326,180,180,0,null)
+(-1,class android.widget.ImageView,876,-326,180,180,0,null)
+(-1,class android.widget.ImageView,1092,-326,180,180,0,null)
+(-1,class android.widget.ImageView,1308,-326,180,180,0,null)
+(-1,class android.widget.ImageView,1524,-326,180,180,0,null)
+(-1,class android.widget.ImageView,1740,-326,180,180,0,null)
+(-1,class android.widget.ImageView,1956,-326,180,180,0,null)
+(-1,class android.widget.ImageView,2172,-326,180,180,0,null)
+(-1,class android.widget.ImageView,-851,-128,180,180,0,null)
+(-1,class android.widget.ImageView,-635,-128,180,180,0,null)
+(-1,class android.widget.ImageView,-419,-128,180,180,0,null)
+(-1,class android.widget.ImageView,-203,-128,180,180,0,null)
+(-1,class android.widget.ImageView,12,-128,180,180,0,null)
+(-1,class android.widget.ImageView,228,-128,180,180,0,null)
+(-1,class android.widget.ImageView,444,-128,180,180,0,null)
+(-1,class android.widget.ImageView,660,-128,180,180,0,null)
+(-1,class android.widget.ImageView,876,-128,180,180,0,null)
+(-1,class android.widget.ImageView,1092,-128,180,180,0,null)
+(-1,class android.widget.ImageView,1308,-128,180,180,0,null)
+(-1,class android.widget.ImageView,1524,-128,180,180,0,null)
+(-1,class android.widget.ImageView,1740,-128,180,180,0,null)
+(-1,class android.widget.ImageView,1956,-128,180,180,0,null)
+(-1,class android.widget.ImageView,2172,-128,180,180,0,null)
+(-1,class android.widget.ImageView,-851,69,180,180,0,null)
+(-1,class android.widget.ImageView,-635,69,180,180,0,null)
+(-1,class android.widget.ImageView,-419,69,180,180,0,null)
+(-1,class android.widget.ImageView,-203,69,180,180,0,null)
+(-1,class android.widget.ImageView,12,69,180,180,0,null)
+(-1,class android.widget.ImageView,228,69,180,180,0,null)
+(-1,class android.widget.ImageView,444,69,180,180,0,null)
+(-1,class android.widget.ImageView,660,69,180,180,0,null)
+(-1,class android.widget.ImageView,876,69,180,180,0,null)
+(-1,class android.widget.ImageView,1092,69,180,180,0,null)
+(-1,class android.widget.ImageView,1308,69,180,180,0,null)
+(-1,class android.widget.ImageView,1524,69,180,180,0,null)
+(-1,class android.widget.ImageView,1740,69,180,180,0,null)
+(-1,class android.widget.ImageView,1956,69,180,180,0,null)
+(-1,class android.widget.ImageView,2172,69,180,180,0,null)
+(-1,class android.widget.ImageView,-851,267,180,180,0,null)
+(-1,class android.widget.ImageView,-635,267,180,180,0,null)
+(-1,class android.widget.ImageView,-419,267,180,180,0,null)
+(-1,class android.widget.ImageView,-203,267,180,180,0,null)
+(-1,class android.widget.ImageView,12,267,180,180,0,null)
+(-1,class android.widget.ImageView,228,267,180,180,0,null)
+(-1,class android.widget.ImageView,444,267,180,180,0,null)
+(-1,class android.widget.ImageView,660,267,180,180,0,null)
+(-1,class android.widget.ImageView,876,267,180,180,0,null)
+(-1,class android.widget.ImageView,1092,267,180,180,0,null)
+(-1,class android.widget.ImageView,1308,267,180,180,0,null)
+(-1,class android.widget.ImageView,1524,267,180,180,0,null)
+(-1,class android.widget.ImageView,1740,267,180,180,0,null)
+(-1,class android.widget.ImageView,1956,267,180,180,0,null)
+(-1,class android.widget.ImageView,2172,267,180,180,0,null)
+(-1,class android.widget.ImageView,-851,465,180,180,0,null)
+(-1,class android.widget.ImageView,-635,465,180,180,0,null)
+(-1,class android.widget.ImageView,-419,465,180,180,0,null)
+(-1,class android.widget.ImageView,-203,465,180,180,0,null)
+(-1,class android.widget.ImageView,12,465,180,180,0,null)
+(-1,class android.widget.ImageView,228,465,180,180,0,null)
+(-1,class android.widget.ImageView,444,465,180,180,0,null)
+(-1,class android.widget.ImageView,660,465,180,180,0,null)
+(-1,class android.widget.ImageView,876,465,180,180,0,null)
+(-1,class android.widget.ImageView,1092,465,180,180,0,null)
+(-1,class android.widget.ImageView,1308,465,180,180,0,null)
+(-1,class android.widget.ImageView,1524,465,180,180,0,null)
+(-1,class android.widget.ImageView,1740,465,180,180,0,null)
+(-1,class android.widget.ImageView,1956,465,180,180,0,null)
+(-1,class android.widget.ImageView,2172,465,180,180,0,null)
+(-1,class android.widget.ImageView,-851,663,180,180,0,null)
+(-1,class android.widget.ImageView,-635,663,180,180,0,null)
+(-1,class android.widget.ImageView,-419,663,180,180,0,null)
+(-1,class android.widget.ImageView,-203,663,180,180,0,null)
+(-1,class android.widget.ImageView,12,663,180,180,0,null)
+(-1,class android.widget.ImageView,228,663,180,180,0,null)
+(-1,class android.widget.ImageView,444,663,180,180,0,null)
+(-1,class android.widget.ImageView,660,663,180,180,0,null)
+(-1,class android.widget.ImageView,876,663,180,180,0,null)
+(-1,class android.widget.ImageView,1092,663,180,180,0,null)
+(-1,class android.widget.ImageView,1308,663,180,180,0,null)
+(-1,class android.widget.ImageView,1524,663,180,180,0,null)
+(-1,class android.widget.ImageView,1740,663,180,180,0,null)
+(-1,class android.widget.ImageView,1956,663,180,180,0,null)
+(-1,class android.widget.ImageView,2172,663,180,180,0,null)
+(-1,class android.widget.ImageView,-851,861,180,180,0,null)
+(-1,class android.widget.ImageView,-635,861,180,180,0,null)
+(-1,class android.widget.ImageView,-419,861,180,180,0,null)
+(-1,class android.widget.ImageView,-203,861,180,180,0,null)
+(-1,class android.widget.ImageView,12,861,180,180,0,null)
+(-1,class android.widget.ImageView,228,861,180,180,0,null)
+(-1,class android.widget.ImageView,444,861,180,180,0,null)
+(-1,class android.widget.ImageView,660,861,180,180,0,null)
+(-1,class android.widget.ImageView,876,861,180,180,0,null)
+(-1,class android.widget.ImageView,1092,861,180,180,0,null)
+(-1,class android.widget.ImageView,1308,861,180,180,0,null)
+(-1,class android.widget.ImageView,1524,861,180,180,0,null)
+(-1,class android.widget.ImageView,1740,861,180,180,0,null)
+(-1,class android.widget.ImageView,1956,861,180,180,0,null)
+(-1,class android.widget.ImageView,2172,861,180,180,0,null)
+(-1,class android.widget.ImageView,-851,1059,180,180,0,null)
+(-1,class android.widget.ImageView,-635,1059,180,180,0,null)
+(-1,class android.widget.ImageView,-419,1059,180,180,0,null)
+(-1,class android.widget.ImageView,-203,1059,180,180,0,null)
+(-1,class android.widget.ImageView,12,1059,180,180,0,null)
+(-1,class android.widget.ImageView,228,1059,180,180,0,null)
+(-1,class android.widget.ImageView,444,1059,180,180,0,null)
+(-1,class android.widget.ImageView,660,1059,180,180,0,null)
+(-1,class android.widget.ImageView,876,1059,180,180,0,null)
+(-1,class android.widget.ImageView,1092,1059,180,180,0,null)
+(-1,class android.widget.ImageView,1308,1059,180,180,0,null)
+(-1,class android.widget.ImageView,1524,1059,180,180,0,null)
+(-1,class android.widget.ImageView,1740,1059,180,180,0,null)
+(-1,class android.widget.ImageView,1956,1059,180,180,0,null)
+(-1,class android.widget.ImageView,2172,1059,180,180,0,null)
+(-1,class android.widget.ImageView,-851,1257,180,180,0,null)
+(-1,class android.widget.ImageView,-635,1257,180,180,0,null)
+(-1,class android.widget.ImageView,-419,1257,180,180,0,null)
+(-1,class android.widget.ImageView,-203,1257,180,180,0,null)
+(-1,class android.widget.ImageView,12,1257,180,180,0,null)
+(-1,class android.widget.ImageView,228,1257,180,180,0,null)
+(-1,class android.widget.ImageView,444,1257,180,180,0,null)
+(-1,class android.widget.ImageView,660,1257,180,180,0,null)
+(-1,class android.widget.ImageView,876,1257,180,180,0,null)
+(-1,class android.widget.ImageView,1092,1257,180,180,0,null)
+(-1,class android.widget.ImageView,1308,1257,180,180,0,null)
+(-1,class android.widget.ImageView,1524,1257,180,180,0,null)
+(-1,class android.widget.ImageView,1740,1257,180,180,0,null)
+(-1,class android.widget.ImageView,1956,1257,180,180,0,null)
+(-1,class android.widget.ImageView,2172,1257,180,180,0,null)
+(-1,class android.widget.ImageView,-851,1455,180,180,0,null)
+(-1,class android.widget.ImageView,-635,1455,180,180,0,null)
+(-1,class android.widget.ImageView,-419,1455,180,180,0,null)
+(-1,class android.widget.ImageView,-203,1455,180,180,0,null)
+(-1,class android.widget.ImageView,12,1455,180,180,0,null)
+(-1,class android.widget.ImageView,228,1455,180,180,0,null)
+(-1,class android.widget.ImageView,444,1455,180,180,0,null)
+(-1,class android.widget.ImageView,660,1455,180,180,0,null)
+(-1,class android.widget.ImageView,876,1455,180,180,0,null)
+(-1,class android.widget.ImageView,1092,1455,180,180,0,null)
+(-1,class android.widget.ImageView,1308,1455,180,180,0,null)
+(-1,class android.widget.ImageView,1524,1455,180,180,0,null)
+(-1,class android.widget.ImageView,1740,1455,180,180,0,null)
+(-1,class android.widget.ImageView,1956,1455,180,180,0,null)
+(-1,class android.widget.ImageView,2172,1455,180,180,0,null)
+(-1,class android.widget.ImageView,-851,1653,180,180,0,null)
+(-1,class android.widget.ImageView,-635,1653,180,180,0,null)
+(-1,class android.widget.ImageView,-419,1653,180,180,0,null)
+(-1,class android.widget.ImageView,-203,1653,180,180,0,null)
+(-1,class android.widget.ImageView,12,1653,180,180,0,null)
+(-1,class android.widget.ImageView,228,1653,180,180,0,null)
+(-1,class android.widget.ImageView,444,1653,180,180,0,null)
+(-1,class android.widget.ImageView,660,1653,180,180,0,null)
+(-1,class android.widget.ImageView,876,1653,180,180,0,null)
+(-1,class android.widget.ImageView,1092,1653,180,180,0,null)
+(-1,class android.widget.ImageView,1308,1653,180,180,0,null)
+(-1,class android.widget.ImageView,1524,1653,180,180,0,null)
+(-1,class android.widget.ImageView,1740,1653,180,180,0,null)
+(-1,class android.widget.ImageView,1956,1653,180,180,0,null)
+(-1,class android.widget.ImageView,2172,1653,180,180,0,null)
+(-1,class android.widget.ImageView,-851,1851,180,180,0,null)
+(-1,class android.widget.ImageView,-635,1851,180,180,0,null)
+(-1,class android.widget.ImageView,-419,1851,180,180,0,null)
+(-1,class android.widget.ImageView,-203,1851,180,180,0,null)
+(-1,class android.widget.ImageView,12,1851,180,180,0,null)
+(-1,class android.widget.ImageView,228,1851,180,180,0,null)
+(-1,class android.widget.ImageView,444,1851,180,180,0,null)
+(-1,class android.widget.ImageView,660,1851,180,180,0,null)
+(-1,class android.widget.ImageView,876,1851,180,180,0,null)
+(-1,class android.widget.ImageView,1092,1851,180,180,0,null)
+(-1,class android.widget.ImageView,1308,1851,180,180,0,null)
+(-1,class android.widget.ImageView,1524,1851,180,180,0,null)
+(-1,class android.widget.ImageView,1740,1851,180,180,0,null)
+(-1,class android.widget.ImageView,1956,1851,180,180,0,null)
+(-1,class android.widget.ImageView,2172,1851,180,180,0,null)
+(-1,class android.widget.ImageView,-851,2049,180,180,0,null)
+(-1,class android.widget.ImageView,-635,2049,180,180,0,null)
+(-1,class android.widget.ImageView,-419,2049,180,180,0,null)
+(-1,class android.widget.ImageView,-203,2049,180,180,0,null)
+(-1,class android.widget.ImageView,12,2049,180,180,0,null)
+(-1,class android.widget.ImageView,228,2049,180,180,0,null)
+(-1,class android.widget.ImageView,444,2049,180,180,0,null)
+(-1,class android.widget.ImageView,660,2049,180,180,0,null)
+(-1,class android.widget.ImageView,876,2049,180,180,0,null)
+(-1,class android.widget.ImageView,1092,2049,180,180,0,null)
+(-1,class android.widget.ImageView,1308,2049,180,180,0,null)
+(-1,class android.widget.ImageView,1524,2049,180,180,0,null)
+(-1,class android.widget.ImageView,1740,2049,180,180,0,null)
+(-1,class android.widget.ImageView,1956,2049,180,180,0,null)
+(-1,class android.widget.ImageView,2172,2049,180,180,0,null)
+(-1,class android.widget.ImageView,-851,2247,180,180,0,null)
+(-1,class android.widget.ImageView,-635,2247,180,180,0,null)
+(-1,class android.widget.ImageView,-419,2247,180,180,0,null)
+(-1,class android.widget.ImageView,-203,2247,180,180,0,null)
+(-1,class android.widget.ImageView,12,2247,180,180,0,null)
+(-1,class android.widget.ImageView,228,2247,180,180,0,null)
+(-1,class android.widget.ImageView,444,2247,180,180,0,null)
+(-1,class android.widget.ImageView,660,2247,180,180,0,null)
+(-1,class android.widget.ImageView,876,2247,180,180,0,null)
+(-1,class android.widget.ImageView,1092,2247,180,180,0,null)
+(-1,class android.widget.ImageView,1308,2247,180,180,0,null)
+(-1,class android.widget.ImageView,1524,2247,180,180,0,null)
+(-1,class android.widget.ImageView,1740,2247,180,180,0,null)
+(-1,class android.widget.ImageView,1956,2247,180,180,0,null)
+(-1,class android.widget.ImageView,2172,2247,180,180,0,null)
+(-1,class android.widget.ImageView,-851,2445,180,180,0,null)
+(-1,class android.widget.ImageView,-635,2445,180,180,0,null)
+(-1,class android.widget.ImageView,-419,2445,180,180,0,null)
+(-1,class android.widget.ImageView,-203,2445,180,180,0,null)
+(-1,class android.widget.ImageView,12,2445,180,180,0,null)
+(-1,class android.widget.ImageView,228,2445,180,180,0,null)
+(-1,class android.widget.ImageView,444,2445,180,180,0,null)
+(-1,class android.widget.ImageView,660,2445,180,180,0,null)
+(-1,class android.widget.ImageView,876,2445,180,180,0,null)
+(-1,class android.widget.ImageView,1092,2445,180,180,0,null)
+(-1,class android.widget.ImageView,1308,2445,180,180,0,null)
+(-1,class android.widget.ImageView,1524,2445,180,180,0,null)
+(-1,class android.widget.ImageView,1740,2445,180,180,0,null)
+(-1,class android.widget.ImageView,1956,2445,180,180,0,null)
+(-1,class android.widget.ImageView,2172,2445,180,180,0,null)
+(-1,class android.widget.ImageView,-851,2643,180,180,0,null)
+(-1,class android.widget.ImageView,-635,2643,180,180,0,null)
+(-1,class android.widget.ImageView,-419,2643,180,180,0,null)
+(-1,class android.widget.ImageView,-203,2643,180,180,0,null)
+(-1,class android.widget.ImageView,12,2643,180,180,0,null)
+(-1,class android.widget.ImageView,228,2643,180,180,0,null)
+(-1,class android.widget.ImageView,444,2643,180,180,0,null)
+(-1,class android.widget.ImageView,660,2643,180,180,0,null)
+(-1,class android.widget.ImageView,876,2643,180,180,0,null)
+(-1,class android.widget.ImageView,1092,2643,180,180,0,null)
+(-1,class android.widget.ImageView,1308,2643,180,180,0,null)
+(-1,class android.widget.ImageView,1524,2643,180,180,0,null)
+(-1,class android.widget.ImageView,1740,2643,180,180,0,null)
+(-1,class android.widget.ImageView,1956,2643,180,180,0,null)
+(-1,class android.widget.ImageView,2172,2643,180,180,0,null)
+(-1,class android.widget.ImageView,-851,2841,180,180,0,null)
+(-1,class android.widget.ImageView,-635,2841,180,180,0,null)
+(-1,class android.widget.ImageView,-419,2841,180,180,0,null)
+(-1,class android.widget.ImageView,-203,2841,180,180,0,null)
+(-1,class android.widget.ImageView,12,2841,180,180,0,null)
+(-1,class android.widget.ImageView,228,2841,180,180,0,null)
+(-1,class android.widget.ImageView,444,2841,180,180,0,null)
+(-1,class android.widget.ImageView,660,2841,180,180,0,null)
+(-1,class android.widget.ImageView,876,2841,180,180,0,null)
+(-1,class android.widget.ImageView,1092,2841,180,180,0,null)
+(-1,class android.widget.ImageView,1308,2841,180,180,0,null)
+(-1,class android.widget.ImageView,1524,2841,180,180,0,null)
+(-1,class android.widget.ImageView,1740,2841,180,180,0,null)
+(-1,class android.widget.ImageView,1956,2841,180,180,0,null)
+(-1,class android.widget.ImageView,2172,2841,180,180,0,null)
+(-1,class android.widget.ImageView,-851,3039,180,180,0,null)
+(-1,class android.widget.ImageView,-635,3039,180,180,0,null)
+(-1,class android.widget.ImageView,-419,3039,180,180,0,null)
+(-1,class android.widget.ImageView,-203,3039,180,180,0,null)
+(-1,class android.widget.ImageView,12,3039,180,180,0,null)
+(-1,class android.widget.ImageView,228,3039,180,180,0,null)
+(-1,class android.widget.ImageView,444,3039,180,180,0,null)
+(-1,class android.widget.ImageView,660,3039,180,180,0,null)
+(-1,class android.widget.ImageView,876,3039,180,180,0,null)
+(-1,class android.widget.ImageView,1092,3039,180,180,0,null)
+(-1,class android.widget.ImageView,1308,3039,180,180,0,null)
+(-1,class android.widget.ImageView,1524,3039,180,180,0,null)
+(-1,class android.widget.ImageView,1740,3039,180,180,0,null)
+(-1,class android.widget.ImageView,1956,3039,180,180,0,null)
+(-1,class android.widget.ImageView,2172,3039,180,180,0,null)
+(2131165277,class android.widget.Button,624,1561,426,144,0,OK I've done it.)
+V_SCROLL_START,25208995
+V_SCROLL,0,1166,0,1260
+V_SCROLL,0,1037,0,1166
+V_SCROLL,0,932,0,1037
+V_SCROLL,0,838,0,932
+V_SCROLL,0,838,0,932
+V_SCROLL,0,689,0,838
+V_SCROLL,0,689,0,838
+V_SCROLL,0,532,0,689
+V_SCROLL,0,532,0,689
+V_SCROLL,0,385,0,532
+V_SCROLL,0,385,0,532
+V_SCROLL,0,232,0,385
+V_SCROLL,0,232,0,385
+V_SCROLL,0,90,0,232
+V_SCROLL,0,90,0,232
+V_SCROLL,0,-18,0,90
+V_SCROLL,0,-18,0,90
+V_SCROLL,0,-17,0,-18
+V_SCROLL,0,-17,0,-18
+V_SCROLL,0,-15,0,-17
+V_SCROLL,0,-15,0,-17
+V_SCROLL,0,-13,0,-15
+V_SCROLL,0,-13,0,-15
+V_SCROLL,0,-9,0,-13
+V_SCROLL,0,-9,0,-13
+V_SCROLL,0,-6,0,-9
+V_SCROLL,0,-6,0,-9
+V_SCROLL,0,-3,0,-6
+V_SCROLL,0,-3,0,-6
+V_SCROLL,0,-1,0,-3
+V_SCROLL,0,-1,0,-3
+V_SCROLL,0,0,0,-1
+V_SCROLL,0,0,0,-1
+V_SCROLL_END,25209093
+V_SCROLL_START,25212828
+V_SCROLL,0,30,0,0
+V_SCROLL,0,65,0,30
+V_SCROLL,0,109,0,65
+V_SCROLL,0,156,0,109
+V_SCROLL,0,194,0,156
+V_SCROLL,0,222,0,194
+V_SCROLL,0,244,0,222
+V_SCROLL,0,263,0,244
+V_SCROLL,0,271,0,263
+V_SCROLL,0,272,0,271
+V_SCROLL,0,272,0,271
+V_SCROLL,0,282,0,272
+V_SCROLL,0,282,0,272
+V_SCROLL,0,289,0,282
+V_SCROLL,0,289,0,282
+V_SCROLL,0,295,0,289
+V_SCROLL,0,295,0,289
+V_SCROLL,0,299,0,295
+V_SCROLL,0,299,0,295
+V_SCROLL,0,302,0,299
+V_SCROLL,0,302,0,299
+V_SCROLL,0,305,0,302
+V_SCROLL,0,305,0,302
+V_SCROLL,0,306,0,305
+V_SCROLL,0,306,0,305
+V_SCROLL,0,307,0,306
+V_SCROLL,0,307,0,306
+V_SCROLL,0,308,0,307
+V_SCROLL,0,308,0,307
+V_SCROLL_END,25213026
+V_SCROLL_START,25213516
+V_SCROLL,0,336,0,308
+V_SCROLL,0,372,0,336
+V_SCROLL,0,414,0,372
+V_SCROLL,0,465,0,414
+V_SCROLL,0,521,0,465
+V_SCROLL,0,558,0,521
+V_SCROLL,0,558,0,521
+V_SCROLL,0,620,0,558
+V_SCROLL,0,620,0,558
+V_SCROLL,0,677,0,620
+V_SCROLL,0,677,0,620
+V_SCROLL,0,736,0,677
+V_SCROLL,0,736,0,677
+V_SCROLL,0,787,0,736
+V_SCROLL,0,787,0,736
+V_SCROLL,0,836,0,787
+V_SCROLL,0,836,0,787
+V_SCROLL,0,890,0,836
+V_SCROLL,0,890,0,836
+V_SCROLL,0,929,0,890
+V_SCROLL,0,929,0,890
+V_SCROLL,0,968,0,929
+V_SCROLL,0,968,0,929
+V_SCROLL,0,1006,0,968
+V_SCROLL,0,1006,0,968
+V_SCROLL,0,1038,0,1006
+V_SCROLL,0,1038,0,1006
+V_SCROLL,0,1070,0,1038
+V_SCROLL,0,1070,0,1038
+V_SCROLL,0,1098,0,1070
+V_SCROLL,0,1098,0,1070
+V_SCROLL,0,1125,0,1098
+V_SCROLL,0,1125,0,1098
+V_SCROLL,0,1150,0,1125
+V_SCROLL,0,1150,0,1125
+V_SCROLL,0,1171,0,1150
+V_SCROLL,0,1171,0,1150
+V_SCROLL,0,1192,0,1171
+V_SCROLL,0,1192,0,1171
+V_SCROLL,0,1210,0,1192
+V_SCROLL,0,1210,0,1192
+V_SCROLL,0,1228,0,1210
+V_SCROLL,0,1228,0,1210
+V_SCROLL,0,1244,0,1228
+V_SCROLL,0,1244,0,1228
+V_SCROLL,0,1258,0,1244
+V_SCROLL,0,1258,0,1244
+V_SCROLL,0,1271,0,1258
+V_SCROLL,0,1271,0,1258
+V_SCROLL,0,1282,0,1271
+V_SCROLL,0,1282,0,1271
+V_SCROLL,0,1293,0,1282
+V_SCROLL,0,1293,0,1282
+V_SCROLL,0,1303,0,1293
+V_SCROLL,0,1303,0,1293
+V_SCROLL,0,1312,0,1303
+V_SCROLL,0,1312,0,1303
+V_SCROLL,0,1320,0,1312
+V_SCROLL,0,1320,0,1312
+V_SCROLL,0,1327,0,1320
+V_SCROLL,0,1327,0,1320
+V_SCROLL,0,1334,0,1327
+V_SCROLL,0,1334,0,1327
+V_SCROLL,0,1339,0,1334
+V_SCROLL,0,1339,0,1334
+V_SCROLL,0,1344,0,1339
+V_SCROLL,0,1344,0,1339
+V_SCROLL,0,1348,0,1344
+V_SCROLL,0,1348,0,1344
+V_SCROLL,0,1352,0,1348
+V_SCROLL,0,1352,0,1348
+V_SCROLL,0,1355,0,1352
+V_SCROLL,0,1355,0,1352
+V_SCROLL,0,1357,0,1355
+V_SCROLL,0,1357,0,1355
+V_SCROLL,0,1359,0,1357
+V_SCROLL,0,1359,0,1357
+V_SCROLL,0,1361,0,1359
+V_SCROLL,0,1361,0,1359
+V_SCROLL,0,1362,0,1361
+V_SCROLL,0,1362,0,1361
+V_SCROLL_END,25213648
+V_SCROLL_START,25214784
+V_SCROLL,0,1399,0,1362
+V_SCROLL,0,1451,0,1399
+V_SCROLL,0,1518,0,1451
+V_SCROLL,0,1579,0,1518
+V_SCROLL,0,1628,0,1579
+V_SCROLL,0,1628,0,1579
+V_SCROLL,0,1705,0,1628
+V_SCROLL,0,1705,0,1628
+V_SCROLL,0,1786,0,1705
+V_SCROLL,0,1786,0,1705
+V_SCROLL,0,1865,0,1786
+V_SCROLL,0,1865,0,1786
+V_SCROLL,0,1936,0,1865
+V_SCROLL,0,1936,0,1865
+V_SCROLL,0,2008,0,1936
+V_SCROLL,0,2008,0,1936
+V_SCROLL,0,2073,0,2008
+V_SCROLL,0,2073,0,2008
+V_SCROLL,0,2138,0,2073
+V_SCROLL,0,2138,0,2073
+V_SCROLL,0,2199,0,2138
+V_SCROLL,0,2199,0,2138
+V_SCROLL,0,2253,0,2199
+V_SCROLL,0,2253,0,2199
+V_SCROLL,0,2306,0,2253
+V_SCROLL,0,2306,0,2253
+V_SCROLL,0,2353,0,2306
+V_SCROLL,0,2353,0,2306
+V_SCROLL,0,2403,0,2353
+V_SCROLL,0,2403,0,2353
+V_SCROLL,0,2441,0,2403
+V_SCROLL,0,2441,0,2403
+V_SCROLL,0,2482,0,2441
+V_SCROLL,0,2482,0,2441
+V_SCROLL,0,2520,0,2482
+V_SCROLL,0,2520,0,2482
+V_SCROLL,0,2553,0,2520
+V_SCROLL,0,2553,0,2520
+V_SCROLL,0,2586,0,2553
+V_SCROLL,0,2586,0,2553
+V_SCROLL,0,2615,0,2586
+V_SCROLL,0,2615,0,2586
+V_SCROLL,0,2644,0,2615
+V_SCROLL,0,2644,0,2615
+V_SCROLL,0,2671,0,2644
+V_SCROLL,0,2671,0,2644
+V_SCROLL,0,2694,0,2671
+V_SCROLL,0,2694,0,2671
+V_SCROLL,0,2717,0,2694
+V_SCROLL,0,2717,0,2694
+V_SCROLL,0,2738,0,2717
+V_SCROLL,0,2738,0,2717
+V_SCROLL,0,2758,0,2738
+V_SCROLL,0,2758,0,2738
+V_SCROLL,0,2775,0,2758
+V_SCROLL,0,2775,0,2758
+V_SCROLL,0,2793,0,2775
+V_SCROLL,0,2793,0,2775
+V_SCROLL,0,2809,0,2793
+V_SCROLL,0,2809,0,2793
+V_SCROLL,0,2823,0,2809
+V_SCROLL,0,2823,0,2809
+V_SCROLL,0,2836,0,2823
+V_SCROLL,0,2836,0,2823
+V_SCROLL,0,2848,0,2836
+V_SCROLL,0,2848,0,2836
+V_SCROLL,0,2860,0,2848
+V_SCROLL,0,2860,0,2848
+V_SCROLL,0,2870,0,2860
+V_SCROLL,0,2870,0,2860
+V_SCROLL,0,2880,0,2870
+V_SCROLL,0,2880,0,2870
+V_SCROLL,0,2888,0,2880
+V_SCROLL,0,2888,0,2880
+V_SCROLL,0,2896,0,2888
+V_SCROLL,0,2896,0,2888
+V_SCROLL,0,2903,0,2896
+V_SCROLL,0,2903,0,2896
+V_SCROLL,0,2909,0,2903
+V_SCROLL,0,2909,0,2903
+V_SCROLL,0,2915,0,2909
+V_SCROLL,0,2915,0,2909
+V_SCROLL,0,2920,0,2915
+V_SCROLL,0,2920,0,2915
+V_SCROLL,0,2924,0,2920
+V_SCROLL,0,2924,0,2920
+V_SCROLL,0,2928,0,2924
+V_SCROLL,0,2928,0,2924
+V_SCROLL,0,2931,0,2928
+V_SCROLL,0,2931,0,2928
+V_SCROLL,0,2933,0,2931
+V_SCROLL,0,2933,0,2931
+V_SCROLL,0,2935,0,2933
+V_SCROLL,0,2935,0,2933
+V_SCROLL,0,2937,0,2935
+V_SCROLL,0,2937,0,2935
+V_SCROLL,0,2938,0,2937
+V_SCROLL,0,2938,0,2937
+V_SCROLL_END,25214890
+V_SCROLL_START,25217584
+V_SCROLL,0,2965,0,2938
+V_SCROLL,0,2999,0,2965
+V_SCROLL,0,3028,0,2999
+V_SCROLL_END,25217856
+V_SCROLL_START,25218802
+V_SCROLL,0,3021,0,3028
+V_SCROLL,0,3019,0,3021
+V_SCROLL,0,3019,0,3021
+V_SCROLL,0,3015,0,3019
+V_SCROLL,0,3015,0,3019
+V_SCROLL,0,3013,0,3015
+V_SCROLL,0,3013,0,3015
+V_SCROLL,0,3012,0,3013
+V_SCROLL,0,3012,0,3013
+V_SCROLL,0,3011,0,3012
+V_SCROLL,0,3011,0,3012
+V_SCROLL_END,25218884
+V_SCROLL_START,25221518
+V_SCROLL,0,2975,0,3011
+V_SCROLL,0,2917,0,2975
+V_SCROLL,0,2848,0,2917
+V_SCROLL,0,2778,0,2848
+V_SCROLL,0,2750,0,2778
+V_SCROLL,0,2745,0,2750
+V_SCROLL,0,2745,0,2750
+V_SCROLL,0,2660,0,2745
+V_SCROLL,0,2660,0,2745
+V_SCROLL,0,2581,0,2660
+V_SCROLL,0,2581,0,2660
+V_SCROLL,0,2500,0,2581
+V_SCROLL,0,2500,0,2581
+V_SCROLL,0,2420,0,2500
+V_SCROLL,0,2420,0,2500
+V_SCROLL,0,2349,0,2420
+V_SCROLL,0,2349,0,2420
+V_SCROLL,0,2276,0,2349
+V_SCROLL,0,2276,0,2349
+V_SCROLL,0,2212,0,2276
+V_SCROLL,0,2212,0,2276
+V_SCROLL,0,2147,0,2212
+V_SCROLL,0,2147,0,2212
+V_SCROLL,0,2086,0,2147
+V_SCROLL,0,2086,0,2147
+V_SCROLL,0,2032,0,2086
+V_SCROLL,0,2032,0,2086
+V_SCROLL,0,1981,0,2032
+V_SCROLL,0,1981,0,2032
+V_SCROLL,0,1931,0,1981
+V_SCROLL,0,1931,0,1981
+V_SCROLL,0,1887,0,1931
+V_SCROLL,0,1887,0,1931
+V_SCROLL,0,1843,0,1887
+V_SCROLL,0,1843,0,1887
+V_SCROLL,0,1802,0,1843
+V_SCROLL,0,1802,0,1843
+V_SCROLL,0,1766,0,1802
+V_SCROLL,0,1766,0,1802
+V_SCROLL,0,1730,0,1766
+V_SCROLL,0,1730,0,1766
+V_SCROLL,0,1698,0,1730
+V_SCROLL,0,1698,0,1730
+V_SCROLL,0,1667,0,1698
+V_SCROLL,0,1667,0,1698
+V_SCROLL,0,1640,0,1667
+V_SCROLL,0,1640,0,1667
+V_SCROLL,0,1613,0,1640
+V_SCROLL,0,1613,0,1640
+V_SCROLL,0,1589,0,1613
+V_SCROLL,0,1589,0,1613
+V_SCROLL,0,1564,0,1589
+V_SCROLL,0,1564,0,1589
+V_SCROLL,0,1543,0,1564
+V_SCROLL,0,1543,0,1564
+V_SCROLL,0,1523,0,1543
+V_SCROLL,0,1523,0,1543
+V_SCROLL,0,1505,0,1523
+V_SCROLL,0,1505,0,1523
+V_SCROLL,0,1487,0,1505
+V_SCROLL,0,1487,0,1505
+V_SCROLL,0,1472,0,1487
+V_SCROLL,0,1472,0,1487
+V_SCROLL,0,1457,0,1472
+V_SCROLL,0,1457,0,1472
+V_SCROLL,0,1443,0,1457
+V_SCROLL,0,1443,0,1457
+V_SCROLL,0,1431,0,1443
+V_SCROLL,0,1431,0,1443
+V_SCROLL,0,1419,0,1431
+V_SCROLL,0,1419,0,1431
+V_SCROLL,0,1408,0,1419
+V_SCROLL,0,1408,0,1419
+V_SCROLL,0,1398,0,1408
+V_SCROLL,0,1398,0,1408
+V_SCROLL,0,1389,0,1398
+V_SCROLL,0,1389,0,1398
+V_SCROLL,0,1381,0,1389
+V_SCROLL,0,1381,0,1389
+V_SCROLL,0,1374,0,1381
+V_SCROLL,0,1374,0,1381
+V_SCROLL,0,1368,0,1374
+V_SCROLL,0,1368,0,1374
+V_SCROLL,0,1362,0,1368
+V_SCROLL,0,1362,0,1368
+V_SCROLL,0,1357,0,1362
+V_SCROLL,0,1357,0,1362
+V_SCROLL,0,1352,0,1357
+V_SCROLL,0,1352,0,1357
+V_SCROLL,0,1348,0,1352
+V_SCROLL,0,1348,0,1352
+V_SCROLL,0,1345,0,1348
+V_SCROLL,0,1345,0,1348
+V_SCROLL,0,1342,0,1345
+V_SCROLL,0,1342,0,1345
+V_SCROLL,0,1340,0,1342
+V_SCROLL,0,1340,0,1342
+V_SCROLL,0,1339,0,1340
+V_SCROLL,0,1339,0,1340
+V_SCROLL_END,25221641
+V_SCROLL_START,25222422
+V_SCROLL,0,1324,0,1339
+V_SCROLL,0,1265,0,1324
+V_SCROLL,0,1171,0,1265
+V_SCROLL,0,1059,0,1171
+V_SCROLL,0,953,0,1059
+V_SCROLL,0,841,0,953
+V_SCROLL,0,744,0,841
+V_SCROLL,0,662,0,744
+V_SCROLL,0,648,0,662
+V_SCROLL,0,643,0,648
+V_SCROLL,0,643,0,648
+V_SCROLL,0,571,0,643
+V_SCROLL,0,571,0,643
+V_SCROLL,0,490,0,571
+V_SCROLL,0,490,0,571
+V_SCROLL,0,421,0,490
+V_SCROLL,0,421,0,490
+V_SCROLL,0,353,0,421
+V_SCROLL,0,353,0,421
+V_SCROLL,0,285,0,353
+V_SCROLL,0,285,0,353
+V_SCROLL,0,224,0,285
+V_SCROLL,0,224,0,285
+V_SCROLL,0,163,0,224
+V_SCROLL,0,163,0,224
+V_SCROLL,0,109,0,163
+V_SCROLL,0,109,0,163
+V_SCROLL,0,55,0,109
+V_SCROLL,0,55,0,109
+V_SCROLL,0,6,0,55
+V_SCROLL,0,6,0,55
+V_SCROLL,0,-18,0,6
+V_SCROLL,0,-18,0,6
+V_SCROLL,0,-17,0,-18
+V_SCROLL,0,-17,0,-18
+V_SCROLL,0,-15,0,-17
+V_SCROLL,0,-15,0,-17
+V_SCROLL,0,-12,0,-15
+V_SCROLL,0,-12,0,-15
+V_SCROLL,0,-9,0,-12
+V_SCROLL,0,-9,0,-12
+V_SCROLL,0,-6,0,-9
+V_SCROLL,0,-6,0,-9
+V_SCROLL,0,-3,0,-6
+V_SCROLL,0,-3,0,-6
+V_SCROLL,0,-1,0,-3
+V_SCROLL,0,-1,0,-3
+V_SCROLL,0,0,0,-1
+V_SCROLL,0,0,0,-1
+V_SCROLL_END,25222570
+V_SCROLL_START,25225545
+V_SCROLL,0,38,0,0
+V_SCROLL,0,84,0,38
+V_SCROLL,0,134,0,84
+V_SCROLL,0,187,0,134
+V_SCROLL,0,242,0,187
+V_SCROLL,0,299,0,242
+V_SCROLL,0,365,0,299
+V_SCROLL,0,430,0,365
+V_SCROLL,0,443,0,430
+V_SCROLL,0,447,0,443
+V_SCROLL,0,447,0,443
+V_SCROLL,0,481,0,447
+V_SCROLL,0,481,0,447
+V_SCROLL,0,542,0,481
+V_SCROLL,0,542,0,481
+V_SCROLL,0,605,0,542
+V_SCROLL,0,605,0,542
+V_SCROLL,0,662,0,605
+V_SCROLL,0,662,0,605
+V_SCROLL,0,720,0,662
+V_SCROLL,0,720,0,662
+V_SCROLL,0,774,0,720
+V_SCROLL,0,774,0,720
+V_SCROLL,0,821,0,774
+V_SCROLL,0,821,0,774
+V_SCROLL,0,868,0,821
+V_SCROLL,0,868,0,821
+V_SCROLL,0,909,0,868
+V_SCROLL,0,909,0,868
+V_SCROLL,0,949,0,909
+V_SCROLL,0,949,0,909
+V_SCROLL,0,986,0,949
+V_SCROLL,0,986,0,949
+V_SCROLL,0,1018,0,986
+V_SCROLL,0,1018,0,986
+V_SCROLL,0,1049,0,1018
+V_SCROLL,0,1049,0,1018
+V_SCROLL,0,1076,0,1049
+V_SCROLL,0,1076,0,1049
+V_SCROLL,0,1102,0,1076
+V_SCROLL,0,1102,0,1076
+V_SCROLL,0,1125,0,1102
+V_SCROLL,0,1125,0,1102
+V_SCROLL,0,1148,0,1125
+V_SCROLL,0,1148,0,1125
+V_SCROLL,0,1167,0,1148
+V_SCROLL,0,1167,0,1148
+V_SCROLL,0,1186,0,1167
+V_SCROLL,0,1186,0,1167
+V_SCROLL,0,1202,0,1186
+V_SCROLL,0,1202,0,1186
+V_SCROLL,0,1218,0,1202
+V_SCROLL,0,1218,0,1202
+V_SCROLL,0,1233,0,1218
+V_SCROLL,0,1233,0,1218
+V_SCROLL_END,25225751
+V_SCROLL_START,25226125
+V_SCROLL,0,1232,0,1233
+V_SCROLL,0,1210,0,1232
+V_SCROLL,0,1162,0,1210
+V_SCROLL,0,1106,0,1162
+V_SCROLL,0,1051,0,1106
+V_SCROLL,0,997,0,1051
+V_SCROLL,0,947,0,997
+V_SCROLL,0,905,0,947
+V_SCROLL,0,870,0,905
+V_SCROLL,0,844,0,870
+V_SCROLL,0,824,0,844
+V_SCROLL,0,808,0,824
+V_SCROLL,0,796,0,808
+V_SCROLL,0,792,0,796
+V_SCROLL,0,791,0,792
+V_SCROLL,0,791,0,792
+V_SCROLL,0,788,0,791
+V_SCROLL,0,788,0,791
+V_SCROLL,0,785,0,788
+V_SCROLL,0,785,0,788
+V_SCROLL,0,784,0,785
+V_SCROLL,0,784,0,785
+V_SCROLL,0,783,0,784
+V_SCROLL,0,783,0,784
+V_SCROLL_END,25226348
+V_SCROLL_START,25227483
+V_SCROLL,0,822,0,783
+V_SCROLL,0,866,0,822
+V_SCROLL,0,908,0,866
+V_SCROLL,0,947,0,908
+V_SCROLL,0,985,0,947
+V_SCROLL,0,1023,0,985
+V_SCROLL,0,1062,0,1023
+V_SCROLL,0,1098,0,1062
+V_SCROLL,0,1132,0,1098
+V_SCROLL,0,1161,0,1132
+V_SCROLL,0,1190,0,1161
+V_SCROLL,0,1226,0,1190
+V_SCROLL,0,1275,0,1226
+V_SCROLL,0,1331,0,1275
+V_SCROLL,0,1386,0,1331
+V_SCROLL,0,1431,0,1386
+V_SCROLL,0,1464,0,1431
+V_SCROLL,0,1493,0,1464
+V_SCROLL,0,1493,0,1464
+V_SCROLL,0,1538,0,1493
+V_SCROLL,0,1538,0,1493
+V_SCROLL,0,1589,0,1538
+V_SCROLL,0,1589,0,1538
+V_SCROLL,0,1624,0,1589
+V_SCROLL,0,1624,0,1589
+V_SCROLL,0,1665,0,1624
+V_SCROLL,0,1665,0,1624
+V_SCROLL,0,1699,0,1665
+V_SCROLL,0,1699,0,1665
+V_SCROLL,0,1733,0,1699
+V_SCROLL,0,1733,0,1699
+V_SCROLL,0,1762,0,1733
+V_SCROLL,0,1762,0,1733
+V_SCROLL,0,1789,0,1762
+V_SCROLL,0,1789,0,1762
+V_SCROLL,0,1814,0,1789
+V_SCROLL,0,1814,0,1789
+V_SCROLL,0,1835,0,1814
+V_SCROLL,0,1835,0,1814
+V_SCROLL,0,1856,0,1835
+V_SCROLL,0,1856,0,1835
+V_SCROLL,0,1873,0,1856
+V_SCROLL,0,1873,0,1856
+V_SCROLL,0,1889,0,1873
+V_SCROLL,0,1889,0,1873
+V_SCROLL,0,1903,0,1889
+V_SCROLL,0,1903,0,1889
+V_SCROLL,0,1916,0,1903
+V_SCROLL,0,1916,0,1903
+V_SCROLL,0,1928,0,1916
+V_SCROLL,0,1928,0,1916
+V_SCROLL,0,1938,0,1928
+V_SCROLL,0,1938,0,1928
+V_SCROLL,0,1948,0,1938
+V_SCROLL,0,1948,0,1938
+V_SCROLL,0,1956,0,1948
+V_SCROLL,0,1956,0,1948
+V_SCROLL,0,1964,0,1956
+V_SCROLL,0,1964,0,1956
+V_SCROLL,0,1970,0,1964
+V_SCROLL,0,1970,0,1964
+V_SCROLL,0,1976,0,1970
+V_SCROLL,0,1976,0,1970
+V_SCROLL,0,1981,0,1976
+V_SCROLL,0,1981,0,1976
+V_SCROLL,0,1985,0,1981
+V_SCROLL,0,1985,0,1981
+V_SCROLL,0,1989,0,1985
+V_SCROLL,0,1989,0,1985
+V_SCROLL,0,1992,0,1989
+V_SCROLL,0,1992,0,1989
+V_SCROLL,0,1994,0,1992
+V_SCROLL,0,1994,0,1992
+V_SCROLL,0,1996,0,1994
+V_SCROLL,0,1996,0,1994
+V_SCROLL,0,1997,0,1996
+V_SCROLL,0,1997,0,1996
+V_SCROLL,0,1998,0,1997
+V_SCROLL,0,1998,0,1997
+V_SCROLL,0,1999,0,1998
+V_SCROLL,0,1999,0,1998
+V_SCROLL_END,25227831
+H_SCROLL_START,25228900
+H_SCROLL,943,0,900,0
+H_SCROLL,1003,0,943,0
+H_SCROLL,1072,0,1003,0
+H_SCROLL,1140,0,1072,0
+H_SCROLL,1199,0,1140,0
+H_SCROLL,1253,0,1199,0
+H_SCROLL,1300,0,1253,0
+H_SCROLL,1346,0,1300,0
+H_SCROLL,1396,0,1346,0
+H_SCROLL,1436,0,1396,0
+H_SCROLL,1473,0,1436,0
+H_SCROLL,1495,0,1473,0
+H_SCROLL,1510,0,1495,0
+H_SCROLL,1522,0,1510,0
+H_SCROLL,1532,0,1522,0
+H_SCROLL,1540,0,1532,0
+H_SCROLL,1546,0,1540,0
+H_SCROLL,1553,0,1546,0
+H_SCROLL,1559,0,1553,0
+H_SCROLL,1562,0,1559,0
+H_SCROLL,1569,0,1562,0
+H_SCROLL,1573,0,1569,0
+H_SCROLL,1577,0,1573,0
+H_SCROLL,1581,0,1577,0
+H_SCROLL,1585,0,1581,0
+H_SCROLL,1588,0,1585,0
+H_SCROLL,1590,0,1588,0
+H_SCROLL,1593,0,1590,0
+H_SCROLL,1597,0,1593,0
+H_SCROLL,1598,0,1597,0
+H_SCROLL,1598,0,1597,0
+H_SCROLL,1599,0,1598,0
+H_SCROLL,1599,0,1598,0
+H_SCROLL,1600,0,1599,0
+H_SCROLL,1600,0,1599,0
+H_SCROLL_END,25229422
+V_SCROLL_START,25230698
+V_SCROLL,0,1952,0,1999
+V_SCROLL,0,1891,0,1952
+V_SCROLL,0,1823,0,1891
+V_SCROLL,0,1756,0,1823
+V_SCROLL,0,1688,0,1756
+V_SCROLL,0,1627,0,1688
+V_SCROLL,0,1583,0,1627
+V_SCROLL,0,1550,0,1583
+V_SCROLL,0,1526,0,1550
+V_SCROLL,0,1508,0,1526
+V_SCROLL,0,1492,0,1508
+V_SCROLL,0,1480,0,1492
+V_SCROLL,0,1467,0,1480
+V_SCROLL,0,1454,0,1467
+V_SCROLL,0,1440,0,1454
+V_SCROLL,0,1426,0,1440
+V_SCROLL,0,1414,0,1426
+V_SCROLL,0,1404,0,1414
+V_SCROLL,0,1398,0,1404
+V_SCROLL,0,1391,0,1398
+V_SCROLL,0,1388,0,1391
+V_SCROLL,0,1388,0,1391
+V_SCROLL,0,1385,0,1388
+V_SCROLL,0,1385,0,1388
+V_SCROLL,0,1383,0,1385
+V_SCROLL,0,1383,0,1385
+V_SCROLL,0,1382,0,1383
+V_SCROLL,0,1382,0,1383
+V_SCROLL,0,1381,0,1382
+V_SCROLL,0,1381,0,1382
+V_SCROLL_END,25231095
+V_SCROLL_START,25231353
+V_SCROLL,0,1312,0,1381
+V_SCROLL,0,1225,0,1312
+V_SCROLL,0,1123,0,1225
+V_SCROLL,0,1015,0,1123
+V_SCROLL,0,935,0,1015
+V_SCROLL,0,888,0,935
+V_SCROLL,0,844,0,888
+V_SCROLL,0,844,0,888
+V_SCROLL,0,751,0,844
+V_SCROLL,0,751,0,844
+V_SCROLL,0,684,0,751
+V_SCROLL,0,684,0,751
+V_SCROLL,0,605,0,684
+V_SCROLL,0,605,0,684
+V_SCROLL,0,528,0,605
+V_SCROLL,0,528,0,605
+V_SCROLL,0,460,0,528
+V_SCROLL,0,460,0,528
+V_SCROLL,0,390,0,460
+V_SCROLL,0,390,0,460
+V_SCROLL,0,328,0,390
+V_SCROLL,0,328,0,390
+V_SCROLL,0,267,0,328
+V_SCROLL,0,267,0,328
+V_SCROLL,0,212,0,267
+V_SCROLL,0,212,0,267
+V_SCROLL,0,158,0,212
+V_SCROLL,0,158,0,212
+V_SCROLL,0,107,0,158
+V_SCROLL,0,107,0,158
+V_SCROLL,0,63,0,107
+V_SCROLL,0,63,0,107
+V_SCROLL,0,18,0,63
+V_SCROLL,0,18,0,63
+V_SCROLL,0,-18,0,18
+V_SCROLL,0,-18,0,18
+V_SCROLL,0,-17,0,-18
+V_SCROLL,0,-17,0,-18
+V_SCROLL,0,-15,0,-17
+V_SCROLL,0,-15,0,-17
+V_SCROLL,0,-13,0,-15
+V_SCROLL,0,-13,0,-15
+V_SCROLL,0,-9,0,-13
+V_SCROLL,0,-9,0,-13
+V_SCROLL,0,-6,0,-9
+V_SCROLL,0,-6,0,-9
+V_SCROLL,0,-3,0,-6
+V_SCROLL,0,-3,0,-6
+V_SCROLL,0,-1,0,-3
+V_SCROLL,0,-1,0,-3
+V_SCROLL,0,0,0,-1
+V_SCROLL,0,0,0,-1
+V_SCROLL_END,25231493
+V_SCROLL_START,25233019
+V_SCROLL,0,59,0,0
+V_SCROLL,0,127,0,59
+V_SCROLL,0,199,0,127
+V_SCROLL,0,276,0,199
+V_SCROLL,0,292,0,276
+V_SCROLL,0,301,0,292
+V_SCROLL,0,301,0,292
+V_SCROLL,0,368,0,301
+V_SCROLL,0,368,0,301
+V_SCROLL,0,442,0,368
+V_SCROLL,0,442,0,368
+V_SCROLL,0,523,0,442
+V_SCROLL,0,523,0,442
+V_SCROLL,0,580,0,523
+V_SCROLL,0,580,0,523
+V_SCROLL,0,651,0,580
+V_SCROLL,0,651,0,580
+V_SCROLL,0,710,0,651
+V_SCROLL,0,710,0,651
+V_SCROLL,0,766,0,710
+V_SCROLL,0,766,0,710
+V_SCROLL,0,822,0,766
+V_SCROLL,0,822,0,766
+V_SCROLL,0,871,0,822
+V_SCROLL,0,871,0,822
+V_SCROLL,0,919,0,871
+V_SCROLL,0,919,0,871
+V_SCROLL,0,962,0,919
+V_SCROLL,0,962,0,919
+V_SCROLL,0,1004,0,962
+V_SCROLL,0,1004,0,962
+V_SCROLL,0,1040,0,1004
+V_SCROLL,0,1040,0,1004
+V_SCROLL,0,1076,0,1040
+V_SCROLL,0,1076,0,1040
+V_SCROLL,0,1110,0,1076
+V_SCROLL,0,1110,0,1076
+V_SCROLL,0,1139,0,1110
+V_SCROLL,0,1139,0,1110
+V_SCROLL,0,1168,0,1139
+V_SCROLL,0,1168,0,1139
+V_SCROLL,0,1193,0,1168
+V_SCROLL,0,1193,0,1168
+V_SCROLL,0,1218,0,1193
+V_SCROLL,0,1218,0,1193
+V_SCROLL,0,1241,0,1218
+V_SCROLL,0,1241,0,1218
+V_SCROLL,0,1261,0,1241
+V_SCROLL,0,1261,0,1241
+V_SCROLL,0,1281,0,1261
+V_SCROLL,0,1281,0,1261
+V_SCROLL,0,1298,0,1281
+V_SCROLL,0,1298,0,1281
+V_SCROLL,0,1315,0,1298
+V_SCROLL,0,1315,0,1298
+V_SCROLL,0,1330,0,1315
+V_SCROLL,0,1330,0,1315
+V_SCROLL,0,1344,0,1330
+V_SCROLL,0,1344,0,1330
+V_SCROLL,0,1357,0,1344
+V_SCROLL,0,1357,0,1344
+V_SCROLL,0,1368,0,1357
+V_SCROLL,0,1368,0,1357
+V_SCROLL,0,1380,0,1368
+V_SCROLL,0,1380,0,1368
+V_SCROLL,0,1389,0,1380
+V_SCROLL,0,1389,0,1380
+V_SCROLL,0,1398,0,1389
+V_SCROLL,0,1398,0,1389
+V_SCROLL,0,1407,0,1398
+V_SCROLL,0,1407,0,1398
+V_SCROLL,0,1414,0,1407
+V_SCROLL,0,1414,0,1407
+V_SCROLL,0,1420,0,1414
+V_SCROLL,0,1420,0,1414
+V_SCROLL,0,1426,0,1420
+V_SCROLL,0,1426,0,1420
+V_SCROLL,0,1431,0,1426
+V_SCROLL,0,1431,0,1426
+V_SCROLL,0,1436,0,1431
+V_SCROLL,0,1436,0,1431
+V_SCROLL,0,1440,0,1436
+V_SCROLL,0,1440,0,1436
+V_SCROLL,0,1443,0,1440
+V_SCROLL,0,1443,0,1440
+V_SCROLL,0,1445,0,1443
+V_SCROLL,0,1445,0,1443
+V_SCROLL_END,25233142
+V_SCROLL_START,25233815
+V_SCROLL,0,1449,0,1445
+V_SCROLL,0,1484,0,1449
+V_SCROLL,0,1547,0,1484
+V_SCROLL,0,1618,0,1547
+V_SCROLL,0,1656,0,1618
+V_SCROLL,0,1662,0,1656
+V_SCROLL,0,1662,0,1656
+V_SCROLL,0,1756,0,1662
+V_SCROLL,0,1756,0,1662
+V_SCROLL,0,1845,0,1756
+V_SCROLL,0,1845,0,1756
+V_SCROLL,0,1937,0,1845
+V_SCROLL,0,1937,0,1845
+V_SCROLL,0,2026,0,1937
+V_SCROLL,0,2026,0,1937
+V_SCROLL,0,2107,0,2026
+V_SCROLL,0,2107,0,2026
+V_SCROLL,0,2190,0,2107
+V_SCROLL,0,2190,0,2107
+V_SCROLL,0,2264,0,2190
+V_SCROLL,0,2264,0,2190
+V_SCROLL,0,2339,0,2264
+V_SCROLL,0,2339,0,2264
+V_SCROLL,0,2406,0,2339
+V_SCROLL,0,2406,0,2339
+V_SCROLL,0,2474,0,2406
+V_SCROLL,0,2474,0,2406
+V_SCROLL,0,2533,0,2474
+V_SCROLL,0,2533,0,2474
+V_SCROLL,0,2593,0,2533
+V_SCROLL,0,2593,0,2533
+V_SCROLL,0,2649,0,2593
+V_SCROLL,0,2649,0,2593
+V_SCROLL,0,2699,0,2649
+V_SCROLL,0,2699,0,2649
+V_SCROLL,0,2748,0,2699
+V_SCROLL,0,2748,0,2699
+V_SCROLL,0,2792,0,2748
+V_SCROLL,0,2792,0,2748
+V_SCROLL,0,2836,0,2792
+V_SCROLL,0,2836,0,2792
+V_SCROLL,0,2876,0,2836
+V_SCROLL,0,2876,0,2836
+V_SCROLL,0,2913,0,2876
+V_SCROLL,0,2913,0,2876
+V_SCROLL,0,2949,0,2913
+V_SCROLL,0,2949,0,2913
+V_SCROLL,0,2980,0,2949
+V_SCROLL,0,2980,0,2949
+V_SCROLL,0,3012,0,2980
+V_SCROLL,0,3012,0,2980
+V_SCROLL,0,3042,0,3012
+V_SCROLL,0,3042,0,3012
+V_SCROLL,0,3046,0,3042
+V_SCROLL,0,3046,0,3042
+V_SCROLL,0,3045,0,3046
+V_SCROLL,0,3045,0,3046
+V_SCROLL,0,3043,0,3045
+V_SCROLL,0,3043,0,3045
+V_SCROLL,0,3040,0,3043
+V_SCROLL,0,3040,0,3043
+V_SCROLL,0,3037,0,3040
+V_SCROLL,0,3037,0,3040
+V_SCROLL,0,3034,0,3037
+V_SCROLL,0,3034,0,3037
+V_SCROLL,0,3031,0,3034
+V_SCROLL,0,3031,0,3034
+V_SCROLL,0,3029,0,3031
+V_SCROLL,0,3029,0,3031
+V_SCROLL,0,3028,0,3029
+V_SCROLL,0,3028,0,3029
+V_SCROLL_END,25233889
+H_SCROLL_START,25235183
+H_SCROLL,1492,0,1600,0
+H_SCROLL,1353,0,1492,0
+H_SCROLL,1154,0,1353,0
+H_SCROLL,1010,0,1154,0
+H_SCROLL,1010,0,1154,0
+H_SCROLL,801,0,1010,0
+H_SCROLL,801,0,1010,0
+H_SCROLL,593,0,801,0
+H_SCROLL,593,0,801,0
+H_SCROLL,374,0,593,0
+H_SCROLL,374,0,593,0
+H_SCROLL,157,0,374,0
+H_SCROLL,157,0,374,0
+H_SCROLL,-18,0,157,0
+H_SCROLL,-18,0,157,0
+H_SCROLL,-17,0,-18,0
+H_SCROLL,-17,0,-18,0
+H_SCROLL,-15,0,-17,0
+H_SCROLL,-15,0,-17,0
+H_SCROLL,-12,0,-15,0
+H_SCROLL,-12,0,-15,0
+H_SCROLL,-9,0,-12,0
+H_SCROLL,-9,0,-12,0
+H_SCROLL,-6,0,-9,0
+H_SCROLL,-6,0,-9,0
+H_SCROLL,-3,0,-6,0
+H_SCROLL,-3,0,-6,0
+H_SCROLL,-1,0,-3,0
+H_SCROLL,-1,0,-3,0
+H_SCROLL,0,0,-1,0
+H_SCROLL,0,0,-1,0
+H_SCROLL_END,25235273
+V_SCROLL_START,25237784
+V_SCROLL,0,2955,0,3028
+V_SCROLL,0,2873,0,2955
+V_SCROLL,0,2795,0,2873
+V_SCROLL,0,2716,0,2795
+V_SCROLL,0,2633,0,2716
+V_SCROLL,0,2562,0,2633
+V_SCROLL,0,2506,0,2562
+V_SCROLL,0,2455,0,2506
+V_SCROLL,0,2415,0,2455
+V_SCROLL,0,2388,0,2415
+V_SCROLL,0,2368,0,2388
+V_SCROLL,0,2353,0,2368
+V_SCROLL,0,2342,0,2353
+V_SCROLL,0,2334,0,2342
+V_SCROLL,0,2328,0,2334
+V_SCROLL,0,2322,0,2328
+V_SCROLL,0,2317,0,2322
+V_SCROLL,0,2313,0,2317
+V_SCROLL,0,2310,0,2313
+V_SCROLL,0,2307,0,2310
+V_SCROLL,0,2303,0,2307
+V_SCROLL,0,2299,0,2303
+V_SCROLL,0,2295,0,2299
+V_SCROLL,0,2291,0,2295
+V_SCROLL,0,2286,0,2291
+V_SCROLL,0,2282,0,2286
+V_SCROLL,0,2277,0,2282
+V_SCROLL,0,2277,0,2282
+V_SCROLL,0,2274,0,2277
+V_SCROLL,0,2274,0,2277
+V_SCROLL,0,2273,0,2274
+V_SCROLL,0,2273,0,2274
+V_SCROLL,0,2272,0,2273
+V_SCROLL,0,2272,0,2273
+V_SCROLL,0,2271,0,2272
+V_SCROLL,0,2271,0,2272
+V_SCROLL_END,25238248
+V_SCROLL_START,25238538
+V_SCROLL,0,2222,0,2271
+V_SCROLL,0,2162,0,2222
+V_SCROLL,0,2088,0,2162
+V_SCROLL,0,2011,0,2088
+V_SCROLL,0,1928,0,2011
+V_SCROLL,0,1860,0,1928
+V_SCROLL,0,1811,0,1860
+V_SCROLL,0,1771,0,1811
+V_SCROLL,0,1733,0,1771
+V_SCROLL,0,1695,0,1733
+V_SCROLL,0,1661,0,1695
+V_SCROLL,0,1636,0,1661
+V_SCROLL,0,1616,0,1636
+V_SCROLL,0,1600,0,1616
+V_SCROLL,0,1595,0,1600
+V_SCROLL,0,1594,0,1595
+V_SCROLL,0,1594,0,1595
+V_SCROLL,0,1586,0,1594
+V_SCROLL,0,1586,0,1594
+V_SCROLL,0,1579,0,1586
+V_SCROLL,0,1579,0,1586
+V_SCROLL,0,1574,0,1579
+V_SCROLL,0,1574,0,1579
+V_SCROLL,0,1570,0,1574
+V_SCROLL,0,1570,0,1574
+V_SCROLL,0,1568,0,1570
+V_SCROLL,0,1568,0,1570
+V_SCROLL,0,1566,0,1568
+V_SCROLL,0,1566,0,1568
+V_SCROLL,0,1565,0,1566
+V_SCROLL,0,1565,0,1566
+V_SCROLL,0,1564,0,1565
+V_SCROLL,0,1564,0,1565
+V_SCROLL_END,25238828
+V_SCROLL_START,25239185
+V_SCROLL,0,1491,0,1564
+V_SCROLL,0,1412,0,1491
+V_SCROLL,0,1331,0,1412
+V_SCROLL,0,1259,0,1331
+V_SCROLL,0,1201,0,1259
+V_SCROLL,0,1153,0,1201
+V_SCROLL,0,1114,0,1153
+V_SCROLL,0,1071,0,1114
+V_SCROLL,0,1033,0,1071
+V_SCROLL,0,1000,0,1033
+V_SCROLL,0,974,0,1000
+V_SCROLL,0,948,0,974
+V_SCROLL,0,924,0,948
+V_SCROLL,0,906,0,924
+V_SCROLL,0,896,0,906
+V_SCROLL,0,896,0,906
+V_SCROLL,0,880,0,896
+V_SCROLL,0,880,0,896
+V_SCROLL,0,866,0,880
+V_SCROLL,0,866,0,880
+V_SCROLL,0,855,0,866
+V_SCROLL,0,855,0,866
+V_SCROLL,0,845,0,855
+V_SCROLL,0,845,0,855
+V_SCROLL,0,837,0,845
+V_SCROLL,0,837,0,845
+V_SCROLL,0,832,0,837
+V_SCROLL,0,832,0,837
+V_SCROLL,0,827,0,832
+V_SCROLL,0,827,0,832
+V_SCROLL,0,823,0,827
+V_SCROLL,0,823,0,827
+V_SCROLL,0,820,0,823
+V_SCROLL,0,820,0,823
+V_SCROLL,0,817,0,820
+V_SCROLL,0,817,0,820
+V_SCROLL,0,816,0,817
+V_SCROLL,0,816,0,817
+V_SCROLL,0,814,0,816
+V_SCROLL,0,814,0,816
+V_SCROLL,0,813,0,814
+V_SCROLL,0,813,0,814
+V_SCROLL_END,25239466
+V_SCROLL_START,25239906
+V_SCROLL,0,753,0,813
+V_SCROLL,0,672,0,753
+V_SCROLL,0,572,0,672
+V_SCROLL,0,468,0,572
+V_SCROLL,0,386,0,468
+V_SCROLL,0,325,0,386
+V_SCROLL,0,272,0,325
+V_SCROLL,0,227,0,272
+V_SCROLL,0,210,0,227
+V_SCROLL,0,208,0,210
+V_SCROLL,0,208,0,210
+V_SCROLL,0,183,0,208
+V_SCROLL,0,183,0,208
+V_SCROLL,0,160,0,183
+V_SCROLL,0,160,0,183
+V_SCROLL,0,139,0,160
+V_SCROLL,0,139,0,160
+V_SCROLL,0,121,0,139
+V_SCROLL,0,121,0,139
+V_SCROLL,0,105,0,121
+V_SCROLL,0,105,0,121
+V_SCROLL,0,92,0,105
+V_SCROLL,0,92,0,105
+V_SCROLL,0,80,0,92
+V_SCROLL,0,80,0,92
+V_SCROLL,0,71,0,80
+V_SCROLL,0,71,0,80
+V_SCROLL,0,62,0,71
+V_SCROLL,0,62,0,71
+V_SCROLL,0,55,0,62
+V_SCROLL,0,55,0,62
+V_SCROLL,0,50,0,55
+V_SCROLL,0,50,0,55
+V_SCROLL,0,45,0,50
+V_SCROLL,0,45,0,50
+V_SCROLL,0,41,0,45
+V_SCROLL,0,41,0,45
+V_SCROLL,0,37,0,41
+V_SCROLL,0,37,0,41
+V_SCROLL,0,35,0,37
+V_SCROLL,0,35,0,37
+V_SCROLL,0,33,0,35
+V_SCROLL,0,33,0,35
+V_SCROLL,0,31,0,33
+V_SCROLL,0,31,0,33
+V_SCROLL,0,30,0,31
+V_SCROLL,0,30,0,31
+V_SCROLL,0,29,0,30
+V_SCROLL,0,29,0,30
+V_SCROLL_END,25240087
+V_SCROLL_START,25240701
+V_SCROLL,0,0,0,29
+V_SCROLL_END,25241057
+H_SCROLL_START,25242831
+H_SCROLL,-18,0,0,0
+H_SCROLL,-18,0,0,0
+H_SCROLL,-17,0,-18,0
+H_SCROLL,-17,0,-18,0
+H_SCROLL,-16,0,-17,0
+H_SCROLL,-16,0,-17,0
+H_SCROLL,-13,0,-16,0
+H_SCROLL,-13,0,-16,0
+H_SCROLL,-10,0,-13,0
+H_SCROLL,-10,0,-13,0
+H_SCROLL,-6,0,-10,0
+H_SCROLL,-6,0,-10,0
+H_SCROLL,-3,0,-6,0
+H_SCROLL,-3,0,-6,0
+H_SCROLL,-1,0,-3,0
+H_SCROLL,-1,0,-3,0
+H_SCROLL,0,0,-1,0
+H_SCROLL,0,0,-1,0
+************ REPETITION 2 ************
+V_SCROLL_START,25242831
+V_SCROLL,0,1260,0,0
+H_SCROLL,900,0,0,0
+(-1,class android.widget.TextView,389,105,301,67,0,Remaining time:)
+(2131165273,class android.widget.ProgressBar,30,232,1020,68,0,null)
+(2131165274,class ch.qol.unige.smartphonetest.searchtask.VerticalScrollViewWithInfo,30,330,1020,1130,0,null)
+(-1,class android.widget.ImageView,-851,-920,180,180,0,null)
+(-1,class android.widget.ImageView,-635,-920,180,180,0,null)
+(-1,class android.widget.ImageView,-419,-920,180,180,0,null)
+(-1,class android.widget.ImageView,-203,-920,180,180,0,null)
+(-1,class android.widget.ImageView,12,-920,180,180,0,null)
+(-1,class android.widget.ImageView,228,-920,180,180,0,null)
+(-1,class android.widget.ImageView,444,-920,180,180,0,null)
+(-1,class android.widget.ImageView,660,-920,180,180,0,null)
+(-1,class android.widget.ImageView,876,-920,180,180,0,null)
+(-1,class android.widget.ImageView,1092,-920,180,180,0,null)
+(-1,class android.widget.ImageView,1308,-920,180,180,0,null)
+(-1,class android.widget.ImageView,1524,-920,180,180,0,null)
+(-1,class android.widget.ImageView,1740,-920,180,180,0,null)
+(-1,class android.widget.ImageView,1956,-920,180,180,0,null)
+(-1,class android.widget.ImageView,2172,-920,180,180,0,null)
+(-1,class android.widget.ImageView,-851,-722,180,180,0,null)
+(-1,class android.widget.ImageView,-635,-722,180,180,0,null)
+(-1,class android.widget.ImageView,-419,-722,180,180,0,null)
+(-1,class android.widget.ImageView,-203,-722,180,180,0,null)
+(-1,class android.widget.ImageView,12,-722,180,180,0,null)
+(-1,class android.widget.ImageView,228,-722,180,180,0,null)
+(-1,class android.widget.ImageView,444,-722,180,180,0,null)
+(-1,class android.widget.ImageView,660,-722,180,180,0,null)
+(-1,class android.widget.ImageView,876,-722,180,180,0,null)
+(-1,class android.widget.ImageView,1092,-722,180,180,0,null)
+(-1,class android.widget.ImageView,1308,-722,180,180,0,null)
+(-1,class android.widget.ImageView,1524,-722,180,180,0,null)
+(-1,class android.widget.ImageView,1740,-722,180,180,0,null)
+(-1,class android.widget.ImageView,1956,-722,180,180,0,null)
+(-1,class android.widget.ImageView,2172,-722,180,180,0,null)
+(-1,class android.widget.ImageView,-851,-524,180,180,0,null)
+(-1,class android.widget.ImageView,-635,-524,180,180,0,null)
+(-1,class android.widget.ImageView,-419,-524,180,180,0,null)
+(-1,class android.widget.ImageView,-203,-524,180,180,0,null)
+(-1,class android.widget.ImageView,12,-524,180,180,0,null)
+(-1,class android.widget.ImageView,228,-524,180,180,0,null)
+(-1,class android.widget.ImageView,444,-524,180,180,0,null)
+(-1,class android.widget.ImageView,660,-524,180,180,0,null)
+(-1,class android.widget.ImageView,876,-524,180,180,0,null)
+(-1,class android.widget.ImageView,1092,-524,180,180,0,null)
+(-1,class android.widget.ImageView,1308,-524,180,180,0,null)
+(-1,class android.widget.ImageView,1524,-524,180,180,0,null)
+(-1,class android.widget.ImageView,1740,-524,180,180,0,null)
+(-1,class android.widget.ImageView,1956,-524,180,180,0,null)
+(-1,class android.widget.ImageView,2172,-524,180,180,0,null)
+(-1,class android.widget.ImageView,-851,-326,180,180,0,null)
+(-1,class android.widget.ImageView,-635,-326,180,180,0,null)
+(-1,class android.widget.ImageView,-419,-326,180,180,0,null)
+(-1,class android.widget.ImageView,-203,-326,180,180,0,null)
+(-1,class android.widget.ImageView,12,-326,180,180,0,null)
+(-1,class android.widget.ImageView,228,-326,180,180,0,null)
+(-1,class android.widget.ImageView,444,-326,180,180,0,null)
+(-1,class android.widget.ImageView,660,-326,180,180,0,null)
+(-1,class android.widget.ImageView,876,-326,180,180,0,null)
+(-1,class android.widget.ImageView,1092,-326,180,180,0,null)
+(-1,class android.widget.ImageView,1308,-326,180,180,0,null)
+(-1,class android.widget.ImageView,1524,-326,180,180,0,null)
+(-1,class android.widget.ImageView,1740,-326,180,180,0,null)
+(-1,class android.widget.ImageView,1956,-326,180,180,0,null)
+(-1,class android.widget.ImageView,2172,-326,180,180,0,null)
+(-1,class android.widget.ImageView,-851,-128,180,180,0,null)
+(-1,class android.widget.ImageView,-635,-128,180,180,0,null)
+(-1,class android.widget.ImageView,-419,-128,180,180,0,null)
+(-1,class android.widget.ImageView,-203,-128,180,180,0,null)
+(-1,class android.widget.ImageView,12,-128,180,180,0,null)
+(-1,class android.widget.ImageView,228,-128,180,180,0,null)
+(-1,class android.widget.ImageView,444,-128,180,180,0,null)
+(-1,class android.widget.ImageView,660,-128,180,180,0,null)
+(-1,class android.widget.ImageView,876,-128,180,180,0,null)
+(-1,class android.widget.ImageView,1092,-128,180,180,0,null)
+(-1,class android.widget.ImageView,1308,-128,180,180,0,null)
+(-1,class android.widget.ImageView,1524,-128,180,180,0,null)
+(-1,class android.widget.ImageView,1740,-128,180,180,0,null)
+(-1,class android.widget.ImageView,1956,-128,180,180,0,null)
+(-1,class android.widget.ImageView,2172,-128,180,180,0,null)
+(-1,class android.widget.ImageView,-851,69,180,180,0,null)
+(-1,class android.widget.ImageView,-635,69,180,180,0,null)
+(-1,class android.widget.ImageView,-419,69,180,180,0,null)
+(-1,class android.widget.ImageView,-203,69,180,180,0,null)
+(-1,class android.widget.ImageView,12,69,180,180,0,null)
+(-1,class android.widget.ImageView,228,69,180,180,0,null)
+(-1,class android.widget.ImageView,444,69,180,180,0,null)
+(-1,class android.widget.ImageView,660,69,180,180,0,null)
+(-1,class android.widget.ImageView,876,69,180,180,0,null)
+(-1,class android.widget.ImageView,1092,69,180,180,0,null)
+(-1,class android.widget.ImageView,1308,69,180,180,0,null)
+(-1,class android.widget.ImageView,1524,69,180,180,0,null)
+(-1,class android.widget.ImageView,1740,69,180,180,0,null)
+(-1,class android.widget.ImageView,1956,69,180,180,0,null)
+(-1,class android.widget.ImageView,2172,69,180,180,0,null)
+(-1,class android.widget.ImageView,-851,267,180,180,0,null)
+(-1,class android.widget.ImageView,-635,267,180,180,0,null)
+(-1,class android.widget.ImageView,-419,267,180,180,0,null)
+(-1,class android.widget.ImageView,-203,267,180,180,0,null)
+(-1,class android.widget.ImageView,12,267,180,180,0,null)
+(-1,class android.widget.ImageView,228,267,180,180,0,null)
+(-1,class android.widget.ImageView,444,267,180,180,0,null)
+(-1,class android.widget.ImageView,660,267,180,180,0,null)
+(-1,class android.widget.ImageView,876,267,180,180,0,null)
+(-1,class android.widget.ImageView,1092,267,180,180,0,null)
+(-1,class android.widget.ImageView,1308,267,180,180,0,null)
+(-1,class android.widget.ImageView,1524,267,180,180,0,null)
+(-1,class android.widget.ImageView,1740,267,180,180,0,null)
+(-1,class android.widget.ImageView,1956,267,180,180,0,null)
+(-1,class android.widget.ImageView,2172,267,180,180,0,null)
+(-1,class android.widget.ImageView,-851,465,180,180,0,null)
+(-1,class android.widget.ImageView,-635,465,180,180,0,null)
+(-1,class android.widget.ImageView,-419,465,180,180,0,null)
+(-1,class android.widget.ImageView,-203,465,180,180,0,null)
+(-1,class android.widget.ImageView,12,465,180,180,0,null)
+(-1,class android.widget.ImageView,228,465,180,180,0,null)
+(-1,class android.widget.ImageView,444,465,180,180,0,null)
+(-1,class android.widget.ImageView,660,465,180,180,0,null)
+(-1,class android.widget.ImageView,876,465,180,180,0,null)
+(-1,class android.widget.ImageView,1092,465,180,180,0,null)
+(-1,class android.widget.ImageView,1308,465,180,180,0,null)
+(-1,class android.widget.ImageView,1524,465,180,180,0,null)
+(-1,class android.widget.ImageView,1740,465,180,180,0,null)
+(-1,class android.widget.ImageView,1956,465,180,180,0,null)
+(-1,class android.widget.ImageView,2172,465,180,180,0,null)
+(-1,class android.widget.ImageView,-851,663,180,180,0,null)
+(-1,class android.widget.ImageView,-635,663,180,180,0,null)
+(-1,class android.widget.ImageView,-419,663,180,180,0,null)
+(-1,class android.widget.ImageView,-203,663,180,180,0,null)
+(-1,class android.widget.ImageView,12,663,180,180,0,null)
+(-1,class android.widget.ImageView,228,663,180,180,0,null)
+(-1,class android.widget.ImageView,444,663,180,180,0,null)
+(-1,class android.widget.ImageView,660,663,180,180,0,null)
+(-1,class android.widget.ImageView,876,663,180,180,0,null)
+(-1,class android.widget.ImageView,1092,663,180,180,0,null)
+(-1,class android.widget.ImageView,1308,663,180,180,0,null)
+(-1,class android.widget.ImageView,1524,663,180,180,0,null)
+(-1,class android.widget.ImageView,1740,663,180,180,0,null)
+(-1,class android.widget.ImageView,1956,663,180,180,0,null)
+(-1,class android.widget.ImageView,2172,663,180,180,0,null)
+(-1,class android.widget.ImageView,-851,861,180,180,0,null)
+(-1,class android.widget.ImageView,-635,861,180,180,0,null)
+(-1,class android.widget.ImageView,-419,861,180,180,0,null)
+(-1,class android.widget.ImageView,-203,861,180,180,0,null)
+(-1,class android.widget.ImageView,12,861,180,180,0,null)
+(-1,class android.widget.ImageView,228,861,180,180,0,null)
+(-1,class android.widget.ImageView,444,861,180,180,0,null)
+(-1,class android.widget.ImageView,660,861,180,180,0,null)
+(-1,class android.widget.ImageView,876,861,180,180,0,null)
+(-1,class android.widget.ImageView,1092,861,180,180,0,null)
+(-1,class android.widget.ImageView,1308,861,180,180,0,null)
+(-1,class android.widget.ImageView,1524,861,180,180,0,null)
+(-1,class android.widget.ImageView,1740,861,180,180,0,null)
+(-1,class android.widget.ImageView,1956,861,180,180,0,null)
+(-1,class android.widget.ImageView,2172,861,180,180,0,null)
+(-1,class android.widget.ImageView,-851,1059,180,180,0,null)
+(-1,class android.widget.ImageView,-635,1059,180,180,0,null)
+(-1,class android.widget.ImageView,-419,1059,180,180,0,null)
+(-1,class android.widget.ImageView,-203,1059,180,180,0,null)
+(-1,class android.widget.ImageView,12,1059,180,180,0,null)
+(-1,class android.widget.ImageView,228,1059,180,180,0,null)
+(-1,class android.widget.ImageView,444,1059,180,180,0,null)
+(-1,class android.widget.ImageView,660,1059,180,180,0,null)
+(-1,class android.widget.ImageView,876,1059,180,180,0,null)
+(-1,class android.widget.ImageView,1092,1059,180,180,0,null)
+(-1,class android.widget.ImageView,1308,1059,180,180,0,null)
+(-1,class android.widget.ImageView,1524,1059,180,180,0,null)
+(-1,class android.widget.ImageView,1740,1059,180,180,0,null)
+(-1,class android.widget.ImageView,1956,1059,180,180,0,null)
+(-1,class android.widget.ImageView,2172,1059,180,180,0,null)
+(-1,class android.widget.ImageView,-851,1257,180,180,0,null)
+(-1,class android.widget.ImageView,-635,1257,180,180,0,null)
+(-1,class android.widget.ImageView,-419,1257,180,180,0,null)
+(-1,class android.widget.ImageView,-203,1257,180,180,0,null)
+(-1,class android.widget.ImageView,12,1257,180,180,0,null)
+(-1,class android.widget.ImageView,228,1257,180,180,0,null)
+(-1,class android.widget.ImageView,444,1257,180,180,0,null)
+(-1,class android.widget.ImageView,660,1257,180,180,0,null)
+(-1,class android.widget.ImageView,876,1257,180,180,0,null)
+(-1,class android.widget.ImageView,1092,1257,180,180,0,null)
+(-1,class android.widget.ImageView,1308,1257,180,180,0,null)
+(-1,class android.widget.ImageView,1524,1257,180,180,0,null)
+(-1,class android.widget.ImageView,1740,1257,180,180,0,null)
+(-1,class android.widget.ImageView,1956,1257,180,180,0,null)
+(-1,class android.widget.ImageView,2172,1257,180,180,0,null)
+(-1,class android.widget.ImageView,-851,1455,180,180,0,null)
+(-1,class android.widget.ImageView,-635,1455,180,180,0,null)
+(-1,class android.widget.ImageView,-419,1455,180,180,0,null)
+(-1,class android.widget.ImageView,-203,1455,180,180,0,null)
+(-1,class android.widget.ImageView,12,1455,180,180,0,null)
+(-1,class android.widget.ImageView,228,1455,180,180,0,null)
+(-1,class android.widget.ImageView,444,1455,180,180,0,null)
+(-1,class android.widget.ImageView,660,1455,180,180,0,null)
+(-1,class android.widget.ImageView,876,1455,180,180,0,null)
+(-1,class android.widget.ImageView,1092,1455,180,180,0,null)
+(-1,class android.widget.ImageView,1308,1455,180,180,0,null)
+(-1,class android.widget.ImageView,1524,1455,180,180,0,null)
+(-1,class android.widget.ImageView,1740,1455,180,180,0,null)
+(-1,class android.widget.ImageView,1956,1455,180,180,0,null)
+(-1,class android.widget.ImageView,2172,1455,180,180,0,null)
+(-1,class android.widget.ImageView,-851,1653,180,180,0,null)
+(-1,class android.widget.ImageView,-635,1653,180,180,0,null)
+(-1,class android.widget.ImageView,-419,1653,180,180,0,null)
+(-1,class android.widget.ImageView,-203,1653,180,180,0,null)
+(-1,class android.widget.ImageView,12,1653,180,180,0,null)
+(-1,class android.widget.ImageView,228,1653,180,180,0,null)
+(-1,class android.widget.ImageView,444,1653,180,180,0,null)
+(-1,class android.widget.ImageView,660,1653,180,180,0,null)
+(-1,class android.widget.ImageView,876,1653,180,180,0,null)
+(-1,class android.widget.ImageView,1092,1653,180,180,0,null)
+(-1,class android.widget.ImageView,1308,1653,180,180,0,null)
+(-1,class android.widget.ImageView,1524,1653,180,180,0,null)
+(-1,class android.widget.ImageView,1740,1653,180,180,0,null)
+(-1,class android.widget.ImageView,1956,1653,180,180,0,null)
+(-1,class android.widget.ImageView,2172,1653,180,180,0,null)
+(-1,class android.widget.ImageView,-851,1851,180,180,0,null)
+(-1,class android.widget.ImageView,-635,1851,180,180,0,null)
+(-1,class android.widget.ImageView,-419,1851,180,180,0,null)
+(-1,class android.widget.ImageView,-203,1851,180,180,0,null)
+(-1,class android.widget.ImageView,12,1851,180,180,0,null)
+(-1,class android.widget.ImageView,228,1851,180,180,0,null)
+(-1,class android.widget.ImageView,444,1851,180,180,0,null)
+(-1,class android.widget.ImageView,660,1851,180,180,0,null)
+(-1,class android.widget.ImageView,876,1851,180,180,0,null)
+(-1,class android.widget.ImageView,1092,1851,180,180,0,null)
+(-1,class android.widget.ImageView,1308,1851,180,180,0,null)
+(-1,class android.widget.ImageView,1524,1851,180,180,0,null)
+(-1,class android.widget.ImageView,1740,1851,180,180,0,null)
+(-1,class android.widget.ImageView,1956,1851,180,180,0,null)
+(-1,class android.widget.ImageView,2172,1851,180,180,0,null)
+(-1,class android.widget.ImageView,-851,2049,180,180,0,null)
+(-1,class android.widget.ImageView,-635,2049,180,180,0,null)
+(-1,class android.widget.ImageView,-419,2049,180,180,0,null)
+(-1,class android.widget.ImageView,-203,2049,180,180,0,null)
+(-1,class android.widget.ImageView,12,2049,180,180,0,null)
+(-1,class android.widget.ImageView,228,2049,180,180,0,null)
+(-1,class android.widget.ImageView,444,2049,180,180,0,null)
+(-1,class android.widget.ImageView,660,2049,180,180,0,null)
+(-1,class android.widget.ImageView,876,2049,180,180,0,null)
+(-1,class android.widget.ImageView,1092,2049,180,180,0,null)
+(-1,class android.widget.ImageView,1308,2049,180,180,0,null)
+(-1,class android.widget.ImageView,1524,2049,180,180,0,null)
+(-1,class android.widget.ImageView,1740,2049,180,180,0,null)
+(-1,class android.widget.ImageView,1956,2049,180,180,0,null)
+(-1,class android.widget.ImageView,2172,2049,180,180,0,null)
+(-1,class android.widget.ImageView,-851,2247,180,180,0,null)
+(-1,class android.widget.ImageView,-635,2247,180,180,0,null)
+(-1,class android.widget.ImageView,-419,2247,180,180,0,null)
+(-1,class android.widget.ImageView,-203,2247,180,180,0,null)
+(-1,class android.widget.ImageView,12,2247,180,180,0,null)
+(-1,class android.widget.ImageView,228,2247,180,180,0,null)
+(-1,class android.widget.ImageView,444,2247,180,180,0,null)
+(-1,class android.widget.ImageView,660,2247,180,180,0,null)
+(-1,class android.widget.ImageView,876,2247,180,180,0,null)
+(-1,class android.widget.ImageView,1092,2247,180,180,0,null)
+(-1,class android.widget.ImageView,1308,2247,180,180,0,null)
+(-1,class android.widget.ImageView,1524,2247,180,180,0,null)
+(-1,class android.widget.ImageView,1740,2247,180,180,0,null)
+(-1,class android.widget.ImageView,1956,2247,180,180,0,null)
+(-1,class android.widget.ImageView,2172,2247,180,180,0,null)
+(-1,class android.widget.ImageView,-851,2445,180,180,0,null)
+(-1,class android.widget.ImageView,-635,2445,180,180,0,null)
+(-1,class android.widget.ImageView,-419,2445,180,180,0,null)
+(-1,class android.widget.ImageView,-203,2445,180,180,0,null)
+(-1,class android.widget.ImageView,12,2445,180,180,0,null)
+(-1,class android.widget.ImageView,228,2445,180,180,0,null)
+(-1,class android.widget.ImageView,444,2445,180,180,0,null)
+(-1,class android.widget.ImageView,660,2445,180,180,0,null)
+(-1,class android.widget.ImageView,876,2445,180,180,0,null)
+(-1,class android.widget.ImageView,1092,2445,180,180,0,null)
+(-1,class android.widget.ImageView,1308,2445,180,180,0,null)
+(-1,class android.widget.ImageView,1524,2445,180,180,0,null)
+(-1,class android.widget.ImageView,1740,2445,180,180,0,null)
+(-1,class android.widget.ImageView,1956,2445,180,180,0,null)
+(-1,class android.widget.ImageView,2172,2445,180,180,0,null)
+(-1,class android.widget.ImageView,-851,2643,180,180,0,null)
+(-1,class android.widget.ImageView,-635,2643,180,180,0,null)
+(-1,class android.widget.ImageView,-419,2643,180,180,0,null)
+(-1,class android.widget.ImageView,-203,2643,180,180,0,null)
+(-1,class android.widget.ImageView,12,2643,180,180,0,null)
+(-1,class android.widget.ImageView,228,2643,180,180,0,null)
+(-1,class android.widget.ImageView,444,2643,180,180,0,null)
+(-1,class android.widget.ImageView,660,2643,180,180,0,null)
+(-1,class android.widget.ImageView,876,2643,180,180,0,null)
+(-1,class android.widget.ImageView,1092,2643,180,180,0,null)
+(-1,class android.widget.ImageView,1308,2643,180,180,0,null)
+(-1,class android.widget.ImageView,1524,2643,180,180,0,null)
+(-1,class android.widget.ImageView,1740,2643,180,180,0,null)
+(-1,class android.widget.ImageView,1956,2643,180,180,0,null)
+(-1,class android.widget.ImageView,2172,2643,180,180,0,null)
+(-1,class android.widget.ImageView,-851,2841,180,180,0,null)
+(-1,class android.widget.ImageView,-635,2841,180,180,0,null)
+(-1,class android.widget.ImageView,-419,2841,180,180,0,null)
+(-1,class android.widget.ImageView,-203,2841,180,180,0,null)
+(-1,class android.widget.ImageView,12,2841,180,180,0,null)
+(-1,class android.widget.ImageView,228,2841,180,180,0,null)
+(-1,class android.widget.ImageView,444,2841,180,180,0,null)
+(-1,class android.widget.ImageView,660,2841,180,180,0,null)
+(-1,class android.widget.ImageView,876,2841,180,180,0,null)
+(-1,class android.widget.ImageView,1092,2841,180,180,0,null)
+(-1,class android.widget.ImageView,1308,2841,180,180,0,null)
+(-1,class android.widget.ImageView,1524,2841,180,180,0,null)
+(-1,class android.widget.ImageView,1740,2841,180,180,0,null)
+(-1,class android.widget.ImageView,1956,2841,180,180,0,null)
+(-1,class android.widget.ImageView,2172,2841,180,180,0,null)
+(-1,class android.widget.ImageView,-851,3039,180,180,0,null)
+(-1,class android.widget.ImageView,-635,3039,180,180,0,null)
+(-1,class android.widget.ImageView,-419,3039,180,180,0,null)
+(-1,class android.widget.ImageView,-203,3039,180,180,0,null)
+(-1,class android.widget.ImageView,12,3039,180,180,0,null)
+(-1,class android.widget.ImageView,228,3039,180,180,0,null)
+(-1,class android.widget.ImageView,444,3039,180,180,0,null)
+(-1,class android.widget.ImageView,660,3039,180,180,0,null)
+(-1,class android.widget.ImageView,876,3039,180,180,0,null)
+(-1,class android.widget.ImageView,1092,3039,180,180,0,null)
+(-1,class android.widget.ImageView,1308,3039,180,180,0,null)
+(-1,class android.widget.ImageView,1524,3039,180,180,0,null)
+(-1,class android.widget.ImageView,1740,3039,180,180,0,null)
+(-1,class android.widget.ImageView,1956,3039,180,180,0,null)
+(-1,class android.widget.ImageView,2172,3039,180,180,0,null)
+(2131165277,class android.widget.Button,624,1561,426,144,0,OK I've done it.)
+V_SCROLL_END,25242930
+H_SCROLL_END,25262949
+V_SCROLL_START,25264232
+V_SCROLL,0,1228,0,1260
+V_SCROLL,0,1198,0,1228
+V_SCROLL,0,1169,0,1198
+V_SCROLL,0,1143,0,1169
+V_SCROLL,0,1119,0,1143
+V_SCROLL,0,1096,0,1119
+V_SCROLL,0,1075,0,1096
+V_SCROLL,0,1058,0,1075
+V_SCROLL,0,1042,0,1058
+V_SCROLL,0,1026,0,1042
+V_SCROLL,0,1011,0,1026
+V_SCROLL,0,998,0,1011
+V_SCROLL,0,986,0,998
+V_SCROLL,0,976,0,986
+V_SCROLL,0,968,0,976
+V_SCROLL,0,960,0,968
+V_SCROLL,0,951,0,960
+V_SCROLL,0,942,0,951
+V_SCROLL,0,932,0,942
+V_SCROLL,0,923,0,932
+V_SCROLL,0,915,0,923
+V_SCROLL,0,905,0,915
+V_SCROLL,0,896,0,905
+V_SCROLL,0,885,0,896
+V_SCROLL,0,875,0,885
+V_SCROLL,0,866,0,875
+V_SCROLL,0,857,0,866
+V_SCROLL,0,848,0,857
+V_SCROLL,0,841,0,848
+V_SCROLL,0,835,0,841
+V_SCROLL,0,829,0,835
+V_SCROLL,0,825,0,829
+V_SCROLL,0,822,0,825
+V_SCROLL,0,820,0,822
+V_SCROLL_END,25264845
+V_SCROLL_START,25266203
+V_SCROLL,0,793,0,820
+V_SCROLL,0,758,0,793
+V_SCROLL,0,723,0,758
+V_SCROLL,0,680,0,723
+V_SCROLL,0,634,0,680
+V_SCROLL,0,590,0,634
+V_SCROLL,0,549,0,590
+V_SCROLL,0,513,0,549
+V_SCROLL,0,481,0,513
+V_SCROLL,0,456,0,481
+V_SCROLL,0,433,0,456
+V_SCROLL,0,406,0,433
+V_SCROLL,0,378,0,406
+V_SCROLL,0,352,0,378
+V_SCROLL,0,334,0,352
+V_SCROLL,0,321,0,334
+V_SCROLL,0,312,0,321
+V_SCROLL,0,305,0,312
+V_SCROLL,0,299,0,305
+V_SCROLL,0,293,0,299
+V_SCROLL,0,288,0,293
+V_SCROLL,0,285,0,288
+V_SCROLL,0,282,0,285
+V_SCROLL,0,282,0,285
+V_SCROLL,0,280,0,282
+V_SCROLL,0,280,0,282
+V_SCROLL,0,279,0,280
+V_SCROLL,0,279,0,280
+V_SCROLL_END,25266608
+V_SCROLL_START,25267909
+V_SCROLL,0,371,0,279
+V_SCROLL,0,472,0,371
+V_SCROLL,0,564,0,472
+V_SCROLL,0,620,0,564
+V_SCROLL,0,620,0,564
+V_SCROLL,0,725,0,620
+V_SCROLL,0,725,0,620
+V_SCROLL,0,823,0,725
+V_SCROLL,0,823,0,725
+V_SCROLL,0,925,0,823
+V_SCROLL,0,925,0,823
+V_SCROLL,0,1019,0,925
+V_SCROLL,0,1019,0,925
+V_SCROLL,0,1115,0,1019
+V_SCROLL,0,1115,0,1019
+V_SCROLL,0,1207,0,1115
+V_SCROLL,0,1207,0,1115
+V_SCROLL,0,1291,0,1207
+V_SCROLL,0,1291,0,1207
+V_SCROLL,0,1375,0,1291
+V_SCROLL,0,1375,0,1291
+V_SCROLL,0,1451,0,1375
+V_SCROLL,0,1451,0,1375
+V_SCROLL,0,1527,0,1451
+V_SCROLL,0,1527,0,1451
+V_SCROLL,0,1595,0,1527
+V_SCROLL,0,1595,0,1527
+V_SCROLL,0,1668,0,1595
+V_SCROLL,0,1668,0,1595
+V_SCROLL,0,1729,0,1668
+V_SCROLL,0,1729,0,1668
+V_SCROLL,0,1786,0,1729
+V_SCROLL,0,1786,0,1729
+V_SCROLL,0,1844,0,1786
+V_SCROLL,0,1844,0,1786
+V_SCROLL,0,1895,0,1844
+V_SCROLL,0,1895,0,1844
+V_SCROLL,0,1947,0,1895
+V_SCROLL,0,1947,0,1895
+V_SCROLL,0,1992,0,1947
+V_SCROLL,0,1992,0,1947
+V_SCROLL,0,2038,0,1992
+V_SCROLL,0,2038,0,1992
+V_SCROLL,0,2079,0,2038
+V_SCROLL,0,2079,0,2038
+V_SCROLL,0,2119,0,2079
+V_SCROLL,0,2119,0,2079
+V_SCROLL,0,2158,0,2119
+V_SCROLL,0,2158,0,2119
+V_SCROLL,0,2192,0,2158
+V_SCROLL,0,2192,0,2158
+V_SCROLL,0,2226,0,2192
+V_SCROLL,0,2226,0,2192
+V_SCROLL,0,2256,0,2226
+V_SCROLL,0,2256,0,2226
+V_SCROLL,0,2287,0,2256
+V_SCROLL,0,2287,0,2256
+V_SCROLL,0,2314,0,2287
+V_SCROLL,0,2314,0,2287
+V_SCROLL,0,2340,0,2314
+V_SCROLL,0,2340,0,2314
+V_SCROLL,0,2366,0,2340
+V_SCROLL,0,2366,0,2340
+V_SCROLL,0,2388,0,2366
+V_SCROLL,0,2388,0,2366
+V_SCROLL,0,2410,0,2388
+V_SCROLL,0,2410,0,2388
+V_SCROLL,0,2430,0,2410
+V_SCROLL,0,2430,0,2410
+V_SCROLL,0,2450,0,2430
+V_SCROLL,0,2450,0,2430
+V_SCROLL,0,2467,0,2450
+V_SCROLL,0,2467,0,2450
+V_SCROLL,0,2484,0,2467
+V_SCROLL,0,2484,0,2467
+V_SCROLL,0,2500,0,2484
+V_SCROLL,0,2500,0,2484
+V_SCROLL,0,2515,0,2500
+V_SCROLL,0,2515,0,2500
+V_SCROLL,0,2529,0,2515
+V_SCROLL,0,2529,0,2515
+V_SCROLL,0,2541,0,2529
+V_SCROLL,0,2541,0,2529
+V_SCROLL,0,2553,0,2541
+V_SCROLL,0,2553,0,2541
+V_SCROLL,0,2563,0,2553
+V_SCROLL,0,2563,0,2553
+V_SCROLL,0,2573,0,2563
+V_SCROLL,0,2573,0,2563
+V_SCROLL,0,2583,0,2573
+V_SCROLL,0,2583,0,2573
+V_SCROLL,0,2591,0,2583
+V_SCROLL,0,2591,0,2583
+V_SCROLL,0,2598,0,2591
+V_SCROLL,0,2598,0,2591
+V_SCROLL,0,2605,0,2598
+V_SCROLL,0,2605,0,2598
+V_SCROLL,0,2611,0,2605
+V_SCROLL,0,2611,0,2605
+V_SCROLL,0,2617,0,2611
+V_SCROLL,0,2617,0,2611
+V_SCROLL,0,2621,0,2617
+V_SCROLL,0,2621,0,2617
+V_SCROLL,0,2626,0,2621
+V_SCROLL,0,2626,0,2621
+V_SCROLL,0,2629,0,2626
+V_SCROLL,0,2629,0,2626
+V_SCROLL,0,2632,0,2629
+V_SCROLL,0,2632,0,2629
+V_SCROLL,0,2634,0,2632
+V_SCROLL,0,2634,0,2632
+V_SCROLL,0,2636,0,2634
+V_SCROLL,0,2636,0,2634
+V_SCROLL,0,2637,0,2636
+V_SCROLL,0,2637,0,2636
+V_SCROLL,0,2638,0,2637
+V_SCROLL,0,2638,0,2637
+V_SCROLL_END,25268024
+V_SCROLL_START,25269367
+V_SCROLL,0,2663,0,2638
+V_SCROLL,0,2688,0,2663
+V_SCROLL,0,2713,0,2688
+V_SCROLL,0,2738,0,2713
+V_SCROLL,0,2770,0,2738
+V_SCROLL,0,2817,0,2770
+V_SCROLL,0,2857,0,2817
+V_SCROLL,0,2886,0,2857
+V_SCROLL,0,2886,0,2857
+V_SCROLL,0,2932,0,2886
+V_SCROLL,0,2932,0,2886
+V_SCROLL,0,2979,0,2932
+V_SCROLL,0,2979,0,2932
+V_SCROLL,0,3020,0,2979
+V_SCROLL,0,3020,0,2979
+V_SCROLL,0,3046,0,3020
+V_SCROLL,0,3046,0,3020
+V_SCROLL,0,3045,0,3046
+V_SCROLL,0,3045,0,3046
+V_SCROLL,0,3043,0,3045
+V_SCROLL,0,3043,0,3045
+V_SCROLL,0,3040,0,3043
+V_SCROLL,0,3040,0,3043
+V_SCROLL,0,3028,0,3040
+V_SCROLL,0,3028,0,3040
+V_SCROLL_END,25269533
+V_SCROLL_START,25272392
+V_SCROLL,0,2979,0,3028
+V_SCROLL,0,2927,0,2979
+V_SCROLL,0,2882,0,2927
+V_SCROLL,0,2845,0,2882
+V_SCROLL,0,2814,0,2845
+V_SCROLL,0,2786,0,2814
+V_SCROLL,0,2761,0,2786
+V_SCROLL,0,2741,0,2761
+V_SCROLL,0,2723,0,2741
+V_SCROLL,0,2705,0,2723
+V_SCROLL,0,2684,0,2705
+V_SCROLL,0,2662,0,2684
+V_SCROLL,0,2641,0,2662
+V_SCROLL,0,2622,0,2641
+V_SCROLL,0,2605,0,2622
+V_SCROLL,0,2589,0,2605
+V_SCROLL,0,2572,0,2589
+V_SCROLL,0,2553,0,2572
+V_SCROLL,0,2535,0,2553
+V_SCROLL,0,2524,0,2535
+V_SCROLL,0,2524,0,2535
+V_SCROLL,0,2507,0,2524
+V_SCROLL,0,2507,0,2524
+V_SCROLL,0,2491,0,2507
+V_SCROLL,0,2491,0,2507
+V_SCROLL,0,2479,0,2491
+V_SCROLL,0,2479,0,2491
+V_SCROLL,0,2468,0,2479
+V_SCROLL,0,2468,0,2479
+V_SCROLL,0,2459,0,2468
+V_SCROLL,0,2459,0,2468
+V_SCROLL,0,2452,0,2459
+V_SCROLL,0,2452,0,2459
+V_SCROLL,0,2446,0,2452
+V_SCROLL,0,2446,0,2452
+V_SCROLL,0,2442,0,2446
+V_SCROLL,0,2442,0,2446
+V_SCROLL,0,2438,0,2442
+V_SCROLL,0,2438,0,2442
+V_SCROLL,0,2435,0,2438
+V_SCROLL,0,2435,0,2438
+V_SCROLL,0,2433,0,2435
+V_SCROLL,0,2433,0,2435
+V_SCROLL,0,2431,0,2433
+V_SCROLL,0,2431,0,2433
+V_SCROLL,0,2430,0,2431
+V_SCROLL,0,2430,0,2431
+V_SCROLL,0,2429,0,2430
+V_SCROLL,0,2429,0,2430
+V_SCROLL_END,25272764
+V_SCROLL_START,25273121
+V_SCROLL,0,2398,0,2429
+V_SCROLL,0,2367,0,2398
+V_SCROLL,0,2342,0,2367
+V_SCROLL,0,2323,0,2342
+V_SCROLL,0,2304,0,2323
+V_SCROLL,0,2285,0,2304
+V_SCROLL,0,2270,0,2285
+V_SCROLL,0,2259,0,2270
+V_SCROLL,0,2250,0,2259
+V_SCROLL,0,2242,0,2250
+V_SCROLL,0,2234,0,2242
+V_SCROLL,0,2226,0,2234
+V_SCROLL,0,2217,0,2226
+V_SCROLL,0,2209,0,2217
+V_SCROLL,0,2202,0,2209
+V_SCROLL,0,2195,0,2202
+V_SCROLL,0,2183,0,2195
+V_SCROLL,0,2178,0,2183
+V_SCROLL,0,2178,0,2183
+V_SCROLL,0,2171,0,2178
+V_SCROLL,0,2171,0,2178
+V_SCROLL,0,2167,0,2171
+V_SCROLL,0,2167,0,2171
+V_SCROLL,0,2163,0,2167
+V_SCROLL,0,2163,0,2167
+V_SCROLL,0,2161,0,2163
+V_SCROLL,0,2161,0,2163
+V_SCROLL,0,2160,0,2161
+V_SCROLL,0,2160,0,2161
+V_SCROLL,0,2159,0,2160
+V_SCROLL,0,2159,0,2160
+V_SCROLL,0,2158,0,2159
+V_SCROLL,0,2158,0,2159
+V_SCROLL_END,25273460
+V_SCROLL_START,25274513
+V_SCROLL,0,2104,0,2158
+V_SCROLL,0,2031,0,2104
+V_SCROLL,0,1948,0,2031
+V_SCROLL,0,1868,0,1948
+V_SCROLL,0,1785,0,1868
+V_SCROLL,0,1697,0,1785
+V_SCROLL,0,1660,0,1697
+V_SCROLL,0,1655,0,1660
+V_SCROLL,0,1655,0,1660
+V_SCROLL,0,1569,0,1655
+V_SCROLL,0,1569,0,1655
+V_SCROLL,0,1478,0,1569
+V_SCROLL,0,1478,0,1569
+V_SCROLL,0,1390,0,1478
+V_SCROLL,0,1390,0,1478
+V_SCROLL,0,1309,0,1390
+V_SCROLL,0,1309,0,1390
+V_SCROLL,0,1226,0,1309
+V_SCROLL,0,1226,0,1309
+V_SCROLL,0,1151,0,1226
+V_SCROLL,0,1151,0,1226
+V_SCROLL,0,1076,0,1151
+V_SCROLL,0,1076,0,1151
+V_SCROLL,0,1004,0,1076
+V_SCROLL,0,1004,0,1076
+V_SCROLL,0,940,0,1004
+V_SCROLL,0,940,0,1004
+V_SCROLL,0,876,0,940
+V_SCROLL,0,876,0,940
+V_SCROLL,0,820,0,876
+V_SCROLL,0,820,0,876
+V_SCROLL,0,763,0,820
+V_SCROLL,0,763,0,820
+V_SCROLL,0,714,0,763
+V_SCROLL,0,714,0,763
+V_SCROLL,0,664,0,714
+V_SCROLL,0,664,0,714
+V_SCROLL,0,617,0,664
+V_SCROLL,0,617,0,664
+V_SCROLL,0,576,0,617
+V_SCROLL,0,576,0,617
+V_SCROLL,0,535,0,576
+V_SCROLL,0,535,0,576
+V_SCROLL,0,499,0,535
+V_SCROLL,0,499,0,535
+V_SCROLL,0,463,0,499
+V_SCROLL,0,463,0,499
+V_SCROLL,0,430,0,463
+V_SCROLL,0,430,0,463
+V_SCROLL,0,400,0,430
+V_SCROLL,0,400,0,430
+V_SCROLL,0,371,0,400
+V_SCROLL,0,371,0,400
+V_SCROLL,0,345,0,371
+V_SCROLL,0,345,0,371
+V_SCROLL,0,319,0,345
+V_SCROLL,0,319,0,345
+V_SCROLL,0,296,0,319
+V_SCROLL,0,296,0,319
+V_SCROLL,0,273,0,296
+V_SCROLL,0,273,0,296
+V_SCROLL,0,254,0,273
+V_SCROLL,0,254,0,273
+V_SCROLL,0,234,0,254
+V_SCROLL,0,234,0,254
+V_SCROLL,0,216,0,234
+V_SCROLL,0,216,0,234
+V_SCROLL,0,200,0,216
+V_SCROLL,0,200,0,216
+V_SCROLL,0,184,0,200
+V_SCROLL,0,184,0,200
+V_SCROLL,0,170,0,184
+V_SCROLL,0,170,0,184
+V_SCROLL,0,156,0,170
+V_SCROLL,0,156,0,170
+V_SCROLL,0,144,0,156
+V_SCROLL,0,144,0,156
+V_SCROLL,0,133,0,144
+V_SCROLL,0,133,0,144
+V_SCROLL,0,122,0,133
+V_SCROLL,0,122,0,133
+V_SCROLL,0,113,0,122
+V_SCROLL,0,113,0,122
+V_SCROLL,0,104,0,113
+V_SCROLL,0,104,0,113
+V_SCROLL,0,96,0,104
+V_SCROLL,0,96,0,104
+V_SCROLL,0,89,0,96
+V_SCROLL,0,89,0,96
+V_SCROLL,0,82,0,89
+V_SCROLL,0,82,0,89
+V_SCROLL,0,77,0,82
+V_SCROLL,0,77,0,82
+V_SCROLL,0,72,0,77
+V_SCROLL,0,72,0,77
+V_SCROLL,0,67,0,72
+V_SCROLL,0,67,0,72
+V_SCROLL,0,64,0,67
+V_SCROLL,0,64,0,67
+V_SCROLL,0,60,0,64
+V_SCROLL,0,60,0,64
+V_SCROLL,0,58,0,60
+V_SCROLL,0,58,0,60
+V_SCROLL,0,56,0,58
+V_SCROLL,0,56,0,58
+V_SCROLL,0,54,0,56
+V_SCROLL,0,54,0,56
+V_SCROLL,0,53,0,54
+V_SCROLL,0,53,0,54
+V_SCROLL_END,25274661
+V_SCROLL_START,25276063
+V_SCROLL,0,24,0,53
+V_SCROLL,0,0,0,24
+V_SCROLL_END,25276377
+H_SCROLL_START,25278772
+H_SCROLL,961,0,900,0
+H_SCROLL,1042,0,961,0
+H_SCROLL,1134,0,1042,0
+H_SCROLL,1226,0,1134,0
+H_SCROLL,1271,0,1226,0
+H_SCROLL,1277,0,1271,0
+H_SCROLL,1277,0,1271,0
+H_SCROLL,1387,0,1277,0
+H_SCROLL,1387,0,1277,0
+H_SCROLL,1489,0,1387,0
+H_SCROLL,1489,0,1387,0
+H_SCROLL,1596,0,1489,0
+H_SCROLL,1596,0,1489,0
+H_SCROLL,1694,0,1596,0
+H_SCROLL,1694,0,1596,0
+H_SCROLL,1796,0,1694,0
+H_SCROLL,1796,0,1694,0
+H_SCROLL,1894,0,1796,0
+H_SCROLL,1894,0,1796,0
+H_SCROLL,1983,0,1894,0
+H_SCROLL,1983,0,1894,0
+H_SCROLL,2068,0,1983,0
+H_SCROLL,2068,0,1983,0
+H_SCROLL,2159,0,2068,0
+H_SCROLL,2159,0,2068,0
+H_SCROLL,2238,0,2159,0
+H_SCROLL,2238,0,2159,0
+H_SCROLL,2237,0,2238,0
+H_SCROLL,2237,0,2238,0
+H_SCROLL,2235,0,2237,0
+H_SCROLL,2235,0,2237,0
+H_SCROLL,2233,0,2235,0
+H_SCROLL,2233,0,2235,0
+H_SCROLL,2229,0,2233,0
+H_SCROLL,2229,0,2233,0
+H_SCROLL,2226,0,2229,0
+H_SCROLL,2226,0,2229,0
+H_SCROLL,2223,0,2226,0
+H_SCROLL,2223,0,2226,0
+H_SCROLL,2221,0,2223,0
+H_SCROLL,2221,0,2223,0
+H_SCROLL,2220,0,2221,0
+H_SCROLL,2220,0,2221,0
+H_SCROLL_END,25278904
+H_SCROLL_START,25282045
+H_SCROLL,2213,0,2220,0
+H_SCROLL,2181,0,2213,0
+H_SCROLL,2144,0,2181,0
+H_SCROLL,2107,0,2144,0
+H_SCROLL,2069,0,2107,0
+H_SCROLL,2033,0,2069,0
+H_SCROLL,2000,0,2033,0
+H_SCROLL,1969,0,2000,0
+H_SCROLL,1944,0,1969,0
+H_SCROLL,1920,0,1944,0
+H_SCROLL,1901,0,1920,0
+H_SCROLL,1886,0,1901,0
+H_SCROLL,1874,0,1886,0
+H_SCROLL,1865,0,1874,0
+H_SCROLL,1858,0,1865,0
+H_SCROLL,1853,0,1858,0
+H_SCROLL,1848,0,1853,0
+H_SCROLL,1844,0,1848,0
+H_SCROLL,1840,0,1844,0
+H_SCROLL,1835,0,1840,0
+H_SCROLL,1829,0,1835,0
+H_SCROLL,1823,0,1829,0
+H_SCROLL,1821,0,1823,0
+H_SCROLL,1821,0,1823,0
+H_SCROLL,1816,0,1821,0
+H_SCROLL,1816,0,1821,0
+H_SCROLL,1813,0,1816,0
+H_SCROLL,1813,0,1816,0
+H_SCROLL,1810,0,1813,0
+H_SCROLL,1810,0,1813,0
+H_SCROLL,1809,0,1810,0
+H_SCROLL,1809,0,1810,0
+H_SCROLL,1808,0,1809,0
+H_SCROLL,1808,0,1809,0
+H_SCROLL_END,25282475
+H_SCROLL_START,25282791
+H_SCROLL,1775,0,1808,0
+H_SCROLL,1742,0,1775,0
+H_SCROLL,1714,0,1742,0
+H_SCROLL,1687,0,1714,0
+H_SCROLL,1666,0,1687,0
+H_SCROLL,1649,0,1666,0
+H_SCROLL,1634,0,1649,0
+H_SCROLL,1618,0,1634,0
+H_SCROLL,1603,0,1618,0
+H_SCROLL,1590,0,1603,0
+H_SCROLL,1579,0,1590,0
+H_SCROLL,1569,0,1579,0
+H_SCROLL,1561,0,1569,0
+H_SCROLL,1554,0,1561,0
+H_SCROLL,1548,0,1554,0
+H_SCROLL,1544,0,1548,0
+H_SCROLL,1538,0,1544,0
+H_SCROLL,1531,0,1538,0
+H_SCROLL,1523,0,1531,0
+H_SCROLL,1515,0,1523,0
+H_SCROLL,1509,0,1515,0
+H_SCROLL,1503,0,1509,0
+H_SCROLL,1498,0,1503,0
+H_SCROLL,1491,0,1498,0
+H_SCROLL,1479,0,1491,0
+H_SCROLL,1473,0,1479,0
+H_SCROLL,1472,0,1473,0
+H_SCROLL,1472,0,1473,0
+H_SCROLL,1462,0,1472,0
+H_SCROLL,1462,0,1472,0
+H_SCROLL,1455,0,1462,0
+H_SCROLL,1455,0,1462,0
+H_SCROLL,1449,0,1455,0
+H_SCROLL,1449,0,1455,0
+H_SCROLL,1445,0,1449,0
+H_SCROLL,1445,0,1449,0
+H_SCROLL,1442,0,1445,0
+H_SCROLL,1442,0,1445,0
+H_SCROLL,1439,0,1442,0
+H_SCROLL,1439,0,1442,0
+H_SCROLL,1438,0,1439,0
+H_SCROLL,1438,0,1439,0
+H_SCROLL,1437,0,1438,0
+H_SCROLL,1437,0,1438,0
+H_SCROLL,1436,0,1437,0
+H_SCROLL,1436,0,1437,0
+H_SCROLL_END,25283279
+V_SCROLL_START,25284258
+V_SCROLL,0,28,0,0
+V_SCROLL,0,54,0,28
+V_SCROLL,0,78,0,54
+V_SCROLL,0,100,0,78
+V_SCROLL,0,128,0,100
+V_SCROLL,0,163,0,128
+V_SCROLL,0,209,0,163
+V_SCROLL,0,254,0,209
+V_SCROLL,0,290,0,254
+V_SCROLL,0,316,0,290
+V_SCROLL,0,339,0,316
+V_SCROLL,0,361,0,339
+V_SCROLL,0,368,0,361
+V_SCROLL,0,369,0,368
+V_SCROLL,0,369,0,368
+V_SCROLL,0,380,0,369
+V_SCROLL,0,380,0,369
+V_SCROLL,0,390,0,380
+V_SCROLL,0,390,0,380
+V_SCROLL,0,398,0,390
+V_SCROLL,0,398,0,390
+V_SCROLL,0,403,0,398
+V_SCROLL,0,403,0,398
+V_SCROLL,0,407,0,403
+V_SCROLL,0,407,0,403
+V_SCROLL,0,410,0,407
+V_SCROLL,0,410,0,407
+V_SCROLL,0,413,0,410
+V_SCROLL,0,413,0,410
+V_SCROLL,0,415,0,413
+V_SCROLL,0,415,0,413
+V_SCROLL,0,416,0,415
+V_SCROLL,0,416,0,415
+V_SCROLL,0,417,0,416
+V_SCROLL,0,417,0,416
+V_SCROLL_END,25284522
+V_SCROLL_START,25285128
+V_SCROLL,0,438,0,417
+V_SCROLL,0,464,0,438
+V_SCROLL,0,495,0,464
+V_SCROLL,0,533,0,495
+V_SCROLL,0,574,0,533
+V_SCROLL,0,611,0,574
+V_SCROLL,0,637,0,611
+V_SCROLL,0,654,0,637
+V_SCROLL,0,666,0,654
+V_SCROLL,0,677,0,666
+V_SCROLL,0,691,0,677
+V_SCROLL,0,714,0,691
+V_SCROLL,0,722,0,714
+V_SCROLL,0,722,0,714
+V_SCROLL,0,733,0,722
+V_SCROLL,0,733,0,722
+V_SCROLL,0,742,0,733
+V_SCROLL,0,742,0,733
+V_SCROLL,0,749,0,742
+V_SCROLL,0,749,0,742
+V_SCROLL,0,755,0,749
+V_SCROLL,0,755,0,749
+V_SCROLL,0,759,0,755
+V_SCROLL,0,759,0,755
+V_SCROLL,0,762,0,759
+V_SCROLL,0,762,0,759
+V_SCROLL,0,764,0,762
+V_SCROLL,0,764,0,762
+V_SCROLL,0,766,0,764
+V_SCROLL,0,766,0,764
+V_SCROLL,0,767,0,766
+V_SCROLL,0,767,0,766
+V_SCROLL,0,768,0,767
+V_SCROLL,0,768,0,767
+V_SCROLL_END,25285409
+V_SCROLL_START,25286404
+V_SCROLL,0,787,0,768
+V_SCROLL,0,812,0,787
+V_SCROLL,0,847,0,812
+V_SCROLL,0,886,0,847
+V_SCROLL,0,917,0,886
+V_SCROLL,0,938,0,917
+V_SCROLL,0,954,0,938
+V_SCROLL,0,966,0,954
+V_SCROLL,0,979,0,966
+V_SCROLL,0,995,0,979
+V_SCROLL,0,1016,0,995
+V_SCROLL,0,1034,0,1016
+V_SCROLL,0,1046,0,1034
+V_SCROLL,0,1054,0,1046
+V_SCROLL,0,1061,0,1054
+V_SCROLL,0,1064,0,1061
+V_SCROLL_END,25286743
+H_SCROLL_START,25287274
+H_SCROLL,1472,0,1436,0
+H_SCROLL,1507,0,1472,0
+H_SCROLL,1545,0,1507,0
+H_SCROLL,1587,0,1545,0
+H_SCROLL,1629,0,1587,0
+H_SCROLL,1676,0,1629,0
+H_SCROLL,1717,0,1676,0
+H_SCROLL,1759,0,1717,0
+H_SCROLL,1796,0,1759,0
+H_SCROLL,1839,0,1796,0
+H_SCROLL,1882,0,1839,0
+H_SCROLL,1918,0,1882,0
+H_SCROLL,1947,0,1918,0
+H_SCROLL,1970,0,1947,0
+H_SCROLL,1988,0,1970,0
+H_SCROLL,2002,0,1988,0
+H_SCROLL,2007,0,2002,0
+H_SCROLL,2007,0,2002,0
+H_SCROLL,2015,0,2007,0
+H_SCROLL,2015,0,2007,0
+H_SCROLL,2021,0,2015,0
+H_SCROLL,2021,0,2015,0
+H_SCROLL,2025,0,2021,0
+H_SCROLL,2025,0,2021,0
+H_SCROLL,2028,0,2025,0
+H_SCROLL,2028,0,2025,0
+H_SCROLL,2030,0,2028,0
+H_SCROLL,2030,0,2028,0
+H_SCROLL,2031,0,2030,0
+H_SCROLL,2031,0,2030,0
+H_SCROLL,2032,0,2031,0
+H_SCROLL,2032,0,2031,0
+H_SCROLL,2033,0,2032,0
+H_SCROLL,2033,0,2032,0
+H_SCROLL_END,25287597
+H_SCROLL_START,25289279
+H_SCROLL,2064,0,2033,0
+H_SCROLL,2101,0,2064,0
+H_SCROLL,2131,0,2101,0
+H_SCROLL,2154,0,2131,0
+H_SCROLL,2178,0,2154,0
+H_SCROLL,2200,0,2178,0
+H_SCROLL,2217,0,2200,0
+H_SCROLL,2220,0,2217,0
+H_SCROLL_END,25289784
+V_SCROLL_START,25291724
+V_SCROLL,0,1094,0,1064
+V_SCROLL,0,1122,0,1094
+V_SCROLL,0,1152,0,1122
+V_SCROLL,0,1187,0,1152
+V_SCROLL,0,1230,0,1187
+V_SCROLL,0,1279,0,1230
+V_SCROLL,0,1332,0,1279
+V_SCROLL,0,1383,0,1332
+V_SCROLL,0,1423,0,1383
+V_SCROLL,0,1454,0,1423
+V_SCROLL,0,1462,0,1454
+V_SCROLL,0,1464,0,1462
+V_SCROLL,0,1464,0,1462
+V_SCROLL,0,1492,0,1464
+V_SCROLL,0,1492,0,1464
+V_SCROLL,0,1521,0,1492
+V_SCROLL,0,1521,0,1492
+V_SCROLL,0,1547,0,1521
+V_SCROLL,0,1547,0,1521
+V_SCROLL,0,1568,0,1547
+V_SCROLL,0,1568,0,1547
+V_SCROLL,0,1589,0,1568
+V_SCROLL,0,1589,0,1568
+V_SCROLL,0,1606,0,1589
+V_SCROLL,0,1606,0,1589
+V_SCROLL,0,1620,0,1606
+V_SCROLL,0,1620,0,1606
+V_SCROLL,0,1634,0,1620
+V_SCROLL,0,1634,0,1620
+V_SCROLL,0,1644,0,1634
+V_SCROLL,0,1644,0,1634
+V_SCROLL,0,1654,0,1644
+V_SCROLL,0,1654,0,1644
+V_SCROLL,0,1662,0,1654
+V_SCROLL,0,1662,0,1654
+V_SCROLL,0,1669,0,1662
+V_SCROLL,0,1669,0,1662
+V_SCROLL,0,1675,0,1669
+V_SCROLL,0,1675,0,1669
+V_SCROLL,0,1680,0,1675
+V_SCROLL,0,1680,0,1675
+V_SCROLL,0,1685,0,1680
+V_SCROLL,0,1685,0,1680
+V_SCROLL,0,1688,0,1685
+V_SCROLL,0,1688,0,1685
+V_SCROLL,0,1691,0,1688
+V_SCROLL,0,1691,0,1688
+V_SCROLL,0,1693,0,1691
+V_SCROLL,0,1693,0,1691
+V_SCROLL,0,1695,0,1693
+V_SCROLL,0,1695,0,1693
+V_SCROLL,0,1697,0,1695
+V_SCROLL,0,1697,0,1695
+V_SCROLL,0,1698,0,1697
+V_SCROLL,0,1698,0,1697
+V_SCROLL_END,25291963
+V_SCROLL_START,25294309
+V_SCROLL,0,1742,0,1698
+V_SCROLL,0,1789,0,1742
+V_SCROLL,0,1839,0,1789
+V_SCROLL,0,1888,0,1839
+V_SCROLL,0,1931,0,1888
+V_SCROLL,0,1968,0,1931
+V_SCROLL,0,2000,0,1968
+V_SCROLL,0,2026,0,2000
+V_SCROLL,0,2039,0,2026
+V_SCROLL,0,2039,0,2026
+V_SCROLL,0,2063,0,2039
+V_SCROLL,0,2063,0,2039
+V_SCROLL,0,2085,0,2063
+V_SCROLL,0,2085,0,2063
+V_SCROLL,0,2104,0,2085
+V_SCROLL,0,2104,0,2085
+V_SCROLL,0,2120,0,2104
+V_SCROLL,0,2120,0,2104
+V_SCROLL,0,2133,0,2120
+V_SCROLL,0,2133,0,2120
+V_SCROLL,0,2145,0,2133
+V_SCROLL,0,2145,0,2133
+V_SCROLL,0,2155,0,2145
+V_SCROLL,0,2155,0,2145
+V_SCROLL,0,2163,0,2155
+V_SCROLL,0,2163,0,2155
+V_SCROLL,0,2171,0,2163
+V_SCROLL,0,2171,0,2163
+V_SCROLL,0,2176,0,2171
+V_SCROLL,0,2176,0,2171
+V_SCROLL,0,2181,0,2176
+V_SCROLL,0,2181,0,2176
+V_SCROLL,0,2185,0,2181
+V_SCROLL,0,2185,0,2181
+V_SCROLL,0,2189,0,2185
+V_SCROLL,0,2189,0,2185
+V_SCROLL,0,2191,0,2189
+V_SCROLL,0,2191,0,2189
+V_SCROLL,0,2193,0,2191
+V_SCROLL,0,2193,0,2191
+V_SCROLL,0,2195,0,2193
+V_SCROLL,0,2195,0,2193
+V_SCROLL,0,2196,0,2195
+V_SCROLL,0,2196,0,2195
+V_SCROLL,0,2197,0,2196
+V_SCROLL,0,2197,0,2196
+V_SCROLL_END,25294490
+V_SCROLL_START,25298044
+V_SCROLL,0,2234,0,2197
+V_SCROLL,0,2272,0,2234
+V_SCROLL,0,2306,0,2272
+V_SCROLL,0,2333,0,2306
+V_SCROLL,0,2360,0,2333
+V_SCROLL,0,2389,0,2360
+V_SCROLL,0,2427,0,2389
+V_SCROLL,0,2437,0,2427
+V_SCROLL,0,2439,0,2437
+V_SCROLL,0,2439,0,2437
+V_SCROLL,0,2469,0,2439
+V_SCROLL,0,2469,0,2439
+V_SCROLL,0,2496,0,2469
+V_SCROLL,0,2496,0,2469
+V_SCROLL,0,2521,0,2496
+V_SCROLL,0,2521,0,2496
+V_SCROLL,0,2544,0,2521
+V_SCROLL,0,2544,0,2521
+V_SCROLL,0,2564,0,2544
+V_SCROLL,0,2564,0,2544
+V_SCROLL,0,2583,0,2564
+V_SCROLL,0,2583,0,2564
+V_SCROLL,0,2597,0,2583
+V_SCROLL,0,2597,0,2583
+V_SCROLL,0,2610,0,2597
+V_SCROLL,0,2610,0,2597
+V_SCROLL,0,2622,0,2610
+V_SCROLL,0,2622,0,2610
+V_SCROLL,0,2631,0,2622
+V_SCROLL,0,2631,0,2622
+V_SCROLL,0,2640,0,2631
+V_SCROLL,0,2640,0,2631
+V_SCROLL,0,2647,0,2640
+V_SCROLL,0,2647,0,2640
+V_SCROLL,0,2653,0,2647
+V_SCROLL,0,2653,0,2647
+V_SCROLL,0,2658,0,2653
+V_SCROLL,0,2658,0,2653
+V_SCROLL,0,2663,0,2658
+V_SCROLL,0,2663,0,2658
+V_SCROLL,0,2666,0,2663
+V_SCROLL,0,2666,0,2663
+V_SCROLL,0,2669,0,2666
+V_SCROLL,0,2669,0,2666
+V_SCROLL,0,2672,0,2669
+V_SCROLL,0,2672,0,2669
+V_SCROLL,0,2674,0,2672
+V_SCROLL,0,2674,0,2672
+V_SCROLL,0,2675,0,2674
+V_SCROLL,0,2675,0,2674
+V_SCROLL,0,2676,0,2675
+V_SCROLL,0,2676,0,2675
+V_SCROLL,0,2677,0,2676
+V_SCROLL,0,2677,0,2676
+V_SCROLL_END,25298226
+V_SCROLL_START,25299892
+V_SCROLL,0,2717,0,2677
+V_SCROLL,0,2759,0,2717
+V_SCROLL,0,2794,0,2759
+V_SCROLL,0,2822,0,2794
+V_SCROLL,0,2831,0,2822
+V_SCROLL,0,2833,0,2831
+V_SCROLL,0,2833,0,2831
+V_SCROLL,0,2857,0,2833
+V_SCROLL,0,2857,0,2833
+V_SCROLL,0,2881,0,2857
+V_SCROLL,0,2881,0,2857
+V_SCROLL,0,2903,0,2881
+V_SCROLL,0,2903,0,2881
+V_SCROLL,0,2921,0,2903
+V_SCROLL,0,2921,0,2903
+V_SCROLL,0,2937,0,2921
+V_SCROLL,0,2937,0,2921
+V_SCROLL,0,2950,0,2937
+V_SCROLL,0,2950,0,2937
+V_SCROLL,0,2962,0,2950
+V_SCROLL,0,2962,0,2950
+V_SCROLL,0,2972,0,2962
+V_SCROLL,0,2972,0,2962
+V_SCROLL,0,2980,0,2972
+V_SCROLL,0,2980,0,2972
+V_SCROLL,0,2987,0,2980
+V_SCROLL,0,2987,0,2980
+V_SCROLL,0,2993,0,2987
+V_SCROLL,0,2993,0,2987
+V_SCROLL,0,2998,0,2993
+V_SCROLL,0,2998,0,2993
+V_SCROLL,0,3002,0,2998
+V_SCROLL,0,3002,0,2998
+V_SCROLL,0,3005,0,3002
+V_SCROLL,0,3005,0,3002
+V_SCROLL,0,3008,0,3005
+V_SCROLL,0,3008,0,3005
+V_SCROLL,0,3010,0,3008
+V_SCROLL,0,3010,0,3008
+V_SCROLL,0,3012,0,3010
+V_SCROLL,0,3012,0,3010
+V_SCROLL,0,3013,0,3012
+V_SCROLL,0,3013,0,3012
+V_SCROLL,0,3014,0,3013
+V_SCROLL,0,3014,0,3013
+V_SCROLL_END,25300015
+V_SCROLL_START,25300944
+V_SCROLL,0,3028,0,3014
+V_SCROLL_END,25301176
+H_SCROLL_START,25302635
+H_SCROLL,2205,0,2220,0
+H_SCROLL,2172,0,2205,0
+H_SCROLL,2127,0,2172,0
+H_SCROLL,2088,0,2127,0
+H_SCROLL,2044,0,2088,0
+H_SCROLL,1995,0,2044,0
+H_SCROLL,1944,0,1995,0
+H_SCROLL,1887,0,1944,0
+H_SCROLL,1833,0,1887,0
+H_SCROLL,1796,0,1833,0
+H_SCROLL,1796,0,1833,0
+H_SCROLL,1739,0,1796,0
+H_SCROLL,1739,0,1796,0
+H_SCROLL,1682,0,1739,0
+H_SCROLL,1682,0,1739,0
+H_SCROLL,1625,0,1682,0
+H_SCROLL,1625,0,1682,0
+H_SCROLL,1570,0,1625,0
+H_SCROLL,1570,0,1625,0
+H_SCROLL,1523,0,1570,0
+H_SCROLL,1523,0,1570,0
+H_SCROLL,1475,0,1523,0
+H_SCROLL,1475,0,1523,0
+H_SCROLL,1434,0,1475,0
+H_SCROLL,1434,0,1475,0
+H_SCROLL,1393,0,1434,0
+H_SCROLL,1393,0,1434,0
+H_SCROLL,1356,0,1393,0
+H_SCROLL,1356,0,1393,0
+H_SCROLL,1324,0,1356,0
+H_SCROLL,1324,0,1356,0
+H_SCROLL,1293,0,1324,0
+H_SCROLL,1293,0,1324,0
+H_SCROLL,1266,0,1293,0
+H_SCROLL,1266,0,1293,0
+H_SCROLL,1239,0,1266,0
+H_SCROLL,1239,0,1266,0
+H_SCROLL,1217,0,1239,0
+H_SCROLL,1217,0,1239,0
+H_SCROLL,1193,0,1217,0
+H_SCROLL,1193,0,1217,0
+H_SCROLL,1174,0,1193,0
+H_SCROLL,1174,0,1193,0
+H_SCROLL,1156,0,1174,0
+H_SCROLL,1156,0,1174,0
+H_SCROLL,1139,0,1156,0
+H_SCROLL,1139,0,1156,0
+H_SCROLL,1124,0,1139,0
+H_SCROLL,1124,0,1139,0
+H_SCROLL,1110,0,1124,0
+H_SCROLL,1110,0,1124,0
+H_SCROLL,1098,0,1110,0
+H_SCROLL,1098,0,1110,0
+H_SCROLL,1086,0,1098,0
+H_SCROLL,1086,0,1098,0
+H_SCROLL,1076,0,1086,0
+H_SCROLL,1076,0,1086,0
+H_SCROLL,1067,0,1076,0
+H_SCROLL,1067,0,1076,0
+H_SCROLL,1058,0,1067,0
+H_SCROLL,1058,0,1067,0
+H_SCROLL,1051,0,1058,0
+H_SCROLL,1051,0,1058,0
+H_SCROLL,1043,0,1051,0
+H_SCROLL,1043,0,1051,0
+H_SCROLL,1037,0,1043,0
+H_SCROLL,1037,0,1043,0
+H_SCROLL,1032,0,1037,0
+H_SCROLL,1032,0,1037,0
+H_SCROLL,1027,0,1032,0
+H_SCROLL,1027,0,1032,0
+H_SCROLL,1024,0,1027,0
+H_SCROLL,1024,0,1027,0
+H_SCROLL,1020,0,1024,0
+H_SCROLL,1020,0,1024,0
+H_SCROLL,1017,0,1020,0
+H_SCROLL,1017,0,1020,0
+H_SCROLL,1015,0,1017,0
+H_SCROLL,1015,0,1017,0
+H_SCROLL,1013,0,1015,0
+H_SCROLL,1013,0,1015,0
+H_SCROLL,1012,0,1013,0
+H_SCROLL,1012,0,1013,0
+H_SCROLL,1011,0,1012,0
+H_SCROLL,1011,0,1012,0
+H_SCROLL_END,25302858
+H_SCROLL_START,25303580
+H_SCROLL,1041,0,1011,0
+H_SCROLL,1073,0,1041,0
+H_SCROLL,1114,0,1073,0
+H_SCROLL,1154,0,1114,0
+H_SCROLL,1193,0,1154,0
+H_SCROLL,1228,0,1193,0
+H_SCROLL,1259,0,1228,0
+H_SCROLL,1279,0,1259,0
+H_SCROLL,1295,0,1279,0
+H_SCROLL,1309,0,1295,0
+H_SCROLL,1320,0,1309,0
+H_SCROLL,1328,0,1320,0
+H_SCROLL,1334,0,1328,0
+H_SCROLL,1338,0,1334,0
+H_SCROLL,1341,0,1338,0
+H_SCROLL,1343,0,1341,0
+H_SCROLL,1345,0,1343,0
+H_SCROLL,1346,0,1345,0
+H_SCROLL_END,25303928
+V_SCROLL_START,25305660
+V_SCROLL,0,2999,0,3028
+V_SCROLL,0,2971,0,2999
+V_SCROLL,0,2940,0,2971
+V_SCROLL,0,2910,0,2940
+V_SCROLL,0,2882,0,2910
+V_SCROLL,0,2853,0,2882
+V_SCROLL,0,2825,0,2853
+V_SCROLL,0,2795,0,2825
+V_SCROLL,0,2765,0,2795
+V_SCROLL,0,2732,0,2765
+V_SCROLL,0,2703,0,2732
+V_SCROLL,0,2678,0,2703
+V_SCROLL,0,2656,0,2678
+V_SCROLL,0,2636,0,2656
+V_SCROLL,0,2619,0,2636
+V_SCROLL,0,2601,0,2619
+V_SCROLL,0,2581,0,2601
+V_SCROLL,0,2562,0,2581
+V_SCROLL,0,2545,0,2562
+V_SCROLL,0,2527,0,2545
+V_SCROLL,0,2511,0,2527
+V_SCROLL,0,2496,0,2511
+V_SCROLL,0,2478,0,2496
+V_SCROLL,0,2461,0,2478
+V_SCROLL,0,2439,0,2461
+V_SCROLL,0,2422,0,2439
+V_SCROLL,0,2409,0,2422
+V_SCROLL,0,2409,0,2422
+V_SCROLL,0,2389,0,2409
+V_SCROLL,0,2389,0,2409
+V_SCROLL,0,2372,0,2389
+V_SCROLL,0,2372,0,2389
+V_SCROLL,0,2356,0,2372
+V_SCROLL,0,2356,0,2372
+V_SCROLL,0,2343,0,2356
+V_SCROLL,0,2343,0,2356
+V_SCROLL,0,2333,0,2343
+V_SCROLL,0,2333,0,2343
+V_SCROLL,0,2324,0,2333
+V_SCROLL,0,2324,0,2333
+V_SCROLL,0,2316,0,2324
+V_SCROLL,0,2316,0,2324
+V_SCROLL,0,2310,0,2316
+V_SCROLL,0,2310,0,2316
+V_SCROLL,0,2305,0,2310
+V_SCROLL,0,2305,0,2310
+V_SCROLL,0,2301,0,2305
+V_SCROLL,0,2301,0,2305
+V_SCROLL,0,2298,0,2301
+V_SCROLL,0,2298,0,2301
+V_SCROLL,0,2295,0,2298
+V_SCROLL,0,2295,0,2298
+V_SCROLL,0,2293,0,2295
+V_SCROLL,0,2293,0,2295
+V_SCROLL,0,2292,0,2293
+V_SCROLL,0,2292,0,2293
+V_SCROLL,0,2291,0,2292
+V_SCROLL,0,2291,0,2292
+V_SCROLL,0,2290,0,2291
+V_SCROLL,0,2290,0,2291
+V_SCROLL_END,25306157
+V_SCROLL_START,25307053
+V_SCROLL,0,2241,0,2290
+V_SCROLL,0,2196,0,2241
+V_SCROLL,0,2151,0,2196
+V_SCROLL,0,2114,0,2151
+V_SCROLL,0,2077,0,2114
+V_SCROLL,0,2045,0,2077
+V_SCROLL,0,2013,0,2045
+V_SCROLL,0,1984,0,2013
+V_SCROLL,0,1956,0,1984
+V_SCROLL,0,1934,0,1956
+V_SCROLL,0,1917,0,1934
+V_SCROLL,0,1900,0,1917
+V_SCROLL,0,1884,0,1900
+V_SCROLL,0,1870,0,1884
+V_SCROLL,0,1860,0,1870
+V_SCROLL,0,1853,0,1860
+V_SCROLL,0,1848,0,1853
+V_SCROLL,0,1845,0,1848
+V_SCROLL,0,1840,0,1845
+V_SCROLL,0,1833,0,1840
+V_SCROLL,0,1825,0,1833
+V_SCROLL,0,1816,0,1825
+V_SCROLL,0,1809,0,1816
+V_SCROLL,0,1803,0,1809
+V_SCROLL,0,1797,0,1803
+V_SCROLL,0,1789,0,1797
+V_SCROLL,0,1782,0,1789
+V_SCROLL,0,1776,0,1782
+V_SCROLL,0,1770,0,1776
+V_SCROLL,0,1767,0,1770
+V_SCROLL,0,1766,0,1767
+V_SCROLL,0,1765,0,1766
+V_SCROLL,0,1762,0,1765
+V_SCROLL,0,1757,0,1762
+V_SCROLL,0,1750,0,1757
+V_SCROLL,0,1740,0,1750
+V_SCROLL,0,1727,0,1740
+V_SCROLL,0,1712,0,1727
+V_SCROLL,0,1697,0,1712
+V_SCROLL,0,1683,0,1697
+V_SCROLL,0,1671,0,1683
+V_SCROLL,0,1662,0,1671
+V_SCROLL,0,1655,0,1662
+V_SCROLL,0,1651,0,1655
+V_SCROLL,0,1649,0,1651
+V_SCROLL,0,1648,0,1649
+V_SCROLL,0,1647,0,1648
+V_SCROLL,0,1646,0,1647
+V_SCROLL_END,25307981
+V_SCROLL_START,25308785
+V_SCROLL,0,1600,0,1646
+V_SCROLL,0,1547,0,1600
+V_SCROLL,0,1496,0,1547
+V_SCROLL,0,1440,0,1496
+V_SCROLL,0,1374,0,1440
+V_SCROLL,0,1307,0,1374
+V_SCROLL,0,1248,0,1307
+V_SCROLL,0,1202,0,1248
+V_SCROLL,0,1161,0,1202
+V_SCROLL,0,1125,0,1161
+V_SCROLL,0,1094,0,1125
+V_SCROLL,0,1072,0,1094
+V_SCROLL,0,1055,0,1072
+V_SCROLL,0,1042,0,1055
+V_SCROLL,0,1030,0,1042
+V_SCROLL,0,1018,0,1030
+V_SCROLL,0,1007,0,1018
+V_SCROLL,0,996,0,1007
+V_SCROLL,0,988,0,996
+V_SCROLL,0,982,0,988
+V_SCROLL,0,978,0,982
+V_SCROLL,0,974,0,978
+V_SCROLL,0,970,0,974
+V_SCROLL,0,966,0,970
+V_SCROLL,0,963,0,966
+V_SCROLL,0,961,0,963
+V_SCROLL,0,959,0,961
+V_SCROLL,0,957,0,959
+V_SCROLL,0,958,0,957
+V_SCROLL,0,959,0,958
+V_SCROLL,0,960,0,959
+V_SCROLL,0,961,0,960
+V_SCROLL,0,962,0,961
+V_SCROLL,0,963,0,962
+V_SCROLL_END,25309605
+H_SCROLL_START,25309813
+H_SCROLL,1269,0,1346,0
+H_SCROLL,1183,0,1269,0
+H_SCROLL,1138,0,1183,0
+H_SCROLL,1126,0,1138,0
+H_SCROLL,1126,0,1138,0
+H_SCROLL,1033,0,1126,0
+H_SCROLL,1033,0,1126,0
+H_SCROLL,941,0,1033,0
+H_SCROLL,941,0,1033,0
+H_SCROLL,844,0,941,0
+H_SCROLL,844,0,941,0
+H_SCROLL,756,0,844,0
+H_SCROLL,756,0,844,0
+H_SCROLL,665,0,756,0
+H_SCROLL,665,0,756,0
+H_SCROLL,577,0,665,0
+H_SCROLL,577,0,665,0
+H_SCROLL,499,0,577,0
+H_SCROLL,499,0,577,0
+H_SCROLL,419,0,499,0
+H_SCROLL,419,0,499,0
+H_SCROLL,348,0,419,0
+H_SCROLL,348,0,419,0
+H_SCROLL,276,0,348,0
+H_SCROLL,276,0,348,0
+H_SCROLL,209,0,276,0
+H_SCROLL,209,0,276,0
+H_SCROLL,148,0,209,0
+H_SCROLL,148,0,209,0
+H_SCROLL,88,0,148,0
+H_SCROLL,88,0,148,0
+H_SCROLL,35,0,88,0
+H_SCROLL,35,0,88,0
+H_SCROLL,-18,0,35,0
+H_SCROLL,-18,0,35,0
+H_SCROLL,-17,0,-18,0
+H_SCROLL,-17,0,-18,0
+H_SCROLL,-15,0,-17,0
+H_SCROLL,-15,0,-17,0
+H_SCROLL,-12,0,-15,0
+H_SCROLL,-12,0,-15,0
+H_SCROLL,-9,0,-12,0
+H_SCROLL,-9,0,-12,0
+H_SCROLL,-6,0,-9,0
+H_SCROLL,-6,0,-9,0
+H_SCROLL,-3,0,-6,0
+H_SCROLL,-3,0,-6,0
+H_SCROLL,-1,0,-3,0
+H_SCROLL,-1,0,-3,0
+H_SCROLL,0,0,-1,0
+H_SCROLL,0,0,-1,0
+H_SCROLL_END,25309928
+H_SCROLL_START,25310344
+H_SCROLL,2,0,0,0
+H_SCROLL,3,0,2,0
+H_SCROLL,2,0,3,0
+H_SCROLL,0,0,2,0
+H_SCROLL_END,25311048
+************ REPETITION 3 ************
+V_SCROLL_START,25314337
+V_SCROLL,0,1260,0,963
+H_SCROLL_START,25314337
+H_SCROLL,900,0,0,0
+(-1,class android.widget.TextView,389,105,301,67,0,Remaining time:)
+(2131165273,class android.widget.ProgressBar,30,232,1020,68,0,null)
+(2131165274,class ch.qol.unige.smartphonetest.searchtask.VerticalScrollViewWithInfo,30,330,1020,1130,0,null)
+(-1,class android.widget.ImageView,-851,-920,180,180,0,null)
+(-1,class android.widget.ImageView,-635,-920,180,180,0,null)
+(-1,class android.widget.ImageView,-419,-920,180,180,0,null)
+(-1,class android.widget.ImageView,-203,-920,180,180,0,null)
+(-1,class android.widget.ImageView,12,-920,180,180,0,null)
+(-1,class android.widget.ImageView,228,-920,180,180,0,null)
+(-1,class android.widget.ImageView,444,-920,180,180,0,null)
+(-1,class android.widget.ImageView,660,-920,180,180,0,null)
+(-1,class android.widget.ImageView,876,-920,180,180,0,null)
+(-1,class android.widget.ImageView,1092,-920,180,180,0,null)
+(-1,class android.widget.ImageView,1308,-920,180,180,0,null)
+(-1,class android.widget.ImageView,1524,-920,180,180,0,null)
+(-1,class android.widget.ImageView,1740,-920,180,180,0,null)
+(-1,class android.widget.ImageView,1956,-920,180,180,0,null)
+(-1,class android.widget.ImageView,2172,-920,180,180,0,null)
+(-1,class android.widget.ImageView,-851,-722,180,180,0,null)
+(-1,class android.widget.ImageView,-635,-722,180,180,0,null)
+(-1,class android.widget.ImageView,-419,-722,180,180,0,null)
+(-1,class android.widget.ImageView,-203,-722,180,180,0,null)
+(-1,class android.widget.ImageView,12,-722,180,180,0,null)
+(-1,class android.widget.ImageView,228,-722,180,180,0,null)
+(-1,class android.widget.ImageView,444,-722,180,180,0,null)
+(-1,class android.widget.ImageView,660,-722,180,180,0,null)
+(-1,class android.widget.ImageView,876,-722,180,180,0,null)
+(-1,class android.widget.ImageView,1092,-722,180,180,0,null)
+(-1,class android.widget.ImageView,1308,-722,180,180,0,null)
+(-1,class android.widget.ImageView,1524,-722,180,180,0,null)
+(-1,class android.widget.ImageView,1740,-722,180,180,0,null)
+(-1,class android.widget.ImageView,1956,-722,180,180,0,null)
+(-1,class android.widget.ImageView,2172,-722,180,180,0,null)
+(-1,class android.widget.ImageView,-851,-524,180,180,0,null)
+(-1,class android.widget.ImageView,-635,-524,180,180,0,null)
+(-1,class android.widget.ImageView,-419,-524,180,180,0,null)
+(-1,class android.widget.ImageView,-203,-524,180,180,0,null)
+(-1,class android.widget.ImageView,12,-524,180,180,0,null)
+(-1,class android.widget.ImageView,228,-524,180,180,0,null)
+(-1,class android.widget.ImageView,444,-524,180,180,0,null)
+(-1,class android.widget.ImageView,660,-524,180,180,0,null)
+(-1,class android.widget.ImageView,876,-524,180,180,0,null)
+(-1,class android.widget.ImageView,1092,-524,180,180,0,null)
+(-1,class android.widget.ImageView,1308,-524,180,180,0,null)
+(-1,class android.widget.ImageView,1524,-524,180,180,0,null)
+(-1,class android.widget.ImageView,1740,-524,180,180,0,null)
+(-1,class android.widget.ImageView,1956,-524,180,180,0,null)
+(-1,class android.widget.ImageView,2172,-524,180,180,0,null)
+(-1,class android.widget.ImageView,-851,-326,180,180,0,null)
+(-1,class android.widget.ImageView,-635,-326,180,180,0,null)
+(-1,class android.widget.ImageView,-419,-326,180,180,0,null)
+(-1,class android.widget.ImageView,-203,-326,180,180,0,null)
+(-1,class android.widget.ImageView,12,-326,180,180,0,null)
+(-1,class android.widget.ImageView,228,-326,180,180,0,null)
+(-1,class android.widget.ImageView,444,-326,180,180,0,null)
+(-1,class android.widget.ImageView,660,-326,180,180,0,null)
+(-1,class android.widget.ImageView,876,-326,180,180,0,null)
+(-1,class android.widget.ImageView,1092,-326,180,180,0,null)
+(-1,class android.widget.ImageView,1308,-326,180,180,0,null)
+(-1,class android.widget.ImageView,1524,-326,180,180,0,null)
+(-1,class android.widget.ImageView,1740,-326,180,180,0,null)
+(-1,class android.widget.ImageView,1956,-326,180,180,0,null)
+(-1,class android.widget.ImageView,2172,-326,180,180,0,null)
+(-1,class android.widget.ImageView,-851,-128,180,180,0,null)
+(-1,class android.widget.ImageView,-635,-128,180,180,0,null)
+(-1,class android.widget.ImageView,-419,-128,180,180,0,null)
+(-1,class android.widget.ImageView,-203,-128,180,180,0,null)
+(-1,class android.widget.ImageView,12,-128,180,180,0,null)
+(-1,class android.widget.ImageView,228,-128,180,180,0,null)
+(-1,class android.widget.ImageView,444,-128,180,180,0,null)
+(-1,class android.widget.ImageView,660,-128,180,180,0,null)
+(-1,class android.widget.ImageView,876,-128,180,180,0,null)
+(-1,class android.widget.ImageView,1092,-128,180,180,0,null)
+(-1,class android.widget.ImageView,1308,-128,180,180,0,null)
+(-1,class android.widget.ImageView,1524,-128,180,180,0,null)
+(-1,class android.widget.ImageView,1740,-128,180,180,0,null)
+(-1,class android.widget.ImageView,1956,-128,180,180,0,null)
+(-1,class android.widget.ImageView,2172,-128,180,180,0,null)
+(-1,class android.widget.ImageView,-851,69,180,180,0,null)
+(-1,class android.widget.ImageView,-635,69,180,180,0,null)
+(-1,class android.widget.ImageView,-419,69,180,180,0,null)
+(-1,class android.widget.ImageView,-203,69,180,180,0,null)
+(-1,class android.widget.ImageView,12,69,180,180,0,null)
+(-1,class android.widget.ImageView,228,69,180,180,0,null)
+(-1,class android.widget.ImageView,444,69,180,180,0,null)
+(-1,class android.widget.ImageView,660,69,180,180,0,null)
+(-1,class android.widget.ImageView,876,69,180,180,0,null)
+(-1,class android.widget.ImageView,1092,69,180,180,0,null)
+(-1,class android.widget.ImageView,1308,69,180,180,0,null)
+(-1,class android.widget.ImageView,1524,69,180,180,0,null)
+(-1,class android.widget.ImageView,1740,69,180,180,0,null)
+(-1,class android.widget.ImageView,1956,69,180,180,0,null)
+(-1,class android.widget.ImageView,2172,69,180,180,0,null)
+(-1,class android.widget.ImageView,-851,267,180,180,0,null)
+(-1,class android.widget.ImageView,-635,267,180,180,0,null)
+(-1,class android.widget.ImageView,-419,267,180,180,0,null)
+(-1,class android.widget.ImageView,-203,267,180,180,0,null)
+(-1,class android.widget.ImageView,12,267,180,180,0,null)
+(-1,class android.widget.ImageView,228,267,180,180,0,null)
+(-1,class android.widget.ImageView,444,267,180,180,0,null)
+(-1,class android.widget.ImageView,660,267,180,180,0,null)
+(-1,class android.widget.ImageView,876,267,180,180,0,null)
+(-1,class android.widget.ImageView,1092,267,180,180,0,null)
+(-1,class android.widget.ImageView,1308,267,180,180,0,null)
+(-1,class android.widget.ImageView,1524,267,180,180,0,null)
+(-1,class android.widget.ImageView,1740,267,180,180,0,null)
+(-1,class android.widget.ImageView,1956,267,180,180,0,null)
+(-1,class android.widget.ImageView,2172,267,180,180,0,null)
+(-1,class android.widget.ImageView,-851,465,180,180,0,null)
+(-1,class android.widget.ImageView,-635,465,180,180,0,null)
+(-1,class android.widget.ImageView,-419,465,180,180,0,null)
+(-1,class android.widget.ImageView,-203,465,180,180,0,null)
+(-1,class android.widget.ImageView,12,465,180,180,0,null)
+(-1,class android.widget.ImageView,228,465,180,180,0,null)
+(-1,class android.widget.ImageView,444,465,180,180,0,null)
+(-1,class android.widget.ImageView,660,465,180,180,0,null)
+(-1,class android.widget.ImageView,876,465,180,180,0,null)
+(-1,class android.widget.ImageView,1092,465,180,180,0,null)
+(-1,class android.widget.ImageView,1308,465,180,180,0,null)
+(-1,class android.widget.ImageView,1524,465,180,180,0,null)
+(-1,class android.widget.ImageView,1740,465,180,180,0,null)
+(-1,class android.widget.ImageView,1956,465,180,180,0,null)
+(-1,class android.widget.ImageView,2172,465,180,180,0,null)
+(-1,class android.widget.ImageView,-851,663,180,180,0,null)
+(-1,class android.widget.ImageView,-635,663,180,180,0,null)
+(-1,class android.widget.ImageView,-419,663,180,180,0,null)
+(-1,class android.widget.ImageView,-203,663,180,180,0,null)
+(-1,class android.widget.ImageView,12,663,180,180,0,null)
+(-1,class android.widget.ImageView,228,663,180,180,0,null)
+(-1,class android.widget.ImageView,444,663,180,180,0,null)
+(-1,class android.widget.ImageView,660,663,180,180,0,null)
+(-1,class android.widget.ImageView,876,663,180,180,0,null)
+(-1,class android.widget.ImageView,1092,663,180,180,0,null)
+(-1,class android.widget.ImageView,1308,663,180,180,0,null)
+(-1,class android.widget.ImageView,1524,663,180,180,0,null)
+(-1,class android.widget.ImageView,1740,663,180,180,0,null)
+(-1,class android.widget.ImageView,1956,663,180,180,0,null)
+(-1,class android.widget.ImageView,2172,663,180,180,0,null)
+(-1,class android.widget.ImageView,-851,861,180,180,0,null)
+(-1,class android.widget.ImageView,-635,861,180,180,0,null)
+(-1,class android.widget.ImageView,-419,861,180,180,0,null)
+(-1,class android.widget.ImageView,-203,861,180,180,0,null)
+(-1,class android.widget.ImageView,12,861,180,180,0,null)
+(-1,class android.widget.ImageView,228,861,180,180,0,null)
+(-1,class android.widget.ImageView,444,861,180,180,0,null)
+(-1,class android.widget.ImageView,660,861,180,180,0,null)
+(-1,class android.widget.ImageView,876,861,180,180,0,null)
+(-1,class android.widget.ImageView,1092,861,180,180,0,null)
+(-1,class android.widget.ImageView,1308,861,180,180,0,null)
+(-1,class android.widget.ImageView,1524,861,180,180,0,null)
+(-1,class android.widget.ImageView,1740,861,180,180,0,null)
+(-1,class android.widget.ImageView,1956,861,180,180,0,null)
+(-1,class android.widget.ImageView,2172,861,180,180,0,null)
+(-1,class android.widget.ImageView,-851,1059,180,180,0,null)
+(-1,class android.widget.ImageView,-635,1059,180,180,0,null)
+(-1,class android.widget.ImageView,-419,1059,180,180,0,null)
+(-1,class android.widget.ImageView,-203,1059,180,180,0,null)
+(-1,class android.widget.ImageView,12,1059,180,180,0,null)
+(-1,class android.widget.ImageView,228,1059,180,180,0,null)
+(-1,class android.widget.ImageView,444,1059,180,180,0,null)
+(-1,class android.widget.ImageView,660,1059,180,180,0,null)
+(-1,class android.widget.ImageView,876,1059,180,180,0,null)
+(-1,class android.widget.ImageView,1092,1059,180,180,0,null)
+(-1,class android.widget.ImageView,1308,1059,180,180,0,null)
+(-1,class android.widget.ImageView,1524,1059,180,180,0,null)
+(-1,class android.widget.ImageView,1740,1059,180,180,0,null)
+(-1,class android.widget.ImageView,1956,1059,180,180,0,null)
+(-1,class android.widget.ImageView,2172,1059,180,180,0,null)
+(-1,class android.widget.ImageView,-851,1257,180,180,0,null)
+(-1,class android.widget.ImageView,-635,1257,180,180,0,null)
+(-1,class android.widget.ImageView,-419,1257,180,180,0,null)
+(-1,class android.widget.ImageView,-203,1257,180,180,0,null)
+(-1,class android.widget.ImageView,12,1257,180,180,0,null)
+(-1,class android.widget.ImageView,228,1257,180,180,0,null)
+(-1,class android.widget.ImageView,444,1257,180,180,0,null)
+(-1,class android.widget.ImageView,660,1257,180,180,0,null)
+(-1,class android.widget.ImageView,876,1257,180,180,0,null)
+(-1,class android.widget.ImageView,1092,1257,180,180,0,null)
+(-1,class android.widget.ImageView,1308,1257,180,180,0,null)
+(-1,class android.widget.ImageView,1524,1257,180,180,0,null)
+(-1,class android.widget.ImageView,1740,1257,180,180,0,null)
+(-1,class android.widget.ImageView,1956,1257,180,180,0,null)
+(-1,class android.widget.ImageView,2172,1257,180,180,0,null)
+(-1,class android.widget.ImageView,-851,1455,180,180,0,null)
+(-1,class android.widget.ImageView,-635,1455,180,180,0,null)
+(-1,class android.widget.ImageView,-419,1455,180,180,0,null)
+(-1,class android.widget.ImageView,-203,1455,180,180,0,null)
+(-1,class android.widget.ImageView,12,1455,180,180,0,null)
+(-1,class android.widget.ImageView,228,1455,180,180,0,null)
+(-1,class android.widget.ImageView,444,1455,180,180,0,null)
+(-1,class android.widget.ImageView,660,1455,180,180,0,null)
+(-1,class android.widget.ImageView,876,1455,180,180,0,null)
+(-1,class android.widget.ImageView,1092,1455,180,180,0,null)
+(-1,class android.widget.ImageView,1308,1455,180,180,0,null)
+(-1,class android.widget.ImageView,1524,1455,180,180,0,null)
+(-1,class android.widget.ImageView,1740,1455,180,180,0,null)
+(-1,class android.widget.ImageView,1956,1455,180,180,0,null)
+(-1,class android.widget.ImageView,2172,1455,180,180,0,null)
+(-1,class android.widget.ImageView,-851,1653,180,180,0,null)
+(-1,class android.widget.ImageView,-635,1653,180,180,0,null)
+(-1,class android.widget.ImageView,-419,1653,180,180,0,null)
+(-1,class android.widget.ImageView,-203,1653,180,180,0,null)
+(-1,class android.widget.ImageView,12,1653,180,180,0,null)
+(-1,class android.widget.ImageView,228,1653,180,180,0,null)
+(-1,class android.widget.ImageView,444,1653,180,180,0,null)
+(-1,class android.widget.ImageView,660,1653,180,180,0,null)
+(-1,class android.widget.ImageView,876,1653,180,180,0,null)
+(-1,class android.widget.ImageView,1092,1653,180,180,0,null)
+(-1,class android.widget.ImageView,1308,1653,180,180,0,null)
+(-1,class android.widget.ImageView,1524,1653,180,180,0,null)
+(-1,class android.widget.ImageView,1740,1653,180,180,0,null)
+(-1,class android.widget.ImageView,1956,1653,180,180,0,null)
+(-1,class android.widget.ImageView,2172,1653,180,180,0,null)
+(-1,class android.widget.ImageView,-851,1851,180,180,0,null)
+(-1,class android.widget.ImageView,-635,1851,180,180,0,null)
+(-1,class android.widget.ImageView,-419,1851,180,180,0,null)
+(-1,class android.widget.ImageView,-203,1851,180,180,0,null)
+(-1,class android.widget.ImageView,12,1851,180,180,0,null)
+(-1,class android.widget.ImageView,228,1851,180,180,0,null)
+(-1,class android.widget.ImageView,444,1851,180,180,0,null)
+(-1,class android.widget.ImageView,660,1851,180,180,0,null)
+(-1,class android.widget.ImageView,876,1851,180,180,0,null)
+(-1,class android.widget.ImageView,1092,1851,180,180,0,null)
+(-1,class android.widget.ImageView,1308,1851,180,180,0,null)
+(-1,class android.widget.ImageView,1524,1851,180,180,0,null)
+(-1,class android.widget.ImageView,1740,1851,180,180,0,null)
+(-1,class android.widget.ImageView,1956,1851,180,180,0,null)
+(-1,class android.widget.ImageView,2172,1851,180,180,0,null)
+(-1,class android.widget.ImageView,-851,2049,180,180,0,null)
+(-1,class android.widget.ImageView,-635,2049,180,180,0,null)
+(-1,class android.widget.ImageView,-419,2049,180,180,0,null)
+(-1,class android.widget.ImageView,-203,2049,180,180,0,null)
+(-1,class android.widget.ImageView,12,2049,180,180,0,null)
+(-1,class android.widget.ImageView,228,2049,180,180,0,null)
+(-1,class android.widget.ImageView,444,2049,180,180,0,null)
+(-1,class android.widget.ImageView,660,2049,180,180,0,null)
+(-1,class android.widget.ImageView,876,2049,180,180,0,null)
+(-1,class android.widget.ImageView,1092,2049,180,180,0,null)
+(-1,class android.widget.ImageView,1308,2049,180,180,0,null)
+(-1,class android.widget.ImageView,1524,2049,180,180,0,null)
+(-1,class android.widget.ImageView,1740,2049,180,180,0,null)
+(-1,class android.widget.ImageView,1956,2049,180,180,0,null)
+(-1,class android.widget.ImageView,2172,2049,180,180,0,null)
+(-1,class android.widget.ImageView,-851,2247,180,180,0,null)
+(-1,class android.widget.ImageView,-635,2247,180,180,0,null)
+(-1,class android.widget.ImageView,-419,2247,180,180,0,null)
+(-1,class android.widget.ImageView,-203,2247,180,180,0,null)
+(-1,class android.widget.ImageView,12,2247,180,180,0,null)
+(-1,class android.widget.ImageView,228,2247,180,180,0,null)
+(-1,class android.widget.ImageView,444,2247,180,180,0,null)
+(-1,class android.widget.ImageView,660,2247,180,180,0,null)
+(-1,class android.widget.ImageView,876,2247,180,180,0,null)
+(-1,class android.widget.ImageView,1092,2247,180,180,0,null)
+(-1,class android.widget.ImageView,1308,2247,180,180,0,null)
+(-1,class android.widget.ImageView,1524,2247,180,180,0,null)
+(-1,class android.widget.ImageView,1740,2247,180,180,0,null)
+(-1,class android.widget.ImageView,1956,2247,180,180,0,null)
+(-1,class android.widget.ImageView,2172,2247,180,180,0,null)
+(-1,class android.widget.ImageView,-851,2445,180,180,0,null)
+(-1,class android.widget.ImageView,-635,2445,180,180,0,null)
+(-1,class android.widget.ImageView,-419,2445,180,180,0,null)
+(-1,class android.widget.ImageView,-203,2445,180,180,0,null)
+(-1,class android.widget.ImageView,12,2445,180,180,0,null)
+(-1,class android.widget.ImageView,228,2445,180,180,0,null)
+(-1,class android.widget.ImageView,444,2445,180,180,0,null)
+(-1,class android.widget.ImageView,660,2445,180,180,0,null)
+(-1,class android.widget.ImageView,876,2445,180,180,0,null)
+(-1,class android.widget.ImageView,1092,2445,180,180,0,null)
+(-1,class android.widget.ImageView,1308,2445,180,180,0,null)
+(-1,class android.widget.ImageView,1524,2445,180,180,0,null)
+(-1,class android.widget.ImageView,1740,2445,180,180,0,null)
+(-1,class android.widget.ImageView,1956,2445,180,180,0,null)
+(-1,class android.widget.ImageView,2172,2445,180,180,0,null)
+(-1,class android.widget.ImageView,-851,2643,180,180,0,null)
+(-1,class android.widget.ImageView,-635,2643,180,180,0,null)
+(-1,class android.widget.ImageView,-419,2643,180,180,0,null)
+(-1,class android.widget.ImageView,-203,2643,180,180,0,null)
+(-1,class android.widget.ImageView,12,2643,180,180,0,null)
+(-1,class android.widget.ImageView,228,2643,180,180,0,null)
+(-1,class android.widget.ImageView,444,2643,180,180,0,null)
+(-1,class android.widget.ImageView,660,2643,180,180,0,null)
+(-1,class android.widget.ImageView,876,2643,180,180,0,null)
+(-1,class android.widget.ImageView,1092,2643,180,180,0,null)
+(-1,class android.widget.ImageView,1308,2643,180,180,0,null)
+(-1,class android.widget.ImageView,1524,2643,180,180,0,null)
+(-1,class android.widget.ImageView,1740,2643,180,180,0,null)
+(-1,class android.widget.ImageView,1956,2643,180,180,0,null)
+(-1,class android.widget.ImageView,2172,2643,180,180,0,null)
+(-1,class android.widget.ImageView,-851,2841,180,180,0,null)
+(-1,class android.widget.ImageView,-635,2841,180,180,0,null)
+(-1,class android.widget.ImageView,-419,2841,180,180,0,null)
+(-1,class android.widget.ImageView,-203,2841,180,180,0,null)
+(-1,class android.widget.ImageView,12,2841,180,180,0,null)
+(-1,class android.widget.ImageView,228,2841,180,180,0,null)
+(-1,class android.widget.ImageView,444,2841,180,180,0,null)
+(-1,class android.widget.ImageView,660,2841,180,180,0,null)
+(-1,class android.widget.ImageView,876,2841,180,180,0,null)
+(-1,class android.widget.ImageView,1092,2841,180,180,0,null)
+(-1,class android.widget.ImageView,1308,2841,180,180,0,null)
+(-1,class android.widget.ImageView,1524,2841,180,180,0,null)
+(-1,class android.widget.ImageView,1740,2841,180,180,0,null)
+(-1,class android.widget.ImageView,1956,2841,180,180,0,null)
+(-1,class android.widget.ImageView,2172,2841,180,180,0,null)
+(-1,class android.widget.ImageView,-851,3039,180,180,0,null)
+(-1,class android.widget.ImageView,-635,3039,180,180,0,null)
+(-1,class android.widget.ImageView,-419,3039,180,180,0,null)
+(-1,class android.widget.ImageView,-203,3039,180,180,0,null)
+(-1,class android.widget.ImageView,12,3039,180,180,0,null)
+(-1,class android.widget.ImageView,228,3039,180,180,0,null)
+(-1,class android.widget.ImageView,444,3039,180,180,0,null)
+(-1,class android.widget.ImageView,660,3039,180,180,0,null)
+(-1,class android.widget.ImageView,876,3039,180,180,0,null)
+(-1,class android.widget.ImageView,1092,3039,180,180,0,null)
+(-1,class android.widget.ImageView,1308,3039,180,180,0,null)
+(-1,class android.widget.ImageView,1524,3039,180,180,0,null)
+(-1,class android.widget.ImageView,1740,3039,180,180,0,null)
+(-1,class android.widget.ImageView,1956,3039,180,180,0,null)
+(-1,class android.widget.ImageView,2172,3039,180,180,0,null)
+(2131165277,class android.widget.Button,624,1561,426,144,0,OK I've done it.)
+V_SCROLL_END,25314394
+V_SCROLL_START,25318023
+V_SCROLL,0,1192,0,1260
+V_SCROLL,0,1071,0,1192
+V_SCROLL,0,973,0,1071
+V_SCROLL,0,871,0,973
+V_SCROLL,0,871,0,973
+V_SCROLL,0,724,0,871
+V_SCROLL,0,724,0,871
+V_SCROLL,0,568,0,724
+V_SCROLL,0,568,0,724
+V_SCROLL,0,424,0,568
+V_SCROLL,0,424,0,568
+V_SCROLL,0,272,0,424
+V_SCROLL,0,272,0,424
+V_SCROLL,0,124,0,272
+V_SCROLL,0,124,0,272
+V_SCROLL,0,-17,0,124
+V_SCROLL,0,-17,0,124
+V_SCROLL,0,-18,0,-17
+V_SCROLL,0,-18,0,-17
+V_SCROLL,0,-17,0,-18
+V_SCROLL,0,-17,0,-18
+V_SCROLL,0,-15,0,-17
+V_SCROLL,0,-15,0,-17
+V_SCROLL,0,-12,0,-15
+V_SCROLL,0,-12,0,-15
+V_SCROLL,0,-9,0,-12
+V_SCROLL,0,-9,0,-12
+V_SCROLL,0,-6,0,-9
+V_SCROLL,0,-6,0,-9
+V_SCROLL,0,-3,0,-6
+V_SCROLL,0,-3,0,-6
+V_SCROLL,0,-1,0,-3
+V_SCROLL,0,-1,0,-3
+V_SCROLL,0,0,0,-1
+V_SCROLL,0,0,0,-1
+V_SCROLL_END,25318105
+H_SCROLL_END,25319879
+V_SCROLL_START,25324906
+V_SCROLL,0,31,0,0
+V_SCROLL,0,72,0,31
+V_SCROLL,0,118,0,72
+V_SCROLL,0,162,0,118
+V_SCROLL,0,207,0,162
+V_SCROLL,0,249,0,207
+V_SCROLL,0,296,0,249
+V_SCROLL,0,335,0,296
+V_SCROLL,0,368,0,335
+V_SCROLL,0,395,0,368
+V_SCROLL,0,420,0,395
+V_SCROLL,0,444,0,420
+V_SCROLL,0,467,0,444
+V_SCROLL,0,491,0,467
+V_SCROLL,0,511,0,491
+V_SCROLL,0,528,0,511
+V_SCROLL,0,544,0,528
+V_SCROLL,0,561,0,544
+V_SCROLL,0,578,0,561
+V_SCROLL,0,593,0,578
+V_SCROLL,0,605,0,593
+V_SCROLL,0,614,0,605
+V_SCROLL,0,621,0,614
+V_SCROLL,0,628,0,621
+V_SCROLL,0,637,0,628
+V_SCROLL,0,645,0,637
+V_SCROLL,0,653,0,645
+V_SCROLL,0,660,0,653
+V_SCROLL,0,666,0,660
+V_SCROLL,0,671,0,666
+V_SCROLL,0,676,0,671
+V_SCROLL,0,681,0,676
+V_SCROLL,0,685,0,681
+V_SCROLL,0,689,0,685
+V_SCROLL,0,693,0,689
+V_SCROLL,0,699,0,693
+V_SCROLL,0,702,0,699
+V_SCROLL,0,707,0,702
+V_SCROLL,0,707,0,702
+V_SCROLL,0,710,0,707
+V_SCROLL,0,710,0,707
+V_SCROLL,0,711,0,710
+V_SCROLL,0,711,0,710
+V_SCROLL,0,712,0,711
+V_SCROLL,0,712,0,711
+V_SCROLL,0,713,0,712
+V_SCROLL,0,713,0,712
+V_SCROLL_END,25325569
+H_SCROLL_START,25331383
+H_SCROLL,906,0,900,0
+H_SCROLL,912,0,906,0
+H_SCROLL,917,0,912,0
+H_SCROLL,920,0,917,0
+H_SCROLL,922,0,920,0
+H_SCROLL,920,0,922,0
+H_SCROLL,917,0,920,0
+H_SCROLL,912,0,917,0
+H_SCROLL,906,0,912,0
+H_SCROLL,900,0,906,0
+H_SCROLL,894,0,900,0
+H_SCROLL,889,0,894,0
+H_SCROLL,885,0,889,0
+H_SCROLL,881,0,885,0
+H_SCROLL,876,0,881,0
+H_SCROLL,869,0,876,0
+H_SCROLL,858,0,869,0
+H_SCROLL,846,0,858,0
+H_SCROLL,839,0,846,0
+H_SCROLL,839,0,846,0
+H_SCROLL,827,0,839,0
+H_SCROLL,827,0,839,0
+H_SCROLL,818,0,827,0
+H_SCROLL,818,0,827,0
+H_SCROLL,810,0,818,0
+H_SCROLL,810,0,818,0
+H_SCROLL,805,0,810,0
+H_SCROLL,805,0,810,0
+H_SCROLL,801,0,805,0
+H_SCROLL,801,0,805,0
+H_SCROLL,798,0,801,0
+H_SCROLL,798,0,801,0
+H_SCROLL,795,0,798,0
+H_SCROLL,795,0,798,0
+H_SCROLL,793,0,795,0
+H_SCROLL,793,0,795,0
+H_SCROLL,792,0,793,0
+H_SCROLL,792,0,793,0
+H_SCROLL,791,0,792,0
+H_SCROLL,791,0,792,0
+H_SCROLL_END,25331822
+V_SCROLL_START,25332245
+V_SCROLL,0,729,0,713
+V_SCROLL,0,745,0,729
+V_SCROLL,0,761,0,745
+V_SCROLL,0,777,0,761
+V_SCROLL,0,793,0,777
+V_SCROLL,0,807,0,793
+V_SCROLL,0,820,0,807
+V_SCROLL,0,831,0,820
+V_SCROLL,0,840,0,831
+V_SCROLL,0,848,0,840
+V_SCROLL,0,854,0,848
+V_SCROLL,0,860,0,854
+V_SCROLL,0,865,0,860
+V_SCROLL,0,870,0,865
+V_SCROLL,0,874,0,870
+V_SCROLL,0,878,0,874
+V_SCROLL,0,884,0,878
+V_SCROLL,0,889,0,884
+V_SCROLL,0,893,0,889
+V_SCROLL,0,897,0,893
+V_SCROLL,0,901,0,897
+V_SCROLL,0,905,0,901
+V_SCROLL,0,911,0,905
+V_SCROLL,0,917,0,911
+V_SCROLL,0,922,0,917
+V_SCROLL,0,930,0,922
+V_SCROLL,0,938,0,930
+V_SCROLL,0,948,0,938
+V_SCROLL,0,961,0,948
+V_SCROLL,0,971,0,961
+V_SCROLL,0,980,0,971
+V_SCROLL,0,991,0,980
+V_SCROLL,0,999,0,991
+V_SCROLL,0,1009,0,999
+V_SCROLL,0,1018,0,1009
+V_SCROLL,0,1032,0,1018
+V_SCROLL,0,1054,0,1032
+V_SCROLL,0,1059,0,1054
+V_SCROLL,0,1060,0,1059
+V_SCROLL,0,1060,0,1059
+V_SCROLL,0,1079,0,1060
+V_SCROLL,0,1079,0,1060
+V_SCROLL,0,1095,0,1079
+V_SCROLL,0,1095,0,1079
+V_SCROLL,0,1110,0,1095
+V_SCROLL,0,1110,0,1095
+V_SCROLL,0,1122,0,1110
+V_SCROLL,0,1122,0,1110
+V_SCROLL,0,1131,0,1122
+V_SCROLL,0,1131,0,1122
+V_SCROLL,0,1140,0,1131
+V_SCROLL,0,1140,0,1131
+V_SCROLL,0,1146,0,1140
+V_SCROLL,0,1146,0,1140
+V_SCROLL,0,1151,0,1146
+V_SCROLL,0,1151,0,1146
+V_SCROLL,0,1155,0,1151
+V_SCROLL,0,1155,0,1151
+V_SCROLL,0,1159,0,1155
+V_SCROLL,0,1159,0,1155
+V_SCROLL,0,1161,0,1159
+V_SCROLL,0,1161,0,1159
+V_SCROLL,0,1163,0,1161
+V_SCROLL,0,1163,0,1161
+V_SCROLL,0,1165,0,1163
+V_SCROLL,0,1165,0,1163
+V_SCROLL,0,1166,0,1165
+V_SCROLL,0,1166,0,1165
+V_SCROLL,0,1167,0,1166
+V_SCROLL,0,1167,0,1166
+V_SCROLL_END,25332925
+V_SCROLL_START,25335610
+V_SCROLL,0,1190,0,1167
+V_SCROLL,0,1221,0,1190
+V_SCROLL,0,1255,0,1221
+V_SCROLL,0,1283,0,1255
+V_SCROLL,0,1308,0,1283
+V_SCROLL,0,1329,0,1308
+V_SCROLL,0,1347,0,1329
+V_SCROLL,0,1363,0,1347
+V_SCROLL,0,1378,0,1363
+V_SCROLL,0,1391,0,1378
+V_SCROLL,0,1402,0,1391
+V_SCROLL,0,1414,0,1402
+V_SCROLL,0,1426,0,1414
+V_SCROLL,0,1440,0,1426
+V_SCROLL,0,1455,0,1440
+V_SCROLL,0,1473,0,1455
+V_SCROLL,0,1489,0,1473
+V_SCROLL,0,1503,0,1489
+V_SCROLL,0,1517,0,1503
+V_SCROLL,0,1532,0,1517
+V_SCROLL,0,1548,0,1532
+V_SCROLL,0,1557,0,1548
+V_SCROLL,0,1557,0,1548
+V_SCROLL,0,1569,0,1557
+V_SCROLL,0,1569,0,1557
+V_SCROLL,0,1581,0,1569
+V_SCROLL,0,1581,0,1569
+V_SCROLL,0,1589,0,1581
+V_SCROLL,0,1589,0,1581
+V_SCROLL,0,1596,0,1589
+V_SCROLL,0,1596,0,1589
+V_SCROLL,0,1602,0,1596
+V_SCROLL,0,1602,0,1596
+V_SCROLL,0,1606,0,1602
+V_SCROLL,0,1606,0,1602
+V_SCROLL,0,1609,0,1606
+V_SCROLL,0,1609,0,1606
+V_SCROLL,0,1611,0,1609
+V_SCROLL,0,1611,0,1609
+V_SCROLL,0,1613,0,1611
+V_SCROLL,0,1613,0,1611
+V_SCROLL,0,1615,0,1613
+V_SCROLL,0,1615,0,1613
+V_SCROLL,0,1616,0,1615
+V_SCROLL,0,1616,0,1615
+V_SCROLL_END,25336049
+V_SCROLL_START,25337309
+V_SCROLL,0,1645,0,1616
+V_SCROLL,0,1680,0,1645
+V_SCROLL,0,1717,0,1680
+V_SCROLL,0,1757,0,1717
+V_SCROLL,0,1796,0,1757
+V_SCROLL,0,1831,0,1796
+V_SCROLL,0,1863,0,1831
+V_SCROLL,0,1901,0,1863
+V_SCROLL,0,1941,0,1901
+V_SCROLL,0,1981,0,1941
+V_SCROLL,0,2020,0,1981
+V_SCROLL,0,2046,0,2020
+V_SCROLL,0,2046,0,2020
+V_SCROLL,0,2086,0,2046
+V_SCROLL,0,2086,0,2046
+V_SCROLL,0,2127,0,2086
+V_SCROLL,0,2127,0,2086
+V_SCROLL,0,2163,0,2127
+V_SCROLL,0,2163,0,2127
+V_SCROLL,0,2198,0,2163
+V_SCROLL,0,2198,0,2163
+V_SCROLL,0,2228,0,2198
+V_SCROLL,0,2228,0,2198
+V_SCROLL,0,2256,0,2228
+V_SCROLL,0,2256,0,2228
+V_SCROLL,0,2282,0,2256
+V_SCROLL,0,2282,0,2256
+V_SCROLL,0,2304,0,2282
+V_SCROLL,0,2304,0,2282
+V_SCROLL,0,2324,0,2304
+V_SCROLL,0,2324,0,2304
+V_SCROLL,0,2344,0,2324
+V_SCROLL,0,2344,0,2324
+V_SCROLL,0,2358,0,2344
+V_SCROLL,0,2358,0,2344
+V_SCROLL,0,2373,0,2358
+V_SCROLL,0,2373,0,2358
+V_SCROLL,0,2385,0,2373
+V_SCROLL,0,2385,0,2373
+V_SCROLL,0,2397,0,2385
+V_SCROLL,0,2397,0,2385
+V_SCROLL,0,2407,0,2397
+V_SCROLL,0,2407,0,2397
+V_SCROLL,0,2415,0,2407
+V_SCROLL,0,2415,0,2407
+V_SCROLL,0,2424,0,2415
+V_SCROLL,0,2424,0,2415
+V_SCROLL,0,2430,0,2424
+V_SCROLL,0,2430,0,2424
+V_SCROLL,0,2437,0,2430
+V_SCROLL,0,2437,0,2430
+V_SCROLL,0,2442,0,2437
+V_SCROLL,0,2442,0,2437
+V_SCROLL,0,2447,0,2442
+V_SCROLL,0,2447,0,2442
+V_SCROLL,0,2450,0,2447
+V_SCROLL,0,2450,0,2447
+V_SCROLL,0,2453,0,2450
+V_SCROLL,0,2453,0,2450
+V_SCROLL,0,2456,0,2453
+V_SCROLL,0,2456,0,2453
+V_SCROLL,0,2458,0,2456
+V_SCROLL,0,2458,0,2456
+V_SCROLL,0,2460,0,2458
+V_SCROLL,0,2460,0,2458
+V_SCROLL,0,2461,0,2460
+V_SCROLL,0,2461,0,2460
+V_SCROLL,0,2462,0,2461
+V_SCROLL,0,2462,0,2461
+V_SCROLL_END,25337557
+V_SCROLL_START,25342098
+V_SCROLL,0,2492,0,2462
+V_SCROLL,0,2527,0,2492
+V_SCROLL,0,2564,0,2527
+V_SCROLL,0,2598,0,2564
+V_SCROLL,0,2635,0,2598
+V_SCROLL,0,2674,0,2635
+V_SCROLL,0,2714,0,2674
+V_SCROLL,0,2759,0,2714
+V_SCROLL,0,2802,0,2759
+V_SCROLL,0,2830,0,2802
+V_SCROLL,0,2830,0,2802
+V_SCROLL,0,2876,0,2830
+V_SCROLL,0,2876,0,2830
+V_SCROLL,0,2918,0,2876
+V_SCROLL,0,2918,0,2876
+V_SCROLL,0,2960,0,2918
+V_SCROLL,0,2960,0,2918
+V_SCROLL,0,2997,0,2960
+V_SCROLL,0,2997,0,2960
+V_SCROLL,0,3035,0,2997
+V_SCROLL,0,3035,0,2997
+V_SCROLL,0,3046,0,3035
+V_SCROLL,0,3046,0,3035
+V_SCROLL,0,3045,0,3046
+V_SCROLL,0,3045,0,3046
+V_SCROLL,0,3043,0,3045
+V_SCROLL,0,3043,0,3045
+V_SCROLL,0,3041,0,3043
+V_SCROLL,0,3041,0,3043
+V_SCROLL,0,3037,0,3041
+V_SCROLL,0,3037,0,3041
+V_SCROLL,0,3034,0,3037
+V_SCROLL,0,3034,0,3037
+V_SCROLL,0,3031,0,3034
+V_SCROLL,0,3031,0,3034
+V_SCROLL,0,3029,0,3031
+V_SCROLL,0,3029,0,3031
+V_SCROLL,0,3028,0,3029
+V_SCROLL,0,3028,0,3029
+V_SCROLL_END,25342296
+H_SCROLL_START,25343806
+H_SCROLL,767,0,791,0
+H_SCROLL,720,0,767,0
+H_SCROLL,676,0,720,0
+H_SCROLL,636,0,676,0
+H_SCROLL,606,0,636,0
+H_SCROLL,568,0,606,0
+H_SCROLL,522,0,568,0
+H_SCROLL,456,0,522,0
+H_SCROLL,389,0,456,0
+H_SCROLL,349,0,389,0
+H_SCROLL,307,0,349,0
+H_SCROLL,307,0,349,0
+H_SCROLL,235,0,307,0
+H_SCROLL,235,0,307,0
+H_SCROLL,170,0,235,0
+H_SCROLL,170,0,235,0
+H_SCROLL,103,0,170,0
+H_SCROLL,103,0,170,0
+H_SCROLL,42,0,103,0
+H_SCROLL,42,0,103,0
+H_SCROLL,-18,0,42,0
+H_SCROLL,-18,0,42,0
+H_SCROLL,-17,0,-18,0
+H_SCROLL,-17,0,-18,0
+H_SCROLL,-15,0,-17,0
+H_SCROLL,-15,0,-17,0
+H_SCROLL,-12,0,-15,0
+H_SCROLL,-12,0,-15,0
+H_SCROLL,-9,0,-12,0
+H_SCROLL,-9,0,-12,0
+H_SCROLL,-6,0,-9,0
+H_SCROLL,-6,0,-9,0
+H_SCROLL,-3,0,-6,0
+H_SCROLL,-3,0,-6,0
+H_SCROLL,-1,0,-3,0
+H_SCROLL,-1,0,-3,0
+H_SCROLL,0,0,-1,0
+H_SCROLL,0,0,-1,0
+H_SCROLL_END,25344037
+V_SCROLL_START,25346963
+V_SCROLL,0,3008,0,3028
+V_SCROLL,0,2983,0,3008
+V_SCROLL,0,2956,0,2983
+V_SCROLL,0,2925,0,2956
+V_SCROLL,0,2895,0,2925
+V_SCROLL,0,2868,0,2895
+V_SCROLL,0,2842,0,2868
+V_SCROLL,0,2820,0,2842
+V_SCROLL,0,2800,0,2820
+V_SCROLL,0,2780,0,2800
+V_SCROLL,0,2763,0,2780
+V_SCROLL,0,2748,0,2763
+V_SCROLL,0,2735,0,2748
+V_SCROLL,0,2724,0,2735
+V_SCROLL,0,2714,0,2724
+V_SCROLL,0,2705,0,2714
+V_SCROLL,0,2696,0,2705
+V_SCROLL,0,2686,0,2696
+V_SCROLL,0,2678,0,2686
+V_SCROLL,0,2668,0,2678
+V_SCROLL,0,2659,0,2668
+V_SCROLL,0,2651,0,2659
+V_SCROLL,0,2644,0,2651
+V_SCROLL,0,2636,0,2644
+V_SCROLL,0,2628,0,2636
+V_SCROLL,0,2620,0,2628
+V_SCROLL,0,2613,0,2620
+V_SCROLL,0,2607,0,2613
+V_SCROLL,0,2601,0,2607
+V_SCROLL,0,2597,0,2601
+V_SCROLL,0,2594,0,2597
+V_SCROLL,0,2590,0,2594
+V_SCROLL,0,2585,0,2590
+V_SCROLL,0,2580,0,2585
+V_SCROLL,0,2574,0,2580
+V_SCROLL,0,2569,0,2574
+V_SCROLL,0,2564,0,2569
+V_SCROLL,0,2559,0,2564
+V_SCROLL,0,2555,0,2559
+V_SCROLL,0,2549,0,2555
+V_SCROLL,0,2542,0,2549
+V_SCROLL,0,2535,0,2542
+V_SCROLL,0,2531,0,2535
+V_SCROLL,0,2531,0,2535
+V_SCROLL,0,2525,0,2531
+V_SCROLL,0,2525,0,2531
+V_SCROLL,0,2521,0,2525
+V_SCROLL,0,2521,0,2525
+V_SCROLL,0,2518,0,2521
+V_SCROLL,0,2518,0,2521
+V_SCROLL,0,2516,0,2518
+V_SCROLL,0,2516,0,2518
+V_SCROLL,0,2515,0,2516
+V_SCROLL,0,2515,0,2516
+V_SCROLL,0,2514,0,2515
+V_SCROLL,0,2514,0,2515
+V_SCROLL_END,25347717
+V_SCROLL_START,25349383
+V_SCROLL,0,2468,0,2514
+V_SCROLL,0,2422,0,2468
+V_SCROLL,0,2382,0,2422
+V_SCROLL,0,2344,0,2382
+V_SCROLL,0,2312,0,2344
+V_SCROLL,0,2283,0,2312
+V_SCROLL,0,2254,0,2283
+V_SCROLL,0,2228,0,2254
+V_SCROLL,0,2202,0,2228
+V_SCROLL,0,2180,0,2202
+V_SCROLL,0,2159,0,2180
+V_SCROLL,0,2138,0,2159
+V_SCROLL,0,2120,0,2138
+V_SCROLL,0,2106,0,2120
+V_SCROLL,0,2094,0,2106
+V_SCROLL,0,2084,0,2094
+V_SCROLL,0,2075,0,2084
+V_SCROLL,0,2065,0,2075
+V_SCROLL,0,2057,0,2065
+V_SCROLL,0,2051,0,2057
+V_SCROLL,0,2046,0,2051
+V_SCROLL,0,2042,0,2046
+V_SCROLL,0,2040,0,2042
+V_SCROLL,0,2036,0,2040
+V_SCROLL,0,2032,0,2036
+V_SCROLL,0,2027,0,2032
+V_SCROLL,0,2022,0,2027
+V_SCROLL,0,2017,0,2022
+V_SCROLL,0,2014,0,2017
+V_SCROLL,0,2012,0,2014
+V_SCROLL,0,2008,0,2012
+V_SCROLL,0,2002,0,2008
+V_SCROLL,0,1996,0,2002
+V_SCROLL,0,1990,0,1996
+V_SCROLL,0,1984,0,1990
+V_SCROLL,0,1977,0,1984
+V_SCROLL,0,1969,0,1977
+V_SCROLL,0,1959,0,1969
+V_SCROLL,0,1949,0,1959
+V_SCROLL,0,1937,0,1949
+V_SCROLL,0,1925,0,1937
+V_SCROLL,0,1911,0,1925
+V_SCROLL,0,1898,0,1911
+V_SCROLL,0,1883,0,1898
+V_SCROLL,0,1863,0,1883
+V_SCROLL,0,1845,0,1863
+V_SCROLL,0,1831,0,1845
+V_SCROLL,0,1827,0,1831
+V_SCROLL,0,1810,0,1827
+V_SCROLL,0,1810,0,1827
+V_SCROLL,0,1796,0,1810
+V_SCROLL,0,1796,0,1810
+V_SCROLL,0,1784,0,1796
+V_SCROLL,0,1784,0,1796
+V_SCROLL,0,1773,0,1784
+V_SCROLL,0,1773,0,1784
+V_SCROLL,0,1766,0,1773
+V_SCROLL,0,1766,0,1773
+V_SCROLL,0,1759,0,1766
+V_SCROLL,0,1759,0,1766
+V_SCROLL,0,1754,0,1759
+V_SCROLL,0,1754,0,1759
+V_SCROLL,0,1750,0,1754
+V_SCROLL,0,1750,0,1754
+V_SCROLL,0,1747,0,1750
+V_SCROLL,0,1747,0,1750
+V_SCROLL,0,1745,0,1747
+V_SCROLL,0,1745,0,1747
+V_SCROLL,0,1743,0,1745
+V_SCROLL,0,1743,0,1745
+V_SCROLL,0,1742,0,1743
+V_SCROLL,0,1742,0,1743
+V_SCROLL,0,1741,0,1742
+V_SCROLL,0,1741,0,1742
+V_SCROLL,0,1740,0,1741
+V_SCROLL,0,1740,0,1741
+V_SCROLL_END,25350212
+V_SCROLL_START,25352392
+V_SCROLL,0,1786,0,1740
+V_SCROLL,0,1841,0,1786
+V_SCROLL,0,1902,0,1841
+V_SCROLL,0,1954,0,1902
+V_SCROLL,0,1993,0,1954
+V_SCROLL,0,2025,0,1993
+V_SCROLL,0,2052,0,2025
+V_SCROLL,0,2075,0,2052
+V_SCROLL,0,2095,0,2075
+V_SCROLL,0,2108,0,2095
+V_SCROLL,0,2118,0,2108
+V_SCROLL,0,2129,0,2118
+V_SCROLL,0,2134,0,2129
+V_SCROLL,0,2138,0,2134
+V_SCROLL,0,2138,0,2134
+V_SCROLL,0,2142,0,2138
+V_SCROLL,0,2142,0,2138
+V_SCROLL,0,2143,0,2142
+V_SCROLL,0,2143,0,2142
+V_SCROLL,0,2144,0,2143
+V_SCROLL,0,2144,0,2143
+V_SCROLL,0,2145,0,2144
+V_SCROLL,0,2145,0,2144
+V_SCROLL_END,25352665
+V_SCROLL_START,25354025
+V_SCROLL,0,2116,0,2145
+V_SCROLL,0,2081,0,2116
+V_SCROLL,0,2043,0,2081
+V_SCROLL,0,2001,0,2043
+V_SCROLL,0,1961,0,2001
+V_SCROLL,0,1920,0,1961
+V_SCROLL,0,1880,0,1920
+V_SCROLL,0,1840,0,1880
+V_SCROLL,0,1800,0,1840
+V_SCROLL,0,1764,0,1800
+V_SCROLL,0,1723,0,1764
+V_SCROLL,0,1677,0,1723
+V_SCROLL,0,1623,0,1677
+V_SCROLL,0,1576,0,1623
+V_SCROLL,0,1542,0,1576
+V_SCROLL,0,1527,0,1542
+V_SCROLL,0,1524,0,1527
+V_SCROLL,0,1524,0,1527
+V_SCROLL,0,1485,0,1524
+V_SCROLL,0,1485,0,1524
+V_SCROLL,0,1443,0,1485
+V_SCROLL,0,1443,0,1485
+V_SCROLL,0,1405,0,1443
+V_SCROLL,0,1405,0,1443
+V_SCROLL,0,1371,0,1405
+V_SCROLL,0,1371,0,1405
+V_SCROLL,0,1338,0,1371
+V_SCROLL,0,1338,0,1371
+V_SCROLL,0,1309,0,1338
+V_SCROLL,0,1309,0,1338
+V_SCROLL,0,1284,0,1309
+V_SCROLL,0,1284,0,1309
+V_SCROLL,0,1262,0,1284
+V_SCROLL,0,1262,0,1284
+V_SCROLL,0,1241,0,1262
+V_SCROLL,0,1241,0,1262
+V_SCROLL,0,1222,0,1241
+V_SCROLL,0,1222,0,1241
+V_SCROLL,0,1205,0,1222
+V_SCROLL,0,1205,0,1222
+V_SCROLL,0,1191,0,1205
+V_SCROLL,0,1191,0,1205
+V_SCROLL,0,1178,0,1191
+V_SCROLL,0,1178,0,1191
+V_SCROLL,0,1167,0,1178
+V_SCROLL,0,1167,0,1178
+V_SCROLL,0,1156,0,1167
+V_SCROLL,0,1156,0,1167
+V_SCROLL,0,1147,0,1156
+V_SCROLL,0,1147,0,1156
+V_SCROLL,0,1139,0,1147
+V_SCROLL,0,1139,0,1147
+V_SCROLL,0,1132,0,1139
+V_SCROLL,0,1132,0,1139
+V_SCROLL,0,1126,0,1132
+V_SCROLL,0,1126,0,1132
+V_SCROLL,0,1121,0,1126
+V_SCROLL,0,1121,0,1126
+V_SCROLL,0,1116,0,1121
+V_SCROLL,0,1116,0,1121
+V_SCROLL,0,1112,0,1116
+V_SCROLL,0,1112,0,1116
+V_SCROLL,0,1109,0,1112
+V_SCROLL,0,1109,0,1112
+V_SCROLL,0,1106,0,1109
+V_SCROLL,0,1106,0,1109
+V_SCROLL,0,1104,0,1106
+V_SCROLL,0,1104,0,1106
+V_SCROLL,0,1102,0,1104
+V_SCROLL,0,1102,0,1104
+V_SCROLL,0,1101,0,1102
+V_SCROLL,0,1101,0,1102
+V_SCROLL,0,1100,0,1101
+V_SCROLL,0,1100,0,1101
+V_SCROLL_END,25354372
+V_SCROLL_START,25357837
+V_SCROLL,0,1054,0,1100
+V_SCROLL,0,1000,0,1054
+V_SCROLL,0,943,0,1000
+V_SCROLL,0,885,0,943
+V_SCROLL,0,827,0,885
+V_SCROLL,0,766,0,827
+V_SCROLL,0,703,0,766
+V_SCROLL,0,647,0,703
+V_SCROLL,0,605,0,647
+V_SCROLL,0,568,0,605
+V_SCROLL,0,536,0,568
+V_SCROLL,0,528,0,536
+V_SCROLL,0,526,0,528
+V_SCROLL,0,526,0,528
+V_SCROLL,0,506,0,526
+V_SCROLL,0,506,0,526
+V_SCROLL,0,487,0,506
+V_SCROLL,0,487,0,506
+V_SCROLL,0,472,0,487
+V_SCROLL,0,472,0,487
+V_SCROLL,0,458,0,472
+V_SCROLL,0,458,0,472
+V_SCROLL,0,448,0,458
+V_SCROLL,0,448,0,458
+V_SCROLL,0,438,0,448
+V_SCROLL,0,438,0,448
+V_SCROLL,0,431,0,438
+V_SCROLL,0,431,0,438
+V_SCROLL,0,425,0,431
+V_SCROLL,0,425,0,431
+V_SCROLL,0,420,0,425
+V_SCROLL,0,420,0,425
+V_SCROLL,0,416,0,420
+V_SCROLL,0,416,0,420
+V_SCROLL,0,412,0,416
+V_SCROLL,0,412,0,416
+V_SCROLL,0,410,0,412
+V_SCROLL,0,410,0,412
+V_SCROLL,0,407,0,410
+V_SCROLL,0,407,0,410
+V_SCROLL,0,406,0,407
+V_SCROLL,0,406,0,407
+V_SCROLL,0,405,0,406
+V_SCROLL,0,405,0,406
+V_SCROLL,0,404,0,405
+V_SCROLL,0,404,0,405
+V_SCROLL_END,25358068
+V_SCROLL_START,25359437
+V_SCROLL,0,356,0,404
+V_SCROLL,0,300,0,356
+V_SCROLL,0,236,0,300
+V_SCROLL,0,174,0,236
+V_SCROLL,0,122,0,174
+V_SCROLL,0,109,0,122
+V_SCROLL,0,51,0,109
+V_SCROLL,0,51,0,109
+V_SCROLL,0,-7,0,51
+V_SCROLL,0,-7,0,51
+V_SCROLL,0,-18,0,-7
+V_SCROLL,0,-18,0,-7
+V_SCROLL,0,-17,0,-18
+V_SCROLL,0,-17,0,-18
+V_SCROLL,0,-15,0,-17
+V_SCROLL,0,-15,0,-17
+V_SCROLL,0,-13,0,-15
+V_SCROLL,0,-13,0,-15
+V_SCROLL,0,-9,0,-13
+V_SCROLL,0,-9,0,-13
+V_SCROLL,0,-6,0,-9
+V_SCROLL,0,-6,0,-9
+V_SCROLL,0,-3,0,-6
+V_SCROLL,0,-3,0,-6
+V_SCROLL,0,-1,0,-3
+V_SCROLL,0,-1,0,-3
+V_SCROLL,0,0,0,-1
+V_SCROLL,0,0,0,-1
+V_SCROLL_END,25359577
+V_SCROLL_START,25362852
+V_SCROLL,0,97,0,0
+V_SCROLL,0,282,0,97
+V_SCROLL,0,396,0,282
+V_SCROLL,0,411,0,396
+V_SCROLL,0,411,0,396
+V_SCROLL,0,665,0,411
+V_SCROLL,0,665,0,411
+V_SCROLL,0,904,0,665
+V_SCROLL,0,904,0,665
+V_SCROLL,0,1157,0,904
+V_SCROLL,0,1157,0,904
+V_SCROLL,0,1408,0,1157
+V_SCROLL,0,1408,0,1157
+V_SCROLL,0,1641,0,1408
+V_SCROLL,0,1641,0,1408
+V_SCROLL,0,1887,0,1641
+V_SCROLL,0,1887,0,1641
+V_SCROLL,0,2116,0,1887
+V_SCROLL,0,2116,0,1887
+V_SCROLL,0,2355,0,2116
+V_SCROLL,0,2355,0,2116
+V_SCROLL,0,2576,0,2355
+V_SCROLL,0,2576,0,2355
+V_SCROLL,0,2821,0,2576
+V_SCROLL,0,2821,0,2576
+V_SCROLL,0,3041,0,2821
+V_SCROLL,0,3041,0,2821
+V_SCROLL,0,3046,0,3041
+V_SCROLL,0,3046,0,3041
+V_SCROLL,0,3045,0,3046
+V_SCROLL,0,3045,0,3046
+V_SCROLL,0,3043,0,3045
+V_SCROLL,0,3043,0,3045
+V_SCROLL,0,3041,0,3043
+V_SCROLL,0,3041,0,3043
+V_SCROLL,0,3037,0,3041
+V_SCROLL,0,3037,0,3041
+V_SCROLL,0,3034,0,3037
+V_SCROLL,0,3034,0,3037
+V_SCROLL,0,3031,0,3034
+V_SCROLL,0,3031,0,3034
+V_SCROLL,0,3029,0,3031
+V_SCROLL,0,3029,0,3031
+V_SCROLL,0,3028,0,3029
+V_SCROLL,0,3028,0,3029
+V_SCROLL_END,25362925
+V_SCROLL_START,25368198
+V_SCROLL,0,0,0,3028
+************************************
+Exercise 10: WRITE(true) DURATION: x3
+************ REPETITION 1 ************
+(-1,class android.widget.TextView,389,105,301,57,0,Remaining time:)
+(2131165273,class android.widget.ProgressBar,60,162,960,48,0,null)
+(2131165310,class android.widget.ScrollView,60,300,960,789,0,null)
+(2131165311,class android.widget.TextView,60,360,960,302,0,The Space Needle is an observation tower in Seattle; Washington. Six parachutists have leaped from the tower since its opening; but this activity is only legal with prior consent. Four jumpers were part of various promotions; and the other two were arrested.)
+(-1,class android.view.View,60,722,960,6,0,null)
+(2131165312,class android.widget.EditText,60,788,960,106,0,)
+(2131165277,class android.widget.Button,594,954,426,144,0,OK I've done it.)
+(2131165313,class ch.qol.unige.smartphonetest.writetask.customkeyboard.KeyboardViewWithInfo,16,1149,1048,627,0,null)
+[-1,class android.inputmethodservice.Keyboard$Key,16,0,97,142,0,q]
+[-1,class android.inputmethodservice.Keyboard$Key,118,0,97,142,0,w]
+[-1,class android.inputmethodservice.Keyboard$Key,220,0,97,142,0,e]
+[-1,class android.inputmethodservice.Keyboard$Key,322,0,97,142,0,r]
+[-1,class android.inputmethodservice.Keyboard$Key,424,0,97,142,0,t]
+[-1,class android.inputmethodservice.Keyboard$Key,526,0,97,142,0,y]
+[-1,class android.inputmethodservice.Keyboard$Key,628,0,97,142,0,u]
+[-1,class android.inputmethodservice.Keyboard$Key,730,0,97,142,0,i]
+[-1,class android.inputmethodservice.Keyboard$Key,832,0,97,142,0,o]
+[-1,class android.inputmethodservice.Keyboard$Key,934,0,97,142,0,p]
+[-1,class android.inputmethodservice.Keyboard$Key,54,160,97,142,0,a]
+[-1,class android.inputmethodservice.Keyboard$Key,156,160,97,142,0,s]
+[-1,class android.inputmethodservice.Keyboard$Key,258,160,97,142,0,d]
+[-1,class android.inputmethodservice.Keyboard$Key,360,160,97,142,0,f]
+[-1,class android.inputmethodservice.Keyboard$Key,462,160,97,142,0,g]
+[-1,class android.inputmethodservice.Keyboard$Key,564,160,97,142,0,h]
+[-1,class android.inputmethodservice.Keyboard$Key,666,160,97,142,0,j]
+[-1,class android.inputmethodservice.Keyboard$Key,768,160,97,142,0,k]
+[-1,class android.inputmethodservice.Keyboard$Key,870,160,97,142,0,l]
+[-1,class android.inputmethodservice.Keyboard$Key,5,320,162,142,0,shift]
+[-1,class android.inputmethodservice.Keyboard$Key,172,320,97,142,0,z]
+[-1,class android.inputmethodservice.Keyboard$Key,274,320,97,142,0,x]
+[-1,class android.inputmethodservice.Keyboard$Key,376,320,97,142,0,c]
+[-1,class android.inputmethodservice.Keyboard$Key,478,320,97,142,0,v]
+[-1,class android.inputmethodservice.Keyboard$Key,580,320,97,142,0,b]
+[-1,class android.inputmethodservice.Keyboard$Key,682,320,97,142,0,n]
+[-1,class android.inputmethodservice.Keyboard$Key,784,320,97,142,0,m]
+[-1,class android.inputmethodservice.Keyboard$Key,886,320,162,142,0,delete]
+[-1,class android.inputmethodservice.Keyboard$Key,173,480,97,142,0,comma]
+[-1,class android.inputmethodservice.Keyboard$Key,275,480,518,142,0,space]
+[-1,class android.inputmethodservice.Keyboard$Key,798,480,97,142,0,dot]
+************ REPETITION 2 ************
+(-1,class android.widget.TextView,389,105,301,57,0,Remaining time:)
+(2131165273,class android.widget.ProgressBar,60,162,960,48,0,null)
+(2131165310,class android.widget.ScrollView,60,300,960,789,0,null)
+(2131165311,class android.widget.TextView,60,360,960,351,0,Tourism is an important part of the Hawaii economy. The summer months and major holidays are the most popular times for outsiders to visit; however; especially when residents of the rest of the United States are looking to escape from cold; winter weather. The Japanese are also principal tourists.)
+(-1,class android.view.View,60,771,960,6,0,null)
+(2131165312,class android.widget.EditText,60,837,960,106,0,)
+(2131165277,class android.widget.Button,594,1003,426,144,0,OK I've done it.)
+(2131165313,class ch.qol.unige.smartphonetest.writetask.customkeyboard.KeyboardViewWithInfo,16,1149,1048,627,0,null)
+[-1,class android.inputmethodservice.Keyboard$Key,16,0,97,142,0,q]
+[-1,class android.inputmethodservice.Keyboard$Key,118,0,97,142,0,w]
+[-1,class android.inputmethodservice.Keyboard$Key,220,0,97,142,0,e]
+[-1,class android.inputmethodservice.Keyboard$Key,322,0,97,142,0,r]
+[-1,class android.inputmethodservice.Keyboard$Key,424,0,97,142,0,t]
+[-1,class android.inputmethodservice.Keyboard$Key,526,0,97,142,0,y]
+[-1,class android.inputmethodservice.Keyboard$Key,628,0,97,142,0,u]
+[-1,class android.inputmethodservice.Keyboard$Key,730,0,97,142,0,i]
+[-1,class android.inputmethodservice.Keyboard$Key,832,0,97,142,0,o]
+[-1,class android.inputmethodservice.Keyboard$Key,934,0,97,142,0,p]
+[-1,class android.inputmethodservice.Keyboard$Key,54,160,97,142,0,a]
+[-1,class android.inputmethodservice.Keyboard$Key,156,160,97,142,0,s]
+[-1,class android.inputmethodservice.Keyboard$Key,258,160,97,142,0,d]
+[-1,class android.inputmethodservice.Keyboard$Key,360,160,97,142,0,f]
+[-1,class android.inputmethodservice.Keyboard$Key,462,160,97,142,0,g]
+[-1,class android.inputmethodservice.Keyboard$Key,564,160,97,142,0,h]
+[-1,class android.inputmethodservice.Keyboard$Key,666,160,97,142,0,j]
+[-1,class android.inputmethodservice.Keyboard$Key,768,160,97,142,0,k]
+[-1,class android.inputmethodservice.Keyboard$Key,870,160,97,142,0,l]
+[-1,class android.inputmethodservice.Keyboard$Key,5,320,162,142,0,shift]
+[-1,class android.inputmethodservice.Keyboard$Key,172,320,97,142,0,z]
+[-1,class android.inputmethodservice.Keyboard$Key,274,320,97,142,0,x]
+[-1,class android.inputmethodservice.Keyboard$Key,376,320,97,142,0,c]
+[-1,class android.inputmethodservice.Keyboard$Key,478,320,97,142,0,v]
+[-1,class android.inputmethodservice.Keyboard$Key,580,320,97,142,0,b]
+[-1,class android.inputmethodservice.Keyboard$Key,682,320,97,142,0,n]
+[-1,class android.inputmethodservice.Keyboard$Key,784,320,97,142,0,m]
+[-1,class android.inputmethodservice.Keyboard$Key,886,320,162,142,0,delete]
+[-1,class android.inputmethodservice.Keyboard$Key,173,480,97,142,0,comma]
+[-1,class android.inputmethodservice.Keyboard$Key,275,480,518,142,0,space]
+[-1,class android.inputmethodservice.Keyboard$Key,798,480,97,142,0,dot]
+************ REPETITION 3 ************
+(-1,class android.widget.TextView,389,105,301,57,0,Remaining time:)
+(2131165273,class android.widget.ProgressBar,60,162,960,48,0,null)
+(2131165310,class android.widget.ScrollView,60,300,960,789,0,null)
+(2131165311,class android.widget.TextView,60,360,960,351,0,MobiSys seeks to present innovative and significant research on the design; implementation; usage; and evaluation of mobile computing and wireless systems; applications; and services. This conference builds on the success of the previous twelve MobiSys conferences. It will be held in Florence; Italy; in May.)
+(-1,class android.view.View,60,771,960,6,0,null)
+(2131165312,class android.widget.EditText,60,837,960,106,0,)
+(2131165277,class android.widget.Button,594,1003,426,144,0,OK I've done it.)
+(2131165313,class ch.qol.unige.smartphonetest.writetask.customkeyboard.KeyboardViewWithInfo,16,1149,1048,627,0,null)
+[-1,class android.inputmethodservice.Keyboard$Key,16,0,97,142,0,q]
+[-1,class android.inputmethodservice.Keyboard$Key,118,0,97,142,0,w]
+[-1,class android.inputmethodservice.Keyboard$Key,220,0,97,142,0,e]
+[-1,class android.inputmethodservice.Keyboard$Key,322,0,97,142,0,r]
+[-1,class android.inputmethodservice.Keyboard$Key,424,0,97,142,0,t]
+[-1,class android.inputmethodservice.Keyboard$Key,526,0,97,142,0,y]
+[-1,class android.inputmethodservice.Keyboard$Key,628,0,97,142,0,u]
+[-1,class android.inputmethodservice.Keyboard$Key,730,0,97,142,0,i]
+[-1,class android.inputmethodservice.Keyboard$Key,832,0,97,142,0,o]
+[-1,class android.inputmethodservice.Keyboard$Key,934,0,97,142,0,p]
+[-1,class android.inputmethodservice.Keyboard$Key,54,160,97,142,0,a]
+[-1,class android.inputmethodservice.Keyboard$Key,156,160,97,142,0,s]
+[-1,class android.inputmethodservice.Keyboard$Key,258,160,97,142,0,d]
+[-1,class android.inputmethodservice.Keyboard$Key,360,160,97,142,0,f]
+[-1,class android.inputmethodservice.Keyboard$Key,462,160,97,142,0,g]
+[-1,class android.inputmethodservice.Keyboard$Key,564,160,97,142,0,h]
+[-1,class android.inputmethodservice.Keyboard$Key,666,160,97,142,0,j]
+[-1,class android.inputmethodservice.Keyboard$Key,768,160,97,142,0,k]
+[-1,class android.inputmethodservice.Keyboard$Key,870,160,97,142,0,l]
+[-1,class android.inputmethodservice.Keyboard$Key,5,320,162,142,0,shift]
+[-1,class android.inputmethodservice.Keyboard$Key,172,320,97,142,0,z]
+[-1,class android.inputmethodservice.Keyboard$Key,274,320,97,142,0,x]
+[-1,class android.inputmethodservice.Keyboard$Key,376,320,97,142,0,c]
+[-1,class android.inputmethodservice.Keyboard$Key,478,320,97,142,0,v]
+[-1,class android.inputmethodservice.Keyboard$Key,580,320,97,142,0,b]
+[-1,class android.inputmethodservice.Keyboard$Key,682,320,97,142,0,n]
+[-1,class android.inputmethodservice.Keyboard$Key,784,320,97,142,0,m]
+[-1,class android.inputmethodservice.Keyboard$Key,886,320,162,142,0,delete]
+[-1,class android.inputmethodservice.Keyboard$Key,173,480,97,142,0,comma]
+[-1,class android.inputmethodservice.Keyboard$Key,275,480,518,142,0,space]
+[-1,class android.inputmethodservice.Keyboard$Key,798,480,97,142,0,dot]
+************************************
+Exercise 11: SURVEY(false) 
+(-1,class android.widget.TextView,48,24,930,140,0,How do you feel?)
+(-1,class android.widget.TextView,48,194,132,76,0,Negative valence)
+(2131165293,class android.widget.RadioButton,205,194,123,76,0,1)
+(2131165294,class android.widget.RadioButton,328,194,123,76,0,2)
+(2131165295,class android.widget.RadioButton,451,194,123,76,0,3)
+(2131165296,class android.widget.RadioButton,574,194,123,76,0,4)
+(2131165297,class android.widget.RadioButton,697,194,123,76,0,5)
+(-1,class android.widget.TextView,845,194,133,76,0,Positive valence)
+(-1,class android.view.View,141,300,744,3,0,null)
+(-1,class android.widget.TextView,48,333,132,76,0,Low energy)
+(2131165299,class android.widget.RadioButton,205,333,123,76,0,1)
+(2131165300,class android.widget.RadioButton,328,333,123,76,0,2)
+(2131165301,class android.widget.RadioButton,451,333,123,76,0,3)
+(2131165302,class android.widget.RadioButton,574,333,123,76,0,4)
+(2131165303,class android.widget.RadioButton,697,333,123,76,0,5)
+(-1,class android.widget.TextView,845,333,133,76,0,High energy)
+(-1,class android.view.View,141,439,744,3,0,null)
+(-1,class android.widget.TextView,48,472,132,41,0,Stressed)
+(2131165305,class android.widget.RadioButton,205,472,123,76,0,5)
+(2131165306,class android.widget.RadioButton,328,472,123,76,0,4)
+(2131165307,class android.widget.RadioButton,451,472,123,76,0,3)
+(2131165308,class android.widget.RadioButton,574,472,123,76,0,2)
+(2131165309,class android.widget.RadioButton,697,472,123,76,0,1)
+(-1,class android.widget.TextView,845,472,133,76,0,Not stressed)
+(-1,class android.view.View,141,578,744,3,0,null)
+(16908313,class android.widget.Button,48,613,930,144,0,Ok; I'm sure !!)
