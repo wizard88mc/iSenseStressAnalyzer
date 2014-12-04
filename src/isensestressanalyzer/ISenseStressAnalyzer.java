@@ -47,8 +47,8 @@ public class ISenseStressAnalyzer
     
     public static final Protocol protocols[] = new Protocol[] {
         new Protocol("SURVEY,false", "RELAX,false","SURVEY,false","SEARCH,false",
-            "WRITE,false","SURVEY,false","STRESSOR,true","SURVEY,false","SEARCH,false",
-            "WRITE,false","SURVEY,false")
+            "WRITE,false","SURVEY,false","STRESSOR,true","SURVEY,false","SEARCH,true",
+            "WRITE,true","SURVEY,false")
     };
     
     /**
@@ -115,11 +115,11 @@ public class ISenseStressAnalyzer
                     }
                 }
                 listTester.add(tester);
-                /*System.out.println("***** TESTER: " + tester.getName() + " ******");
+                System.out.println("***** TESTER: " + tester.getName() + " ******");
                 WriteAnalyzer singleUserAnalysis = new WriteAnalyzer(tester);
                 singleUserAnalysis.performAnalysis();
                 SearchAnalyzer singleUserSearchAnalysis = new SearchAnalyzer(tester);
-                singleUserSearchAnalysis.performAnalysis();*/
+                singleUserSearchAnalysis.performAnalysis();
             }
         }
         

@@ -19,7 +19,7 @@ public class FilesInputReader extends FileReader
 {
     public FilesInputReader()
     {
-        super("input_data");
+        super("input_data_serious");
     }
     
     /**
