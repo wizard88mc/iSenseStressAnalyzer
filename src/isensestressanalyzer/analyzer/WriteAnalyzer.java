@@ -15,493 +15,229 @@ import tester.Tester;
  * @author Matteo Ciman
  */
 public class WriteAnalyzer extends Analyzer
-{
-    private final ArrayList<Tester> mListTester;
-    
-    public WriteAnalyzer(ArrayList<Tester> mListTester)
-    {
-        this.mListTester = mListTester;
-    }
-    
-    public WriteAnalyzer(Tester singleTester)
-    {
-        this.mListTester = new ArrayList<>(); this.mListTester.add(singleTester);
-    }
-    
+{   
     /**
      * Performs all the operations necessary to calculate the information 
      * and the statistics about the exercises not stress and stress
      */
-    public void performAnalysis()
+    public void performAnalysis(Tester tester)
     {
-        for (Protocol protocol: ISenseStressAnalyzer.protocols)
-        {
-            // From each user I extract the writing exercise for that particular
-            // protocol and analyse them
-           
-            ArrayList<BasicDataStatistic> pressureDataNoStress = new ArrayList<>(),
-                    pressureDataStress = new ArrayList<>(),
-                    sizeDataNoStress = new ArrayList<>(),
-                    sizeDataStress = new ArrayList<>(),
-                    movementDataNoStress = new ArrayList<>(),
-                    movementDataStress = new ArrayList<>(),
-                    durationDataNoStress = new ArrayList<>(),
-                    durationDataStress = new ArrayList<>(),
-                    precisionDataNoStress = new ArrayList<>(),
-                    precisionDataStress = new ArrayList<>(), 
-                    ratioBackOverDigitsDataNoStress = new ArrayList<>(),
-                    ratioBackOverDigitsDataStress = new ArrayList<>(),
-                    ratioWrongCorrectWordsDataNoStress = new ArrayList<>(),
-                    ratioWrongCorrectWordsDataStress = new ArrayList<>(),
-                    digitsFrequencyDataNoStress = new ArrayList<>(),
-                    digitsFrequencyDataStress = new ArrayList<>();
-            
-            ArrayList<RotationDataWrapper> rotationNoStress = new ArrayList<>(), 
+        // I extract the writing exercise for that particular
+        // protocol and analyse them    
+        ArrayList<RotationDataWrapper> rotationNoStress = new ArrayList<>(), 
                     rotationStress = new ArrayList<>();
             
-            for (Tester tester: mListTester)
-            {   
-                ArrayList<Write> exercises = tester.getWritingExercisesForProtocol(protocol);
-                /**
-                 * Now I have all the exercises for that particular protocol
-                 * for this particular user. I have to perform analysis for all 
-                 * the info, add them
-                 */
-                if (!exercises.isEmpty() && mListTester.size() != 1)
-                {
-                    ArrayList<Digit> allDigitsNoStress = new ArrayList<>(), 
-                            allDigitsStress = new ArrayList<>();
-                    ArrayList<Write> noStressExercises = new ArrayList<>(),
-                            stressExercises = new ArrayList<>();
-                    for (Write write: exercises)
-                    {
-                        if (!write.stress())
-                        {
-                            noStressExercises.add(write);
-                            allDigitsNoStress.addAll(write.getDigits());
-                        }
-                        else
-                        {
-                            stressExercises.add(write);
-                            allDigitsStress.addAll(write.getDigits());
-                        }
-                    }
-
-                    managePressureData(allDigitsStress, allDigitsNoStress, 
-                            pressureDataNoStress, pressureDataStress);
-                    manageSizeData(allDigitsNoStress, allDigitsStress, 
-                            sizeDataNoStress, sizeDataStress);
-                    manageMovementData(allDigitsNoStress, allDigitsStress, 
-                            movementDataNoStress, movementDataStress);
-                    manageDurationData(allDigitsNoStress, allDigitsStress, 
-                            durationDataNoStress, durationDataStress);
-                    managePrecisionData(stressExercises, noStressExercises, 
-                            precisionDataNoStress, precisionDataStress);
-                    manageWritingTextData(stressExercises, noStressExercises, 
-                            ratioBackOverDigitsDataNoStress, ratioBackOverDigitsDataStress, 
-                            ratioWrongCorrectWordsDataNoStress, ratioWrongCorrectWordsDataStress, 
-                            digitsFrequencyDataNoStress, digitsFrequencyDataStress);
-                    manageRotationSensorData(noStressExercises, stressExercises, 
-                                rotationStress, rotationNoStress, mListTester.size() == 1);
-                }
-                else if (!exercises.isEmpty() && mListTester.size() == 1)
-                {
-                    for (Write exercise: exercises)
-                    {
-                       if (!exercise.stress())
-                       {
-                           pressureDataNoStress.add(exercise.getPressionDigitsBasicData());
-                           sizeDataNoStress.add(exercise.getSizeDigitsBasicData());
-                           movementDataNoStress.add(exercise.getMovementDigitsBasicData());
-                           durationDataNoStress.add(exercise.getDurationDigitsBasicData());
-                           precisionDataNoStress.add(exercise.getTouchPresicisionDigitsBasicData());
-                           ratioBackOverDigitsDataNoStress.add(new BasicDataStatistic(exercise.getRatioBackButtonsOverDigits()));
-                           ratioWrongCorrectWordsDataNoStress.add(new 
-                                BasicDataStatistic(ratioWrongTotalWords(exercise.getTextToWrite(), 
-                                        exercise.getWrittenText())));
-                           digitsFrequencyDataNoStress.add(new BasicDataStatistic(exercise.calculateDigitsFrequency()));
-                       }
-                       else
-                       {
-                           pressureDataStress.add(exercise.getPressionDigitsBasicData());
-                           sizeDataStress.add(exercise.getSizeDigitsBasicData());
-                           movementDataStress.add(exercise.getMovementDigitsBasicData());
-                           durationDataStress.add(exercise.getDurationDigitsBasicData());
-                           precisionDataStress.add(exercise.getTouchPresicisionDigitsBasicData());
-                           ratioBackOverDigitsDataStress.add(new BasicDataStatistic(exercise.getRatioBackButtonsOverDigits()));
-                           ratioWrongCorrectWordsDataStress.add(new 
-                                BasicDataStatistic(ratioWrongTotalWords(exercise.getTextToWrite(), 
-                                        exercise.getWrittenText())));
-                           digitsFrequencyDataStress.add(new BasicDataStatistic(exercise.calculateDigitsFrequency()));
-                       }
-                    }
-                }
-            }
+              
+        ArrayList<Write> exercises = 
+                tester.getWritingExercisesForProtocol(isensestressanalyzer.ISenseStressAnalyzer.protocols[0]);
+        /**
+         * Now I have all the exercises for that particular protocol
+         * for this particular user. I have to perform analysis for all 
+         * the info, add them
+         */
+        if (!exercises.isEmpty())
+        {
+            BasicDataStatistic pressureDataNoStress = null,
+                pressureDataStress = null,
+                sizeDataNoStress = null,
+                sizeDataStress = null,
+                movementDataNoStress = null,
+                movementDataStress = null,
+                durationDataNoStress = null,
+                durationDataStress = null,
+                precisionDataNoStress = null,
+                precisionDataStress = null, 
+                ratioBackOverDigitsDataNoStress = null,
+                ratioBackOverDigitsDataStress = null,
+                ratioWrongCorrectWordsDataNoStress = null,
+                ratioWrongCorrectWordsDataStress = null,
+                digitsFrequencyDataNoStress = null,
+                digitsFrequencyDataStress = null;
             
-            if (!pressureDataNoStress.isEmpty())
+            for (Write exercise: exercises)
             {
-                WriteAnalysisResume resume = new WriteAnalysisResume();
-                resume.pressureData(pressureDataNoStress, pressureDataStress);
-                resume.sizeData(sizeDataNoStress, sizeDataStress);
-                resume.movementData(movementDataNoStress, movementDataStress);
-                resume.durationData(durationDataNoStress, durationDataStress);
-                resume.precisionData(precisionDataNoStress, precisionDataStress);
-                resume.ratioBackOverDigitsData(ratioBackOverDigitsDataNoStress, ratioBackOverDigitsDataStress);
-                resume.ratioWrongAllWords(ratioWrongCorrectWordsDataNoStress, ratioWrongCorrectWordsDataStress);
-                resume.digitsFrequency(digitsFrequencyDataNoStress, digitsFrequencyDataStress);
-                resume.rotationData(rotationNoStress, rotationStress);
-
-                System.out.println("** RESUME WRITING **");
-                System.out.println(protocol.toString());
-                resume.printAnalysis();
-            }
-        }
-    }
-    
-    public void performGlobalAnalysis()
-    {
-        
-        ArrayList<BasicDataStatistic> pressureDataNoStress = new ArrayList<>(),
-                    pressureDataStress = new ArrayList<>(),
-                    sizeDataNoStress = new ArrayList<>(),
-                    sizeDataStress = new ArrayList<>(),
-                    movementDataNoStress = new ArrayList<>(),
-                    movementDataStress = new ArrayList<>(),
-                    durationDataNoStress = new ArrayList<>(),
-                    durationDataStress = new ArrayList<>(),
-                    precisionDataNoStress = new ArrayList<>(),
-                    precisionDataStress = new ArrayList<>(), 
-                    ratioBackOverDigitsDataNoStress = new ArrayList<>(),
-                    ratioBackOverDigitsDataStress = new ArrayList<>(),
-                    ratioWrongCorrectWordsDataNoStress = new ArrayList<>(),
-                    ratioWrongCorrectWordsDataStress = new ArrayList<>(),
-                    digitsFrequencyDataNoStress = new ArrayList<>(),
-                    digitsFrequencyDataStress = new ArrayList<>();
-            
-            ArrayList<RotationDataWrapper> rotationNoStress = new ArrayList<>(), 
-                    rotationStress = new ArrayList<>();
-        
-        for (Protocol protocol: ISenseStressAnalyzer.protocols)
-        {
-            // From each user I extract the writing exercise for that particular
-            // protocol and analyse them
-            
-            for (Tester tester: mListTester)
-            {   
-                ArrayList<Write> exercises = tester.getWritingExercisesForProtocol(protocol);
-                /**
-                 * Now I have all the exercises for that particular protocol
-                 * for this particular user. I have to perform analysis for all 
-                 * the info, add them
-                 */
-                if (!exercises.isEmpty())
+               if (!exercise.stress())
+               {
+                   pressureDataNoStress = exercise.getPressionDigitsBasicData();
+                   sizeDataNoStress = exercise.getSizeDigitsBasicData();
+                   movementDataNoStress = exercise.getMovementDigitsBasicData();
+                   durationDataNoStress = exercise.getDurationDigitsBasicData();
+                   precisionDataNoStress = exercise.getTouchPresicisionDigitsBasicData();
+                   ratioBackOverDigitsDataNoStress = 
+                           new BasicDataStatistic(exercise.getRatioBackButtonsOverDigits());
+                   ratioWrongCorrectWordsDataNoStress = new
+                        BasicDataStatistic(ratioWrongTotalWords(exercise.getTextToWrite(), 
+                                exercise.getWrittenText()));
+                   digitsFrequencyDataNoStress = new BasicDataStatistic(exercise.calculateDigitsFrequency());
+               }
+               else
+               {
+                   pressureDataStress = exercise.getPressionDigitsBasicData();
+                   sizeDataStress = exercise.getSizeDigitsBasicData();
+                   movementDataStress = exercise.getMovementDigitsBasicData();
+                   durationDataStress = exercise.getDurationDigitsBasicData();
+                   precisionDataStress = exercise.getTouchPresicisionDigitsBasicData();
+                   ratioBackOverDigitsDataStress = new BasicDataStatistic(exercise.getRatioBackButtonsOverDigits());
+                   ratioWrongCorrectWordsDataStress = new 
+                        BasicDataStatistic(ratioWrongTotalWords(exercise.getTextToWrite(), 
+                                exercise.getWrittenText()));
+                   digitsFrequencyDataStress = new BasicDataStatistic(exercise.calculateDigitsFrequency());
+               }
+               
+               if (pressureDataNoStress != null)
                 {
-                    ArrayList<Digit> allDigitsNoStress = new ArrayList<>(), 
-                            allDigitsStress = new ArrayList<>();
-                    ArrayList<Write> noStressExercises = new ArrayList<>(),
-                            stressExercises = new ArrayList<>();
-                    for (Write write: exercises)
-                    {
-                        if (!write.stress())
-                        {
-                            noStressExercises.add(write);
-                            allDigitsNoStress.addAll(write.getDigits());
-                        }
-                        else
-                        {
-                            stressExercises.add(write);
-                            allDigitsStress.addAll(write.getDigits());
-                        }
-                    }
-
-                    managePressureData(allDigitsStress, allDigitsNoStress, 
-                            pressureDataNoStress, pressureDataStress);
-                    manageSizeData(allDigitsNoStress, allDigitsStress, 
-                            sizeDataNoStress, sizeDataStress);
-                    manageMovementData(allDigitsNoStress, allDigitsStress, 
-                            movementDataNoStress, movementDataStress);
-                    manageDurationData(allDigitsNoStress, allDigitsStress, 
-                            durationDataNoStress, durationDataStress);
-                    managePrecisionData(stressExercises, noStressExercises, 
-                            precisionDataNoStress, precisionDataStress);
-                    manageWritingTextData(stressExercises, noStressExercises, 
-                            ratioBackOverDigitsDataNoStress, ratioBackOverDigitsDataStress, 
-                            ratioWrongCorrectWordsDataNoStress, ratioWrongCorrectWordsDataStress, 
-                            digitsFrequencyDataNoStress, digitsFrequencyDataStress);
-                    manageRotationSensorData(noStressExercises, stressExercises, 
-                                rotationStress, rotationNoStress, mListTester.size() == 1);
+                    WriteAnalysisResume resume = new WriteAnalysisResume();
+                    resume.pressureData(pressureDataNoStress, pressureDataStress);
+                    resume.sizeData(sizeDataNoStress, sizeDataStress);
+                    resume.movementData(movementDataNoStress, movementDataStress);
+                    resume.durationData(durationDataNoStress, durationDataStress);
+                    resume.precisionData(precisionDataNoStress, precisionDataStress);
+                    resume.ratioBackOverDigitsData(ratioBackOverDigitsDataNoStress, ratioBackOverDigitsDataStress);
+                    resume.ratioWrongAllWords(ratioWrongCorrectWordsDataNoStress, ratioWrongCorrectWordsDataStress);
+                    resume.digitsFrequency(digitsFrequencyDataNoStress, digitsFrequencyDataStress);
+                    resume.rotationData(rotationNoStress, rotationStress);
+                    
+                    tester.addNewWriteAnalysisResume(resume);
                 }
             }
         }
-        
-        if (!pressureDataNoStress.isEmpty())
-            {
-                WriteAnalysisResume resume = new WriteAnalysisResume();
-                resume.pressureData(pressureDataNoStress, pressureDataStress);
-                resume.sizeData(sizeDataNoStress, sizeDataStress);
-                resume.movementData(movementDataNoStress, movementDataStress);
-                resume.durationData(durationDataNoStress, durationDataStress);
-                resume.precisionData(precisionDataNoStress, precisionDataStress);
-                resume.ratioBackOverDigitsData(ratioBackOverDigitsDataNoStress, ratioBackOverDigitsDataStress);
-                resume.ratioWrongAllWords(ratioWrongCorrectWordsDataNoStress, ratioWrongCorrectWordsDataStress);
-                resume.digitsFrequency(digitsFrequencyDataNoStress, digitsFrequencyDataStress);
-                resume.rotationData(rotationNoStress, rotationStress);
-
-                System.out.println("** RESUME WRITING **");
-                resume.printAnalysis();
-            }
     }
     
-    /**
-     * 
-     * @param allDigitsStress
-     * @param allDigitsNoStress
-     * @param pressureDataNoStress
-     * @param pressureDataStress 
-     */
-    protected void managePressureData(ArrayList<Digit> allDigitsStress, 
-            ArrayList<Digit> allDigitsNoStress, ArrayList<BasicDataStatistic> pressureDataNoStress,
-            ArrayList<BasicDataStatistic> pressureDataStress)
+    public static WriteAnalysisResume performingGlobalAnalysis(Tester tester)
     {
-        ArrayList<Double> pressureStressedData = new ArrayList<>(),
-                pressureNotStressedData = new ArrayList<>();
-
-        for (Digit digit: allDigitsStress)
-        {
-            pressureStressedData.add(digit.getPressureBasicData().getAverage());
-        }
-        for (Digit digit: allDigitsNoStress)
-        {
-            pressureNotStressedData.add(digit.getPressureBasicData().getAverage());
-        }
-
-        if (!pressureStressedData.isEmpty() && 
-                !pressureNotStressedData.isEmpty())
-        {
-            pressureDataStress.add(new BasicDataStatistic(pressureStressedData, false));
-            pressureDataNoStress.add(new BasicDataStatistic(pressureNotStressedData, false));
-        }
+        ArrayList<WriteAnalysisResume> listResumes = tester.getWriteAnalysisResumes();
+        WriteAnalysisResume resumeGlobalForUser = new WriteAnalysisResume();
+        pressureDataForGlobalAnalysis(listResumes, resumeGlobalForUser);
+        sizeDataForGlobalAnalysis(listResumes, resumeGlobalForUser);
+        movementDataForGlobalAnalysis(listResumes, resumeGlobalForUser);
+        durationDataForGlobalAnalysis(listResumes, resumeGlobalForUser);
+        precisionDataForGlobalAnalysis(listResumes, resumeGlobalForUser);
+        ratioBackOverDigitsDataForGlobalAnalysis(listResumes, resumeGlobalForUser);
+        ratioWrongAllWordsForGlobalAnalysis(listResumes, resumeGlobalForUser);
+        digitsFrequencyForGlobalAnalysis(listResumes, resumeGlobalForUser);
+        
+        return resumeGlobalForUser;
     }
     
-    protected void managePressureDataOneTester(ArrayList<Write> exercises, 
-            ArrayList<BasicDataStatistic> pressureDataNoStress, 
-            ArrayList<BasicDataStatistic> pressureDataStress)
+    private static void pressureDataForGlobalAnalysis(ArrayList<WriteAnalysisResume> resumes, 
+            WriteAnalysisResume resume)
     {
-        for (Write write: exercises)
+        ArrayList<Double> meanValuesNoStress = new ArrayList<>(), 
+                meanValuesStress = new ArrayList<>();
+        
+        for (WriteAnalysisResume resumeWrite: resumes)
         {
-            ArrayList<Double> pressureNoStress = new ArrayList<>(),
-                    pressureStress = new ArrayList<>();
-            if (write.stress())
-            {
-                for (Digit digit: write.getDigits())
-                {
-                    pressureStress.add(digit.getPressureBasicData().getAverage());
-                }
-            }
-            else
-            {
-                for (Digit digit: write.getDigits())
-                {
-                    pressureNoStress.add(digit.getPressureBasicData().getAverage());
-                }
-            }
-            
-            pressureDataNoStress.add(new BasicDataStatistic(pressureNoStress, false));
-            pressureDataStress.add(new BasicDataStatistic(pressureStress, false));
+            meanValuesNoStress.add(resumeWrite.getPressureData().getNoStressData().getAverage());
+            meanValuesStress.add(resumeWrite.getPressureData().getStressData().getAverage());
         }
+        resume.pressureData(new BasicDataStatistic(meanValuesNoStress, false), 
+                new BasicDataStatistic(meanValuesStress, false));
     }
     
-    /**
-     * 
-     * @param allDigitsNoStress
-     * @param allDigitsStress
-     * @param sizeDataNoStress
-     * @param sizeDataStress 
-     */
-    protected void manageSizeData(ArrayList<Digit> allDigitsNoStress, 
-            ArrayList<Digit> allDigitsStress, ArrayList<BasicDataStatistic> sizeDataNoStress, 
-            ArrayList<BasicDataStatistic> sizeDataStress)
+    private static void sizeDataForGlobalAnalysis(ArrayList<WriteAnalysisResume> resumes, 
+            WriteAnalysisResume resume)
     {
-        ArrayList<Double> sizeStressedData = new ArrayList<>(),
-                sizeNotStressedData = new ArrayList<>();
+        ArrayList<Double> meanValueNoStress = new ArrayList<>(), 
+                meanValueStress = new ArrayList<>();
         
-        for (Digit digit: allDigitsStress)
+        for (WriteAnalysisResume resumeWrite: resumes)
         {
-            sizeStressedData.add(digit.getSizeBasicData().getAverage());
+            meanValueNoStress.add(resumeWrite.getSizeData().getNoStressData().getAverage());
+            meanValueStress.add(resumeWrite.getSizeData().getStressData().getAverage());
         }
-        for (Digit digit: allDigitsNoStress)
-        {
-            sizeNotStressedData.add(digit.getSizeBasicData().getAverage());
-        }
-        
-        if (!sizeNotStressedData.isEmpty() && !sizeStressedData.isEmpty())
-        {
-            sizeDataNoStress.add(new BasicDataStatistic(sizeNotStressedData, false));
-            sizeDataStress.add(new BasicDataStatistic(sizeStressedData, false));
-        }
+        resume.sizeData(new BasicDataStatistic(meanValueNoStress, false), 
+                new BasicDataStatistic(meanValueStress, false));
     }
     
-    /**
-     * 
-     * @param allDigitsNoStress
-     * @param allDigitsStress
-     * @param movementDataNoStress
-     * @param movementDataStress 
-     */
-    protected void manageMovementData(ArrayList<Digit> allDigitsNoStress, 
-            ArrayList<Digit> allDigitsStress, ArrayList<BasicDataStatistic> movementDataNoStress,
-            ArrayList<BasicDataStatistic> movementDataStress)
+    private static void movementDataForGlobalAnalysis(ArrayList<WriteAnalysisResume> resumes, 
+            WriteAnalysisResume resume)
     {
-        ArrayList<Double> movementStressData = new ArrayList<>(),
-                movementNoStressData = new ArrayList<>();
+        ArrayList<Double> meanValueNoStress = new ArrayList<>(), 
+                meanValueStress = new ArrayList<>();
         
-        for (Digit digit: allDigitsStress)
+        for (WriteAnalysisResume resumeWrite: resumes)
         {
-            if (digit.isValid())
-            {
-                movementStressData.add(digit.getTouchMovement());
-            }
+            meanValueNoStress.add(resumeWrite.getMovementData().getNoStressData().getAverage());
+            meanValueStress.add(resumeWrite.getMovementData().getStressData().getAverage());
         }
-        for (Digit digit: allDigitsNoStress)
-        {
-            if (digit.isValid())
-            {
-                movementNoStressData.add(digit.getTouchMovement());
-            }
-        }
-        
-        if (!movementNoStressData.isEmpty() && !movementStressData.isEmpty())
-        {
-            movementDataNoStress.add(new BasicDataStatistic(movementNoStressData, true));
-            movementDataStress.add(new BasicDataStatistic(movementStressData, true));
-        }
+        resume.movementData(new BasicDataStatistic(meanValueNoStress, false), 
+                new BasicDataStatistic(meanValueStress, false));
     }
     
-    /**
-     * 
-     * @param allDigitsNoStress
-     * @param allDigitsStress
-     * @param durationDataNoStress
-     * @param durationDataStress 
-     */
-    protected void manageDurationData(ArrayList<Digit> allDigitsNoStress, 
-            ArrayList<Digit> allDigitsStress, ArrayList<BasicDataStatistic> durationDataNoStress, 
-            ArrayList<BasicDataStatistic> durationDataStress)
+    private static void durationDataForGlobalAnalysis(ArrayList<WriteAnalysisResume> resumes, 
+            WriteAnalysisResume resume)
     {
-        ArrayList<Double> durationStressData = new ArrayList<>(),
-                durationNoStressData = new ArrayList<>();
+        ArrayList<Double> meanValueNoStress = new ArrayList<>(), 
+                meanValueStress = new ArrayList<>();
         
-        for (Digit digit: allDigitsStress)
+        for (WriteAnalysisResume resumeWrite: resumes)
         {
-            if (digit.isValid())
-            {
-                durationStressData.add(digit.getTouchDuration());
-            }
+            meanValueNoStress.add(resumeWrite.getDurationData().getNoStressData().getAverage());
+            meanValueStress.add(resumeWrite.getDurationData().getStressData().getAverage());
         }
-        for (Digit digit: allDigitsNoStress)
-        {
-            if (digit.isValid())
-            {
-                durationNoStressData.add(digit.getTouchDuration());
-            }
-        }
-        
-        if (!durationNoStressData.isEmpty() && !durationStressData.isEmpty())
-        {
-            durationDataNoStress.add(new BasicDataStatistic(durationNoStressData, true));
-            durationDataStress.add(new BasicDataStatistic(durationStressData, true));
-        }
+        resume.durationData(new BasicDataStatistic(meanValueNoStress, false), 
+                new BasicDataStatistic(meanValueStress, false));
     }
+    
+    private static void precisionDataForGlobalAnalysis(ArrayList<WriteAnalysisResume> resumes, 
+            WriteAnalysisResume resume)
+    {
+        ArrayList<Double> meanValueNoStress = new ArrayList<>(),
+                meanValueStress = new ArrayList<>();
+        
+        for (WriteAnalysisResume resumeWrite: resumes)
+        {
+            meanValueNoStress.add(resumeWrite.getPrecisionData().getNoStressData().getAverage());
+            meanValueStress.add(resumeWrite.getPrecisionData().getStressData().getAverage());
+        }
+        resume.precisionData(new BasicDataStatistic(meanValueNoStress, false), 
+                new BasicDataStatistic(meanValueStress, false));
+    }
+    
 
-    protected void managePrecisionData(ArrayList<Write> stressExercises, 
-            ArrayList<Write> noStressExercises, ArrayList<BasicDataStatistic> precisionDataNoStress, 
-            ArrayList<BasicDataStatistic> precisionDataStress)
+    private static void ratioBackOverDigitsDataForGlobalAnalysis(ArrayList<WriteAnalysisResume> resumes, 
+            WriteAnalysisResume resume)
     {
-        ArrayList<Double> precisionStress = new ArrayList<>(),
-                precisionNoStress = new ArrayList<>();
+        ArrayList<Double> meanValueNoStress = new ArrayList<>(),
+                meanValueStress = new ArrayList<>();
         
-        for (Write write: stressExercises)
+        for (WriteAnalysisResume resumeWrite: resumes)
         {
-            precisionStress.add(write.rateTouchPrecisionExercise());
+            meanValueNoStress.add(resumeWrite.getRatioBackOverDigits().getNoStressData().getAverage());
+            meanValueStress.add(resumeWrite.getRatioBackOverDigits().getStressData().getAverage());
         }
-        for (Write write: noStressExercises)
-        {
-            precisionNoStress.add(write.rateTouchPrecisionExercise());
-        }
-        
-        if (!precisionNoStress.isEmpty() && !precisionStress.isEmpty())
-        {
-            precisionDataNoStress.add(new BasicDataStatistic(precisionNoStress, true));
-            precisionDataStress.add(new BasicDataStatistic(precisionStress, true));
-        }
+        resume.ratioBackOverDigitsData(new BasicDataStatistic(meanValueNoStress, false), 
+                new BasicDataStatistic(meanValueStress, false));
     }
     
-    /**
-     * Performs analysis of the written text of the user, comparing it to the 
-     * target text to write
-     * @param stressExercises the exercises in stress mode
-     * @param noStressExercises the exercises in no stress mode
-     * @param ratioBackOverDigitsNoStressData where to put the BasicDataStatistic about back press in no stress mode
-     * @param ratioBackOverDigitsStressData where to put the BasicDataStatistic about back press in stress mode
-     * @param ratioWrongCorrectWordsNoStressData where to put the BasicDataStatistic 
-     * about the ratio of wrong words over all the words of the test in no stress mode
-     * @param ratioWrongCorrectWordsStressData where to put the BasicDataStatistic 
-     * about the ratio of wrong words over all the words of the text in stress mode
-     * @param digitsFrequencyNoStressData where to put the BasicDataStatistic about
-     * the frequency of digits in no stress mode
-     * @param digitsFrequencyStressData where to put the BasicDataStatistic about
-     * the frequency of digits in stress mode
-     */
-    protected void manageWritingTextData(ArrayList<Write> stressExercises, 
-            ArrayList<Write> noStressExercises, ArrayList<BasicDataStatistic> ratioBackOverDigitsNoStressData, 
-            ArrayList<BasicDataStatistic> ratioBackOverDigitsStressData, 
-            ArrayList<BasicDataStatistic> ratioWrongCorrectWordsNoStressData, 
-            ArrayList<BasicDataStatistic> ratioWrongCorrectWordsStressData, 
-            ArrayList<BasicDataStatistic> digitsFrequencyNoStressData, 
-            ArrayList<BasicDataStatistic> digitsFrequencyStressData)
+    private static void ratioWrongAllWordsForGlobalAnalysis(ArrayList<WriteAnalysisResume> resumes, 
+            WriteAnalysisResume resume)
     {
-        ArrayList<Double> backNoStress = new ArrayList<>(),
-                backStress = new ArrayList<>(), 
-                ratioWrongCorrectNoStress = new ArrayList<>(), 
-                ratioWrongCorrectStress = new ArrayList<>(), 
-                digitsFrequencyNoStress = new ArrayList<>(), 
-                digitsFrequencyStress = new ArrayList<>();
+        ArrayList<Double> meanValueNoStress = new ArrayList<>(), 
+                meanValueStress = new ArrayList<>();
         
-        for (Write write: noStressExercises)
+        for (WriteAnalysisResume resumeWrite: resumes)
         {
-            backNoStress.add(write.getRatioBackButtonsOverDigits());
-            ratioWrongCorrectNoStress.add(ratioWrongTotalWords(write.getTextToWrite(), 
-                    write.getWrittenText()));
-            digitsFrequencyNoStress.add(write.calculateDigitsFrequency());
+            meanValueNoStress.add(resumeWrite.getRatioWrongAllWords().getNoStressData().getAverage());
+            meanValueStress.add(resumeWrite.getRatioWrongAllWords().getStressData().getAverage());
         }
-        for (Write write: stressExercises)
-        {
-            try
-            {
-            backStress.add(write.getRatioBackButtonsOverDigits());
-            ratioWrongCorrectStress.add(ratioWrongTotalWords(write.getTextToWrite(), 
-                    write.getWrittenText()));
-            digitsFrequencyStress.add(write.calculateDigitsFrequency());
-            }
-            catch(Exception exc) 
-            {
-                System.out.println(exc.toString());
-            }
-        }
+        resume.ratioWrongAllWords(new BasicDataStatistic(meanValueNoStress, false), 
+                new BasicDataStatistic(meanValueStress, false));
+    }
+    
+    private static void digitsFrequencyForGlobalAnalysis(ArrayList<WriteAnalysisResume> resumes, 
+            WriteAnalysisResume resume)
+    {
+        ArrayList<Double> meanValueNoStress = new ArrayList<>(),
+                meanValueStress = new ArrayList<>();
         
-        if (!backNoStress.isEmpty() && !backStress.isEmpty() && 
-                !ratioWrongCorrectNoStress.isEmpty() && !ratioWrongCorrectStress.isEmpty() 
-                && !digitsFrequencyStress.isEmpty() && !digitsFrequencyNoStress.isEmpty())
+        for (WriteAnalysisResume resumeWrite: resumes)
         {
-            ratioBackOverDigitsNoStressData.add(new BasicDataStatistic(backNoStress, true));
-            ratioBackOverDigitsStressData.add(new BasicDataStatistic(backStress, true));
-
-            ratioWrongCorrectWordsNoStressData.add(new BasicDataStatistic(ratioWrongCorrectNoStress, false));
-            ratioWrongCorrectWordsStressData.add(new BasicDataStatistic(ratioWrongCorrectStress, false));
-
-            digitsFrequencyNoStressData.add(new BasicDataStatistic(digitsFrequencyNoStress, true));
-            digitsFrequencyStressData.add(new BasicDataStatistic(digitsFrequencyStress, true));
+            meanValueNoStress.add(resumeWrite.getDigitsFrequencyData().getNoStressData().getAverage());
+            meanValueStress.add(resumeWrite.getDigitsFrequencyData().getStressData().getAverage());
         }
+        resume.digitsFrequency(new BasicDataStatistic(meanValueNoStress, false), 
+                new BasicDataStatistic(meanValueStress, false));
     }
     
     /**

@@ -1,6 +1,7 @@
 package isensestressanalyzer;
 
 import isensestressanalyzer.analyzer.SearchAnalyzer;
+import isensestressanalyzer.analyzer.WriteAnalysisResume;
 import isensestressanalyzer.analyzer.WriteAnalyzer;
 import isensestressanalyzer.exercise.Exercise;
 import isensestressanalyzer.exercise.Protocol;
@@ -116,20 +117,16 @@ public class ISenseStressAnalyzer
                 }
                 listTester.add(tester);
                 System.out.println("***** TESTER: " + tester.getName() + " ******");
-                WriteAnalyzer singleUserAnalysis = new WriteAnalyzer(tester);
-                singleUserAnalysis.performAnalysis();
-                SearchAnalyzer singleUserSearchAnalysis = new SearchAnalyzer(tester);
-                singleUserSearchAnalysis.performAnalysis();
+                
             }
         }
         
-        WriteAnalyzer mWriteAnalyzer = new WriteAnalyzer(listTester);
-        //mWriteAnalyzer.performAnalysis();
-        mWriteAnalyzer.performGlobalAnalysis();
+        ArrayList<WriteAnalysisResume> resumesForTesters = new ArrayList<>();
+        for (Tester tester: listTester)
+        {
+            resumesForTesters.add(WriteAnalyzer.performingGlobalAnalysis(tester));
+        }
         
-        SearchAnalyzer mSearchAnalyzer = new SearchAnalyzer(listTester);
-        //mSearchAnalyzer.performAnalysis();
-        mSearchAnalyzer.performGlobalAnalysis();
     }
     
     private static void clearWrongExercises(ArrayList<Exercise> exercises)

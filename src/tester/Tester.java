@@ -1,5 +1,10 @@
 package tester;
 
+import isensestressanalyzer.analyzer.SearchAnalysisResume;
+import isensestressanalyzer.analyzer.SearchAnalyzer;
+import isensestressanalyzer.analyzer.WriteAnalysisResume;
+import isensestressanalyzer.analyzer.WriteAnalyzer;
+import isensestressanalyzer.dataanalysis.BasicDataStatistic;
 import isensestressanalyzer.exercise.Exercise;
 import isensestressanalyzer.exercise.Protocol;
 import isensestressanalyzer.exercise.Search;
@@ -14,7 +19,12 @@ import java.util.ArrayList;
 public class Tester 
 {
     private final String name;
+    /**
+     * Each single exercise (Write or Search) is a test
+     */
     private ArrayList<Test> listTests = new ArrayList<>();
+    private ArrayList<WriteAnalysisResume> writeEvaluations = new ArrayList<>();
+    private ArrayList<SearchAnalysisResume> searchEvaluations = new ArrayList<>();
     private PhoneSettings mPhoneSettigns = null;
     
     public Tester(String name)
@@ -124,5 +134,43 @@ public class Tester
     public PhoneSettings getPhoneSettings()
     {
         return this.mPhoneSettigns;
+    }
+    
+    public void addNewWriteAnalysisResume(WriteAnalysisResume resume)
+    {
+        this.writeEvaluations.add(resume);
+    }
+    
+    public ArrayList<WriteAnalysisResume> getWriteAnalysisResumes()
+    {
+        return this.writeEvaluations;
+    }
+    
+    public void addNewSearchAnalysisResume(SearchAnalysisResume resume)
+    {
+        this.searchEvaluations.add(resume);
+    }
+    
+    public ArrayList<SearchAnalysisResume> getSearchAnalysisResumes()
+    {
+        return this.searchEvaluations;
+    }
+    
+    public void performinGlobalAnalysis()
+    {
+        
+    }
+    
+    private void pressureData(WriteAnalysisResume resume)
+    {
+        ArrayList<Double> meanValuesNoStress = new ArrayList<>(),
+                meanValuesStress = new ArrayList<>();
+        
+        for (WriteAnalysisResume analysis: writeEvaluations)
+        {
+            meanValuesNoStress.add(analysis.getPressureData().getNoStressData().getAverage());
+            meanValuesStress.add(analysis.getPressureData().getStressData().getAverage());
+        }
+        resume.pressureData(new BasicDataStatistic(meanValuesNoStress, false), new BasicDataStatistic(meanValuesStress, false));
     }
 }

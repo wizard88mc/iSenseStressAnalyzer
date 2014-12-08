@@ -8,6 +8,7 @@ import isensestressanalyzer.interaction.Scroll;
 import isensestressanalyzer.interaction.ScrollMovement;
 import isensestressanalyzer.interaction.Touch;
 import isensestressanalyzer.interaction.VerticalScroll;
+import isensestressanalyzer.utils.PhoneSettings;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -343,5 +344,184 @@ public class Search extends Exercise
             movement.add(touch.getTouchMovement());
         }
         return new BasicDataStatistic(movement, false);
+    }
+    
+    public BasicDataStatistic getScrollDeltaDataVertical()
+    {
+        ArrayList<Double> scrollDeltaData = new ArrayList<>();
+        
+        for (Scroll scroll: mListScroll)
+        {
+            if (scroll instanceof VerticalScroll)
+            {
+                scrollDeltaData.add(scroll.calculateScrollDelta());
+            }
+        }
+        
+        return new BasicDataStatistic(scrollDeltaData, true);
+    }
+    
+    public BasicDataStatistic getScrollDeltaDataHorizontal()
+    {
+        ArrayList<Double> scrollDeltaData = new ArrayList<>();
+        
+        for (Scroll scroll: mListScroll)
+        {
+            if (scroll instanceof HorizontalScroll)
+            {
+                scrollDeltaData.add(scroll.calculateScrollDelta());
+            }
+        }
+        
+        return new BasicDataStatistic(scrollDeltaData, true);
+    }
+    
+    public BasicDataStatistic getScrollTimeLengthData(boolean horizontal)
+    {
+        ArrayList<Double> scrollTimeLengthData = new ArrayList<>();
+        
+        for (Scroll scroll: mListScroll)
+        {
+            if (!horizontal && (scroll instanceof VerticalScroll))
+            {
+                scrollTimeLengthData.add(scroll.calculateScrollTimeLength());
+            }
+            else if (horizontal && (scroll instanceof HorizontalScroll))
+            {
+                scrollTimeLengthData.add(scroll.calculateScrollTimeLength());
+            }
+        }
+        return new BasicDataStatistic(scrollTimeLengthData, true);
+    }
+    
+    public BasicDataStatistic getScrollInteractionLengthData(boolean horizontal)
+    {
+        ArrayList<Double> scrollInteractionLengthData = new ArrayList<>();
+        
+        for (Scroll scroll: mListScroll)
+        {
+            if (!horizontal && (scroll instanceof VerticalScroll))
+            {
+                scrollInteractionLengthData.add(scroll.calculateScrollInteractionLength());
+            }
+            else if (horizontal && (scroll instanceof HorizontalScroll))
+            {
+                scrollInteractionLengthData.add(scroll.calculateScrollInteractionLength());
+            }
+        }
+        return new BasicDataStatistic(scrollInteractionLengthData, true);
+    }
+    
+    public BasicDataStatistic getSpeedScrollDeltaData(boolean horizontal)
+    {
+        ArrayList<Double> speedScrollDeltaData = new ArrayList<>();
+        
+        for (Scroll scroll: mListScroll)
+        {
+            if (!horizontal && (scroll instanceof VerticalScroll))
+            {
+                speedScrollDeltaData.add(scroll.calculateSpeedScrollDelta());
+            }
+            else if (horizontal && (scroll instanceof HorizontalScroll))
+            {
+                speedScrollDeltaData.add(scroll.calculateSpeedScrollDelta());
+            }
+        }
+        return new BasicDataStatistic(speedScrollDeltaData, true);
+    }
+    
+    public BasicDataStatistic getSpeedScrollInteractionData(boolean horizontal)
+    {
+        ArrayList<Double> speedScrollInteractionData = new ArrayList<>();
+        
+        for (Scroll scroll: mListScroll)
+        {
+            if (!horizontal && (scroll instanceof VerticalScroll))
+            {
+                speedScrollInteractionData.add(scroll.calculateSpeedScrollInteraction());
+            }
+            else if (horizontal && (scroll instanceof HorizontalScroll))
+            {
+                speedScrollInteractionData.add(scroll.calculateSpeedScrollInteraction());
+            }
+        }
+        return new BasicDataStatistic(speedScrollInteractionData, true);
+    }
+    
+    public BasicDataStatistic getMeanDistanceFromCenterData(boolean horizontal, 
+            PhoneSettings settings)
+    {
+        ArrayList<Double> meanDistanceFromCenterData = new ArrayList<>();
+        
+        for (Scroll scroll: mListScroll)
+        {
+            if (!horizontal && (scroll instanceof VerticalScroll))
+            {
+                meanDistanceFromCenterData.add(scroll.meanDistanceFromPoint((int) settings.getScreenWidth() / 2, 
+                        (int) settings.getScreenHeight() / 2));
+            }
+            else if (horizontal && (scroll instanceof HorizontalScroll))
+            {
+                meanDistanceFromCenterData.add(scroll.meanDistanceFromPoint((int) settings.getScreenWidth() / 2, 
+                        (int) settings.getScreenHeight() / 2));
+            }
+        }
+        return new BasicDataStatistic(meanDistanceFromCenterData, false);
+    }
+    
+    public BasicDataStatistic getMeanDistanceFromTopLeftData(boolean horizontal)
+    {
+        ArrayList<Double> meanDistanceFromTopLeftData = new ArrayList<>();
+        
+        for (Scroll scroll: mListScroll)
+        {
+            if (!horizontal && (scroll instanceof VerticalScroll))
+            {
+                meanDistanceFromTopLeftData.add(scroll.meanDistanceFromPoint(0, 0));
+            }
+            else if (horizontal && (scroll instanceof HorizontalScroll))
+            {
+                meanDistanceFromTopLeftData.add(scroll.meanDistanceFromPoint(0, 0));
+            }
+        }
+        return new BasicDataStatistic(meanDistanceFromTopLeftData, true);
+    }
+    
+    public BasicDataStatistic getLinearityData(boolean horizontal, 
+            PhoneSettings settings)
+    {
+        ArrayList<Double> linearityData = new ArrayList<>();
+        
+        for (Scroll scroll: mListScroll)
+        {
+            if (!horizontal && (scroll instanceof VerticalScroll))
+            {
+                linearityData.add(scroll.calculateLinearity((int) settings.getScreenWidth()));
+            }
+            else if (horizontal && (scroll instanceof HorizontalScroll))
+            {
+                linearityData.add(scroll.calculateLinearity((int) settings.getScreenHeight()));
+            }
+        }
+        return new BasicDataStatistic(linearityData, false);
+    }
+    
+    public BasicDataStatistic getLinearityAsSumEveryPointData(boolean horizontal, 
+            PhoneSettings settings)
+    {
+        ArrayList<Double> linearityAsSumEveryPointData = new ArrayList<>();
+        
+        for (Scroll scroll: mListScroll)
+        {
+            if (!horizontal && (scroll instanceof VerticalScroll))
+            {
+                linearityAsSumEveryPointData.add(scroll.calculateLinearityAsSumOfEveryPoint((int) settings.getScreenWidth()));
+            }
+            else if (horizontal && (scroll instanceof HorizontalScroll))
+            {
+                linearityAsSumEveryPointData.add(scroll.calculateLinearityAsSumOfEveryPoint((int) settings.getScreenHeight()));
+            }
+        }
+        return new BasicDataStatistic(linearityAsSumEveryPointData, false);
     }
 }

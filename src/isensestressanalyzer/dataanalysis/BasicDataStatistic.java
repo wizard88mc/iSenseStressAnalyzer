@@ -14,6 +14,7 @@ import java.util.ArrayList;
  */
 public class BasicDataStatistic 
 {
+    private ArrayList<Double> data;
     private double min = Double.MAX_VALUE;
     private double max = Double.MIN_VALUE;
     private double average = 0;
@@ -22,6 +23,7 @@ public class BasicDataStatistic
     
     public BasicDataStatistic(ArrayList<Double> data, boolean discardZeroValues)
     {
+        this.data = data;
         int count = 0;
         for (Double value: data)
         {

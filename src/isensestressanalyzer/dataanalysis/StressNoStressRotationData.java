@@ -23,7 +23,7 @@ public class StressNoStressRotationData
         this.dataNoStress = noStress; this.dataStress = stress;
     }
     
-    public void makeAndPrintTest()
+    /*public void makeAndPrintTest()
     {
         System.out.println(feature);
         testOnXAxis(); testOnYAxis(); testOnZAxis();
@@ -93,5 +93,5 @@ public class StressNoStressRotationData
             ArrayList<BasicDataStatistic> axisStress)
     {
         new StressNoStressData(name + " Axis", axisNostress, axisStress).makeAndPrintTTest();
-    }
+    }*/
 }

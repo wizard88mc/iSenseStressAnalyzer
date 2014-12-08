@@ -13,43 +13,47 @@ import org.apache.commons.math3.stat.inference.TTest;
 public class StressNoStressData 
 {
     private final String feature;
-    private final ArrayList<BasicDataStatistic> noStress;
-    private final ArrayList<BasicDataStatistic> stress;
+    private BasicDataStatistic noStress;
+    private BasicDataStatistic stress;
     
     public StressNoStressData(String feature)
     {
-        this(feature, new ArrayList<BasicDataStatistic>(), 
-                new ArrayList<BasicDataStatistic>());
+        this(feature, null, null);
     }
     
-    public StressNoStressData(String feature, ArrayList<BasicDataStatistic> noStress, 
-            ArrayList<BasicDataStatistic> stress)
+    public StressNoStressData(String feature, BasicDataStatistic noStress, 
+            BasicDataStatistic stress)
     {
         this.feature = feature; this.noStress = noStress; this.stress = stress;
     }
     
-    public boolean isEmpty()
+    public void setNoStressData(BasicDataStatistic data)
     {
-        return noStress.isEmpty();
+        noStress = data;
     }
     
-    public void addNoStressData(BasicDataStatistic data)
+    public void setStressData(BasicDataStatistic data)
     {
-        noStress.add(data);
+        stress = data;
     }
     
-    public void addStressData(BasicDataStatistic data)
-    {
-        stress.add(data);
-    }
-    
-    public void addData(BasicDataStatistic dataNoStress, 
+    public void setData(BasicDataStatistic dataNoStress, 
             BasicDataStatistic dataStress)
     {
-        addNoStressData(dataNoStress); addStressData(dataStress);
+        stress = dataStress; noStress = dataNoStress;
     }
     
-    public void makeAndPrintTTest()
+    public BasicDataStatistic getNoStressData()
+    {
+        return this.noStress;
+    }
+    
+    public BasicDataStatistic getStressData()
+    {
+        return this.stress;
+    }
+    
+    /*public void makeAndPrintTTest()
     {   
         adjustData(noStress, stress);
         double[] arrayNoStress = new double[noStress.size()],
@@ -192,5 +196,5 @@ public class StressNoStressData
             }
             //System.out.println(exc.toString());
         }
-    }
+    }*/
 }
