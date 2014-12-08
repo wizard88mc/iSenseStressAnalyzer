@@ -3,6 +3,7 @@ package isensestressanalyzer;
 import isensestressanalyzer.analyzer.SearchAnalyzer;
 import isensestressanalyzer.analyzer.WriteAnalysisResume;
 import isensestressanalyzer.analyzer.WriteAnalyzer;
+import isensestressanalyzer.dataanalysis.StressNoStressData;
 import isensestressanalyzer.exercise.Exercise;
 import isensestressanalyzer.exercise.Protocol;
 import isensestressanalyzer.exercise.Write;
@@ -116,16 +117,16 @@ public class ISenseStressAnalyzer
                     }
                 }
                 listTester.add(tester);
-                System.out.println("***** TESTER: " + tester.getName() + " ******");
-                
+                //System.out.println("***** TESTER: " + tester.getName() + " ******");
             }
         }
         
-        ArrayList<WriteAnalysisResume> resumesForTesters = new ArrayList<>();
         for (Tester tester: listTester)
         {
-            resumesForTesters.add(WriteAnalyzer.performingGlobalAnalysis(tester));
+            tester.getWriteAnalyzer().performAnalysis(tester);
         }
+        
+        WriteAnalyzer.performingGlobalAnalysis(listTester);
         
     }
     

@@ -53,28 +53,30 @@ public class StressNoStressData
         return this.stress;
     }
     
-    /*public void makeAndPrintTTest()
-    {   
+    public static void makeAndPrintTTest(String featureName, 
+            ArrayList<Double> noStress, ArrayList<Double> stress) {
+    
         adjustData(noStress, stress);
         double[] arrayNoStress = new double[noStress.size()],
                 arrayStress = new double[stress.size()], 
                 arrayIncreases = new double[stress.size()];
-        
-        System.out.println(feature);
+
+        System.out.println("******" + featureName + "******");
+
         if (noStress.size() > 1)
         {
             //printCoupleValuesNoStressStress();
             copyMeanValueIntoDoubleArray(arrayNoStress, noStress);
             copyMeanValueIntoDoubleArray(arrayStress, stress);
-            createIncreaseArray(arrayIncreases);
-            
+            createIncreaseArray(noStress, stress, arrayIncreases);
+
             float mean = 0; 
             for (double value: arrayIncreases)
             {
                 mean += value;
             }
             mean /= arrayIncreases.length;
-        
+
             System.out.println("TTest: " + 
                 new TTest().pairedTTest(arrayNoStress, arrayStress));
             System.out.println("TTest increase: " + 
@@ -88,8 +90,8 @@ public class StressNoStressData
             try
             {
             System.out.println("Difference: " + 
-                    (100 * (stress.get(0).getAverage() - noStress.get(0).getAverage()) 
-                            / noStress.get(0).getAverage()));
+                    (100 * (stress.get(0) - noStress.get(0)) 
+                            / noStress.get(0)));
             }
             catch(IndexOutOfBoundsException exc)
             {
@@ -97,17 +99,18 @@ public class StressNoStressData
             }
             }
         }
+        
     }
     
-    private void copyMeanValueIntoDoubleArray(double[] destination, 
-            ArrayList<BasicDataStatistic> origin)
+    private static void copyMeanValueIntoDoubleArray(double[] destination, 
+            ArrayList<Double> origin)
     {
         for (int i = 0; i < origin.size(); i++)
         {
-            if (!origin.get(i).getAverage().isNaN() || 
-                    !origin.get(i).getAverage().isInfinite())
+            if (!origin.get(i).isNaN() || 
+                    !origin.get(i).isInfinite())
             {
-                destination[i] = origin.get(i).getAverage();
+                destination[i] = origin.get(i);
             }
             else
             {
@@ -116,31 +119,33 @@ public class StressNoStressData
         }
     }
     
-    private void createIncreaseArray(double[] arrayIncrease)
+    private static void createIncreaseArray(ArrayList<Double> noStress, 
+            ArrayList<Double> stress, double[] arrayIncrease)
     {
         for (int i = 0; i < stress.size(); i++)
         {
-            arrayIncrease[i] = 100 * (stress.get(i).getAverage() - noStress.get(i).getAverage())
-                / noStress.get(i).getAverage();
+            arrayIncrease[i] = 100 * (stress.get(i) - noStress.get(i))
+                / noStress.get(i);
         }
     }
     
-    private void printCoupleValuesNoStressStress()
+    /*private void printCoupleValuesNoStressStress(ArrayList<Double> noStress, 
+            ArrayList<Double> stress)
     {
         for (int i = 0; i < noStress.size(); i++)
         {
-            System.out.println(noStress.get(i).getAverage() 
+            System.out.println(noStress.get(i) 
                     + "(+- " + noStress.get(i).getStd() + ") - " 
                     + stress.get(i).getAverage() + "(+- " 
                     + stress.get(i).getStd() + " )");
         }
-    }
+    }*/
     
-    private void adjustData(ArrayList<BasicDataStatistic> first, ArrayList<BasicDataStatistic> second)
+    private static void adjustData(ArrayList<Double> first, ArrayList<Double> second)
     {
         for (int i = 0; i < first.size(); )
         {
-            if (first.get(i).getAverage().isNaN() || first.get(i).getAverage().isInfinite())
+            if (first.get(i).isNaN() || first.get(i).isInfinite())
             {
                 first.remove(i);
             }
@@ -151,7 +156,7 @@ public class StressNoStressData
         }
         for (int i = 0; i < second.size();)
         {
-            if (second.get(i).getAverage().isInfinite() || second.get(i).getAverage().isNaN())
+            if (second.get(i).isInfinite() || second.get(i).isNaN())
             {
                 second.remove(i);
             }
@@ -167,7 +172,7 @@ public class StressNoStressData
         {
             while (first.size() != second.size())
             {
-                BasicDataStatistic newData = new BasicDataStatistic((first.get(first.size() - 1).getAverage() + first.get(first.size() - 2).getAverage()) / 2);
+                Double newData = (first.get(first.size() - 1) + first.get(first.size() - 2)) / 2;
                 first.remove(first.size() - 2);
                 first.remove(first.size() - 1);
                 first.add(newData);
@@ -177,7 +182,7 @@ public class StressNoStressData
         {
             while (second.size() != first.size())
             {
-                BasicDataStatistic newData = new BasicDataStatistic((second.get(second.size() - 1).getAverage() + second.get(second.size() - 2).getAverage()) / 2);
+                Double newData = (second.get(second.size() - 1) + second.get(second.size() - 2)) / 2;
                 second.remove(second.size() - 2);
                 second.remove(second.size() - 1);
                 second.add(newData);
@@ -196,5 +201,5 @@ public class StressNoStressData
             }
             //System.out.println(exc.toString());
         }
-    }*/
+    }
 }

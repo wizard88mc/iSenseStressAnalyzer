@@ -23,7 +23,7 @@ public class Tester
      * Each single exercise (Write or Search) is a test
      */
     private ArrayList<Test> listTests = new ArrayList<>();
-    private ArrayList<WriteAnalysisResume> writeEvaluations = new ArrayList<>();
+    private WriteAnalyzer mWriteAnalyzer = new WriteAnalyzer();
     private ArrayList<SearchAnalysisResume> searchEvaluations = new ArrayList<>();
     private PhoneSettings mPhoneSettigns = null;
     
@@ -136,14 +136,14 @@ public class Tester
         return this.mPhoneSettigns;
     }
     
-    public void addNewWriteAnalysisResume(WriteAnalysisResume resume)
+    public void performWriteAnalysis()
     {
-        this.writeEvaluations.add(resume);
+        this.mWriteAnalyzer.performAnalysis(this);
     }
     
-    public ArrayList<WriteAnalysisResume> getWriteAnalysisResumes()
+    public WriteAnalyzer getWriteAnalyzer()
     {
-        return this.writeEvaluations;
+        return mWriteAnalyzer;
     }
     
     public void addNewSearchAnalysisResume(SearchAnalysisResume resume)
@@ -159,18 +159,5 @@ public class Tester
     public void performinGlobalAnalysis()
     {
         
-    }
-    
-    private void pressureData(WriteAnalysisResume resume)
-    {
-        ArrayList<Double> meanValuesNoStress = new ArrayList<>(),
-                meanValuesStress = new ArrayList<>();
-        
-        for (WriteAnalysisResume analysis: writeEvaluations)
-        {
-            meanValuesNoStress.add(analysis.getPressureData().getNoStressData().getAverage());
-            meanValuesStress.add(analysis.getPressureData().getStressData().getAverage());
-        }
-        resume.pressureData(new BasicDataStatistic(meanValuesNoStress, false), new BasicDataStatistic(meanValuesStress, false));
     }
 }

@@ -14,64 +14,54 @@ import java.util.ArrayList;
  */
 public class WriteAnalysisResume 
 {
-    private StressNoStressData pressureData;
-    private StressNoStressData sizeData;
-    private StressNoStressData movementData;
-    private StressNoStressData durationData;
-    private StressNoStressData precisionData;
-    private StressNoStressData ratioBackOVerDigits;
-    private StressNoStressData ratioWrongAllWords;
-    private StressNoStressData digitsFrequency;
+    private BasicDataStatistic pressureData;
+    private BasicDataStatistic sizeData;
+    private BasicDataStatistic movementData;
+    private BasicDataStatistic durationData;
+    private BasicDataStatistic precisionData;
+    private BasicDataStatistic ratioBackOverDigits;
+    private BasicDataStatistic ratioWrongAllWords;
+    private BasicDataStatistic digitsFrequency;
     private StressNoStressRotationData rotationData;
     
-   public void pressureData(BasicDataStatistic noStress, 
-           BasicDataStatistic stress)
+   public void pressureData(BasicDataStatistic data)
    {
-       pressureData = new StressNoStressData("Pressure", noStress, stress);
+       pressureData = data;
    }
    
-   public void sizeData(BasicDataStatistic noStress, 
-           BasicDataStatistic stress)
+   public void sizeData(BasicDataStatistic data)
    {
-       sizeData = new StressNoStressData("Size", noStress, stress);
+       sizeData = data;
    }
    
-   public void movementData(BasicDataStatistic noStress, 
-           BasicDataStatistic stress)
+   public void movementData(BasicDataStatistic data)
    {
-       movementData = new StressNoStressData("Movement", noStress, stress);
+       movementData = data;
    }
    
-   public void durationData(BasicDataStatistic noStress, 
-           BasicDataStatistic stress)
+   public void durationData(BasicDataStatistic data)
    {
-       durationData = new StressNoStressData("Duration", noStress, stress);
+       durationData = data;
    }
    
-   public void precisionData(BasicDataStatistic noStress, 
-           BasicDataStatistic stress)
+   public void precisionData(BasicDataStatistic data)
    {
-       precisionData = new StressNoStressData("Precision", noStress, stress);
+       precisionData = data;
    }
    
-   public void ratioBackOverDigitsData(BasicDataStatistic noStress, 
-           BasicDataStatistic stress)
+   public void ratioBackOverDigitsData(BasicDataStatistic data)
    {
-       ratioBackOVerDigits = new StressNoStressData("Ratio Back Digits over all digits", 
-               noStress, stress);
+       ratioBackOverDigits = data;
    }
    
-   public void ratioWrongAllWords(BasicDataStatistic noStress, 
-           BasicDataStatistic stress)
+   public void ratioWrongAllWords(BasicDataStatistic data)
    {
-       ratioWrongAllWords = new StressNoStressData("Ratio wrong words over all words", noStress, stress);
+       ratioWrongAllWords = data;
    }
    
-   public void digitsFrequency(BasicDataStatistic noStress, 
-           BasicDataStatistic stress)
+   public void digitsFrequency(BasicDataStatistic data)
    {
-       digitsFrequency = new StressNoStressData("Digits frequency", noStress, 
-               stress);
+       digitsFrequency = data;
    }
    
    public void rotationData(ArrayList<RotationDataWrapper> noStress, 
@@ -80,42 +70,42 @@ public class WriteAnalysisResume
        rotationData = new StressNoStressRotationData(noStress, stress);
    }
    
-   public StressNoStressData getPressureData()
+   public BasicDataStatistic getPressureData()
    {
        return pressureData;
    }
    
-   public StressNoStressData getSizeData()
+   public BasicDataStatistic getSizeData()
    {
        return this.sizeData;
    }
    
-   public StressNoStressData getMovementData()
+   public BasicDataStatistic getMovementData()
    {
        return this.movementData;
    }
    
-   public StressNoStressData getDurationData()
+   public BasicDataStatistic getDurationData()
    {
        return this.durationData;
    }
    
-   public StressNoStressData getPrecisionData()
+   public BasicDataStatistic getPrecisionData()
    {
        return this.precisionData;
    }
    
-   public StressNoStressData getRatioBackOverDigits()
+   public BasicDataStatistic getRatioBackOverDigits()
    {
-       return this.ratioBackOVerDigits;
+       return this.ratioBackOverDigits;
    }
    
-   public StressNoStressData getRatioWrongAllWords()
+   public BasicDataStatistic getRatioWrongAllWords()
    {
        return this.ratioWrongAllWords;
    }
    
-   public StressNoStressData getDigitsFrequencyData()
+   public BasicDataStatistic getDigitsFrequencyData()
    {
        return this.digitsFrequency;
    }
@@ -128,16 +118,41 @@ public class WriteAnalysisResume
    /**
     * Prints the results of the t-test for each feature we are considering
     */
-   /*public void printAnalysis()
+   /*public static void printAnalysis(ArrayList<WriteAnalysisResume> resumesForTesters)
    {
-       pressureData.makeAndPrintTTest();
-       sizeData.makeAndPrintTTest();
-       movementData.makeAndPrintTTest();
-       durationData.makeAndPrintTTest();
-       precisionData.makeAndPrintTTest();
-       ratioBackOVerDigits.makeAndPrintTTest();
-       ratioWrongAllWords.makeAndPrintTTest();
-       digitsFrequency.makeAndPrintTTest();
-       rotationData.makeAndPrintTest();
+       ArrayList<StressNoStressData> allPressureData = new ArrayList<>(),
+               allSizeData = new ArrayList<>(), 
+               allMovementData = new ArrayList<>(), 
+               allDurationData = new ArrayList<>(), 
+               allPrecisionData = new ArrayList<>(), 
+               allRatioBackOverDigitsData = new ArrayList<>(), 
+               allRatioWrongAllWords = new ArrayList<>(), 
+               allDigitsFrequency = new ArrayList<>();
+       
+       for (WriteAnalysisResume analysis: resumesForTesters)
+       {
+           allPressureData.add(analysis.pressureData);
+           allSizeData.add(analysis.sizeData);
+           allMovementData.add(analysis.movementData);
+           allDurationData.add(analysis.durationData);
+           allPrecisionData.add(analysis.precisionData);
+           allRatioBackOverDigitsData.add(analysis.ratioBackOVerDigits);
+           allRatioWrongAllWords.add(analysis.ratioWrongAllWords);
+           allDigitsFrequency.add(analysis.digitsFrequency);
+       }
+       
+       StressNoStressData.makeAndPrintTTest(allPressureData);
+       StressNoStressData.makeAndPrintTTest(allSizeData);
+       StressNoStressData.makeAndPrintTTest(allMovementData);
+       StressNoStressData.makeAndPrintTTest(allDurationData);
+       StressNoStressData.makeAndPrintTTest(allPrecisionData);
+       StressNoStressData.makeAndPrintTTest(allRatioBackOverDigitsData);
+       StressNoStressData.makeAndPrintTTest(allRatioWrongAllWords);
+       StressNoStressData.makeAndPrintTTest(allDigitsFrequency);
+   }
+   
+   private static void ttestForPressureData(ArrayList<WriteAnalysisResume> resumes)
+   {
+       
    }*/
 }
