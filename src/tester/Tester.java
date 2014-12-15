@@ -1,13 +1,11 @@
 package tester;
 
-import isensestressanalyzer.analyzer.SearchAnalysisResume;
 import isensestressanalyzer.analyzer.SearchAnalyzer;
-import isensestressanalyzer.analyzer.WriteAnalysisResume;
 import isensestressanalyzer.analyzer.WriteAnalyzer;
-import isensestressanalyzer.dataanalysis.BasicDataStatistic;
 import isensestressanalyzer.exercise.Exercise;
 import isensestressanalyzer.exercise.Protocol;
 import isensestressanalyzer.exercise.Search;
+import isensestressanalyzer.exercise.Survey;
 import isensestressanalyzer.exercise.Write;
 import isensestressanalyzer.utils.PhoneSettings;
 import java.util.ArrayList;
@@ -19,12 +17,17 @@ import java.util.ArrayList;
 public class Tester 
 {
     private final String name;
+    private String gender;
+    private String nickname;
+    private String email;
+    private int age;
     /**
      * Each single exercise (Write or Search) is a test
      */
     private ArrayList<Test> listTests = new ArrayList<>();
     private WriteAnalyzer mWriteAnalyzer = new WriteAnalyzer();
-    private ArrayList<SearchAnalysisResume> searchEvaluations = new ArrayList<>();
+    private SearchAnalyzer mSearchAnalyzer = new SearchAnalyzer();
+    private ArrayList<Survey> mListSurvey = new ArrayList<>();
     private PhoneSettings mPhoneSettigns = null;
     
     public Tester(String name)
@@ -59,7 +62,7 @@ public class Tester
      * @param protocol
      * @return a List of Write exercises
      */
-    public ArrayList<Write> getWritingExercisesForProtocol(Protocol protocol)
+    public ArrayList<Write> getWriteExercisesForProtocol(Protocol protocol)
     {
         ArrayList<Write> exercises = new ArrayList<>();
             // Search for all the writing exercises of a particular protocol
@@ -106,6 +109,24 @@ public class Tester
         return exercises;
     }
     
+    public ArrayList<Survey> getSurveyListForProtocol(Protocol protocol) {
+        
+        ArrayList<Survey> surveys = new ArrayList<>();
+        
+        for (Test test: listTests) {
+            if (protocol != null) {
+                if (test.getProtocol().toString().equals(protocol.toString())) {
+                    surveys.addAll(test.getSurveys());
+                }
+            }
+            else {
+                surveys.addAll(test.getSurveys());
+            }
+        }
+        
+        return surveys;
+    }
+    
     public static void touchExerciseClassification(ArrayList<Exercise> exercises)
     {
         int indexStressor =  -1;
@@ -146,18 +167,16 @@ public class Tester
         return mWriteAnalyzer;
     }
     
-    public void addNewSearchAnalysisResume(SearchAnalysisResume resume)
+    public SearchAnalyzer getSearchAnalyzer()
     {
-        this.searchEvaluations.add(resume);
+        return this.mSearchAnalyzer;
     }
     
-    public ArrayList<SearchAnalysisResume> getSearchAnalysisResumes()
-    {
-        return this.searchEvaluations;
-    }
-    
-    public void performinGlobalAnalysis()
-    {
-        
+    public void setUserDetails(String details) {
+        details = details.replace("User: ", "").trim();
+       
+        String[] elements = details.split(",");
+        gender = elements[0]; age = Integer.valueOf(elements[1]); 
+        email = elements[1]; nickname = elements[2];
     }
 }

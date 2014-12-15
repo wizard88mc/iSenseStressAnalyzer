@@ -47,6 +47,30 @@ public class Survey extends Exercise
         return (String) additionalValues.get(2);
     }
     
+    /**
+     * Returns the valence value as integer
+     * @return valence as integer
+     */
+    public int getIntValence() {
+        return  Integer.valueOf(additionalValues.get(0));
+    }
+    
+    /**
+     * Returns the energy value as integer
+     * @return energy as integer
+     */
+    public int getIntEnergy() {
+        return Integer.valueOf(additionalValues.get(1));
+    }
+    
+    /**
+     * Returns the stress value as integer
+     * @return stress as integer
+     */
+    public int getIntStress() {
+        return Integer.valueOf(additionalValues.get(2));
+    }
+    
     @Override
     public void completeDataAcquisition(Protocol protocol)
     {

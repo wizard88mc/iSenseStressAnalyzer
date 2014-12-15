@@ -1,12 +1,9 @@
 package isensestressanalyzer.analyzer;
 
-import isensestressanalyzer.ISenseStressAnalyzer;
 import isensestressanalyzer.exercise.Write;
-import isensestressanalyzer.interaction.Digit;
 import isensestressanalyzer.dataanalysis.BasicDataStatistic;
 import isensestressanalyzer.dataanalysis.RotationDataWrapper;
 import isensestressanalyzer.dataanalysis.StressNoStressData;
-import isensestressanalyzer.exercise.Protocol;
 import java.util.ArrayList;
 import tester.Tester;
 
@@ -17,6 +14,10 @@ import tester.Tester;
  */
 public class WriteAnalyzer extends Analyzer
 {   
+    private static final String[] featuresName = new String[]{"Digits pressure", 
+        "Digits size", "Digits movement", "Digits duration", "Digits precision", 
+        "Ratio BACK over all digits", "Ratio wrong words over all words", 
+        "Digits time distance"};
     private ArrayList<WriteAnalysisResume> noStressResumes = new ArrayList<>();
     private ArrayList<WriteAnalysisResume> stressResumes = new ArrayList<>();
     /**
@@ -30,10 +31,9 @@ public class WriteAnalyzer extends Analyzer
         // protocol and analyse them    
         ArrayList<RotationDataWrapper> rotationNoStress = new ArrayList<>(), 
                     rotationStress = new ArrayList<>();
-            
-              
+        
         ArrayList<Write> exercises = 
-                tester.getWritingExercisesForProtocol(isensestressanalyzer.ISenseStressAnalyzer.protocols[0]);
+                tester.getWriteExercisesForProtocol(isensestressanalyzer.ISenseStressAnalyzer.protocols[0]);
         /**
          * Now I have all the exercises for that particular protocol
          * for this particular user. I have to perform analysis for all 
@@ -83,6 +83,19 @@ public class WriteAnalyzer extends Analyzer
         return mean / toUse.size();
     }
     
+    private ArrayList<Double> getAllPressureData(boolean stress) {
+        
+        ArrayList<WriteAnalysisResume> toUse = noStressResumes;
+        if (stress) {
+            toUse = stressResumes;
+        }
+        ArrayList<Double> valuesToReturn = new ArrayList<>();
+        for (WriteAnalysisResume resume: toUse) {
+            valuesToReturn.add(resume.getPressureData().getAverage());
+        }
+        return valuesToReturn;
+    }
+    
     private Double getMeanSizeData(boolean stress)
     {
         double mean = 0;
@@ -96,6 +109,18 @@ public class WriteAnalyzer extends Analyzer
             mean += resume.getSizeData().getAverage();
         }
         return mean / toUse.size();
+    }
+    
+    public ArrayList<Double> getAllSizeData(boolean stress) {
+        ArrayList<WriteAnalysisResume> toUse = noStressResumes;
+        if (stress) {
+            toUse = stressResumes;
+        }
+        ArrayList<Double> valuesToReturn = new ArrayList<>();
+        for (WriteAnalysisResume resume: toUse) {
+            valuesToReturn.add(resume.getSizeData().getAverage());
+        }
+        return valuesToReturn;
     }
     
     private Double getMeanMovementData(boolean stress)
@@ -113,6 +138,18 @@ public class WriteAnalyzer extends Analyzer
         return mean / toUse.size();
     }
     
+    public ArrayList<Double> getAllMovementData(boolean stress) {
+        ArrayList<WriteAnalysisResume> toUse = noStressResumes;
+        if (stress) {
+            toUse = stressResumes;
+        }
+        ArrayList<Double> valuesToReturn = new ArrayList<>();
+        for (WriteAnalysisResume resume: toUse) {
+            valuesToReturn.add(resume.getMovementData().getAverage());
+        }
+        return valuesToReturn;
+    }
+    
     private Double getMeanDurationData(boolean stress) {
         
         double mean = 0;
@@ -124,6 +161,18 @@ public class WriteAnalyzer extends Analyzer
             mean += resume.getDurationData().getAverage();
         }
         return mean / toUse.size();
+    }
+    
+    private ArrayList<Double> getAllDurationData(boolean stress) {
+        ArrayList<WriteAnalysisResume> toUse = noStressResumes;
+        if (stress) {
+            toUse = stressResumes;
+        }
+        ArrayList<Double> valuesToReturn = new ArrayList<>();
+        for (WriteAnalysisResume resume: toUse) {
+            valuesToReturn.add(resume.getDurationData().getAverage());
+        }
+        return valuesToReturn;
     }
     
     private Double getMeanPrecisionData(boolean stress) {
@@ -139,6 +188,18 @@ public class WriteAnalyzer extends Analyzer
         return mean / toUse.size();
     }
     
+    private ArrayList<Double> getAllPrecisionData(boolean stress) {
+        ArrayList<WriteAnalysisResume> toUse = noStressResumes;
+        if (stress) {
+            toUse = stressResumes;
+        }
+        ArrayList<Double> valuesToReturn = new ArrayList<>();
+        for (WriteAnalysisResume resume: toUse) {
+            valuesToReturn.add(resume.getPrecisionData().getAverage());
+        }
+        return valuesToReturn;
+    }
+    
     private Double getMeanRatioBackOverDigits(boolean stress) {
         
         double mean = 0;
@@ -150,6 +211,18 @@ public class WriteAnalyzer extends Analyzer
             mean += resume.getRatioBackOverDigits().getAverage();
         }
         return mean / toUse.size();
+    }
+    
+    private ArrayList<Double> getAllRatioBackOVerDigits(boolean stress) {
+        ArrayList<WriteAnalysisResume> toUse = noStressResumes;
+        if (stress) {
+            toUse = stressResumes;
+        }
+        ArrayList<Double> valuesToReturn = new ArrayList<>();
+        for (WriteAnalysisResume resume: toUse) {
+            valuesToReturn.add(resume.getRatioBackOverDigits().getAverage());
+        }
+        return valuesToReturn;
     }
     
     private Double getMeanRatioWrongAllWords(boolean stress) {
@@ -165,6 +238,18 @@ public class WriteAnalyzer extends Analyzer
         return mean / toUse.size();
     }
     
+    private ArrayList<Double> getAllRatioWrongAllWords(boolean stress) {
+        ArrayList<WriteAnalysisResume> toUse = noStressResumes;
+        if (stress) {
+            toUse = stressResumes;
+        }
+        ArrayList<Double> valuesToReturn = new ArrayList<>();
+        for (WriteAnalysisResume resume: toUse) {
+            valuesToReturn.add(resume.getRatioWrongAllWords().getAverage());
+        }
+        return valuesToReturn;
+    }
+    
     private Double getMeanDigitsFrequency(boolean stress) {
         
         double mean = 0;
@@ -178,7 +263,19 @@ public class WriteAnalyzer extends Analyzer
         return mean / toUse.size();
     }
     
-    public static void performingGlobalAnalysis(ArrayList<Tester> listTester)
+    private ArrayList<Double> getAllDigitsFrequency(boolean stress) {
+        ArrayList<WriteAnalysisResume> toUse = noStressResumes;
+        if (stress) {
+            toUse = stressResumes;
+        }
+        ArrayList<Double> valuesToReturn = new ArrayList<>();
+        for (WriteAnalysisResume resume: toUse) {
+            valuesToReturn.add(resume.getDigitsFrequencyData().getAverage());
+        }
+        return valuesToReturn;
+    }
+    
+    public static void performGlobalAnalysis(ArrayList<Tester> listTester)
     {
         ArrayList<ArrayList<Double>> pressureData = new ArrayList<>(),
                 sizeData = new ArrayList<>(), movementData = new ArrayList<>(),
@@ -217,14 +314,30 @@ public class WriteAnalyzer extends Analyzer
             digitsFrequencyData.get(1).add(tester.getWriteAnalyzer().getMeanDigitsFrequency(true));
         }
         
-        StressNoStressData.makeAndPrintTTest("Digits pressure", pressureData.get(0), pressureData.get(1));
-        StressNoStressData.makeAndPrintTTest("Digits size", sizeData.get(0), sizeData.get(1));
-        StressNoStressData.makeAndPrintTTest("Digits movement", movementData.get(0), movementData.get(1));
-        StressNoStressData.makeAndPrintTTest("Digits duration", durationData.get(0), durationData.get(1));
-        StressNoStressData.makeAndPrintTTest("Digits precision", precisionData.get(0), precisionData.get(1));
-        StressNoStressData.makeAndPrintTTest("Ratio BACK over all digits", ratioBackOverDigitsData.get(0), ratioBackOverDigitsData.get(1));
-        StressNoStressData.makeAndPrintTTest("Ratio wrong words over all words", ratioWrongAllWordsData.get(0), ratioWrongAllWordsData.get(1));
-        StressNoStressData.makeAndPrintTTest("Digits time distance", digitsFrequencyData.get(0), digitsFrequencyData.get(1));
+        printReport(new StressNoStressData(featuresName[0], pressureData.get(0), pressureData.get(1)), 
+                new StressNoStressData(featuresName[1], sizeData.get(0), sizeData.get(1)), 
+                new StressNoStressData(featuresName[2], movementData.get(0), movementData.get(1)), 
+                new StressNoStressData(featuresName[3], durationData.get(0), durationData.get(1)), 
+                new StressNoStressData(featuresName[4], precisionData.get(0), precisionData.get(1)), 
+                new StressNoStressData(featuresName[5], ratioBackOverDigitsData.get(0), ratioBackOverDigitsData.get(1)), 
+                new StressNoStressData(featuresName[6], ratioWrongAllWordsData.get(0), ratioWrongAllWordsData.get(1)), 
+                new StressNoStressData(featuresName[7], digitsFrequencyData.get(0), digitsFrequencyData.get(1)));
+        }
+    
+    public static void performLocalAnalysis(Tester tester)
+    {
+        System.out.println("*********** Tester: " + tester.getName() + " ***********");
+        
+        WriteAnalyzer analyzerTester = tester.getWriteAnalyzer();
+        
+        printReport(new StressNoStressData(featuresName[0], analyzerTester.getAllPressureData(false), analyzerTester.getAllPressureData(true)), 
+                new StressNoStressData(featuresName[1], analyzerTester.getAllSizeData(false), analyzerTester.getAllSizeData(true)), 
+                new StressNoStressData(featuresName[2], analyzerTester.getAllMovementData(false), analyzerTester.getAllMovementData(true)), 
+                new StressNoStressData(featuresName[3], analyzerTester.getAllDurationData(false), analyzerTester.getAllDurationData(true)), 
+                new StressNoStressData(featuresName[4], analyzerTester.getAllPrecisionData(false), analyzerTester.getAllPrecisionData(true)), 
+                new StressNoStressData(featuresName[5], analyzerTester.getAllRatioBackOVerDigits(false), analyzerTester.getAllRatioBackOVerDigits(true)), 
+                new StressNoStressData(featuresName[6], analyzerTester.getAllRatioWrongAllWords(false), analyzerTester.getAllRatioWrongAllWords(true)), 
+                new StressNoStressData(featuresName[7], analyzerTester.getAllDigitsFrequency(false), analyzerTester.getAllDigitsFrequency(true)));
     }
     
     /**

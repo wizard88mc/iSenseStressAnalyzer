@@ -3,6 +3,7 @@ package tester;
 import isensestressanalyzer.exercise.Exercise;
 import isensestressanalyzer.exercise.Protocol;
 import isensestressanalyzer.exercise.Search;
+import isensestressanalyzer.exercise.Survey;
 import isensestressanalyzer.exercise.Write;
 import java.util.ArrayList;
 
@@ -59,6 +60,23 @@ public class Test
                 toReturn.add((Search) exercise);
             }
         }
+        return toReturn;
+    }
+    
+    /**
+     * Returns all the Survey exercises in the Test
+     * @return a list of Survey objects
+     */
+    public ArrayList<Survey> getSurveys() {
+        
+        ArrayList<Survey> toReturn = new ArrayList<>();
+        
+        for (Exercise exercise: listExercises) {
+            if (exercise instanceof Survey) {
+                toReturn.add((Survey) exercise);
+            }
+        }
+        
         return toReturn;
     }
 }

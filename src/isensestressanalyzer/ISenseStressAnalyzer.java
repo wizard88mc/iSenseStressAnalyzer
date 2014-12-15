@@ -1,6 +1,7 @@
 package isensestressanalyzer;
 
 import isensestressanalyzer.analyzer.SearchAnalyzer;
+import isensestressanalyzer.analyzer.SurveyAnalyzer;
 import isensestressanalyzer.analyzer.WriteAnalysisResume;
 import isensestressanalyzer.analyzer.WriteAnalyzer;
 import isensestressanalyzer.dataanalysis.StressNoStressData;
@@ -82,6 +83,7 @@ public class ISenseStressAnalyzer
                         elements[i]);
                 
                 tester.setPhoneSettings(mSettingsReader.getPhoneSettings());
+                tester.setUserDetails(mSettingsReader.getStringUser());
 
                 /**
                  * Check if the Settings file contains the protocol. If not, this 
@@ -124,9 +126,15 @@ public class ISenseStressAnalyzer
         for (Tester tester: listTester)
         {
             tester.getWriteAnalyzer().performAnalysis(tester);
+            tester.getSearchAnalyzer().performAnalysis(tester);
+            
+            WriteAnalyzer.performLocalAnalysis(tester);
+            SearchAnalyzer.performLocalAnalysis(tester);
         }
         
-        WriteAnalyzer.performingGlobalAnalysis(listTester);
+        SurveyAnalyzer.performAnalysis(listTester);
+        WriteAnalyzer.performGlobalAnalysis(listTester);
+        SearchAnalyzer.performGlobalAnalysis(listTester);
         
     }
     

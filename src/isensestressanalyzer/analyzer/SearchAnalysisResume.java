@@ -1,7 +1,6 @@
 package isensestressanalyzer.analyzer;
 
 import isensestressanalyzer.dataanalysis.BasicDataStatistic;
-import isensestressanalyzer.dataanalysis.StressNoStressData;
 
 /**
  *
@@ -9,7 +8,7 @@ import isensestressanalyzer.dataanalysis.StressNoStressData;
  */
 public class SearchAnalysisResume 
 {
-    private StressNoStressData pressureDataClick, sizeDataClick, 
+    private BasicDataStatistic pressureDataClick, sizeDataClick, 
             movementDataClick, scrollDeltaDataVertical, scrollDeltaDataHorizontal, 
             scrollTimeLengthDataVertical, scrollTimeLengthDataHorizontal,
             scrollInteractionLengthDataVertical, scrollInteractionLengthDataHorizontal, 
@@ -20,148 +19,193 @@ public class SearchAnalysisResume
             linearityDataVertical, linearityDataHorizontal, 
             linearityAsSumEveryPointDataVertical, linearityAsSumEveryPointDataHorizontal;
     
-    public void pressureDataClick(BasicDataStatistic noStress, 
-            BasicDataStatistic stress)
+    public void pressureDataClick(BasicDataStatistic data)
     {
-        this.pressureDataClick = new StressNoStressData("Touch pressure", noStress, stress);
+        this.pressureDataClick = data;
     }
     
-    public void sizeDataClick(BasicDataStatistic noStress, 
-            BasicDataStatistic stress)
-    {
-        this.sizeDataClick = new StressNoStressData("Touch size", noStress, stress);
+    public BasicDataStatistic getPressureDataClick() {
+        return this.pressureDataClick;
     }
     
-    public void movementDataClick(BasicDataStatistic noStress, 
-            BasicDataStatistic stress)
+    public void sizeDataClick(BasicDataStatistic data)
     {
-        this.movementDataClick = new StressNoStressData("Touch movement", noStress, stress);
+        this.sizeDataClick = data;
     }
     
-    public void scrollDeltaDataVertical(BasicDataStatistic noStress, 
-            BasicDataStatistic stress)
-    {
-        this.scrollDeltaDataVertical = new StressNoStressData("Scroll delta vertical", 
-                noStress, stress);
+    public BasicDataStatistic getSizeDataClick() {
+        return this.sizeDataClick;
     }
     
-    public void scrollDeltaDataHorizontal(BasicDataStatistic noStress, 
-            BasicDataStatistic stress)
+    public void movementDataClick(BasicDataStatistic data)
     {
-        this.scrollDeltaDataHorizontal = new StressNoStressData("Scroll delta horizontal", 
-                noStress, stress);
+        this.movementDataClick = data;
     }
     
-    public void scrollTimeLengthDataVertical(BasicDataStatistic noStress, 
-            BasicDataStatistic stress)
-    {
-        this.scrollTimeLengthDataVertical = new StressNoStressData("Scroll time length vertical", 
-                noStress, stress);
+    public BasicDataStatistic getMovementDataClick() {
+        return this.movementDataClick;
     }
     
-    public void scrollTimeLengthDataHorizontal(BasicDataStatistic noStress, 
-            BasicDataStatistic stress)
+    public void scrollDeltaDataVertical(BasicDataStatistic data)
     {
-        this.scrollTimeLengthDataHorizontal = new StressNoStressData("Scroll time length horizontal", 
-                noStress, stress);
+        this.scrollDeltaDataVertical = data;
     }
     
-    public void scrollInteractionLengthDataVertical(BasicDataStatistic noStress, 
-            BasicDataStatistic stress)
-    {
-        this.scrollInteractionLengthDataVertical = new StressNoStressData("Scroll interaction length vertical",
-                noStress, stress);
+    public BasicDataStatistic getScrollDeltaDataVertical() {
+        return this.scrollDeltaDataVertical;
     }
     
-    public void scrollInteractionLengthDataHorizontal(BasicDataStatistic noStress,
-            BasicDataStatistic stress)
+    public void scrollDeltaDataHorizontal(BasicDataStatistic data)
     {
-        this.scrollInteractionLengthDataHorizontal = new StressNoStressData("Scroll interaction length horizontal", 
-                noStress, stress);
+        this.scrollDeltaDataHorizontal = data;
     }
     
-    public void speedScrollDeltaDataVertical(BasicDataStatistic noStress, 
-            BasicDataStatistic stress)
-    {
-        this.speedScrollDeltaDataVertical = new StressNoStressData("Speed scroll delta vertical", 
-                noStress, stress);
+    public BasicDataStatistic getScrollDeltaDataHorizontal() {
+        return this.scrollDeltaDataHorizontal;
     }
     
-    public void speedScrollDeltaDataHorizontal(BasicDataStatistic noStress, 
-            BasicDataStatistic stress)
+    public void scrollTimeLengthDataVertical(BasicDataStatistic data)
     {
-        this.speedScrollDeltaDataHorizontal = new StressNoStressData("Speed scroll delta horizontal", 
-                noStress, stress);
+        this.scrollTimeLengthDataVertical = data;
     }
     
-    public void speedScrollInteractionDataVertical(BasicDataStatistic noStress,
-            BasicDataStatistic stress)
-    {
-        this.speedScrollInteractionDataVertical = new StressNoStressData("Speed scroll interaction vertical", 
-                noStress, stress);
+    public BasicDataStatistic getScrollTimeLengthDataVertical() {
+        return this.scrollTimeLengthDataVertical;
     }
     
-    public void speedScrollInteractionDataHorizontal(BasicDataStatistic noStress, 
-            BasicDataStatistic stress)
+    public void scrollTimeLengthDataHorizontal(BasicDataStatistic data)
     {
-        this.speedScrollInteractionDataHorizontal = new StressNoStressData("Speed scroll interaction horizontal", 
-                noStress, stress);
+        this.scrollTimeLengthDataHorizontal = data;
     }
     
-    public void meanDistanceFromCenterDataVertical(BasicDataStatistic noStress, 
-            BasicDataStatistic stress)
-    {
-        this.meanDistanceFromCenterDataVertical = new StressNoStressData("Mean distance from center vertical", 
-                noStress, stress);
+    public BasicDataStatistic getScrollTimeLengthDataHorizontal() {
+        return this.scrollTimeLengthDataHorizontal;
     }
     
-    public void meanDistanceFromCenterDataHorizontal(BasicDataStatistic noStress, 
-            BasicDataStatistic stress)
+    public void scrollInteractionLengthDataVertical(BasicDataStatistic data)
     {
-        this.meanDistanceFromCenterDataHorizontal = new StressNoStressData("Mean distance from center horizontal",
-                noStress, stress);
+        this.scrollInteractionLengthDataVertical = data;
     }
     
-    public void meanDistanceFromTopLeftDataVertical(BasicDataStatistic noStress,
-            BasicDataStatistic stress)
-    {
-        this.meanDistanceFromTopLeftDataVertical = new StressNoStressData("Mean distance from top left vertical", 
-                noStress, stress);
+    public BasicDataStatistic getScrollInteractionLengthDataVertical() {
+        return this.scrollInteractionLengthDataVertical;
     }
     
-    public void meandDistanceFromTopLeftDataHorizontal(BasicDataStatistic noStress,
-            BasicDataStatistic stress)
+    public void scrollInteractionLengthDataHorizontal(BasicDataStatistic data)
     {
-        this.meanDistanceFromTopLeftDataHorizontal = new StressNoStressData("Mean distance from top left horizontal", 
-                noStress, stress);
+        this.scrollInteractionLengthDataHorizontal = data;
     }
     
-    public void linearityDataVertical(BasicDataStatistic noStress, 
-            BasicDataStatistic stress)
-    {
-        this.linearityDataVertical = new StressNoStressData("Linearity vertical", 
-                noStress, stress);
+    public BasicDataStatistic getScrollInteractionLengthDataHorizontal() {
+        return this.scrollInteractionLengthDataHorizontal;
     }
     
-    public void linearityDataHorizontal(BasicDataStatistic noStress, 
-            BasicDataStatistic stress)
+    public void speedScrollDeltaDataVertical(BasicDataStatistic data)
     {
-        this.linearityDataHorizontal = new StressNoStressData("Linearity horizontal", 
-                noStress, stress);
+        this.speedScrollDeltaDataVertical = data;
     }
     
-    public void linearityAsSumEveryPointDataVertical(BasicDataStatistic noStress, 
-            BasicDataStatistic stress)
-    {
-        this.linearityAsSumEveryPointDataVertical = new StressNoStressData("Linearity as sum every point vertical", 
-                noStress, stress);
+    public BasicDataStatistic getSpeedScrollDeltaDataVertical() {
+        return this.speedScrollDeltaDataVertical;
     }
     
-    public void linearityAsSumEveryPointDataHorizontal(BasicDataStatistic noStress,
-            BasicDataStatistic stress)
+    public void speedScrollDeltaDataHorizontal(BasicDataStatistic data)
     {
-        this.linearityAsSumEveryPointDataHorizontal = new StressNoStressData("Linearity as sum every point horizontal", 
-                noStress, stress);
+        this.speedScrollDeltaDataHorizontal = data;
+    }
+    
+    public BasicDataStatistic getSpeedScrollDeltaDataHorizontal() {
+        return this.speedScrollDeltaDataHorizontal;
+    }
+    
+    public void speedScrollInteractionDataVertical(BasicDataStatistic data)
+    {
+        this.speedScrollInteractionDataVertical = data;
+    }
+    
+    public BasicDataStatistic getSpeedScrollInteractionDataVertical() {
+        return this.speedScrollInteractionDataVertical;
+    }
+    
+    public void speedScrollInteractionDataHorizontal(BasicDataStatistic data)
+    {
+        this.speedScrollInteractionDataHorizontal = data;
+    }
+    
+    public BasicDataStatistic getSpeedScrollInteractionDataHorizontal() {
+        return this.speedScrollInteractionDataHorizontal;
+    }
+    
+    public void meanDistanceFromCenterDataVertical(BasicDataStatistic data)
+    {
+        this.meanDistanceFromCenterDataVertical = data;
+    }
+    
+    public BasicDataStatistic getMeanDistanceFromCenterDataVertical() {
+        return this.meanDistanceFromCenterDataVertical;
+    }
+    
+    public void meanDistanceFromCenterDataHorizontal(BasicDataStatistic data)
+    {
+        this.meanDistanceFromCenterDataHorizontal = data;
+    }
+    
+    public BasicDataStatistic getMeanDistanceFromCenterDataHorizontal() {
+        return this.meanDistanceFromCenterDataHorizontal;
+    }
+    
+    public void meanDistanceFromTopLeftDataVertical(BasicDataStatistic data)
+    {
+        this.meanDistanceFromTopLeftDataVertical = data;
+    }
+    
+    public BasicDataStatistic getMeanDistanceFromTopLeftDataVertical() {
+        return this.meanDistanceFromTopLeftDataVertical;
+    }
+    
+    public void meandDistanceFromTopLeftDataHorizontal(BasicDataStatistic data)
+    {
+        this.meanDistanceFromTopLeftDataHorizontal = data;
+    }
+    
+    public BasicDataStatistic getMeanDistanceFromTopLeftDataHorizontal() {
+        return this.meanDistanceFromTopLeftDataHorizontal;
+    }
+    
+    public void linearityDataVertical(BasicDataStatistic data)
+    {
+        this.linearityDataVertical = data;
+    }
+    
+    public BasicDataStatistic getLinearityDataVertical() {
+        return this.linearityDataVertical;
+    }
+    
+    public void linearityDataHorizontal(BasicDataStatistic data)
+    {
+        this.linearityDataHorizontal = data;
+    }
+    
+    public BasicDataStatistic getLinearityDataHorizontal() {
+        return this.linearityDataHorizontal;
+    }
+    
+    public void linearityAsSumEveryPointDataVertical(BasicDataStatistic data)
+    {
+        this.linearityAsSumEveryPointDataVertical = data;
+    }
+    
+    public BasicDataStatistic getLinearityAsSumEveryPointDataVertical() {
+        return this.linearityAsSumEveryPointDataVertical;
+    }
+    
+    public void linearityAsSumEveryPointDataHorizontal(BasicDataStatistic data)
+    {
+        this.linearityAsSumEveryPointDataHorizontal = data;
+    }
+    
+    public BasicDataStatistic getLinearityAsSumEveryPointDataHorizontal() {
+        return this.linearityAsSumEveryPointDataHorizontal;
     }
     
     /*public void printAnalysis()

@@ -1,6 +1,7 @@
 package isensestressanalyzer.analyzer;
 
 import isensestressanalyzer.dataanalysis.RotationDataWrapper;
+import isensestressanalyzer.dataanalysis.StressNoStressData;
 import isensestressanalyzer.exercise.Exercise;
 import isensestressanalyzer.rotationsensor.RotationSensorData;
 import java.util.ArrayList;
@@ -42,5 +43,12 @@ public class Analyzer
             }
         }
         
+    }
+    
+    protected static void printReport(StressNoStressData... featuresData) {
+        
+        for (StressNoStressData data: featuresData) {
+            data.makeAndPrintTTest();
+        }
     }
 }

@@ -13,55 +13,47 @@ import org.apache.commons.math3.stat.inference.TTest;
 public class StressNoStressData 
 {
     private final String feature;
-    private BasicDataStatistic noStress;
-    private BasicDataStatistic stress;
+    private ArrayList<Double> noStress;
+    private ArrayList<Double> stress;
     
     public StressNoStressData(String feature)
     {
         this(feature, null, null);
     }
     
-    public StressNoStressData(String feature, BasicDataStatistic noStress, 
-            BasicDataStatistic stress)
+    public StressNoStressData(String feature, ArrayList<Double> noStress, 
+            ArrayList<Double> stress)
     {
         this.feature = feature; this.noStress = noStress; this.stress = stress;
     }
     
-    public void setNoStressData(BasicDataStatistic data)
-    {
-        noStress = data;
-    }
-    
-    public void setStressData(BasicDataStatistic data)
-    {
-        stress = data;
-    }
-    
-    public void setData(BasicDataStatistic dataNoStress, 
-            BasicDataStatistic dataStress)
+    public void setData(ArrayList<Double> dataNoStress, 
+            ArrayList<Double> dataStress)
     {
         stress = dataStress; noStress = dataNoStress;
     }
     
-    public BasicDataStatistic getNoStressData()
+    public ArrayList<Double> getNoStressData()
     {
         return this.noStress;
     }
     
-    public BasicDataStatistic getStressData()
+    public ArrayList<Double> getStressData()
     {
         return this.stress;
     }
     
-    public static void makeAndPrintTTest(String featureName, 
-            ArrayList<Double> noStress, ArrayList<Double> stress) {
+    /**
+     * Make a paired TTest between no-stress and stress data
+     */
+    public void makeAndPrintTTest() {
     
         adjustData(noStress, stress);
         double[] arrayNoStress = new double[noStress.size()],
                 arrayStress = new double[stress.size()], 
                 arrayIncreases = new double[stress.size()];
 
-        System.out.println("******" + featureName + "******");
+        System.out.println("****** " + feature + " ******");
 
         if (noStress.size() > 1)
         {
@@ -102,7 +94,7 @@ public class StressNoStressData
         
     }
     
-    private static void copyMeanValueIntoDoubleArray(double[] destination, 
+    public static void copyMeanValueIntoDoubleArray(double[] destination, 
             ArrayList<Double> origin)
     {
         for (int i = 0; i < origin.size(); i++)

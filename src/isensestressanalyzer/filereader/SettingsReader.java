@@ -26,6 +26,8 @@ import java.util.List;
  */
 public class SettingsReader extends FileReader
 {
+    private String stringForGameParticipation = null;
+    
     public SettingsReader(String IMEI, String data) {
         super(IMEI, data, "log_settings_data");
     }
@@ -36,7 +38,7 @@ public class SettingsReader extends FileReader
      */
     public PhoneSettings getPhoneSettings()
     {
-        String line = null, date = null, manufacturer = null, language = null;
+        String line, date = null, manufacturer = null, language = null;
         long screenWidth = 0, screenHeight = 0;
         
         try 
@@ -47,23 +49,21 @@ public class SettingsReader extends FileReader
             
             while (language == null) 
             {
-                if (!line.contains("/"))
-                {
+                if (!line.contains("/")) {
                     /**
                      * Relevant information is only in the second part of the 
                      * string after the :
                      */
                     String interesting = (line.split(":")[1]).replace("*", "").trim();
-                    if (date == null)
-                    {
+                    if (date == null) {
                         date = interesting.substring(0, interesting.length() - 2);
                     }
-                    else if (manufacturer == null)
-                    {
+                    else if (manufacturer == null) {
+                        
                         manufacturer = interesting;
                     }
-                    else if (screenHeight == 0 && screenWidth == 0)
-                    {
+                    else if (screenHeight == 0 && screenWidth == 0) {
+                        
                         String[] widthAndHeight = interesting.split("x");
                         screenWidth = Long.valueOf(widthAndHeight[0]);
                         screenHeight = Long.valueOf(widthAndHeight[1]);
@@ -71,6 +71,9 @@ public class SettingsReader extends FileReader
                     else if (language == null)
                     {
                         language = interesting;
+                    }
+                    else if (stringForGameParticipation == null && line.contains("User")) {
+                        stringForGameParticipation = line;
                     }
                 }
                 line = readLine();
@@ -239,5 +242,9 @@ public class SettingsReader extends FileReader
             exc.printStackTrace();
             return false;
         }
+    }
+    
+    public String getStringUser() {
+        return stringForGameParticipation;
     }
 }
