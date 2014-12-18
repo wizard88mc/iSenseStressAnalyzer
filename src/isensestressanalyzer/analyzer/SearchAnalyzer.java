@@ -3,8 +3,9 @@ package isensestressanalyzer.analyzer;
 import isensestressanalyzer.dataanalysis.BasicDataStatistic;
 import isensestressanalyzer.dataanalysis.StressNoStressData;
 import isensestressanalyzer.exercise.Search;
+import isensestressanalyzer.tester.Tester;
+
 import java.util.ArrayList;
-import tester.Tester;
 
 /**
  *
@@ -31,8 +32,7 @@ public class SearchAnalyzer extends Analyzer
 
         if (!exercises.isEmpty())
         {
-            for (Search exercise: exercises)
-            {
+            for (Search exercise: exercises) {
                 
                 SearchAnalysisResume resume = new SearchAnalysisResume();
                 resume.pressureDataClick(new BasicDataStatistic(exercise.getAveragePressureBasicData().getAverage())); 
@@ -668,7 +668,7 @@ public class SearchAnalyzer extends Analyzer
             linearityAsSumEveryPointDataHorizontal.get(0).add(mSearchAnalyzer.getMeanLinearityAsSumEveryPointDataHorizontal(false)); linearityAsSumEveryPointDataHorizontal.get(1).add(mSearchAnalyzer.getMeanLinearityAsSumEveryPointDataHorizontal(true));
         }
         
-        printReport(new StressNoStressData(featuresName[0], pressureData.get(0), pressureData.get(1)), 
+        printReport(false, new StressNoStressData(featuresName[0], pressureData.get(0), pressureData.get(1)), 
             new StressNoStressData(featuresName[1], sizeData.get(0), sizeData.get(1)), 
             new StressNoStressData(featuresName[2], movementData.get(0), movementData.get(1)),
             new StressNoStressData(featuresName[3], scrollDeltaDataVertical.get(0), scrollDeltaDataVertical.get(1)),
@@ -697,7 +697,7 @@ public class SearchAnalyzer extends Analyzer
         
         SearchAnalyzer searchAnalyzer = tester.getSearchAnalyzer();
         
-        printReport(new StressNoStressData(featuresName[0], searchAnalyzer.getAllPressureData(false), searchAnalyzer.getAllPressureData(true)), 
+        boolean[] results = printReport(true, new StressNoStressData(featuresName[0], searchAnalyzer.getAllPressureData(false), searchAnalyzer.getAllPressureData(true)), 
                 new StressNoStressData(featuresName[1], searchAnalyzer.getAllSizeData(false), searchAnalyzer.getAllSizeData(true)), 
                 new StressNoStressData(featuresName[2], searchAnalyzer.getAllMovementData(false), searchAnalyzer.getAllMovementData(true)), 
                 new StressNoStressData(featuresName[3], searchAnalyzer.getAllScrollDeltaDataVertical(false), searchAnalyzer.getAllScrollDeltaDataVertical(true)), 

@@ -1,11 +1,12 @@
 package isensestressanalyzer.analyzer;
 
 import isensestressanalyzer.exercise.Write;
+import isensestressanalyzer.tester.Tester;
 import isensestressanalyzer.dataanalysis.BasicDataStatistic;
 import isensestressanalyzer.dataanalysis.RotationDataWrapper;
 import isensestressanalyzer.dataanalysis.StressNoStressData;
+
 import java.util.ArrayList;
-import tester.Tester;
 
 /**
  * Handles all the Writing exercises, both in stress and non stress mode, 
@@ -18,6 +19,9 @@ public class WriteAnalyzer extends Analyzer
         "Digits size", "Digits movement", "Digits duration", "Digits precision", 
         "Ratio BACK over all digits", "Ratio wrong words over all words", 
         "Digits time distance"};
+    private static int[] featurePassesTestForTester = new int[]{0, 0, 0, 
+    	0, 0, 0, 0, 0};
+    private static int totalTesters = 0;
     private ArrayList<WriteAnalysisResume> noStressResumes = new ArrayList<>();
     private ArrayList<WriteAnalysisResume> stressResumes = new ArrayList<>();
     /**
@@ -314,7 +318,7 @@ public class WriteAnalyzer extends Analyzer
             digitsFrequencyData.get(1).add(tester.getWriteAnalyzer().getMeanDigitsFrequency(true));
         }
         
-        printReport(new StressNoStressData(featuresName[0], pressureData.get(0), pressureData.get(1)), 
+        printReport(false, new StressNoStressData(featuresName[0], pressureData.get(0), pressureData.get(1)), 
                 new StressNoStressData(featuresName[1], sizeData.get(0), sizeData.get(1)), 
                 new StressNoStressData(featuresName[2], movementData.get(0), movementData.get(1)), 
                 new StressNoStressData(featuresName[3], durationData.get(0), durationData.get(1)), 
@@ -330,7 +334,7 @@ public class WriteAnalyzer extends Analyzer
         
         WriteAnalyzer analyzerTester = tester.getWriteAnalyzer();
         
-        printReport(new StressNoStressData(featuresName[0], analyzerTester.getAllPressureData(false), analyzerTester.getAllPressureData(true)), 
+        boolean[] results = printReport(true, new StressNoStressData(featuresName[0], analyzerTester.getAllPressureData(false), analyzerTester.getAllPressureData(true)), 
                 new StressNoStressData(featuresName[1], analyzerTester.getAllSizeData(false), analyzerTester.getAllSizeData(true)), 
                 new StressNoStressData(featuresName[2], analyzerTester.getAllMovementData(false), analyzerTester.getAllMovementData(true)), 
                 new StressNoStressData(featuresName[3], analyzerTester.getAllDurationData(false), analyzerTester.getAllDurationData(true)), 
@@ -338,6 +342,23 @@ public class WriteAnalyzer extends Analyzer
                 new StressNoStressData(featuresName[5], analyzerTester.getAllRatioBackOVerDigits(false), analyzerTester.getAllRatioBackOVerDigits(true)), 
                 new StressNoStressData(featuresName[6], analyzerTester.getAllRatioWrongAllWords(false), analyzerTester.getAllRatioWrongAllWords(true)), 
                 new StressNoStressData(featuresName[7], analyzerTester.getAllDigitsFrequency(false), analyzerTester.getAllDigitsFrequency(true)));
+        
+        for (int i = 0; i < results.length; i++) {
+        	if (results[i]) {
+        		featurePassesTestForTester[i]++;
+        	}
+        }
+        
+        totalTesters++;
+    }
+    
+    public static void printPercentageSingleFeature() {
+    	
+    	for (int i = 0; i < featuresName.length; i++) {
+    		System.out.println(featuresName[i] + ": " + 
+    				featurePassesTestForTester[i] + "/" + totalTesters + "(" + 
+    				featurePassesTestForTester[i] * 100 / totalTesters + ")");
+    	}
     }
     
     /**

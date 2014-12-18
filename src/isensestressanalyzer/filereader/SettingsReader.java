@@ -197,7 +197,7 @@ public class SettingsReader extends FileReader
         try
         {
             List<String> lines = Files.readAllLines(Paths.get(file.toURI()), 
-                    Charset.defaultCharset());
+            		Charset.forName("UTF-8"));
             String completeFile = "";
             for (String line: lines)
             {

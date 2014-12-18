@@ -29,6 +29,7 @@ public class BasicDataStatistic
         {
             if (!discardZeroValues || (discardZeroValues && value != 0))
             {
+            	if (value != null) {
                 if (value < min) 
                 {
                     min = value;
@@ -40,13 +41,14 @@ public class BasicDataStatistic
                 average += value;
                 
                 count++;
+            	}
             }
         }
         average /= count;
         
         for (Double value: data)
         {
-            if (!discardZeroValues || discardZeroValues && value != 0)
+            if (value != null && !discardZeroValues || discardZeroValues && value != 0)
             {
                 variance += Math.pow(value - average, 2);
             }

@@ -1,4 +1,4 @@
-package tester;
+package isensestressanalyzer.tester;
 
 import isensestressanalyzer.analyzer.SearchAnalyzer;
 import isensestressanalyzer.analyzer.WriteAnalyzer;
@@ -173,10 +173,12 @@ public class Tester
     }
     
     public void setUserDetails(String details) {
-        details = details.replace("User: ", "").trim();
-       
-        String[] elements = details.split(",");
-        gender = elements[0]; age = Integer.valueOf(elements[1]); 
-        email = elements[1]; nickname = elements[2];
+    	if (details != null) {
+	        details = details.replace("User: ", "").trim();
+	       
+	        String[] elements = details.split(",");
+	        gender = elements[0]; age = Integer.valueOf(elements[1]); 
+	        email = elements[1]; nickname = elements[2];
+    	}
     }
 }

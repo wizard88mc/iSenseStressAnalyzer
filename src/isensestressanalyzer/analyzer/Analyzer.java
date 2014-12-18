@@ -45,10 +45,15 @@ public class Analyzer
         
     }
     
-    protected static void printReport(StressNoStressData... featuresData) {
+    protected static boolean[] printReport(boolean local, 
+    		StressNoStressData... featuresData) {
         
-        for (StressNoStressData data: featuresData) {
-            data.makeAndPrintTTest();
-        }
+    	boolean[] pass = new boolean[featuresData.length];
+    	
+    	for (int i = 0; i < featuresData.length; i++) {
+    		pass[i] = featuresData[i].makeAndPrintTTest();
+    	}
+        
+        return pass;
     }
 }

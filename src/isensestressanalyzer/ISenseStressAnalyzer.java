@@ -13,9 +13,10 @@ import isensestressanalyzer.filereader.LayoutReader;
 import isensestressanalyzer.filereader.RotationSensorReader;
 import isensestressanalyzer.filereader.SettingsReader;
 import isensestressanalyzer.filereader.TouchReader;
+import isensestressanalyzer.tester.Test;
+import isensestressanalyzer.tester.Tester;
+
 import java.util.ArrayList;
-import tester.Test;
-import tester.Tester;
 
 /**
  *
@@ -136,6 +137,7 @@ public class ISenseStressAnalyzer
         WriteAnalyzer.performGlobalAnalysis(listTester);
         SearchAnalyzer.performGlobalAnalysis(listTester);
         
+        WriteAnalyzer.printPercentageSingleFeature();
     }
     
     private static void clearWrongExercises(ArrayList<Exercise> exercises)

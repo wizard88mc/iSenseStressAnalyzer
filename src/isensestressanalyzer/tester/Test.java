@@ -1,4 +1,4 @@
-package tester;
+package isensestressanalyzer.tester;
 
 import isensestressanalyzer.exercise.Exercise;
 import isensestressanalyzer.exercise.Protocol;

@@ -3,9 +3,11 @@ package isensestressanalyzer.analyzer;
 import isensestressanalyzer.ISenseStressAnalyzer;
 import isensestressanalyzer.dataanalysis.StressNoStressData;
 import isensestressanalyzer.exercise.Survey;
+import isensestressanalyzer.tester.Tester;
+
 import java.util.ArrayList;
+
 import org.apache.commons.math3.stat.inference.TTest;
-import tester.Tester;
 
 /**
  *
@@ -88,6 +90,7 @@ public class SurveyAnalyzer {
         performTestBetweenTwoSurveys(resumes.get(0), resumes.get(1), "Begin", "After relax");
         performTestBetweenTwoSurveys(resumes.get(2), resumes.get(3), "Before stressor", "After stressor");
         performTestBetweenTwoSurveys(resumes.get(2), resumes.get(4), "Before stressor", "After stress task");
+        performTestBetweenTwoSurveys(resumes.get(3), resumes.get(4), "After Stressor", "After stress task");	
     }
     
     private static void performTestBetweenTwoSurveys(FastResumeSurvey first, FastResumeSurvey second, 

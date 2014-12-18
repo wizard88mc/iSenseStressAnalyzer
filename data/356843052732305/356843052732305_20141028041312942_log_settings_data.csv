@@ -3,6 +3,7 @@
  * Manufacturer + Model: samsung GT-I9505 *
  * Screen Pixels WxH: 1080x1920 *
  * Language: it *
+ * User: M, 30, Jose.Luis@unige.ch, jose *
 /*********************************/
 ** PROTOCOL: SURVEY,false - RELAX,false - SURVEY,false - SEARCH,false - WRITE,false - SURVEY,false - STRESSOR,true - SURVEY,false - SEARCH,true - WRITE,true - SURVEY,false -  **
 (1,SURVEY,false,1,1,3,3,4)

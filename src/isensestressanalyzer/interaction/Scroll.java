@@ -118,15 +118,28 @@ public class Scroll
     {
         int counter = 0; double mean = 0;
         
-        for (Interaction interaction: mListInteraction)
+        /*for (Interaction interaction: mListInteraction)
         {
             Point point = interaction.getPoint();
             mean += Math.sqrt(Math.pow(point.getX() - x, 2) + 
                     Math.pow(point.getY() - y, 2));
             counter++;
         }
-        mean /= counter;
-        return mean;
+        mean /= counter;*/
+        
+        if (mListInteraction.size() != 0) {
+	        Point point = mListInteraction.get(0).getPoint(),
+	        		lastPoint = mListInteraction.get(mListInteraction.size() - 1).getPoint();
+	        mean = Math.sqrt(Math.pow(point.getX() - x, 2) + 
+	        		Math.pow(point.getY() - y, 2)) + 
+	        		Math.sqrt(Math.pow(lastPoint.getX() - x, 2) + 
+	        				Math.pow(lastPoint.getY() - y, 2));
+	        
+	        return mean / 2;
+        }
+        else {
+        	return 0.0;
+        }
     }
     
     public Double calculateLinearity(int value)

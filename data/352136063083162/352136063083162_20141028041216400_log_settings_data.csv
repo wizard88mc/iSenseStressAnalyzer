@@ -3,6 +3,7 @@
  * Manufacturer + Model: LGE Nexus 5 *
  * Screen Pixels WxH: 1080x1776 *
  * Language: en *
+ * User: F, 26, Camille.Tardy@unige.ch, camille *
 /*********************************/
 ** PROTOCOL: SURVEY,false - RELAX,false - SURVEY,false - SEARCH,false - WRITE,false - SURVEY,false - STRESSOR,true - SURVEY,false - SEARCH,true - WRITE,true - SURVEY,false -  **
 (1,SURVEY,false,1,1,5,4,1)
