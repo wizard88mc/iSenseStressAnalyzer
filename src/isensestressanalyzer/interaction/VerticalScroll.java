@@ -34,7 +34,7 @@ public class VerticalScroll extends Scroll
         Point firstPoint = mListInteraction.get(0).getPoint(),
                 endPoint = mListInteraction.get(mListInteraction.size() - 1).getPoint();
         
-        return (double) Math.abs(firstPoint.getX() - endPoint.getX()) / (float) width;
+        return (double) Math.abs(firstPoint.getX() - endPoint.getX()); /// (float) width;
     }
     
     /**
@@ -56,6 +56,6 @@ public class VerticalScroll extends Scroll
             sum += Math.abs(current.getX() - before.getX());
         }
         
-        return sum / (float) width;
+        return sum; /// (float) width;
     }
 }

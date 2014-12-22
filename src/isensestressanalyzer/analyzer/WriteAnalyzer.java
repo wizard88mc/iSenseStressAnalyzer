@@ -52,7 +52,7 @@ public class WriteAnalyzer extends Analyzer
                    resume.sizeData(exercise.getSizeDigitsBasicData());
                    resume.movementData(exercise.getMovementDigitsBasicData());
                    resume.durationData(exercise.getDurationDigitsBasicData());
-                   resume.precisionData(exercise.getTouchPresicisionDigitsBasicData());
+                   resume.precisionData(exercise.getTouchPrecisionDigitsBasicData());
                    resume.ratioBackOverDigitsData(
                            new BasicDataStatistic(exercise.getRatioBackButtonsOverDigits()));
                    resume.ratioWrongAllWords(new

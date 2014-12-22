@@ -1,6 +1,7 @@
 package isensestressanalyzer.exercise;
 
 import isensestressanalyzer.ISenseStressAnalyzer;
+import isensestressanalyzer.analyzer.SearchAnalyzer;
 import isensestressanalyzer.dataanalysis.BasicDataStatistic;
 import isensestressanalyzer.interaction.HorizontalScroll;
 import isensestressanalyzer.interaction.Interaction;
@@ -8,7 +9,12 @@ import isensestressanalyzer.interaction.Scroll;
 import isensestressanalyzer.interaction.ScrollMovement;
 import isensestressanalyzer.interaction.Touch;
 import isensestressanalyzer.interaction.VerticalScroll;
+import isensestressanalyzer.tester.Tester;
 import isensestressanalyzer.utils.PhoneSettings;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -316,6 +322,10 @@ public class Search extends Exercise
         return this.mListScroll;
     }
     
+    /**
+     * Calculates pressure data when clicking on icons
+     * @return BasicDataStatistic object with pressure data
+     */
     public BasicDataStatistic getAveragePressureBasicData()
     {
         ArrayList<Double> pressure = new ArrayList<>();
@@ -326,6 +336,10 @@ public class Search extends Exercise
         return new BasicDataStatistic(pressure, false);
     }
     
+    /**
+     * Calculates size data when clicking on icons
+     * @return BasicDataStatistic object with size data
+     */
     public BasicDataStatistic getAverageSizeBasicData()
     {
         ArrayList<Double> size = new ArrayList<>();
@@ -336,6 +350,10 @@ public class Search extends Exercise
         return new BasicDataStatistic(size, false);
     }
     
+    /**
+     * Calculates movement data when clicking on icons
+     * @return BasicDataStatistic object with movement information
+     */
     public BasicDataStatistic getAverageMovementClicksBasicData()
     {
         ArrayList<Double> movement = new ArrayList<>();
@@ -344,6 +362,41 @@ public class Search extends Exercise
             movement.add(touch.getTouchMovement());
         }
         return new BasicDataStatistic(movement, false);
+    }
+    
+    /**
+     * Calculates average pressure data when scrolling
+     * @param vertical consider vertical or horizontal scroll
+     * @return BasicDataStatistic object with average pressure information
+     */
+    public BasicDataStatistic getAveragePressureScrollData(boolean vertical) {
+    	
+    	ArrayList<Double> averagePressureData = new ArrayList<>();
+    	
+    	for (Scroll scroll: mListScroll) {
+    		if (vertical && scroll instanceof VerticalScroll) {
+    			averagePressureData.add(scroll.calculateAveragePressure());
+    		}
+    		else if (!vertical && scroll instanceof HorizontalScroll) {
+    			averagePressureData.add(scroll.calculateAveragePressure());
+    		}
+    	}
+    	return new BasicDataStatistic(averagePressureData, true);
+    }
+    
+    public BasicDataStatistic getAverageSizeScrollData(boolean vertical) {
+    	
+    	ArrayList<Double> averageSizeData = new ArrayList<>();
+    	
+    	for (Scroll scroll: mListScroll) {
+    		if (vertical && scroll instanceof VerticalScroll) {
+    			averageSizeData.add(scroll.calculateAverageSize());
+    		}
+    		else if (!vertical && scroll instanceof HorizontalScroll) {
+    			averageSizeData.add(scroll.calculateAverageSize());
+    		}
+    	}
+    	return new BasicDataStatistic(averageSizeData, true);
     }
     
     public BasicDataStatistic getScrollDeltaDataVertical()
@@ -523,5 +576,72 @@ public class Search extends Exercise
             }
         }
         return new BasicDataStatistic(linearityAsSumEveryPointData, false);
+    }
+    
+    /**
+     * 
+     * @param vertical if we are considering vertical or horizontal scroll
+     * @param settings settings of the phone
+     * @return
+     */
+    public ArrayList<ArrayList<Double>> ARFFAttributesForScroll(boolean vertical, 
+    		PhoneSettings settings) {
+    	
+    	ArrayList<ArrayList<Double>> attributesForAllScrolls = new ArrayList<>();
+    	for (Scroll scroll: mListScroll) {
+    		ArrayList<Double> attributes = new ArrayList<>();
+    		if (vertical && scroll instanceof VerticalScroll) {
+    			attributes.add(scroll.calculateAveragePressure());
+    			attributes.add(scroll.calculateAverageSize());
+    			attributes.add(scroll.calculateScrollDelta());
+    			attributes.add(scroll.calculateScrollTimeLength());
+    			attributes.add(scroll.calculateScrollInteractionLength());
+    			attributes.add(scroll.calculateSpeedScrollDelta());
+    			attributes.add(scroll.calculateSpeedScrollInteraction());
+    			attributes.add(scroll.meanDistanceFromPoint((int) settings.getScreenWidth() / 2, (int) settings.getScreenHeight() / 2));
+    			attributes.add(scroll.meanDistanceFromPoint(0, 0));
+    			attributes.add(scroll.calculateLinearity((int) settings.getScreenWidth()));
+    			attributes.add(scroll.calculateLinearityAsSumOfEveryPoint((int) settings.getScreenWidth()));
+    		}
+    		else if (!vertical && scroll instanceof HorizontalScroll) {
+    			attributes.add(scroll.calculateAveragePressure());
+    			attributes.add(scroll.calculateAverageSize());
+    			attributes.add(scroll.calculateScrollDelta());
+    			attributes.add(scroll.calculateScrollTimeLength()); 
+    			attributes.add(scroll.calculateScrollInteractionLength());
+    			attributes.add(scroll.calculateSpeedScrollDelta());
+    			attributes.add(scroll.calculateSpeedScrollInteraction());
+    			attributes.add(scroll.meanDistanceFromPoint((int) settings.getScreenWidth() / 2, (int) settings.getScreenHeight() / 2));
+    			attributes.add(scroll.meanDistanceFromPoint(0, 0));
+    			attributes.add(scroll.calculateLinearity((int) settings.getScreenHeight()));
+    			attributes.add(scroll.calculateLinearityAsSumOfEveryPoint((int) settings.getScreenHeight()));
+    		}
+    		
+    		attributesForAllScrolls.add(attributes);
+    	}
+    	
+    	return attributesForAllScrolls;
+    }
+    
+    public static ArrayList<String> getListARFFAttributesNames(boolean vertical) {
+    	
+    	String prefix = "VERTICAL"; 
+    	if (!vertical) {
+    		prefix = "HORIZONTAL";
+    	}
+    	ArrayList<String> attributes = new ArrayList<String>();
+    	attributes.add(prefix + "_AVERAGE_PRESSURE");
+    	attributes.add(prefix + "_AVERAGE_SIZE");
+    	attributes.add(prefix + "_SCROLL_DELTA");
+    	attributes.add(prefix + "_SCROLL_TIME_LENGTH");
+    	attributes.add(prefix + "_SCROLL_INTERACTION_LENGTH");
+    	attributes.add(prefix + "_SPEED_SCROLL_DELTA");
+    	attributes.add(prefix + "_SPEED_SCROLL_INTERACTION");
+    	attributes.add(prefix + "_MEAN_DISTANCE_CENTER");
+    	attributes.add(prefix + "_MEAN_DISTANCE_TOP_LEFT");
+    	attributes.add(prefix + "_LINEARITY");
+    	attributes.add(prefix + "_LINEARITY_SUM_EVERY_POINT");
+    	
+    	return attributes;
     }
 }

@@ -9,7 +9,9 @@ import isensestressanalyzer.dataanalysis.BasicDataStatistic;
 public class SearchAnalysisResume 
 {
     private BasicDataStatistic pressureDataClick, sizeDataClick, 
-            movementDataClick, scrollDeltaDataVertical, scrollDeltaDataHorizontal, 
+            movementDataClick, averagePressureScrollVertical, averagePressureScrollHorizontal, 
+            averageSizeScrollVertical, averageSizeScrollHorizontal, 
+            scrollDeltaDataVertical, scrollDeltaDataHorizontal, 
             scrollTimeLengthDataVertical, scrollTimeLengthDataHorizontal,
             scrollInteractionLengthDataVertical, scrollInteractionLengthDataHorizontal, 
             speedScrollDeltaDataVertical, speedScrollDeltaDataHorizontal, 
@@ -44,6 +46,38 @@ public class SearchAnalysisResume
     
     public BasicDataStatistic getMovementDataClick() {
         return this.movementDataClick;
+    }
+    
+    public void averagePressureScrollDataVertical(BasicDataStatistic data) {
+    	this.averagePressureScrollVertical = data;
+    }
+    
+    public BasicDataStatistic getAveragePressureScrollDataVertical() {
+    	return this.averagePressureScrollVertical;
+    }
+    
+    public void averagePressureScrollDataHorizontal(BasicDataStatistic data) {
+    	this.averagePressureScrollHorizontal = data;
+    }
+    
+    public BasicDataStatistic getAveragePressureScrollDataHorizontal() {
+    	return this.averagePressureScrollHorizontal;
+    }
+    
+    public void averageSizeScrollDataVertical(BasicDataStatistic data) {
+    	this.averageSizeScrollVertical = data;
+    }
+    
+    public BasicDataStatistic getAverageSizeScrollDataVertical() {
+    	return this.averageSizeScrollVertical;
+    }
+    
+    public void averageSizeScrollDataHorizontal(BasicDataStatistic data) {
+    	this.averageSizeScrollHorizontal = data;
+    }
+    
+    public BasicDataStatistic getAverageSizeScrollDataHorizontal() {
+    	return this.averageSizeScrollHorizontal;
     }
     
     public void scrollDeltaDataVertical(BasicDataStatistic data)

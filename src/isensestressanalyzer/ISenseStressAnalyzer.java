@@ -4,6 +4,7 @@ import isensestressanalyzer.analyzer.SearchAnalyzer;
 import isensestressanalyzer.analyzer.SurveyAnalyzer;
 import isensestressanalyzer.analyzer.WriteAnalysisResume;
 import isensestressanalyzer.analyzer.WriteAnalyzer;
+import isensestressanalyzer.classifiers.ClassifiersTester;
 import isensestressanalyzer.dataanalysis.StressNoStressData;
 import isensestressanalyzer.exercise.Exercise;
 import isensestressanalyzer.exercise.Protocol;
@@ -16,6 +17,7 @@ import isensestressanalyzer.filereader.TouchReader;
 import isensestressanalyzer.tester.Test;
 import isensestressanalyzer.tester.Tester;
 
+import java.io.File;
 import java.util.ArrayList;
 
 /**
@@ -31,6 +33,7 @@ public class ISenseStressAnalyzer
     public static TouchReader mTouchReader = null;
     public static LayoutReader mLayoutReader = null;
     public static RotationSensorReader mRotationSensorReader = null;
+    public static ArrayList<File> listCreatedFiles = new ArrayList<>();
     /**
      * List of the possible protocols followed
      */
@@ -131,6 +134,9 @@ public class ISenseStressAnalyzer
             
             WriteAnalyzer.performLocalAnalysis(tester);
             SearchAnalyzer.performLocalAnalysis(tester);
+            
+            tester.createARFFFileForWriteTask();
+            tester.createARFFFileForSearchTask();
         }
         
         SurveyAnalyzer.performAnalysis(listTester);
@@ -138,8 +144,18 @@ public class ISenseStressAnalyzer
         SearchAnalyzer.performGlobalAnalysis(listTester);
         
         WriteAnalyzer.printPercentageSingleFeature();
+        SearchAnalyzer.printPercentageSingleFeature();
+        
+        Tester.createGlobalARFF(listTester);
+        
+        ClassifiersTester tester = new ClassifiersTester(listCreatedFiles);
+        tester.performEvaluation();
     }
     
+    /**
+     * Eliminates all the exercises that do not respect minimum requirements
+     * @param exercises the list of exercises to test
+     */
     private static void clearWrongExercises(ArrayList<Exercise> exercises)
     {
         ArrayList<Exercise> exercisesToEliminate = new ArrayList<>();

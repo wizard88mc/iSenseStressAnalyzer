@@ -4,6 +4,8 @@ import isensestressanalyzer.dataanalysis.RotationDataWrapper;
 import isensestressanalyzer.dataanalysis.StressNoStressData;
 import isensestressanalyzer.exercise.Exercise;
 import isensestressanalyzer.rotationsensor.RotationSensorData;
+
+import java.io.File;
 import java.util.ArrayList;
 
 /**
@@ -11,7 +13,10 @@ import java.util.ArrayList;
  * @author Matteo Ciman
  */
 public class Analyzer 
-{    
+{
+	public static String OUTPUT_FOLDER = "data" + File.separator + 
+			"output" + File.separator;
+	
     protected void manageRotationSensorData(ArrayList<? extends Exercise> noStress, 
             ArrayList<? extends Exercise> stress, 
             ArrayList<RotationDataWrapper> axisDataNoStress, 

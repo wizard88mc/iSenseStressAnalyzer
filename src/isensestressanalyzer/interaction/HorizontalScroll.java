@@ -31,7 +31,7 @@ public class HorizontalScroll extends Scroll
         Point firstPoint = mListInteraction.get(0).getPoint(),
                 endPoint = mListInteraction.get(mListInteraction.size() - 1).getPoint();
         
-        return (double) Math.abs(firstPoint.getY() - endPoint.getY()) / (float) height;
+        return (double) Math.abs(firstPoint.getY() - endPoint.getY()); // (float) height;
     }
     
     /**
@@ -53,6 +53,6 @@ public class HorizontalScroll extends Scroll
             sum += Math.abs(current.getY() - before.getY());
         }
         
-        return sum / (float) height;
+        return sum; // (float) height;
     }
 }

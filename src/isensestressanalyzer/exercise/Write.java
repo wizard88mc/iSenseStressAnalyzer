@@ -159,6 +159,10 @@ public class Write extends Exercise
         return this.digits;
     }
     
+    /**
+     * Calculates the data statistic for pressure information
+     * @return BasicDataStatistic built with pressure information
+     */
     public BasicDataStatistic getPressionDigitsBasicData()
     {
         ArrayList<Double> pressures = new ArrayList<>();
@@ -169,6 +173,10 @@ public class Write extends Exercise
         return new BasicDataStatistic(pressures, false);
     }
     
+    /**
+     * Calculates the data statistics for size information
+     * @return BasicDataStatistic built with size information
+     */
     public BasicDataStatistic getSizeDigitsBasicData()
     {
         ArrayList<Double> sizes = new ArrayList<>();
@@ -179,6 +187,10 @@ public class Write extends Exercise
         return new BasicDataStatistic(sizes, false);
     }
     
+    /**
+     * Calculates the data statistic for the movement information
+     * @return BasicDataStatistic built with movement information
+     */
     public BasicDataStatistic getMovementDigitsBasicData()
     {
         ArrayList<Double> movements = new ArrayList<>();
@@ -189,6 +201,10 @@ public class Write extends Exercise
         return new BasicDataStatistic(movements, false);
     }
     
+    /**
+     * Calculates the data statistic for the duration information
+     * @return BasicDataStatistic built with duration information
+     */
     public BasicDataStatistic getDurationDigitsBasicData()
     {
         ArrayList<Double> durations = new ArrayList<>();
@@ -199,7 +215,11 @@ public class Write extends Exercise
         return new BasicDataStatistic(durations, false);
     }
     
-    public BasicDataStatistic getTouchPresicisionDigitsBasicData()
+    /**
+     * Calculates the data statistic for the touch precision information
+     * @return BasicDataStatistic built with precision information
+     */
+    public BasicDataStatistic getTouchPrecisionDigitsBasicData()
     {
         ArrayList<Double> precisions = new ArrayList<>();
         for (Digit digit: digits)
@@ -259,5 +279,50 @@ public class Write extends Exercise
                 digits.get(0).getDigitStart();
         
         return (double) deltaTime / (double) digits.size();
+    }
+    
+    /**
+     * Calculates the list of attributes for the write task
+     * @return for each digits the list of attributes
+     */
+    public ArrayList<ArrayList<Double>> ARFFAttributesForWrite() {
+    	
+    	ArrayList<ArrayList<Double>> attributesForAllDigits = new ArrayList<>();
+    	
+    	for (int i = 0; i < digits.size(); i++) {
+    		
+    		ArrayList<Double> attributes = new ArrayList<>();
+    		attributes.add(digits.get(i).getPressureBasicData().getAverage());
+    		attributes.add(digits.get(i).getSizeBasicData().getAverage());
+    		attributes.add(digits.get(i).getTouchMovement());
+    		attributes.add(digits.get(i).getTouchDuration());
+    		
+    		if (i > 0) {
+    			attributes.add((double) (digits.get(i).getDigitEnd() - 
+    					digits.get(i - 1).getDigitEnd()));
+    		}
+    		else {
+    			attributes.add(null);
+    		}
+    		
+    		attributesForAllDigits.add(attributes);
+    	}
+    	
+    	return attributesForAllDigits;
+    }
+    
+    /**
+     * Returns the name of all the attributes calculated for the write task
+     * @return
+     */
+    public static ArrayList<String> getARFFListAttributesNames() {
+    	
+    	ArrayList<String> attributesNames = new ArrayList<>();
+    	attributesNames.add("PRESSURE");
+    	attributesNames.add("SIZE");
+    	attributesNames.add("MOVEMENT");
+    	attributesNames.add("DURATION");
+    	attributesNames.add("TIME_DISTANCE");
+    	return attributesNames;
     }
 }

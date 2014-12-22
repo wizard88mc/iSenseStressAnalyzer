@@ -5,6 +5,9 @@ import isensestressanalyzer.dataanalysis.StressNoStressData;
 import isensestressanalyzer.exercise.Search;
 import isensestressanalyzer.tester.Tester;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 
 /**
@@ -14,7 +17,9 @@ import java.util.ArrayList;
 public class SearchAnalyzer extends Analyzer
 {   
     private static final String[] featuresName = new String[]{"Pressure data", 
-        "Click size", "Click movement", "Scroll delta vertical", "Scroll delta horizontal", 
+        "Click size", "Click movement", "Average pressure vertical", 
+        "Average pressure horizontal", "Average size vertical", "Average size horizontal", 
+        "Scroll delta vertical", "Scroll delta horizontal", 
         "Scroll time length vertical", "Scroll time length horizontal", 
         "Scroll interaction length vertical", "Scroll interaction length horizontal", 
         "Speed scroll delta vertical", "Speed scroll delta horizontal", 
@@ -23,6 +28,9 @@ public class SearchAnalyzer extends Analyzer
         "Mean distance from top left vertical", "Mean distance from top left horizontal", 
         "Linearity vertical", "Linearity horizontal", "Linearity sum every point vertical", 
         "Linearity sum every point horizontal"};
+    private static final int[] featuresPassesSingleTest = new int[]{0, 0, 0, 0, 0, 
+    	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    private static int totalTesters = 0;
     private ArrayList<SearchAnalysisResume> noStressResumes = new ArrayList<>();
     private ArrayList<SearchAnalysisResume> stressResumes = new ArrayList<>(); 
     
@@ -38,6 +46,10 @@ public class SearchAnalyzer extends Analyzer
                 resume.pressureDataClick(new BasicDataStatistic(exercise.getAveragePressureBasicData().getAverage())); 
                 resume.sizeDataClick(new BasicDataStatistic(exercise.getAverageSizeBasicData().getAverage()));
                 resume.movementDataClick(new BasicDataStatistic(exercise.getAverageMovementClicksBasicData().getAverage()));
+                resume.averagePressureScrollDataVertical(exercise.getAveragePressureScrollData(true));
+                resume.averagePressureScrollDataHorizontal(exercise.getAveragePressureScrollData(false));
+                resume.averageSizeScrollDataVertical(exercise.getAverageSizeScrollData(true));
+                resume.averageSizeScrollDataHorizontal(exercise.getAverageSizeScrollData(false));
                 resume.scrollDeltaDataVertical(exercise.getScrollDeltaDataVertical());
                 resume.scrollDeltaDataHorizontal(exercise.getScrollDeltaDataHorizontal());
                 resume.scrollTimeLengthDataVertical(exercise.getScrollTimeLengthData(false));
@@ -142,6 +154,102 @@ public class SearchAnalyzer extends Analyzer
             valuesToReturn.add(resume.getMovementDataClick().getAverage());
         }
         return valuesToReturn;
+    }
+    
+    private Double getMeanAveragePressureScrollDataVertical(boolean stress) {
+    	double mean = 0;
+    	ArrayList<SearchAnalysisResume> toUse = noStressResumes;
+    	if (stress) {
+    		toUse = stressResumes;
+    	}
+    	for (SearchAnalysisResume resume: toUse) {
+    		mean += resume.getAveragePressureScrollDataVertical().getAverage();
+    	}
+    	return mean / toUse.size();
+    }
+    
+    private ArrayList<Double> getAllAveragePressureScrollDataVertical(boolean stress) {
+    	ArrayList<SearchAnalysisResume> toUse = noStressResumes;
+    	if (stress) {
+    		toUse = stressResumes;
+    	}
+    	ArrayList<Double> valuesToReturn = new ArrayList<>();
+    	for (SearchAnalysisResume resume: toUse) {
+    		valuesToReturn.add(resume.getAveragePressureScrollDataVertical().getAverage());
+    	}
+    	return valuesToReturn;
+    }
+    
+    private Double getMeanAveragePressureScrollDataHorizontal(boolean stress) {
+    	double mean = 0;
+    	ArrayList<SearchAnalysisResume> toUse = noStressResumes;
+    	if (stress) {
+    		toUse = stressResumes;
+    	}
+    	for (SearchAnalysisResume resume: toUse) {
+    		mean += resume.getAveragePressureScrollDataHorizontal().getAverage();
+    	}
+    	return mean / toUse.size();
+    }
+    
+    private ArrayList<Double> getAllAveragePressureScrollDataHorizontal(boolean stress) {
+    	ArrayList<SearchAnalysisResume> toUse = noStressResumes;
+    	if (stress) {
+    		toUse = stressResumes;
+    	}
+    	ArrayList<Double> valuesToReturn = new ArrayList<>();
+    	for (SearchAnalysisResume resume: toUse) {
+    		valuesToReturn.add(resume.getAveragePressureScrollDataHorizontal().getAverage());
+    	}
+    	return valuesToReturn;
+    }
+    
+    private Double getMeanAverageSizeScrollDataVertical(boolean stress) {
+    	double mean = 0;
+    	ArrayList<SearchAnalysisResume> toUse = noStressResumes;
+    	if (stress) {
+    		toUse = stressResumes;
+    	}
+    	for (SearchAnalysisResume resume: toUse) {
+    		mean += resume.getAverageSizeScrollDataVertical().getAverage();
+    	}
+    	return mean / toUse.size();
+    }
+    
+    private ArrayList<Double> getAllAverageSizeScrollDataVertical(boolean stress) {
+    	ArrayList<SearchAnalysisResume> toUse = noStressResumes;
+    	if (stress) {
+    		toUse = stressResumes;
+    	}
+    	ArrayList<Double> valuesToReturn = new ArrayList<>();
+    	for (SearchAnalysisResume resume: toUse) {
+    		valuesToReturn.add(resume.getAverageSizeScrollDataVertical().getAverage());
+    	}
+    	return valuesToReturn;
+    }
+    
+    private Double getMeanAverageSizeScrollDataHorizontal(boolean stress) {
+    	double mean = 0;
+    	ArrayList<SearchAnalysisResume> toUse = noStressResumes;
+    	if (stress) {
+    		toUse = stressResumes;
+    	}
+    	for (SearchAnalysisResume resume: toUse) {
+    		mean += resume.getAverageSizeScrollDataHorizontal().getAverage();
+    	}
+    	return mean / toUse.size();
+    }
+    
+    private ArrayList<Double> getAllAverageSizeScrollDataHorizontal(boolean stress) {
+    	ArrayList<SearchAnalysisResume> toUse = noStressResumes;
+    	if (stress) {
+    		toUse = stressResumes;
+    	}
+    	ArrayList<Double> valuesToReturn = new ArrayList<>();
+    	for (SearchAnalysisResume resume: toUse) {
+    		valuesToReturn.add(resume.getAverageSizeScrollDataHorizontal().getAverage());
+    	}
+    	return valuesToReturn;
     }
     
     private Double getMeanScrollDeltaDataVertical(boolean stress) {
@@ -598,6 +706,10 @@ public class SearchAnalyzer extends Analyzer
         ArrayList<ArrayList<Double>> pressureData = new ArrayList<>(), 
                 sizeData = new ArrayList<>(), 
                 movementData = new ArrayList<>(), 
+                averagePressureScrollDataVertical = new ArrayList<>(), 
+                averagePressureScrollDataHorizontal = new ArrayList<>(), 
+                averageSizeScrollDataVertical = new ArrayList<>(), 
+                averageSizeScrollDataHorizontal = new ArrayList<>(),
                 scrollDeltaDataVertical = new ArrayList<>(), 
                 scrollDeltaDataHorizontal = new ArrayList<>(), 
                 scrollTimeLengthDataVertical = new ArrayList<>(), 
@@ -623,6 +735,10 @@ public class SearchAnalyzer extends Analyzer
                 pressureData.add(new ArrayList<Double>()); pressureData.add(new ArrayList<Double>());
                 sizeData.add(new ArrayList<Double>()); sizeData.add(new ArrayList<Double>());
                 movementData.add(new ArrayList<Double>()); movementData.add(new ArrayList<Double>());
+                averagePressureScrollDataVertical.add(new ArrayList<Double>()); averagePressureScrollDataVertical.add(new ArrayList<Double>());
+                averagePressureScrollDataHorizontal.add(new ArrayList<Double>()); averagePressureScrollDataHorizontal.add(new ArrayList<Double>());
+                averageSizeScrollDataVertical.add(new ArrayList<Double>()); averageSizeScrollDataVertical.add(new ArrayList<Double>());
+                averageSizeScrollDataHorizontal.add(new ArrayList<Double>()); averageSizeScrollDataHorizontal.add(new ArrayList<Double>());
                 scrollDeltaDataVertical.add(new ArrayList<Double>()); scrollDeltaDataVertical.add(new ArrayList<Double>());
                 scrollDeltaDataHorizontal.add(new ArrayList<Double>()); scrollDeltaDataHorizontal.add(new ArrayList<Double>());
                 scrollTimeLengthDataVertical.add(new ArrayList<Double>()); scrollTimeLengthDataVertical.add(new ArrayList<Double>());
@@ -648,6 +764,14 @@ public class SearchAnalyzer extends Analyzer
             pressureData.get(0).add(mSearchAnalyzer.getMeanPressureData(false)); pressureData.get(1).add(mSearchAnalyzer.getMeanPressureData(true));
             sizeData.get(0).add(mSearchAnalyzer.getMeanSizeData(false)); sizeData.get(1).add(mSearchAnalyzer.getMeanSizeData(true));
             movementData.get(0).add(mSearchAnalyzer.getMeanMovementData(false)); movementData.get(1).add(mSearchAnalyzer.getMeanMovementData(true));
+            averagePressureScrollDataVertical.get(0).add(mSearchAnalyzer.getMeanAveragePressureScrollDataVertical(false)); 
+            averagePressureScrollDataVertical.get(1).add(mSearchAnalyzer.getMeanAveragePressureScrollDataVertical(true));
+            averagePressureScrollDataHorizontal.get(0).add(mSearchAnalyzer.getMeanAveragePressureScrollDataHorizontal(false));
+            averagePressureScrollDataVertical.get(1).add(mSearchAnalyzer.getMeanAveragePressureScrollDataHorizontal(true));
+            averageSizeScrollDataVertical.get(0).add(mSearchAnalyzer.getMeanAverageSizeScrollDataVertical(false));
+            averageSizeScrollDataVertical.get(1).add(mSearchAnalyzer.getMeanAverageSizeScrollDataVertical(true));
+            averageSizeScrollDataHorizontal.get(0).add(mSearchAnalyzer.getMeanAverageSizeScrollDataHorizontal(false));
+            averageSizeScrollDataHorizontal.get(1).add(mSearchAnalyzer.getMeanAverageSizeScrollDataHorizontal(true));
             scrollDeltaDataVertical.get(0).add(mSearchAnalyzer.getMeanScrollDeltaDataVertical(false)); scrollDeltaDataVertical.get(1).add(mSearchAnalyzer.getMeanScrollDeltaDataVertical(true));
             scrollDeltaDataHorizontal.get(0).add(mSearchAnalyzer.getMeanScrollDeltaDataHorizontal(false)); scrollDeltaDataHorizontal.get(1).add(mSearchAnalyzer.getMeanScrollDeltaDataHorizontal(true));
             scrollTimeLengthDataVertical.get(0).add(mSearchAnalyzer.getMeanScrollTimeLengthDataVertical(false)); scrollTimeLengthDataVertical.get(1).add(mSearchAnalyzer.getMeanScrollTimeLengthDataVertical(true));
@@ -700,24 +824,43 @@ public class SearchAnalyzer extends Analyzer
         boolean[] results = printReport(true, new StressNoStressData(featuresName[0], searchAnalyzer.getAllPressureData(false), searchAnalyzer.getAllPressureData(true)), 
                 new StressNoStressData(featuresName[1], searchAnalyzer.getAllSizeData(false), searchAnalyzer.getAllSizeData(true)), 
                 new StressNoStressData(featuresName[2], searchAnalyzer.getAllMovementData(false), searchAnalyzer.getAllMovementData(true)), 
-                new StressNoStressData(featuresName[3], searchAnalyzer.getAllScrollDeltaDataVertical(false), searchAnalyzer.getAllScrollDeltaDataVertical(true)), 
-                new StressNoStressData(featuresName[4], searchAnalyzer.getAllScrollDeltaDataHorizontal(false), searchAnalyzer.getAllScrollDeltaDataHorizontal(true)), 
-                new StressNoStressData(featuresName[5], searchAnalyzer.getAllScrollTimeLengthDataVertical(false), searchAnalyzer.getAllScrollTimeLengthDataVertical(true)), 
-                new StressNoStressData(featuresName[6], searchAnalyzer.getAllScrollTimeLengthDataHorizontal(false), searchAnalyzer.getAllScrollTimeLengthDataHorizontal(true)), 
-                new StressNoStressData(featuresName[7], searchAnalyzer.getAllScrollInteractionLengthDataVertical(false), searchAnalyzer.getAllScrollInteractionLengthDataVertical(true)), 
-                new StressNoStressData(featuresName[8], searchAnalyzer.getAllScrollInteractionLengthDataHorizontal(false), searchAnalyzer.getAllScrollInteractionLengthDataHorizontal(true)), 
-                new StressNoStressData(featuresName[9], searchAnalyzer.getAllSpeedScrollDeltaDataVertical(false), searchAnalyzer.getAllSpeedScrollDeltaDataVertical(true)), 
-                new StressNoStressData(featuresName[10], searchAnalyzer.getAllSpeedScrollDeltaDataHorizontal(false), searchAnalyzer.getAllSpeedScrollDeltaDataHorizontal(true)), 
-                new StressNoStressData(featuresName[11], searchAnalyzer.getAllSpeedScrollInteractionDataVertical(false), searchAnalyzer.getAllSpeedScrollInteractionDataVertical(true)), 
-                new StressNoStressData(featuresName[12], searchAnalyzer.getAllSpeedScrollInteractionDataHorizontal(false), searchAnalyzer.getAllSpeedScrollInteractionDataHorizontal(true)), 
-                new StressNoStressData(featuresName[13], searchAnalyzer.getAllMeanDistanceFromCenterDataVertical(false), searchAnalyzer.getAllMeanDistanceFromCenterDataVertical(true)), 
-                new StressNoStressData(featuresName[14], searchAnalyzer.getAllMeanDistanceFromCenterDataHorizontal(false), searchAnalyzer.getAllMeanDistanceFromCenterDataHorizontal(true)), 
-                new StressNoStressData(featuresName[15], searchAnalyzer.getAllMeanDistanceFromTopLeftDataVertical(false), searchAnalyzer.getAllMeanDistanceFromTopLeftDataVertical(true)), 
-                new StressNoStressData(featuresName[16], searchAnalyzer.getAllMeanDistanceFromTopLeftDataHorizontal(false), searchAnalyzer.getAllMeanDistanceFromTopLeftDataHorizontal(true)), 
-                new StressNoStressData(featuresName[17], searchAnalyzer.getAllLinearityDataVertical(false), searchAnalyzer.getAllLinearityDataVertical(true)), 
-                new StressNoStressData(featuresName[18], searchAnalyzer.getAllLinearityDataHorizontal(false), searchAnalyzer.getAllLinearityDataHorizontal(true)), 
-                new StressNoStressData(featuresName[19], searchAnalyzer.getAllLinearityAsSumEveryPointDataVertical(false), searchAnalyzer.getAllLinearityAsSumEveryPointDataVertical(true)), 
-                new StressNoStressData(featuresName[20], searchAnalyzer.getAllLinearityAsSumEveryPointDataHorizontal(false), searchAnalyzer.getAllLinearityAsSumEveryPointDataHorizontal(true)));
+                new StressNoStressData(featuresName[3], searchAnalyzer.getAllAveragePressureScrollDataVertical(false), searchAnalyzer.getAllAveragePressureScrollDataVertical(true)),
+                new StressNoStressData(featuresName[4], searchAnalyzer.getAllAveragePressureScrollDataHorizontal(false), searchAnalyzer.getAllAveragePressureScrollDataHorizontal(true)),
+                new StressNoStressData(featuresName[5], searchAnalyzer.getAllAverageSizeScrollDataVertical(false), searchAnalyzer.getAllAverageSizeScrollDataVertical(true)),
+                new StressNoStressData(featuresName[6], searchAnalyzer.getAllAverageSizeScrollDataHorizontal(false), searchAnalyzer.getAllAverageSizeScrollDataHorizontal(true)),
+                new StressNoStressData(featuresName[7], searchAnalyzer.getAllScrollDeltaDataVertical(false), searchAnalyzer.getAllScrollDeltaDataVertical(true)), 
+                new StressNoStressData(featuresName[8], searchAnalyzer.getAllScrollDeltaDataHorizontal(false), searchAnalyzer.getAllScrollDeltaDataHorizontal(true)), 
+                new StressNoStressData(featuresName[9], searchAnalyzer.getAllScrollTimeLengthDataVertical(false), searchAnalyzer.getAllScrollTimeLengthDataVertical(true)), 
+                new StressNoStressData(featuresName[10], searchAnalyzer.getAllScrollTimeLengthDataHorizontal(false), searchAnalyzer.getAllScrollTimeLengthDataHorizontal(true)), 
+                new StressNoStressData(featuresName[11], searchAnalyzer.getAllScrollInteractionLengthDataVertical(false), searchAnalyzer.getAllScrollInteractionLengthDataVertical(true)), 
+                new StressNoStressData(featuresName[12], searchAnalyzer.getAllScrollInteractionLengthDataHorizontal(false), searchAnalyzer.getAllScrollInteractionLengthDataHorizontal(true)), 
+                new StressNoStressData(featuresName[13], searchAnalyzer.getAllSpeedScrollDeltaDataVertical(false), searchAnalyzer.getAllSpeedScrollDeltaDataVertical(true)), 
+                new StressNoStressData(featuresName[14], searchAnalyzer.getAllSpeedScrollDeltaDataHorizontal(false), searchAnalyzer.getAllSpeedScrollDeltaDataHorizontal(true)), 
+                new StressNoStressData(featuresName[15], searchAnalyzer.getAllSpeedScrollInteractionDataVertical(false), searchAnalyzer.getAllSpeedScrollInteractionDataVertical(true)), 
+                new StressNoStressData(featuresName[16], searchAnalyzer.getAllSpeedScrollInteractionDataHorizontal(false), searchAnalyzer.getAllSpeedScrollInteractionDataHorizontal(true)), 
+                new StressNoStressData(featuresName[17], searchAnalyzer.getAllMeanDistanceFromCenterDataVertical(false), searchAnalyzer.getAllMeanDistanceFromCenterDataVertical(true)), 
+                new StressNoStressData(featuresName[18], searchAnalyzer.getAllMeanDistanceFromCenterDataHorizontal(false), searchAnalyzer.getAllMeanDistanceFromCenterDataHorizontal(true)), 
+                new StressNoStressData(featuresName[19], searchAnalyzer.getAllMeanDistanceFromTopLeftDataVertical(false), searchAnalyzer.getAllMeanDistanceFromTopLeftDataVertical(true)), 
+                new StressNoStressData(featuresName[20], searchAnalyzer.getAllMeanDistanceFromTopLeftDataHorizontal(false), searchAnalyzer.getAllMeanDistanceFromTopLeftDataHorizontal(true)), 
+                new StressNoStressData(featuresName[21], searchAnalyzer.getAllLinearityDataVertical(false), searchAnalyzer.getAllLinearityDataVertical(true)), 
+                new StressNoStressData(featuresName[22], searchAnalyzer.getAllLinearityDataHorizontal(false), searchAnalyzer.getAllLinearityDataHorizontal(true)), 
+                new StressNoStressData(featuresName[23], searchAnalyzer.getAllLinearityAsSumEveryPointDataVertical(false), searchAnalyzer.getAllLinearityAsSumEveryPointDataVertical(true)), 
+                new StressNoStressData(featuresName[24], searchAnalyzer.getAllLinearityAsSumEveryPointDataHorizontal(false), searchAnalyzer.getAllLinearityAsSumEveryPointDataHorizontal(true)));
+        
+        for (int i = 0; i < results.length; i++) {
+        	if (results[i]) {
+        		featuresPassesSingleTest[i]++;
+        	}
+        }
+        totalTesters++;
     }
     
+    public static void printPercentageSingleFeature() {
+    	
+    	for (int i = 0; i < featuresName.length; i++) {
+    		System.out.println(featuresName[i] + ": " + 
+    				featuresPassesSingleTest[i] + "/" + totalTesters + "(" + 
+    				featuresPassesSingleTest[i] * 100 / totalTesters + ")");
+    	}
+    }
 }

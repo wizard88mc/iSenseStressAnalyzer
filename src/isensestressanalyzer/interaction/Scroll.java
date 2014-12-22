@@ -33,6 +33,39 @@ public class Scroll
     }
     
     /**
+     * Calculates the average pressure during the scroll action
+     * @return the average pressure
+     */
+    public double calculateAveragePressure() {
+    	double mean = 0; int counter = 0;
+    	
+    	for (Interaction interaction: mListInteraction) {
+    		if (interaction.pressure != 0.0) {
+    			mean += interaction.pressure;
+    			counter++;
+    		}
+    	}
+    	return mean / counter;
+    }
+    
+    /**
+     * Calculates the average size during the scroll action
+     * @return the average size
+     */
+    public double calculateAverageSize() {
+    	double mean = 0; int counter = 0;
+    	
+    	for (Interaction interaction: mListInteraction) {
+    		if (interaction.size != 0.0) {
+    			mean += interaction.size;
+    			counter++;
+    		}
+    	}
+    	
+    	return mean / counter;
+    }
+    
+    /**
      * Calculates the delta of the scroll as the difference of the starting
      * top scroll to the end top scroll (or from the starting left to the end
      * left in case of horizontal scroll)
@@ -142,13 +175,13 @@ public class Scroll
         }
     }
     
-    public Double calculateLinearity(int value)
+    public Double calculateLinearity(int screenSize)
     {
         return 0.0;
     }
     
-    public Double calculateLinearityAsSumOfEveryPoint(int value)
-    {
-        return 0.0;
+    //TODO
+    public Double calculateLinearityAsSumOfEveryPoint(int screenSize) {
+    	return 0.0;
     }
 }
