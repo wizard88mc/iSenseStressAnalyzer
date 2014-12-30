@@ -1,7 +1,5 @@
 package isensestressanalyzer.interaction;
 
-import isensestressanalyzer.dataanalysis.BasicDataStatistic;
-import isensestressanalyzer.utils.Point;
 import java.util.ArrayList;
 
 /**

@@ -141,4 +141,8 @@ public class ScreenObject
     {
         return this.text;
     }
+    
+    public String getObjectClass() {
+    	return this.objectClass;
+    }
 }

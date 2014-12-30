@@ -137,6 +137,7 @@ public class ISenseStressAnalyzer
             
             tester.createARFFFileForWriteTask();
             tester.createARFFFileForSearchTask();
+        	WriteAnalyzer.createHeatMapForDigit(tester, " ");
         }
         
         SurveyAnalyzer.performAnalysis(listTester);

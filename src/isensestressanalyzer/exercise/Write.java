@@ -293,6 +293,24 @@ public class Write extends Exercise
     }
     
     /**
+     * Retrieves all the digits over a particular digit of the keyboard
+     * @param character the character to search for
+     * @return a list of digits, empty in case of no digits found
+     */
+    public ArrayList<Digit> retrieveAllDigitsForAParticularCharacter(String character) {
+    	
+    	ArrayList<Digit> list = new ArrayList<>();
+    	
+    	for (Digit digit: digits) {
+    		if (digit.getDigitText().equals(character)) {
+    			list.add(digit);
+    		}
+    	}
+    	
+    	return list;
+    }
+    
+    /**
      * Calculates the list of attributes for the write task
      * @return for each digits the list of attributes
      */

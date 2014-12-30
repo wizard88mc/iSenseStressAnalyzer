@@ -5,7 +5,7 @@ import isensestressanalyzer.interaction.Touch;
 
 /**
  *
- * @author Matteo
+ * @author Matteo Ciman
  */
 public class KeyboardKeyObject extends ScreenObject 
 {

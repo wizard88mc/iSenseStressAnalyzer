@@ -1,12 +1,21 @@
 package isensestressanalyzer.analyzer;
 
+import isensestressanalyzer.ISenseStressAnalyzer;
 import isensestressanalyzer.exercise.Write;
+import isensestressanalyzer.interaction.Digit;
+import isensestressanalyzer.interaction.Interaction;
 import isensestressanalyzer.tester.Tester;
+import isensestressanalyzer.utils.KeyboardKeyObject;
+import isensestressanalyzer.utils.ScreenObject;
 import isensestressanalyzer.dataanalysis.BasicDataStatistic;
 import isensestressanalyzer.dataanalysis.RotationDataWrapper;
 import isensestressanalyzer.dataanalysis.StressNoStressData;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+
+import org.tc33.jheatchart.HeatChart;
 
 /**
  * Handles all the Writing exercises, both in stress and non stress mode, 
@@ -73,6 +82,11 @@ public class WriteAnalyzer extends Analyzer
         }
     }
     
+    /**
+     * Calculates the mean value of the pressure feature
+     * @param stress if consider
+     * @return the average pressure data
+     */
     private Double getMeanPressureData(boolean stress)
     {
         double mean = 0;
@@ -88,6 +102,11 @@ public class WriteAnalyzer extends Analyzer
         return mean / toUse.size();
     }
     
+    /**
+     * Retrieves all the pressure data
+     * @param stress if retrieve stress or relax data
+     * @return a list with all the pressure values
+     */
     private ArrayList<Double> getAllPressureData(boolean stress) {
         
         ArrayList<WriteAnalysisResume> toUse = noStressResumes;
@@ -101,6 +120,11 @@ public class WriteAnalyzer extends Analyzer
         return valuesToReturn;
     }
     
+    /**
+     * Calculates the mean value of the size of the touch
+     * @param stress if relax o stress data
+     * @return the mean value of the size data
+     */
     private Double getMeanSizeData(boolean stress)
     {
         double mean = 0;
@@ -116,6 +140,11 @@ public class WriteAnalyzer extends Analyzer
         return mean / toUse.size();
     }
     
+    /**
+     * Retrieves all the size data of the digits
+     * @param stress if use relax or stress data
+     * @return all the values for size feature
+     */
     public ArrayList<Double> getAllSizeData(boolean stress) {
         ArrayList<WriteAnalysisResume> toUse = noStressResumes;
         if (stress) {
@@ -165,6 +194,11 @@ public class WriteAnalyzer extends Analyzer
     	return valuesToReturn;
     }
     
+    /**
+     * Calculates the average movement while digiting
+     * @param stress use relax or stress data
+     * @return the average movement
+     */
     private Double getMeanMovementData(boolean stress)
     {
         double mean = 0;
@@ -180,6 +214,11 @@ public class WriteAnalyzer extends Analyzer
         return mean / toUse.size();
     }
     
+    /**
+     * Retrieves all the data for movement feature
+     * @param stress use relax or stress value
+     * @return a list of movement data
+     */
     public ArrayList<Double> getAllMovementData(boolean stress) {
         ArrayList<WriteAnalysisResume> toUse = noStressResumes;
         if (stress) {
@@ -192,6 +231,11 @@ public class WriteAnalyzer extends Analyzer
         return valuesToReturn;
     }
     
+    /**
+     * Calculates mean value for digit duration
+     * @param stress use relax or stress data
+     * @return the average digit duration
+     */
     private Double getMeanDurationData(boolean stress) {
         
         double mean = 0;
@@ -205,6 +249,11 @@ public class WriteAnalyzer extends Analyzer
         return mean / toUse.size();
     }
     
+    /**
+     * Retrieves all the digit duration values
+     * @param stress use relax or stress value
+     * @return a list with all the duration values
+     */
     private ArrayList<Double> getAllDurationData(boolean stress) {
         ArrayList<WriteAnalysisResume> toUse = noStressResumes;
         if (stress) {
@@ -217,6 +266,11 @@ public class WriteAnalyzer extends Analyzer
         return valuesToReturn;
     }
     
+    /**
+     * Calculates the mean value of the precision evaluation
+     * @param stress use relax or stress values
+     * @return the mean precision value
+     */
     private Double getMeanPrecisionData(boolean stress) {
         
         double mean = 0;
@@ -230,6 +284,11 @@ public class WriteAnalyzer extends Analyzer
         return mean / toUse.size();
     }
     
+    /**
+     * Retrieves all the values of the precision evaluation
+     * @param stress use relax or stress data
+     * @return a list of precision data
+     */
     private ArrayList<Double> getAllPrecisionData(boolean stress) {
         ArrayList<WriteAnalysisResume> toUse = noStressResumes;
         if (stress) {
@@ -242,6 +301,11 @@ public class WriteAnalyzer extends Analyzer
         return valuesToReturn;
     }
     
+    /**
+     * Calculates the average ratio of back digits over all the digits
+     * @param stress use relax or stress data
+     * @return the mean ratio back digits over all the digits
+     */
     private Double getMeanRatioBackOverDigits(boolean stress) {
         
         double mean = 0;
@@ -255,6 +319,11 @@ public class WriteAnalyzer extends Analyzer
         return mean / toUse.size();
     }
     
+    /**
+     * Retrieves all the values of the ratio of back digits over all the digits
+     * @param stress use relax or stress data
+     * @return a list of ratio back digits 
+     */
     private ArrayList<Double> getAllRatioBackOVerDigits(boolean stress) {
         ArrayList<WriteAnalysisResume> toUse = noStressResumes;
         if (stress) {
@@ -370,6 +439,10 @@ public class WriteAnalyzer extends Analyzer
                 new StressNoStressData(featuresName[8], digitsFrequencyData.get(0), digitsFrequencyData.get(1)));
         }
     
+    /**
+     * Perform statistical analysis for a single tester
+     * @param tester the User we want to analyze
+     */
     public static void performLocalAnalysis(Tester tester)
     {
         System.out.println("*********** Tester: " + tester.getName() + " ***********");
@@ -395,6 +468,9 @@ public class WriteAnalyzer extends Analyzer
         totalTesters++;
     }
     
+    /**
+     * Prints for how many tester the feature has a statistical significance
+     */
     public static void printPercentageSingleFeature() {
     	
     	for (int i = 0; i < featuresName.length; i++) {
@@ -444,5 +520,113 @@ public class WriteAnalyzer extends Analyzer
         }
         
         return ((double) wrongWords) / ((double) wordsTargetString.length);
+    }
+
+    public static void createHeatMapForDigit(Tester tester, String digitText) {
+    	
+    	ArrayList<Write> listWriteExercises = 
+    			tester.getWriteExercisesForProtocol(ISenseStressAnalyzer.protocols[0]);
+    	
+    	ScreenObject spacebar = listWriteExercises.get(0).findScreenObject("Keyboard.Key", 
+    			"space");
+    	
+    	ArrayList<Digit> noStressDigits = new ArrayList<>(), 
+    			stressDigits = new ArrayList<>();
+    	
+    	for (Write writeExercise: listWriteExercises) {
+    		if (writeExercise.stress()) {
+    			stressDigits.addAll(writeExercise.retrieveAllDigitsForAParticularCharacter(" "));
+    		}
+    		else {
+    			noStressDigits.addAll(writeExercise.retrieveAllDigitsForAParticularCharacter(" "));
+    		}
+    	}
+    	
+    	ArrayList<ArrayList<Double>> forHeatMapNoStress = new ArrayList<ArrayList<Double>>(), 
+    			forHeatMapStress = new ArrayList<ArrayList<Double>>();
+    	
+    	int width = Math.round(spacebar.getWidth()), 
+    			height = Math.round(spacebar.getHeight());
+    	
+    	for (int i = 0; i < height; i++) {
+    		ArrayList<Double> secondDimensionNoStress = new ArrayList<>(),
+    				secondDimensionStress = new ArrayList<>();
+    		for (int j = 0; j < width; j++) {
+    			secondDimensionNoStress.add(0.0);
+    			secondDimensionStress.add(0.0);
+    		}
+    		forHeatMapNoStress.add(secondDimensionNoStress);
+    		forHeatMapStress.add(secondDimensionStress);
+    	}
+    	
+    	completeHeatmapValues(forHeatMapNoStress, spacebar, noStressDigits);
+    	completeHeatmapValues(forHeatMapStress, spacebar, stressDigits);
+    	
+    	double[][] heatMapNoStressArray = new double[forHeatMapNoStress.size()][];
+    	double[][] heatMapStressArray = new double[forHeatMapStress.size()][];
+    	
+    	copyDoubleArrayListToDoubleArray(forHeatMapNoStress, heatMapNoStressArray);
+    	copyDoubleArrayListToDoubleArray(forHeatMapStress, heatMapStressArray);
+    	
+    	HeatChart mapNoStress = new HeatChart(heatMapNoStressArray), 
+    			mapStress = new HeatChart(heatMapStressArray);
+    	mapNoStress.setTitle("No Stress condition");
+    	mapStress.setTitle("Stress condition");
+    	try {
+			mapNoStress.saveToFile(new File(Analyzer.OUTPUT_FOLDER + File.separator 
+					+ tester.getName() + File.separator + "NoStress.png"));
+			mapStress.saveToFile(new File(Analyzer.OUTPUT_FOLDER + File.separator
+					+ tester.getName() + File.separator + "Stress.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+    
+    /**
+     * For each digit, it completes the heatmap adding each digit over it
+     * @param heatmap the heatmap we have to complete
+     * @param targetObject the ScreenObject we are studying
+     * @param listDigits the list of digits over the object
+     */
+    private static void completeHeatmapValues(ArrayList<ArrayList<Double>> heatmap, 
+    		ScreenObject targetObject, ArrayList<Digit> listDigits) {
+    	
+    	for (Digit digit: listDigits) {
+    		
+    		ArrayList<Interaction> listInteractions = digit.getInteractions();
+    		for (Interaction interaction: listInteractions) {
+    			int xPosition = Math.round(interaction.getPoint().getX() 
+    					- targetObject.getPosition().getX() 
+    					- KeyboardKeyObject.mViewKeyboard.getPosition().getX());
+    			
+    			int yPosition = Math.round(interaction.getPoint().getY() 
+    					- targetObject.getPosition().getY()
+    					- KeyboardKeyObject.mViewKeyboard.getPosition().getY());
+    			
+    			if (yPosition >=0 && xPosition >= 0 && 
+    					yPosition < heatmap.size() && 
+    					xPosition < heatmap.get(0).size()) {
+    				
+    				Double current = heatmap.get(yPosition).get(xPosition);
+    				heatmap.get(yPosition).set(xPosition, current.doubleValue() + 1);
+    			}
+    		}
+    	}
+    }
+    
+    private static void copyDoubleArrayListToDoubleArray(ArrayList<ArrayList<Double>> list, 
+    		double[][] array) {
+    	
+    	final int listSize = list.size();
+    	for(int i = 0; i < listSize; i++) {
+    	    ArrayList<Double> sublist = list.get(i);
+    	    final int sublistSize = sublist.size();
+    	    array[i] = new double[sublistSize];
+    	    for(int j = 0; j < sublistSize; j++) {
+    	    	array[i][j] = sublist.get(j);
+    	    }
+    	}
+    	
     }
 }

@@ -195,4 +195,24 @@ public abstract class Exercise
     {
         return this.listRotationSensorData;
     }
+    
+    /**
+     * Retrieves an object on the screen
+     * @param targetClass the class of the object
+     * @param text the text of the object
+     * @return The ScreenObject if found, null otherwise
+     */
+    public ScreenObject findScreenObject(String targetClass, String text) {
+    	
+    	ScreenObject object = null;
+    	
+    	for (int i = 0; i < screenObjects.size() && object == null; i++) {
+    		if (screenObjects.get(i).getObjectClass().contains(targetClass) && 
+    				screenObjects.get(i).getText().equals(text)) {
+    			object = screenObjects.get(i);
+    		}
+    	}
+    	
+    	return object;
+    }
 }
