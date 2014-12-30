@@ -16,11 +16,11 @@ import java.util.ArrayList;
 public class WriteAnalyzer extends Analyzer
 {   
     private static final String[] featuresName = new String[]{"Digits pressure", 
-        "Digits size", "Digits movement", "Digits duration", "Digits precision", 
+        "Digits size", "Pressure size ratio", "Digits movement", "Digits duration", "Digits precision", 
         "Ratio BACK over all digits", "Ratio wrong words over all words", 
         "Digits time distance"};
-    private static int[] featurePassesTestForTester = new int[]{0, 0, 0, 
-    	0, 0, 0, 0, 0};
+    private static int[] featurePassesTestForTester = new int[]{0, 0, 0, 0, 0, 
+    	0, 0, 0, 0};
     private static int totalTesters = 0;
     private ArrayList<WriteAnalysisResume> noStressResumes = new ArrayList<>();
     private ArrayList<WriteAnalysisResume> stressResumes = new ArrayList<>();
@@ -32,7 +32,7 @@ public class WriteAnalyzer extends Analyzer
     public void performAnalysis(Tester tester)
     {
         // I extract the writing exercise for that particular
-        // protocol and analyse them    
+        // protocol and analyze them    
         ArrayList<RotationDataWrapper> rotationNoStress = new ArrayList<>(), 
                     rotationStress = new ArrayList<>();
         
@@ -50,6 +50,7 @@ public class WriteAnalyzer extends Analyzer
                 WriteAnalysisResume resume = new WriteAnalysisResume();
                    resume.pressureData(exercise.getPressionDigitsBasicData());
                    resume.sizeData(exercise.getSizeDigitsBasicData());
+                   resume.ratioPressureSizeData(exercise.getRatioPressureSizeData());
                    resume.movementData(exercise.getMovementDigitsBasicData());
                    resume.durationData(exercise.getDurationDigitsBasicData());
                    resume.precisionData(exercise.getTouchPrecisionDigitsBasicData());
@@ -125,6 +126,43 @@ public class WriteAnalyzer extends Analyzer
             valuesToReturn.add(resume.getSizeData().getAverage());
         }
         return valuesToReturn;
+    }
+    
+    /**
+     * Returns the mean value of the ratio between the pressure and the size 
+     * of all the digits
+     * @param stress: if stress or not
+     * @return the mean value of the pressure / size ratio
+     */
+    private Double getMeanRatioPressureSizeData(boolean stress) {
+    	
+    	double mean = 0;
+    	ArrayList<WriteAnalysisResume> toUse = noStressResumes;
+    	if (stress) {
+    		toUse = stressResumes;
+    	}
+    	for (WriteAnalysisResume resume: toUse) {
+    		mean += resume.getRatioPressureSizeData().getAverage();
+    	}
+    	return mean / toUse.size();
+    }
+    
+    /**
+     * Returns all the value of the ratio between the pressure and the size of
+     * the digits
+     * @param stress is tress or not
+     * @return a List with all the pressure / size ratios
+     */
+    public ArrayList<Double> getAllRatioPressureSizeData(boolean stress) {
+    	ArrayList<WriteAnalysisResume> toUse = noStressResumes;
+    	if (stress) {
+    		toUse = stressResumes;
+    	}
+    	ArrayList<Double> valuesToReturn = new ArrayList<>();
+    	for (WriteAnalysisResume resume: toUse) {
+    		valuesToReturn.add(resume.getRatioPressureSizeData().getAverage());
+    	}
+    	return valuesToReturn;
     }
     
     private Double getMeanMovementData(boolean stress)
@@ -282,16 +320,17 @@ public class WriteAnalyzer extends Analyzer
     public static void performGlobalAnalysis(ArrayList<Tester> listTester)
     {
         ArrayList<ArrayList<Double>> pressureData = new ArrayList<>(),
-                sizeData = new ArrayList<>(), movementData = new ArrayList<>(),
-                durationData = new ArrayList<>(), precisionData = new ArrayList<>(),
-                ratioBackOverDigitsData = new ArrayList<>(), ratioWrongAllWordsData = new ArrayList<>(),
-                digitsFrequencyData = new ArrayList<>();
+                sizeData = new ArrayList<>(), ratioPressureSizeData = new ArrayList<>(),
+                movementData = new ArrayList<>(), durationData = new ArrayList<>(), 
+                precisionData = new ArrayList<>(), ratioBackOverDigitsData = new ArrayList<>(), 
+                ratioWrongAllWordsData = new ArrayList<>(), digitsFrequencyData = new ArrayList<>();
         
         for (Tester tester: listTester) {
             
             if (pressureData.isEmpty()) {
                 pressureData.add(new ArrayList<Double>()); pressureData.add(new ArrayList<Double>());
                 sizeData.add(new ArrayList<Double>()); sizeData.add(new ArrayList<Double>());
+                ratioPressureSizeData.add(new ArrayList<Double>()); ratioPressureSizeData.add(new ArrayList<Double>());
                 movementData.add(new ArrayList<Double>()); movementData.add(new ArrayList<Double>());
                 durationData.add(new ArrayList<Double>()); durationData.add(new ArrayList<Double>());
                 precisionData.add(new ArrayList<Double>()); precisionData.add(new ArrayList<Double>());
@@ -304,6 +343,8 @@ public class WriteAnalyzer extends Analyzer
             pressureData.get(1).add(tester.getWriteAnalyzer().getMeanPressureData(true));
             sizeData.get(0).add(tester.getWriteAnalyzer().getMeanSizeData(false));
             sizeData.get(1).add(tester.getWriteAnalyzer().getMeanSizeData(true));
+            ratioPressureSizeData.get(0).add(tester.getWriteAnalyzer().getMeanRatioPressureSizeData(false));
+            ratioPressureSizeData.get(1).add(tester.getWriteAnalyzer().getMeanRatioPressureSizeData(true));
             movementData.get(0).add(tester.getWriteAnalyzer().getMeanMovementData(false));
             movementData.get(1).add(tester.getWriteAnalyzer().getMeanMovementData(true));
             durationData.get(0).add(tester.getWriteAnalyzer().getMeanDurationData(false));
@@ -320,12 +361,13 @@ public class WriteAnalyzer extends Analyzer
         
         printReport(false, new StressNoStressData(featuresName[0], pressureData.get(0), pressureData.get(1)), 
                 new StressNoStressData(featuresName[1], sizeData.get(0), sizeData.get(1)), 
-                new StressNoStressData(featuresName[2], movementData.get(0), movementData.get(1)), 
-                new StressNoStressData(featuresName[3], durationData.get(0), durationData.get(1)), 
-                new StressNoStressData(featuresName[4], precisionData.get(0), precisionData.get(1)), 
-                new StressNoStressData(featuresName[5], ratioBackOverDigitsData.get(0), ratioBackOverDigitsData.get(1)), 
-                new StressNoStressData(featuresName[6], ratioWrongAllWordsData.get(0), ratioWrongAllWordsData.get(1)), 
-                new StressNoStressData(featuresName[7], digitsFrequencyData.get(0), digitsFrequencyData.get(1)));
+                new StressNoStressData(featuresName[2], ratioPressureSizeData.get(0), ratioPressureSizeData.get(1)),
+                new StressNoStressData(featuresName[3], movementData.get(0), movementData.get(1)), 
+                new StressNoStressData(featuresName[4], durationData.get(0), durationData.get(1)), 
+                new StressNoStressData(featuresName[5], precisionData.get(0), precisionData.get(1)), 
+                new StressNoStressData(featuresName[6], ratioBackOverDigitsData.get(0), ratioBackOverDigitsData.get(1)), 
+                new StressNoStressData(featuresName[7], ratioWrongAllWordsData.get(0), ratioWrongAllWordsData.get(1)), 
+                new StressNoStressData(featuresName[8], digitsFrequencyData.get(0), digitsFrequencyData.get(1)));
         }
     
     public static void performLocalAnalysis(Tester tester)
@@ -336,12 +378,13 @@ public class WriteAnalyzer extends Analyzer
         
         boolean[] results = printReport(true, new StressNoStressData(featuresName[0], analyzerTester.getAllPressureData(false), analyzerTester.getAllPressureData(true)), 
                 new StressNoStressData(featuresName[1], analyzerTester.getAllSizeData(false), analyzerTester.getAllSizeData(true)), 
-                new StressNoStressData(featuresName[2], analyzerTester.getAllMovementData(false), analyzerTester.getAllMovementData(true)), 
-                new StressNoStressData(featuresName[3], analyzerTester.getAllDurationData(false), analyzerTester.getAllDurationData(true)), 
-                new StressNoStressData(featuresName[4], analyzerTester.getAllPrecisionData(false), analyzerTester.getAllPrecisionData(true)), 
-                new StressNoStressData(featuresName[5], analyzerTester.getAllRatioBackOVerDigits(false), analyzerTester.getAllRatioBackOVerDigits(true)), 
-                new StressNoStressData(featuresName[6], analyzerTester.getAllRatioWrongAllWords(false), analyzerTester.getAllRatioWrongAllWords(true)), 
-                new StressNoStressData(featuresName[7], analyzerTester.getAllDigitsFrequency(false), analyzerTester.getAllDigitsFrequency(true)));
+                new StressNoStressData(featuresName[2], analyzerTester.getAllRatioPressureSizeData(false), analyzerTester.getAllRatioPressureSizeData(true)),
+                new StressNoStressData(featuresName[3], analyzerTester.getAllMovementData(false), analyzerTester.getAllMovementData(true)), 
+                new StressNoStressData(featuresName[4], analyzerTester.getAllDurationData(false), analyzerTester.getAllDurationData(true)), 
+                new StressNoStressData(featuresName[5], analyzerTester.getAllPrecisionData(false), analyzerTester.getAllPrecisionData(true)), 
+                new StressNoStressData(featuresName[6], analyzerTester.getAllRatioBackOVerDigits(false), analyzerTester.getAllRatioBackOVerDigits(true)), 
+                new StressNoStressData(featuresName[7], analyzerTester.getAllRatioWrongAllWords(false), analyzerTester.getAllRatioWrongAllWords(true)), 
+                new StressNoStressData(featuresName[8], analyzerTester.getAllDigitsFrequency(false), analyzerTester.getAllDigitsFrequency(true)));
         
         for (int i = 0; i < results.length; i++) {
         	if (results[i]) {

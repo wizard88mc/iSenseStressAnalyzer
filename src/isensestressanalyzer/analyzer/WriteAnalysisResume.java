@@ -16,6 +16,7 @@ public class WriteAnalysisResume
 {
     private BasicDataStatistic pressureData;
     private BasicDataStatistic sizeData;
+    private BasicDataStatistic ratioPressureSizeData;
     private BasicDataStatistic movementData;
     private BasicDataStatistic durationData;
     private BasicDataStatistic precisionData;
@@ -32,6 +33,10 @@ public class WriteAnalysisResume
    public void sizeData(BasicDataStatistic data)
    {
        sizeData = data;
+   }
+   
+   public void ratioPressureSizeData(BasicDataStatistic data) {
+	   ratioPressureSizeData = data;
    }
    
    public void movementData(BasicDataStatistic data)
@@ -85,6 +90,10 @@ public class WriteAnalysisResume
        return this.movementData;
    }
    
+   public BasicDataStatistic getRatioPressureSizeData() {
+	   return this.ratioPressureSizeData;
+   }
+   
    public BasicDataStatistic getDurationData()
    {
        return this.durationData;
@@ -114,45 +123,4 @@ public class WriteAnalysisResume
    {
        return rotationData;
    }
-   
-   /**
-    * Prints the results of the t-test for each feature we are considering
-    */
-   /*public static void printAnalysis(ArrayList<WriteAnalysisResume> resumesForTesters)
-   {
-       ArrayList<StressNoStressData> allPressureData = new ArrayList<>(),
-               allSizeData = new ArrayList<>(), 
-               allMovementData = new ArrayList<>(), 
-               allDurationData = new ArrayList<>(), 
-               allPrecisionData = new ArrayList<>(), 
-               allRatioBackOverDigitsData = new ArrayList<>(), 
-               allRatioWrongAllWords = new ArrayList<>(), 
-               allDigitsFrequency = new ArrayList<>();
-       
-       for (WriteAnalysisResume analysis: resumesForTesters)
-       {
-           allPressureData.add(analysis.pressureData);
-           allSizeData.add(analysis.sizeData);
-           allMovementData.add(analysis.movementData);
-           allDurationData.add(analysis.durationData);
-           allPrecisionData.add(analysis.precisionData);
-           allRatioBackOverDigitsData.add(analysis.ratioBackOVerDigits);
-           allRatioWrongAllWords.add(analysis.ratioWrongAllWords);
-           allDigitsFrequency.add(analysis.digitsFrequency);
-       }
-       
-       StressNoStressData.makeAndPrintTTest(allPressureData);
-       StressNoStressData.makeAndPrintTTest(allSizeData);
-       StressNoStressData.makeAndPrintTTest(allMovementData);
-       StressNoStressData.makeAndPrintTTest(allDurationData);
-       StressNoStressData.makeAndPrintTTest(allPrecisionData);
-       StressNoStressData.makeAndPrintTTest(allRatioBackOverDigitsData);
-       StressNoStressData.makeAndPrintTTest(allRatioWrongAllWords);
-       StressNoStressData.makeAndPrintTTest(allDigitsFrequency);
-   }
-   
-   private static void ttestForPressureData(ArrayList<WriteAnalysisResume> resumes)
-   {
-       
-   }*/
 }

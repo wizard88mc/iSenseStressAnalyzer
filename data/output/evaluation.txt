@@ -1,79 +1,827 @@
-data/output/352136060443906/write.arff
+data/output/353490061572406/write.arff
 TREE
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.418     0.309      0.582     0.418     0.487      0.573    no-stress
-                 0.691     0.582      0.536     0.691     0.604      0.573    stress
-Weighted Avg.    0.553     0.443      0.559     0.553     0.544      0.573
+                 0.582     0.326      0.598     0.582     0.59       0.657    no-stress
+                 0.674     0.418      0.659     0.674     0.666      0.657    stress
+Weighted Avg.    0.632     0.376      0.631     0.632     0.631      0.657
 
 1kNN
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.55      0.529      0.517     0.55      0.533      0.514    no-stress
-                 0.471     0.45       0.505     0.471     0.487      0.514    stress
-Weighted Avg.    0.511     0.49       0.511     0.511     0.511      0.514
+                 0.535     0.394      0.531     0.535     0.533      0.569    no-stress
+                 0.606     0.465      0.61      0.606     0.608      0.569    stress
+Weighted Avg.    0.573     0.433      0.574     0.573     0.574      0.569
 
 2kNN
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.749     0.705      0.523     0.749     0.616      0.527    no-stress
-                 0.295     0.251      0.533     0.295     0.38       0.527    stress
-Weighted Avg.    0.526     0.481      0.528     0.526     0.5        0.527
+                 0.535     0.394      0.531     0.535     0.533      0.569    no-stress
+                 0.606     0.465      0.61      0.606     0.608      0.569    stress
+Weighted Avg.    0.573     0.433      0.574     0.573     0.574      0.569
 
-data/output/352136063083162/write.arff
+SVM
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.681     0.6        0.486     0.681     0.567      0.541    no-stress
+                 0.4       0.319      0.601     0.4       0.48       0.541    stress
+Weighted Avg.    0.528     0.447      0.549     0.528     0.52       0.541
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.538     0.309      0.592     0.538     0.564      0.668    no-stress
+                 0.691     0.462      0.642     0.691     0.665      0.668    stress
+Weighted Avg.    0.621     0.393      0.619     0.621     0.619      0.668
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.884     0.848      0.465     0.884     0.609      0.52     no-stress
+                 0.152     0.116      0.61      0.152     0.243      0.537    stress
+Weighted Avg.    0.484     0.449      0.544     0.484     0.41       0.529
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.65      0.341      0.614     0.65      0.631      0.692    no-stress
+                 0.659     0.35       0.693     0.659     0.676      0.692    stress
+Weighted Avg.    0.655     0.346      0.657     0.655     0.655      0.692
+
+data/output/353490061572406/VerticalScroll.arff
 TREE
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.746     0.435      0.623     0.746     0.679      0.674    no-stress
-                 0.565     0.254      0.698     0.565     0.624      0.674    stress
-Weighted Avg.    0.654     0.343      0.661     0.654     0.651      0.674
+                 0.903     0.071      0.862     0.903     0.882      0.906    no-stress
+                 0.929     0.097      0.951     0.929     0.94       0.906    stress
+Weighted Avg.    0.92      0.088      0.922     0.92      0.921      0.906
 
 1kNN
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.605     0.402      0.592     0.605     0.598      0.614    no-stress
-                 0.598     0.395      0.611     0.598     0.604      0.614    stress
-Weighted Avg.    0.601     0.399      0.601     0.601     0.601      0.614
+                 0.903     0.04       0.918     0.903     0.911      0.945    no-stress
+                 0.96      0.097      0.953     0.96      0.957      0.945    stress
+Weighted Avg.    0.941     0.078      0.941     0.941     0.941      0.945
 
 2kNN
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.803     0.573      0.575     0.803     0.67       0.649    no-stress
-                 0.427     0.197      0.693     0.427     0.528      0.649    stress
-Weighted Avg.    0.612     0.381      0.635     0.612     0.598      0.649
+                 0.903     0.04       0.918     0.903     0.911      0.945    no-stress
+                 0.96      0.097      0.953     0.96      0.957      0.945    stress
+Weighted Avg.    0.941     0.078      0.941     0.941     0.941      0.945
 
-data/output/352136063083162/VerticalScroll.arff
+SVM
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.742     0.056      0.868     0.742     0.8        0.843    no-stress
+                 0.944     0.258      0.881     0.944     0.912      0.843    stress
+Weighted Avg.    0.878     0.191      0.877     0.878     0.875      0.843
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.855     0.056      0.883     0.855     0.869      0.978    no-stress
+                 0.944     0.145      0.93      0.944     0.937      0.978    stress
+Weighted Avg.    0.915     0.116      0.914     0.915     0.915      0.978
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.661     0.087      0.788     0.661     0.719      0.794    no-stress
+                 0.913     0.339      0.846     0.913     0.878      0.806    stress
+Weighted Avg.    0.83      0.256      0.827     0.83      0.826      0.802
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.887     0.079      0.846     0.887     0.866      0.948    no-stress
+                 0.921     0.113      0.943     0.921     0.932      0.948    stress
+Weighted Avg.    0.91      0.102      0.911     0.91      0.91       0.948
+
+data/output/353490061572406/HorizontalScroll.arff
 TREE
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.577     0.087      0.6       0.577     0.588      0.749    no-stress
-                 0.913     0.423      0.905     0.913     0.909      0.749    stress
-Weighted Avg.    0.851     0.361      0.849     0.851     0.85       0.749
+                 1         0.015      0.962     1         0.98       0.986    no-stress
+                 0.985     0          1         0.985     0.992      0.986    stress
+Weighted Avg.    0.989     0.004      0.99      0.989     0.989      0.986
 
 1kNN
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.692     0.087      0.643     0.692     0.667      0.786    no-stress
-                 0.913     0.308      0.929     0.913     0.921      0.786    stress
-Weighted Avg.    0.872     0.267      0.876     0.872     0.874      0.786
+                 0.96      0.015      0.96      0.96      0.96       0.967    no-stress
+                 0.985     0.04       0.985     0.985     0.985      0.967    stress
+Weighted Avg.    0.978     0.033      0.978     0.978     0.978      0.967
 
 2kNN
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.808     0.113      0.618     0.808     0.7        0.865    no-stress
-                 0.887     0.192      0.953     0.887     0.919      0.865    stress
-Weighted Avg.    0.872     0.178      0.891     0.872     0.879      0.865
+                 0.96      0.015      0.96      0.96      0.96       0.967    no-stress
+                 0.985     0.04       0.985     0.985     0.985      0.967    stress
+Weighted Avg.    0.978     0.033      0.978     0.978     0.978      0.967
 
-data/output/352136063083162/HorizontalScroll.arff
+SVM
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.72      0.015      0.947     0.72      0.818      0.853    no-stress
+                 0.985     0.28       0.904     0.985     0.943      0.853    stress
+Weighted Avg.    0.913     0.208      0.916     0.913     0.909      0.853
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         0.015      0.962     1         0.98       0.985    no-stress
+                 0.985     0          1         0.985     0.992      0.985    stress
+Weighted Avg.    0.989     0.004      0.99      0.989     0.989      0.985
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.92      0.015      0.958     0.92      0.939      0.952    no-stress
+                 0.985     0.08       0.971     0.985     0.978      0.946    stress
+Weighted Avg.    0.967     0.062      0.967     0.967     0.967      0.948
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         0.045      0.893     1         0.943      0.988    no-stress
+                 0.955     0          1         0.955     0.977      0.988    stress
+Weighted Avg.    0.967     0.012      0.971     0.967     0.968      0.988
+
+data/output/353490061572406/VerticalHorizontalScroll.arff
+TREE
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.575     0.036      0.877     0.575     0.694      0.889    no-stress
+                 0.964     0.425      0.834     0.964     0.894      0.885    stress
+Weighted Avg.    0.843     0.304      0.847     0.843     0.832      0.886
+
+1kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.966     0.373      0.538     0.966     0.691      0.796    no-stress
+                 0.627     0.034      0.976     0.627     0.763      0.796    stress
+Weighted Avg.    0.732     0.14       0.84      0.732     0.741      0.796
+
+2kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.966     0.373      0.538     0.966     0.691      0.796    no-stress
+                 0.627     0.034      0.976     0.627     0.763      0.796    stress
+Weighted Avg.    0.732     0.14       0.84      0.732     0.741      0.796
+
+SVM
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.747     0.036      0.903     0.747     0.818      0.855    no-stress
+                 0.964     0.253      0.894     0.964     0.928      0.855    stress
+Weighted Avg.    0.896     0.186      0.897     0.896     0.893      0.855
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.897     0.031      0.929     0.897     0.912      0.984    no-stress
+                 0.969     0.103      0.954     0.969     0.961      0.984    stress
+Weighted Avg.    0.946     0.081      0.946     0.946     0.946      0.984
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.655     0.036      0.891     0.655     0.755      0.815    no-stress
+                 0.964     0.345      0.861     0.964     0.91       0.816    stress
+Weighted Avg.    0.868     0.249      0.87      0.868     0.862      0.815
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.839     0.057      0.869     0.839     0.854      0.96     no-stress
+                 0.943     0.161      0.929     0.943     0.936      0.96     stress
+Weighted Avg.    0.911     0.129      0.91      0.911     0.91       0.96 
+
+data/output/352136063161943/write.arff
+TREE
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.653     0.509      0.568     0.653     0.607      0.588    no-stress
+                 0.491     0.347      0.579     0.491     0.531      0.588    stress
+Weighted Avg.    0.573     0.429      0.574     0.573     0.57       0.588
+
+1kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.557     0.471      0.548     0.557     0.553      0.536    no-stress
+                 0.529     0.443      0.538     0.529     0.534      0.536    stress
+Weighted Avg.    0.543     0.457      0.543     0.543     0.543      0.536
+
+2kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.557     0.471      0.548     0.557     0.553      0.536    no-stress
+                 0.529     0.443      0.538     0.529     0.534      0.536    stress
+Weighted Avg.    0.543     0.457      0.543     0.543     0.543      0.536
+
+SVM
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.487     0.461      0.52      0.487     0.503      0.513    no-stress
+                 0.539     0.513      0.506     0.539     0.522      0.513    stress
+Weighted Avg.    0.513     0.487      0.513     0.513     0.512      0.513
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.533     0.475      0.535     0.533     0.534      0.553    no-stress
+                 0.525     0.467      0.523     0.525     0.524      0.553    stress
+Weighted Avg.    0.529     0.471      0.529     0.529     0.529      0.553
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         1          0.506     1         0.672      0.5      no-stress
+                 0         0          0         0         0          0.5      stress
+Weighted Avg.    0.506     0.506      0.256     0.506     0.341      0.5  
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.709     0.561      0.565     0.709     0.629      0.568    no-stress
+                 0.439     0.291      0.595     0.439     0.505      0.568    stress
+Weighted Avg.    0.576     0.428      0.58      0.576     0.568      0.568
+
+data/output/352136063161943/VerticalScroll.arff
+TREE
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.452     0.038      0.609     0.452     0.519      0.704    no-stress
+                 0.963     0.548      0.931     0.963     0.947      0.704    stress
+Weighted Avg.    0.904     0.49       0.895     0.904     0.898      0.704
+
+1kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.355     0.05       0.478     0.355     0.407      0.686    no-stress
+                 0.95      0.645      0.919     0.95      0.934      0.686    stress
+Weighted Avg.    0.882     0.577      0.869     0.882     0.874      0.686
+
+2kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.355     0.05       0.478     0.355     0.407      0.686    no-stress
+                 0.95      0.645      0.919     0.95      0.934      0.686    stress
+Weighted Avg.    0.882     0.577      0.869     0.882     0.874      0.686
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.484     0.05       0.556     0.484     0.517      0.904    no-stress
+                 0.95      0.516      0.934     0.95      0.942      0.904    stress
+Weighted Avg.    0.897     0.463      0.891     0.897     0.894      0.904
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.194     0.013      0.667     0.194     0.3        0.591    no-stress
+                 0.988     0.806      0.905     0.988     0.944      0.59     stress
+Weighted Avg.    0.897     0.716      0.877     0.897     0.871      0.59 
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.355     0.033      0.579     0.355     0.44       0.784    no-stress
+                 0.967     0.645      0.921     0.967     0.943      0.783    stress
+Weighted Avg.    0.897     0.575      0.882     0.897     0.886      0.783
+
+data/output/352136063161943/HorizontalScroll.arff
+TREE
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0         0.02       0         0         0          0.655    no-stress
+                 0.98      1          0.955     0.98      0.968      0.655    stress
+Weighted Avg.    0.937     0.957      0.913     0.937     0.925      0.655
+
+1kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.286     0.039      0.25      0.286     0.267      0.658    no-stress
+                 0.961     0.714      0.967     0.961     0.964      0.658    stress
+Weighted Avg.    0.931     0.685      0.935     0.931     0.933      0.658
+
+2kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.286     0.039      0.25      0.286     0.267      0.658    no-stress
+                 0.961     0.714      0.967     0.961     0.964      0.658    stress
+Weighted Avg.    0.931     0.685      0.935     0.931     0.933      0.658
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0         0.026      0         0         0          0.584    no-stress
+                 0.974     1          0.955     0.974     0.964      0.584    stress
+Weighted Avg.    0.931     0.957      0.913     0.931     0.922      0.584
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0         0.013      0         0         0          0.493    no-stress
+                 0.987     1          0.955     0.987     0.971      0.493    stress
+Weighted Avg.    0.943     0.957      0.913     0.943     0.928      0.493
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0         0          0         0         0          0.327    no-stress
+                 1         1          0.956     1         0.977      0.327    stress
+Weighted Avg.    0.956     0.956      0.914     0.956     0.934      0.327
+
+data/output/352136063161943/VerticalHorizontalScroll.arff
+TREE
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.289     0.018      0.611     0.289     0.393      0.591    no-stress
+                 0.982     0.711      0.934     0.982     0.958      0.594    stress
+Weighted Avg.    0.921     0.649      0.906     0.921     0.908      0.593
+
+1kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0         0.033      0         0         0          0.483    no-stress
+                 0.967     1          0.909     0.967     0.937      0.483    stress
+Weighted Avg.    0.881     0.915      0.829     0.881     0.854      0.483
+
+2kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0         0.033      0         0         0          0.483    no-stress
+                 0.967     1          0.909     0.967     0.937      0.483    stress
+Weighted Avg.    0.881     0.915      0.829     0.881     0.854      0.483
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.395     0.041      0.484     0.395     0.435      0.839    no-stress
+                 0.959     0.605      0.942     0.959     0.951      0.839    stress
+Weighted Avg.    0.909     0.555      0.902     0.909     0.905      0.839
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.211     0.013      0.615     0.211     0.314      0.599    no-stress
+                 0.987     0.789      0.928     0.987     0.957      0.599    stress
+Weighted Avg.    0.919     0.721      0.9       0.919     0.9        0.599
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.316     0.023      0.571     0.316     0.407      0.71     no-stress
+                 0.977     0.684      0.936     0.977     0.956      0.711    stress
+Weighted Avg.    0.919     0.626      0.904     0.919     0.908      0.711
+
+data/output/358240050552579/write.arff
+TREE
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.486     0.45       0.518     0.486     0.502      0.517    no-stress
+                 0.55      0.514      0.519     0.55      0.534      0.517    stress
+Weighted Avg.    0.518     0.482      0.518     0.518     0.518      0.517
+
+1kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.507     0.508      0.498     0.507     0.503      0.502    no-stress
+                 0.492     0.493      0.501     0.492     0.497      0.502    stress
+Weighted Avg.    0.5       0.5        0.5       0.5       0.5        0.502
+
+2kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.507     0.508      0.498     0.507     0.503      0.502    no-stress
+                 0.492     0.493      0.501     0.492     0.497      0.502    stress
+Weighted Avg.    0.5       0.5        0.5       0.5       0.5        0.502
+
+SVM
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.493     0.524      0.483     0.493     0.488      0.484    no-stress
+                 0.476     0.507      0.485     0.476     0.481      0.484    stress
+Weighted Avg.    0.484     0.516      0.484     0.484     0.484      0.484
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.346     0.273      0.558     0.346     0.427      0.535    no-stress
+                 0.727     0.654      0.528     0.727     0.612      0.535    stress
+Weighted Avg.    0.537     0.464      0.543     0.537     0.52       0.535
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         1          0.499     1         0.665      0.501    no-stress
+                 0         0          0         0         0          0.509    stress
+Weighted Avg.    0.499     0.499      0.249     0.499     0.332      0.505
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.064     0.069      0.48      0.064     0.113      0.494    no-stress
+                 0.931     0.936      0.5       0.931     0.651      0.494    stress
+Weighted Avg.    0.499     0.504      0.49      0.499     0.383      0.494
+
+data/output/358240050552686/write.arff
+TREE
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.979     0.979      0.602     0.979     0.746      0.5      no-stress
+                 0.021     0.021      0.4       0.021     0.041      0.5      stress
+Weighted Avg.    0.598     0.598      0.522     0.598     0.465      0.5  
+
+1kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.628     0.59       0.617     0.628     0.622      0.516    no-stress
+                 0.41      0.372      0.421     0.41      0.416      0.516    stress
+Weighted Avg.    0.541     0.503      0.539     0.541     0.54       0.516
+
+2kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.628     0.59       0.617     0.628     0.622      0.516    no-stress
+                 0.41      0.372      0.421     0.41      0.416      0.516    stress
+Weighted Avg.    0.541     0.503      0.539     0.541     0.54       0.516
+
+SVM
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.474     0.447      0.616     0.474     0.535      0.513    no-stress
+                 0.553     0.526      0.41      0.553     0.471      0.513    stress
+Weighted Avg.    0.505     0.479      0.534     0.505     0.51       0.513
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.989     0.982      0.604     0.989     0.75       0.556    no-stress
+                 0.018     0.011      0.522     0.018     0.036      0.556    stress
+Weighted Avg.    0.603     0.595      0.571     0.603     0.466      0.556
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         1          0.602     1         0.752      0.5      no-stress
+                 0         0          0         0         0          0.5      stress
+Weighted Avg.    0.602     0.602      0.362     0.602     0.453      0.5  
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         1          0.602     1         0.752      0.519    no-stress
+                 0         0          0         0         0          0.519    stress
+Weighted Avg.    0.602     0.602      0.362     0.602     0.453      0.519
+
+data/output/358240050552686/VerticalScroll.arff
+TREE
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.925     0.089      0.899     0.925     0.912      0.928    no-stress
+                 0.911     0.075      0.935     0.911     0.923      0.928    stress
+Weighted Avg.    0.918     0.081      0.918     0.918     0.918      0.928
+
+1kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.925     0.063      0.925     0.925     0.925      0.935    no-stress
+                 0.937     0.075      0.937     0.937     0.937      0.935    stress
+Weighted Avg.    0.932     0.069      0.932     0.932     0.932      0.935
+
+2kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.925     0.063      0.925     0.925     0.925      0.935    no-stress
+                 0.937     0.075      0.937     0.937     0.937      0.935    stress
+Weighted Avg.    0.932     0.069      0.932     0.932     0.932      0.935
+
+SVM
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.985     0.089      0.904     0.985     0.943      0.948    no-stress
+                 0.911     0.015      0.986     0.911     0.947      0.948    stress
+Weighted Avg.    0.945     0.049      0.949     0.945     0.945      0.948
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.97      0.038      0.956     0.97      0.963      0.981    no-stress
+                 0.962     0.03       0.974     0.962     0.968      0.981    stress
+Weighted Avg.    0.966     0.034      0.966     0.966     0.966      0.981
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.657     0.19       0.746     0.657     0.698      0.758    no-stress
+                 0.81      0.343      0.736     0.81      0.771      0.775    stress
+Weighted Avg.    0.74      0.273      0.74      0.74      0.738      0.767
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.836     0.051      0.933     0.836     0.882      0.962    no-stress
+                 0.949     0.164      0.872     0.949     0.909      0.962    stress
+Weighted Avg.    0.897     0.112      0.9       0.897     0.897      0.962
+
+data/output/358240050552686/HorizontalScroll.arff
+TREE
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.778     0          1         0.778     0.875      0.978    no-stress
+                 1         0.222      0.953     1         0.976      0.978    stress
+Weighted Avg.    0.96      0.182      0.962     0.96      0.958      0.978
+
+1kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.889     0          1         0.889     0.941      0.944    no-stress
+                 1         0.111      0.976     1         0.988      0.944    stress
+Weighted Avg.    0.98      0.091      0.98      0.98      0.98       0.944
+
+2kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.889     0          1         0.889     0.941      0.944    no-stress
+                 1         0.111      0.976     1         0.988      0.944    stress
+Weighted Avg.    0.98      0.091      0.98      0.98      0.98       0.944
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.778     0          1         0.778     0.875      0.919    no-stress
+                 1         0.222      0.953     1         0.976      0.919    stress
+Weighted Avg.    0.96      0.182      0.962     0.96      0.958      0.919
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.667     0.073      0.667     0.667     0.667      0.797    no-stress
+                 0.927     0.333      0.927     0.927     0.927      0.797    stress
+Weighted Avg.    0.88      0.287      0.88      0.88      0.88       0.797
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.778     0          1         0.778     0.875      0.986    no-stress
+                 1         0.222      0.953     1         0.976      0.986    stress
+Weighted Avg.    0.96      0.182      0.962     0.96      0.958      0.986
+
+data/output/358240050552686/VerticalHorizontalScroll.arff
+TREE
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.763     0.092      0.841     0.763     0.8        0.854    no-stress
+                 0.908     0.237      0.858     0.908     0.883      0.861    stress
+Weighted Avg.    0.852     0.181      0.851     0.852     0.851      0.858
+
+1kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.882     0.083      0.87      0.882     0.876      0.902    no-stress
+                 0.917     0.118      0.924     0.917     0.921      0.902    stress
+Weighted Avg.    0.903     0.105      0.903     0.903     0.903      0.902
+
+2kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.882     0.083      0.87      0.882     0.876      0.902    no-stress
+                 0.917     0.118      0.924     0.917     0.921      0.902    stress
+Weighted Avg.    0.903     0.105      0.903     0.903     0.903      0.902
+
+SVM
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.882     0.025      0.957     0.882     0.918      0.928    no-stress
+                 0.975     0.118      0.929     0.975     0.951      0.928    stress
+Weighted Avg.    0.939     0.082      0.94      0.939     0.938      0.928
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.921     0.025      0.959     0.921     0.94       0.972    no-stress
+                 0.975     0.079      0.951     0.975     0.963      0.972    stress
+Weighted Avg.    0.954     0.058      0.954     0.954     0.954      0.972
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.618     0.125      0.758     0.618     0.681      0.758    no-stress
+                 0.875     0.382      0.784     0.875     0.827      0.769    stress
+Weighted Avg.    0.776     0.282      0.774     0.776     0.77       0.765
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.803     0.058      0.897     0.803     0.847      0.943    no-stress
+                 0.942     0.197      0.883     0.942     0.911      0.942    stress
+Weighted Avg.    0.888     0.143      0.888     0.888     0.886      0.942
+
+data/output/358240052286374/write.arff
+TREE
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.996     0.998      0.697     0.996     0.82       0.502    no-stress
+                 0.002     0.004      0.2       0.002     0.004      0.502    stress
+Weighted Avg.    0.696     0.697      0.547     0.696     0.574      0.502
+
+1kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.741     0.654      0.723     0.741     0.732      0.539    no-stress
+                 0.346     0.259      0.367     0.346     0.356      0.539    stress
+Weighted Avg.    0.622     0.534      0.616     0.622     0.619      0.539
+
+2kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.741     0.654      0.723     0.741     0.732      0.539    no-stress
+                 0.346     0.259      0.367     0.346     0.356      0.539    stress
+Weighted Avg.    0.622     0.534      0.616     0.622     0.619      0.539
+
+SVM
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.431     0.39       0.718     0.431     0.539      0.52     no-stress
+                 0.61      0.569      0.317     0.61      0.417      0.52     stress
+Weighted Avg.    0.485     0.444      0.597     0.485     0.502      0.52 
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.977     0.952      0.703     0.977     0.817      0.536    no-stress
+                 0.048     0.023      0.469     0.048     0.087      0.536    stress
+Weighted Avg.    0.696     0.671      0.632     0.696     0.596      0.536
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         1          0.698     1         0.822      0.5      no-stress
+                 0         0          0         0         0          0.5      stress
+Weighted Avg.    0.698     0.698      0.487     0.698     0.573      0.5  
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         1          0.698     1         0.822      0.492    no-stress
+                 0         0          0         0         0          0.492    stress
+Weighted Avg.    0.698     0.698      0.487     0.698     0.573      0.492
+
+data/output/358240052286374/VerticalScroll.arff
+TREE
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.681     0.237      0.778     0.681     0.726      0.686    no-stress
+                 0.763     0.319      0.662     0.763     0.709      0.686    stress
+Weighted Avg.    0.718     0.274      0.726     0.718     0.718      0.686
+
+1kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.694     0.254      0.769     0.694     0.73       0.728    no-stress
+                 0.746     0.306      0.667     0.746     0.704      0.728    stress
+Weighted Avg.    0.718     0.277      0.723     0.718     0.718      0.728
+
+2kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.694     0.254      0.769     0.694     0.73       0.728    no-stress
+                 0.746     0.306      0.667     0.746     0.704      0.728    stress
+Weighted Avg.    0.718     0.277      0.723     0.718     0.718      0.728
+
+SVM
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.792     0.305      0.76      0.792     0.776      0.743    no-stress
+                 0.695     0.208      0.732     0.695     0.713      0.743    stress
+Weighted Avg.    0.748     0.262      0.747     0.748     0.747      0.743
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.722     0.153      0.852     0.722     0.782      0.829    no-stress
+                 0.847     0.278      0.714     0.847     0.775      0.829    stress
+Weighted Avg.    0.779     0.209      0.79      0.779     0.779      0.829
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.819     0.593      0.628     0.819     0.711      0.647    no-stress
+                 0.407     0.181      0.649     0.407     0.5        0.698    stress
+Weighted Avg.    0.634     0.407      0.637     0.634     0.616      0.67 
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.583     0.169      0.808     0.583     0.677      0.707    no-stress
+                 0.831     0.417      0.62      0.831     0.71       0.707    stress
+Weighted Avg.    0.695     0.281      0.723     0.695     0.692      0.707
+
+data/output/358240052286374/HorizontalScroll.arff
 TREE
 === Detailed Accuracy By Class ===
 
@@ -98,658 +846,7 @@ Weighted Avg.    1         0          1         1         1          0
                  1         0          1         1         1          ?        stress
 Weighted Avg.    1         0          1         1         1          0    
 
-data/output/352136063083162/VerticalHorizontalScroll.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.538     0.035      0.7       0.538     0.609      0.769    no-stress
-                 0.965     0.462      0.932     0.965     0.948      0.769    stress
-Weighted Avg.    0.909     0.405      0.902     0.909     0.903      0.769
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.577     0.018      0.833     0.577     0.682      0.839    no-stress
-                 0.982     0.423      0.939     0.982     0.96       0.839    stress
-Weighted Avg.    0.929     0.37       0.925     0.929     0.923      0.839
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.808     0.053      0.7       0.808     0.75       0.918    no-stress
-                 0.947     0.192      0.97      0.947     0.959      0.916    stress
-Weighted Avg.    0.929     0.174      0.934     0.929     0.931      0.916
-
-data/output/352136063159269/write.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.827     0.657      0.65      0.827     0.728      0.588    no-stress
-                 0.343     0.173      0.574     0.343     0.429      0.588    stress
-Weighted Avg.    0.632     0.461      0.619     0.632     0.607      0.588
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.635     0.567      0.623     0.635     0.629      0.534    no-stress
-                 0.433     0.365      0.446     0.433     0.439      0.534    stress
-Weighted Avg.    0.553     0.485      0.551     0.553     0.552      0.534
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.847     0.781      0.616     0.847     0.713      0.561    no-stress
-                 0.219     0.153      0.493     0.219     0.304      0.561    stress
-Weighted Avg.    0.594     0.527      0.566     0.594     0.548      0.561
-
-data/output/352136063159269/VerticalScroll.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.7       0.321      0.673     0.7       0.686      0.662    no-stress
-                 0.679     0.3        0.706     0.679     0.692      0.662    stress
-Weighted Avg.    0.689     0.31       0.69      0.689     0.689      0.662
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.62      0.415      0.585     0.62      0.602      0.632    no-stress
-                 0.585     0.38       0.62      0.585     0.602      0.632    stress
-Weighted Avg.    0.602     0.397      0.603     0.602     0.602      0.632
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.82      0.566      0.577     0.82      0.678      0.656    no-stress
-                 0.434     0.18       0.719     0.434     0.541      0.656    stress
-Weighted Avg.    0.621     0.367      0.65      0.621     0.607      0.656
-
-data/output/352136063159269/HorizontalScroll.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.706     0.571      0.6       0.706     0.649      0.605    no-stress
-                 0.429     0.294      0.545     0.429     0.48       0.605    stress
-Weighted Avg.    0.581     0.446      0.575     0.581     0.572      0.605
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.588     0.571      0.556     0.588     0.571      0.511    no-stress
-                 0.429     0.412      0.462     0.429     0.444      0.511    stress
-Weighted Avg.    0.516     0.499      0.513     0.516     0.514      0.511
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.824     0.786      0.56      0.824     0.667      0.641    no-stress
-                 0.214     0.176      0.5       0.214     0.3        0.59     stress
-Weighted Avg.    0.548     0.511      0.533     0.548     0.501      0.618
-
-data/output/352136063159269/VerticalHorizontalScroll.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.731     0.507      0.59      0.731     0.653      0.631    no-stress
-                 0.493     0.269      0.647     0.493     0.559      0.63     stress
-Weighted Avg.    0.612     0.388      0.619     0.612     0.606      0.63 
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.657     0.418      0.611     0.657     0.633      0.632    no-stress
-                 0.582     0.343      0.629     0.582     0.605      0.632    stress
-Weighted Avg.    0.619     0.381      0.62      0.619     0.619      0.632
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.866     0.657      0.569     0.866     0.686      0.66     no-stress
-                 0.343     0.134      0.719     0.343     0.465      0.66     stress
-Weighted Avg.    0.604     0.396      0.644     0.604     0.576      0.66 
-
-data/output/352136063167064/write.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.728     0.331      0.751     0.728     0.74       0.715    no-stress
-                 0.669     0.272      0.641     0.669     0.655      0.715    stress
-Weighted Avg.    0.703     0.306      0.705     0.703     0.704      0.715
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.69      0.441      0.683     0.69      0.686      0.632    no-stress
-                 0.559     0.31       0.567     0.559     0.563      0.632    stress
-Weighted Avg.    0.635     0.386      0.634     0.635     0.634      0.632
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.845     0.607      0.657     0.845     0.739      0.672    no-stress
-                 0.393     0.155      0.648     0.393     0.49       0.675    stress
-Weighted Avg.    0.655     0.417      0.653     0.655     0.634      0.674
-
-data/output/352136063167064/VerticalScroll.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.634     0.032      0.963     0.634     0.765      0.764    no-stress
-                 0.968     0.366      0.667     0.968     0.789      0.764    stress
-Weighted Avg.    0.778     0.176      0.835     0.778     0.775      0.764
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.732     0.355      0.732     0.732     0.732      0.7      no-stress
-                 0.645     0.268      0.645     0.645     0.645      0.7      stress
-Weighted Avg.    0.694     0.318      0.694     0.694     0.694      0.7  
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.902     0.548      0.685     0.902     0.779      0.755    no-stress
-                 0.452     0.098      0.778     0.452     0.571      0.755    stress
-Weighted Avg.    0.708     0.354      0.725     0.708     0.69       0.755
-
-data/output/352136063167064/VerticalHorizontalScroll.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.634     0.147      0.839     0.634     0.722      0.743    no-stress
-                 0.853     0.366      0.659     0.853     0.744      0.743    stress
-Weighted Avg.    0.733     0.246      0.757     0.733     0.732      0.743
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.78      0.471      0.667     0.78      0.719      0.698    no-stress
-                 0.529     0.22       0.667     0.529     0.59       0.698    stress
-Weighted Avg.    0.667     0.357      0.667     0.667     0.661      0.698
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.902     0.676      0.617     0.902     0.733      0.761    no-stress
-                 0.324     0.098      0.733     0.324     0.449      0.761    stress
-Weighted Avg.    0.64      0.414      0.67      0.64      0.604      0.761
-
-data/output/356843052732305/write.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.7       0.458      0.64      0.7       0.669      0.626    no-stress
-                 0.542     0.3        0.608     0.542     0.573      0.626    stress
-Weighted Avg.    0.627     0.385      0.625     0.627     0.624      0.626
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.589     0.496      0.58      0.589     0.585      0.552    no-stress
-                 0.504     0.411      0.513     0.504     0.508      0.552    stress
-Weighted Avg.    0.55      0.457      0.549     0.55      0.55       0.552
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.805     0.714      0.568     0.805     0.666      0.577    no-stress
-                 0.286     0.195      0.557     0.286     0.378      0.567    stress
-Weighted Avg.    0.565     0.474      0.563     0.565     0.533      0.572
-
-data/output/356843052732305/VerticalScroll.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.711     0.118      0.692     0.711     0.701      0.835    no-stress
-                 0.882     0.289      0.891     0.882     0.887      0.835    stress
-Weighted Avg.    0.836     0.243      0.837     0.836     0.836      0.835
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.632     0.098      0.706     0.632     0.667      0.767    no-stress
-                 0.902     0.368      0.868     0.902     0.885      0.767    stress
-Weighted Avg.    0.829     0.295      0.824     0.829     0.825      0.767
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.711     0.137      0.659     0.711     0.684      0.819    no-stress
-                 0.863     0.289      0.889     0.863     0.876      0.819    stress
-Weighted Avg.    0.821     0.248      0.826     0.821     0.823      0.819
-
-data/output/356843052732305/HorizontalScroll.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.874     0.579      0.898     0.874     0.886      0.683    no-stress
-                 0.421     0.126      0.364     0.421     0.39       0.683    stress
-Weighted Avg.    0.808     0.513      0.82      0.808     0.813      0.683
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.919     0.579      0.903     0.919     0.911      0.67     no-stress
-                 0.421     0.081      0.471     0.421     0.444      0.67     stress
-Weighted Avg.    0.846     0.506      0.84      0.846     0.843      0.67 
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.973     0.737      0.885     0.973     0.927      0.744    no-stress
-                 0.263     0.027      0.625     0.263     0.37       0.744    stress
-Weighted Avg.    0.869     0.633      0.847     0.869     0.846      0.744
-
-data/output/356843052732305/VerticalHorizontalScroll.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.973     0.347      0.775     0.973     0.863      0.744    no-stress
-                 0.653     0.027      0.952     0.653     0.775      0.754    stress
-Weighted Avg.    0.83      0.204      0.854     0.83      0.823      0.748
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.846     0.165      0.863     0.846     0.854      0.84     no-stress
-                 0.835     0.154      0.815     0.835     0.824      0.84     stress
-Weighted Avg.    0.841     0.16       0.841     0.841     0.841      0.84 
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.919     0.248      0.82      0.919     0.867      0.902    no-stress
-                 0.752     0.081      0.883     0.752     0.813      0.902    stress
-Weighted Avg.    0.844     0.173      0.849     0.844     0.843      0.902
-
-data/output/358240051667814/write.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.806     0.381      0.777     0.806     0.791      0.78     no-stress
-                 0.619     0.194      0.66      0.619     0.639      0.78     stress
-Weighted Avg.    0.735     0.31       0.733     0.735     0.734      0.78 
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.742     0.402      0.752     0.742     0.747      0.66     no-stress
-                 0.598     0.258      0.585     0.598     0.591      0.66     stress
-Weighted Avg.    0.687     0.348      0.689     0.687     0.688      0.66 
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.88      0.614      0.702     0.88      0.781      0.703    no-stress
-                 0.386     0.12       0.663     0.386     0.488      0.703    stress
-Weighted Avg.    0.693     0.427      0.687     0.693     0.67       0.703
-
-data/output/358240051667814/VerticalScroll.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.726     0.333      0.662     0.726     0.692      0.694    no-stress
-                 0.667     0.274      0.73      0.667     0.697      0.694    stress
-Weighted Avg.    0.695     0.302      0.698     0.695     0.695      0.694
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.806     0.246      0.746     0.806     0.775      0.764    no-stress
-                 0.754     0.194      0.813     0.754     0.782      0.764    stress
-Weighted Avg.    0.779     0.219      0.781     0.779     0.779      0.764
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.839     0.522      0.591     0.839     0.693      0.751    no-stress
-                 0.478     0.161      0.767     0.478     0.589      0.751    stress
-Weighted Avg.    0.649     0.332      0.684     0.649     0.639      0.751
-
-data/output/358240051667814/VerticalHorizontalScroll.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.758     0.253      0.712     0.758     0.734      0.764    no-stress
-                 0.747     0.242      0.789     0.747     0.767      0.767    stress
-Weighted Avg.    0.752     0.247      0.754     0.752     0.752      0.766
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.726     0.28       0.682     0.726     0.703      0.73     no-stress
-                 0.72      0.274      0.761     0.72      0.74       0.73     stress
-Weighted Avg.    0.723     0.277      0.725     0.723     0.723      0.73 
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.806     0.533      0.556     0.806     0.658      0.742    no-stress
-                 0.467     0.194      0.745     0.467     0.574      0.754    stress
-Weighted Avg.    0.62      0.347      0.659     0.62      0.612      0.749
-
-data/output/358240053586327/write.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.79      0.255      0.811     0.79      0.801      0.777    no-stress
-                 0.745     0.21       0.719     0.745     0.732      0.777    stress
-Weighted Avg.    0.771     0.236      0.773     0.771     0.772      0.777
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.726     0.407      0.712     0.726     0.719      0.668    no-stress
-                 0.593     0.274      0.61      0.593     0.601      0.668    stress
-Weighted Avg.    0.67      0.351      0.669     0.67      0.67       0.668
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.873     0.588      0.673     0.873     0.76       0.721    no-stress
-                 0.412     0.127      0.701     0.412     0.519      0.721    stress
-Weighted Avg.    0.68      0.395      0.685     0.68      0.659      0.721
-
-data/output/352136063162636/write.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.971     0.971      0.579     0.971     0.725      0.529    no-stress
-                 0.029     0.029      0.424     0.029     0.055      0.529    stress
-Weighted Avg.    0.574     0.574      0.513     0.574     0.443      0.529
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.603     0.563      0.595     0.603     0.599      0.521    no-stress
-                 0.438     0.397      0.445     0.438     0.441      0.521    stress
-Weighted Avg.    0.533     0.493      0.532     0.533     0.532      0.521
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.794     0.772      0.585     0.794     0.674      0.539    no-stress
-                 0.228     0.206      0.446     0.228     0.301      0.537    stress
-Weighted Avg.    0.555     0.534      0.527     0.555     0.517      0.538
-
-data/output/352136063162636/VerticalScroll.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.357     0.13       0.455     0.357     0.4        0.644    no-stress
-                 0.87      0.643      0.816     0.87      0.842      0.644    stress
-Weighted Avg.    0.75      0.523      0.732     0.75      0.739      0.644
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.536     0.087      0.652     0.536     0.588      0.724    no-stress
-                 0.913     0.464      0.866     0.913     0.889      0.724    stress
-Weighted Avg.    0.825     0.376      0.816     0.825     0.819      0.724
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.607     0.207      0.472     0.607     0.531      0.731    no-stress
-                 0.793     0.393      0.869     0.793     0.83       0.731    stress
-Weighted Avg.    0.75      0.349      0.776     0.75      0.76       0.731
-
-data/output/352136063162636/HorizontalScroll.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.667     0.158      0.571     0.667     0.615      0.614    no-stress
-                 0.842     0.333      0.889     0.842     0.865      0.614    stress
-Weighted Avg.    0.8       0.291      0.813     0.8       0.805      0.614
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.333     0.105      0.5       0.333     0.4        0.671    no-stress
-                 0.895     0.667      0.81      0.895     0.85       0.671    stress
-Weighted Avg.    0.76      0.532      0.735     0.76      0.742      0.671
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.333     0.211      0.333     0.333     0.333      0.654    no-stress
-                 0.789     0.667      0.789     0.789     0.789      0.654    stress
-Weighted Avg.    0.68      0.557      0.68      0.68      0.68       0.654
-
-data/output/352136063162636/VerticalHorizontalScroll.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.147     0.045      0.5       0.147     0.227      0.617    no-stress
-                 0.955     0.853      0.785     0.955     0.862      0.635    stress
-Weighted Avg.    0.766     0.664      0.718     0.766     0.713      0.631
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.471     0.09       0.615     0.471     0.533      0.682    no-stress
-                 0.91      0.529      0.849     0.91      0.878      0.682    stress
-Weighted Avg.    0.807     0.426      0.794     0.807     0.797      0.682
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.559     0.225      0.432     0.559     0.487      0.696    no-stress
-                 0.775     0.441      0.851     0.775     0.811      0.696    stress
-Weighted Avg.    0.724     0.391      0.753     0.724     0.735      0.696
-
-data/output/353918056970763/write.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.834     0.457      0.723     0.834     0.774      0.753    no-stress
-                 0.543     0.166      0.696     0.543     0.61       0.753    stress
-Weighted Avg.    0.714     0.337      0.712     0.714     0.707      0.753
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.697     0.441      0.693     0.697     0.695      0.637    no-stress
-                 0.559     0.303      0.563     0.559     0.561      0.637    stress
-Weighted Avg.    0.64      0.384      0.64      0.64      0.64       0.637
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.867     0.635      0.661     0.867     0.751      0.674    no-stress
-                 0.365     0.133      0.658     0.365     0.47       0.674    stress
-Weighted Avg.    0.661     0.428      0.66      0.661     0.635      0.674
-
-data/output/353918056970763/VerticalScroll.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.929     0.318      0.881     0.929     0.904      0.708    no-stress
-                 0.682     0.071      0.789     0.682     0.732      0.708    stress
-Weighted Avg.    0.859     0.249      0.855     0.859     0.856      0.708
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.964     0.273      0.9       0.964     0.931      0.842    no-stress
-                 0.727     0.036      0.889     0.727     0.8        0.842    stress
-Weighted Avg.    0.897     0.206      0.897     0.897     0.894      0.842
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.982     0.364      0.873     0.982     0.924      0.907    no-stress
-                 0.636     0.018      0.933     0.636     0.757      0.907    stress
-Weighted Avg.    0.885     0.266      0.89      0.885     0.877      0.907
-
-data/output/353918056970763/HorizontalScroll.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.966     0.672      0.904     0.966     0.934      0.761    no-stress
-                 0.328     0.034      0.594     0.328     0.422      0.761    stress
-Weighted Avg.    0.881     0.588      0.863     0.881     0.866      0.761
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.937     0.569      0.915     0.937     0.926      0.688    no-stress
-                 0.431     0.063      0.51      0.431     0.467      0.688    stress
-Weighted Avg.    0.87      0.502      0.861     0.87      0.865      0.688
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.992     0.741      0.897     0.992     0.942      0.727    no-stress
-                 0.259     0.008      0.833     0.259     0.395      0.727    stress
-Weighted Avg.    0.895     0.644      0.889     0.895     0.87       0.727
-
-data/output/353918056970763/VerticalHorizontalScroll.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.984     0.875      0.859     0.984     0.917      0.699    no-stress
-                 0.125     0.016      0.588     0.125     0.206      0.694    stress
-Weighted Avg.    0.85      0.742      0.817     0.85      0.807      0.698
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.931     0.5        0.91      0.931     0.92       0.719    no-stress
-                 0.5       0.069      0.571     0.5       0.533      0.719    stress
-Weighted Avg.    0.864     0.433      0.858     0.864     0.86       0.719
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.991     0.675      0.889     0.991     0.937      0.777    no-stress
-                 0.325     0.009      0.867     0.325     0.473      0.774    stress
-Weighted Avg.    0.887     0.572      0.885     0.887     0.865      0.776
-
-data/output/358240051668267/write.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.91      0.691      0.717     0.91      0.802      0.636    no-stress
-                 0.309     0.09       0.64      0.309     0.416      0.636    stress
-Weighted Avg.    0.704     0.486      0.691     0.704     0.67       0.636
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.748     0.582      0.712     0.748     0.73       0.581    no-stress
-                 0.418     0.252      0.463     0.418     0.439      0.581    stress
-Weighted Avg.    0.635     0.469      0.627     0.635     0.63       0.581
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.914     0.781      0.693     0.914     0.788      0.601    no-stress
-                 0.219     0.086      0.57      0.219     0.317      0.601    stress
-Weighted Avg.    0.677     0.543      0.651     0.677     0.627      0.601
-
-data/output/358240051668267/VerticalScroll.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.833     0.292      0.811     0.833     0.822      0.8      no-stress
-                 0.708     0.167      0.739     0.708     0.723      0.8      stress
-Weighted Avg.    0.783     0.242      0.782     0.783     0.783      0.8  
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.75      0.208      0.844     0.75      0.794      0.771    no-stress
-                 0.792     0.25       0.679     0.792     0.731      0.771    stress
-Weighted Avg.    0.767     0.225      0.778     0.767     0.769      0.771
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.806     0.375      0.763     0.806     0.784      0.803    no-stress
-                 0.625     0.194      0.682     0.625     0.652      0.803    stress
-Weighted Avg.    0.733     0.303      0.731     0.733     0.731      0.803
-
-data/output/358240051668267/HorizontalScroll.arff
-TREE
+SVM
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
@@ -757,7 +854,7 @@ TREE
                  1         0          1         1         1          ?        stress
 Weighted Avg.    1         0          1         1         1          0    
 
-1kNN
+Multilayer Perceptron
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
@@ -765,211 +862,459 @@ Weighted Avg.    1         0          1         1         1          0
                  1         0          1         1         1          ?        stress
 Weighted Avg.    1         0          1         1         1          0    
 
-2kNN
+Voted Perceptron
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0         0          0         0         0          ?        no-stress
-                 1         0          1         1         1          ?        stress
-Weighted Avg.    1         0          1         1         1          0    
-
-data/output/358240051668267/VerticalHorizontalScroll.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.806     0.146      0.829     0.806     0.817      0.761    no-stress
-                 0.854     0.194      0.833     0.854     0.843      0.761    stress
-Weighted Avg.    0.831     0.172      0.831     0.831     0.831      0.761
-
-1kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.167     0.22       0.4       0.167     0.235      0.474    no-stress
-                 0.78      0.833      0.516     0.78      0.621      0.474    stress
-Weighted Avg.    0.494     0.546      0.462     0.494     0.441      0.474
-
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.333     0.317      0.48      0.333     0.393      0.523    no-stress
-                 0.683     0.667      0.538     0.683     0.602      0.523    stress
-Weighted Avg.    0.519     0.503      0.511     0.519     0.505      0.523
-
-data/output/359093055745105/write.arff
-TREE
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 1         0          1         1         1          ?        no-stress
+                 0         1          0         0         0          ?        no-stress
                  0         0          0         0         0          ?        stress
-Weighted Avg.    1         0          1         1         1          0    
+Weighted Avg.    0         0          0         0         0          0    
 
-1kNN
+Bayes network
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 1         0          1         1         1          ?        no-stress
-                 0         0          0         0         0          ?        stress
+                 0         0          0         0         0          ?        no-stress
+                 1         0          1         1         1          ?        stress
 Weighted Avg.    1         0          1         1         1          0    
 
-2kNN
-=== Detailed Accuracy By Class ===
-
-               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 1         0          1         1         1          ?        no-stress
-                 0         0          0         0         0          ?        stress
-Weighted Avg.    1         0          1         1         1          0    
-
-data/output/359093055745105/VerticalScroll.arff
+data/output/358240052286374/VerticalHorizontalScroll.arff
 TREE
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.841     0.478      0.804     0.841     0.822      0.664    no-stress
-                 0.522     0.159      0.585     0.522     0.552      0.664    stress
-Weighted Avg.    0.745     0.382      0.738     0.745     0.741      0.664
+                 0.681     0.125      0.778     0.681     0.726      0.722    no-stress
+                 0.875     0.319      0.81      0.875     0.841      0.722    stress
+Weighted Avg.    0.799     0.243      0.797     0.799     0.796      0.722
 
 1kNN
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.729     0.674      0.716     0.729     0.722      0.535    no-stress
-                 0.326     0.271      0.341     0.326     0.333      0.535    stress
-Weighted Avg.    0.608     0.553      0.603     0.608     0.605      0.535
+                 0.708     0.196      0.699     0.708     0.703      0.779    no-stress
+                 0.804     0.292      0.811     0.804     0.807      0.779    stress
+Weighted Avg.    0.766     0.254      0.767     0.766     0.767      0.779
 
 2kNN
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.907     0.913      0.698     0.907     0.789      0.533    no-stress
-                 0.087     0.093      0.286     0.087     0.133      0.522    stress
-Weighted Avg.    0.66      0.667      0.574     0.66      0.592      0.53 
+                 0.708     0.196      0.699     0.708     0.703      0.779    no-stress
+                 0.804     0.292      0.811     0.804     0.807      0.779    stress
+Weighted Avg.    0.766     0.254      0.767     0.766     0.767      0.779
 
-data/output/359093055745105/HorizontalScroll.arff
+SVM
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.681     0.08       0.845     0.681     0.754      0.8      no-stress
+                 0.92      0.319      0.817     0.92      0.866      0.8      stress
+Weighted Avg.    0.826     0.226      0.828     0.826     0.822      0.8  
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.778     0.223      0.691     0.778     0.732      0.868    no-stress
+                 0.777     0.222      0.845     0.777     0.809      0.868    stress
+Weighted Avg.    0.777     0.223      0.785     0.777     0.779      0.868
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.194     0.071      0.636     0.194     0.298      0.573    no-stress
+                 0.929     0.806      0.642     0.929     0.759      0.571    stress
+Weighted Avg.    0.641     0.518      0.64      0.641     0.579      0.572
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.569     0.054      0.872     0.569     0.689      0.722    no-stress
+                 0.946     0.431      0.774     0.946     0.851      0.722    stress
+Weighted Avg.    0.799     0.283      0.812     0.799     0.788      0.722
+
+data/output/358240052286630/write.arff
 TREE
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.755     0.722      0.74      0.755     0.747      0.547    no-stress
-                 0.278     0.245      0.294     0.278     0.286      0.547    stress
-Weighted Avg.    0.627     0.594      0.62      0.627     0.623      0.547
+                 0.822     0.686      0.6       0.822     0.693      0.583    no-stress
+                 0.314     0.178      0.586     0.314     0.409      0.583    stress
+Weighted Avg.    0.596     0.46       0.593     0.596     0.567      0.583
 
 1kNN
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.755     0.667      0.755     0.755     0.755      0.573    no-stress
-                 0.333     0.245      0.333     0.333     0.333      0.573    stress
-Weighted Avg.    0.642     0.553      0.642     0.642     0.642      0.573
+                 0.575     0.551      0.566     0.575     0.571      0.512    no-stress
+                 0.449     0.425      0.459     0.449     0.454      0.512    stress
+Weighted Avg.    0.519     0.495      0.518     0.519     0.519      0.512
 
 2kNN
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.898     0.889      0.733     0.898     0.807      0.609    no-stress
-                 0.111     0.102      0.286     0.111     0.16       0.609    stress
-Weighted Avg.    0.687     0.677      0.613     0.687     0.633      0.609
+                 0.575     0.551      0.566     0.575     0.571      0.512    no-stress
+                 0.449     0.425      0.459     0.449     0.454      0.512    stress
+Weighted Avg.    0.519     0.495      0.518     0.519     0.519      0.512
 
-data/output/359093055745105/VerticalHorizontalScroll.arff
+SVM
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.417     0.308      0.629     0.417     0.502      0.555    no-stress
+                 0.692     0.583      0.488     0.692     0.572      0.555    stress
+Weighted Avg.    0.54      0.43       0.566     0.54      0.533      0.555
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.79      0.643      0.605     0.79      0.685      0.597    no-stress
+                 0.357     0.21       0.576     0.357     0.44       0.597    stress
+Weighted Avg.    0.597     0.451      0.592     0.597     0.576      0.597
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.993     0.996      0.555     0.993     0.712      0.499    no-stress
+                 0.004     0.007      0.333     0.004     0.008      0.498    stress
+Weighted Avg.    0.554     0.556      0.456     0.554     0.399      0.498
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.799     0.647      0.607     0.799     0.69       0.593    no-stress
+                 0.353     0.201      0.584     0.353     0.441      0.592    stress
+Weighted Avg.    0.601     0.449      0.597     0.601     0.579      0.593
+
+data/output/358240052286630/VerticalScroll.arff
 TREE
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.917     0.797      0.737     0.917     0.817      0.579    no-stress
-                 0.203     0.083      0.5       0.203     0.289      0.583    stress
-Weighted Avg.    0.709     0.589      0.668     0.709     0.663      0.58 
+                 0.758     0.441      0.625     0.758     0.685      0.669    no-stress
+                 0.559     0.242      0.704     0.559     0.623      0.669    stress
+Weighted Avg.    0.657     0.34       0.665     0.657     0.653      0.669
 
 1kNN
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.744     0.594      0.753     0.744     0.748      0.575    no-stress
-                 0.406     0.256      0.394     0.406     0.4        0.575    stress
-Weighted Avg.    0.645     0.496      0.649     0.645     0.647      0.575
+                 0.667     0.324      0.667     0.667     0.667      0.676    no-stress
+                 0.676     0.333      0.676     0.676     0.676      0.676    stress
+Weighted Avg.    0.672     0.329      0.672     0.672     0.672      0.676
 
 2kNN
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.917     0.875      0.719     0.917     0.806      0.623    no-stress
-                 0.125     0.083      0.381     0.125     0.188      0.623    stress
-Weighted Avg.    0.686     0.645      0.62      0.686     0.626      0.623
+                 0.667     0.324      0.667     0.667     0.667      0.676    no-stress
+                 0.676     0.333      0.676     0.676     0.676      0.676    stress
+Weighted Avg.    0.672     0.329      0.672     0.672     0.672      0.676
+
+SVM
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.833     0.324      0.714     0.833     0.769      0.755    no-stress
+                 0.676     0.167      0.807     0.676     0.736      0.755    stress
+Weighted Avg.    0.754     0.244      0.761     0.754     0.752      0.755
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.682     0.338      0.662     0.682     0.672      0.679    no-stress
+                 0.662     0.318      0.682     0.662     0.672      0.679    stress
+Weighted Avg.    0.672     0.328      0.672     0.672     0.672      0.679
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.621     0.338      0.641     0.621     0.631      0.666    no-stress
+                 0.662     0.379      0.643     0.662     0.652      0.664    stress
+Weighted Avg.    0.642     0.359      0.642     0.642     0.642      0.665
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.47      0.485      0.484     0.47      0.477      0.508    no-stress
+                 0.515     0.53       0.5       0.515     0.507      0.508    stress
+Weighted Avg.    0.493     0.508      0.492     0.493     0.492      0.508
+
+data/output/358240052286630/HorizontalScroll.arff
+TREE
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.556     0.267      0.385     0.556     0.455      0.672    no-stress
+                 0.733     0.444      0.846     0.733     0.786      0.672    stress
+Weighted Avg.    0.692     0.403      0.74      0.692     0.709      0.672
+
+1kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.778     0.1        0.7       0.778     0.737      0.85     no-stress
+                 0.9       0.222      0.931     0.9       0.915      0.85     stress
+Weighted Avg.    0.872     0.194      0.878     0.872     0.874      0.85 
+
+2kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.778     0.1        0.7       0.778     0.737      0.85     no-stress
+                 0.9       0.222      0.931     0.9       0.915      0.85     stress
+Weighted Avg.    0.872     0.194      0.878     0.872     0.874      0.85 
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.667     0.133      0.6       0.667     0.632      0.689    no-stress
+                 0.867     0.333      0.897     0.867     0.881      0.689    stress
+Weighted Avg.    0.821     0.287      0.828     0.821     0.824      0.689
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0         0.133      0         0         0          0.481    no-stress
+                 0.867     1          0.743     0.867     0.8        0.481    stress
+Weighted Avg.    0.667     0.8        0.571     0.667     0.615      0.481
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0         0          0         0         0          0.444    no-stress
+                 1         1          0.769     1         0.87       0.444    stress
+Weighted Avg.    0.769     0.769      0.592     0.769     0.669      0.444
+
+data/output/358240052286630/VerticalHorizontalScroll.arff
+TREE
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.48      0.306      0.545     0.48      0.511      0.58     no-stress
+                 0.694     0.52       0.636     0.694     0.663      0.578    stress
+Weighted Avg.    0.601     0.427      0.596     0.601     0.597      0.579
+
+1kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.52      0.316      0.557     0.52      0.538      0.602    no-stress
+                 0.684     0.48       0.65      0.684     0.667      0.602    stress
+Weighted Avg.    0.613     0.409      0.61      0.613     0.611      0.602
+
+2kNN
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.52      0.316      0.557     0.52      0.538      0.602    no-stress
+                 0.684     0.48       0.65      0.684     0.667      0.602    stress
+Weighted Avg.    0.613     0.409      0.61      0.613     0.611      0.602
+
+SVM
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.733     0.306      0.647     0.733     0.688      0.714    no-stress
+                 0.694     0.267      0.773     0.694     0.731      0.714    stress
+Weighted Avg.    0.711     0.284      0.718     0.711     0.712      0.714
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.64      0.316      0.608     0.64      0.623      0.725    no-stress
+                 0.684     0.36       0.713     0.684     0.698      0.725    stress
+Weighted Avg.    0.665     0.341      0.667     0.665     0.666      0.725
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.373     0.224      0.56      0.373     0.448      0.594    no-stress
+                 0.776     0.627      0.618     0.776     0.688      0.587    stress
+Weighted Avg.    0.601     0.452      0.593     0.601     0.584      0.59 
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.24      0.194      0.486     0.24      0.321      0.539    no-stress
+                 0.806     0.76       0.581     0.806     0.675      0.539    stress
+Weighted Avg.    0.561     0.515      0.54      0.561     0.522      0.539
 
 data/output/globalModelVertical.arff
 TREE
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.651     0.271      0.658     0.651     0.655      0.741    no-stress
-                 0.729     0.349      0.723     0.729     0.726      0.741    stress
-Weighted Avg.    0.694     0.314      0.694     0.694     0.694      0.741
+                 0.659     0.179      0.657     0.659     0.658      0.793    no-stress
+                 0.821     0.341      0.822     0.821     0.821      0.793    stress
+Weighted Avg.    0.765     0.286      0.765     0.765     0.765      0.793
 
 1kNN
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.739     0.262      0.693     0.739     0.715      0.737    no-stress
-                 0.738     0.261      0.779     0.738     0.758      0.737    stress
-Weighted Avg.    0.738     0.261      0.741     0.738     0.739      0.737
+                 0.649     0.174      0.66      0.649     0.654      0.746    no-stress
+                 0.826     0.351      0.819     0.826     0.822      0.746    stress
+Weighted Avg.    0.765     0.291      0.764     0.765     0.765      0.746
 
 2kNN
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.872     0.426      0.621     0.872     0.725      0.787    no-stress
-                 0.574     0.128      0.848     0.574     0.685      0.787    stress
-Weighted Avg.    0.706     0.261      0.747     0.706     0.703      0.787
+                 0.649     0.174      0.66      0.649     0.654      0.746    no-stress
+                 0.826     0.351      0.819     0.826     0.822      0.746    stress
+Weighted Avg.    0.765     0.291      0.764     0.765     0.765      0.746
+
+SVM
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.659     0.141      0.709     0.659     0.683      0.759    no-stress
+                 0.859     0.341      0.829     0.859     0.843      0.759    stress
+Weighted Avg.    0.79      0.273      0.787     0.79      0.788      0.759
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.662     0.162      0.68      0.662     0.671      0.82     no-stress
+                 0.838     0.338      0.826     0.838     0.832      0.82     stress
+Weighted Avg.    0.778     0.278      0.776     0.778     0.777      0.82 
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.274     0.111      0.562     0.274     0.369      0.587    no-stress
+                 0.889     0.726      0.702     0.889     0.784      0.587    stress
+Weighted Avg.    0.678     0.515      0.654     0.678     0.642      0.587
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.575     0.174      0.632     0.575     0.602      0.811    no-stress
+                 0.826     0.425      0.789     0.826     0.807      0.811    stress
+Weighted Avg.    0.74      0.339      0.735     0.74      0.737      0.811
 
 data/output/globalModelHorizontal.arff
 TREE
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.936     0.41       0.859     0.936     0.896      0.819    no-stress
-                 0.59      0.064      0.775     0.59      0.67       0.819    stress
-Weighted Avg.    0.842     0.316      0.836     0.842     0.835      0.819
+                 0.46      0.038      0.639     0.46      0.535      0.787    no-stress
+                 0.962     0.54       0.924     0.962     0.943      0.787    stress
+Weighted Avg.    0.898     0.476      0.888     0.898     0.891      0.787
 
 1kNN
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.893     0.324      0.881     0.893     0.887      0.781    no-stress
-                 0.676     0.107      0.703     0.676     0.689      0.781    stress
-Weighted Avg.    0.834     0.265      0.832     0.834     0.833      0.781
+                 0.66      0.061      0.611     0.66      0.635      0.803    no-stress
+                 0.939     0.34       0.95      0.939     0.944      0.803    stress
+Weighted Avg.    0.903     0.305      0.907     0.903     0.905      0.803
 
 2kNN
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.97      0.471      0.846     0.97      0.904      0.825    no-stress
-                 0.529     0.03       0.867     0.529     0.657      0.825    stress
-Weighted Avg.    0.85      0.351      0.852     0.85      0.837      0.825
+                 0.66      0.061      0.611     0.66      0.635      0.803    no-stress
+                 0.939     0.34       0.95      0.939     0.944      0.803    stress
+Weighted Avg.    0.903     0.305      0.907     0.903     0.905      0.803
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.56      0.038      0.683     0.56      0.615      0.801    no-stress
+                 0.962     0.44       0.938     0.962     0.95       0.801    stress
+Weighted Avg.    0.911     0.389      0.905     0.911     0.907      0.801
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.1       0.026      0.357     0.1       0.156      0.537    no-stress
+                 0.974     0.9        0.881     0.974     0.925      0.536    stress
+Weighted Avg.    0.863     0.789      0.815     0.863     0.827      0.536
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.36      0.064      0.45      0.36      0.4        0.849    no-stress
+                 0.936     0.64       0.909     0.936     0.922      0.849    stress
+Weighted Avg.    0.863     0.567      0.851     0.863     0.856      0.849
 
 data/output/gloablModelVerticalHorizontal.arff
 TREE
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.958     0.669      0.654     0.958     0.777      0.662    no-stress
-                 0.331     0.042      0.858     0.331     0.478      0.662    stress
-Weighted Avg.    0.688     0.398      0.742     0.688     0.648      0.662
+                 0.269     0.034      0.752     0.269     0.397      0.674    no-stress
+                 0.966     0.731      0.777     0.966     0.861      0.674    stress
+Weighted Avg.    0.774     0.539      0.77      0.774     0.733      0.674
 
 1kNN
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.819     0.285      0.791     0.819     0.805      0.767    no-stress
-                 0.715     0.181      0.75      0.715     0.732      0.767    stress
-Weighted Avg.    0.774     0.24       0.773     0.774     0.773      0.767
+                 0.65      0.137      0.643     0.65      0.647      0.749    no-stress
+                 0.863     0.35       0.866     0.863     0.864      0.749    stress
+Weighted Avg.    0.804     0.291      0.805     0.804     0.804      0.749
 
 2kNN
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.928     0.425      0.742     0.928     0.825      0.83     no-stress
-                 0.575     0.072      0.859     0.575     0.689      0.83     stress
-Weighted Avg.    0.776     0.273      0.792     0.776     0.766      0.83 
+                 0.65      0.137      0.643     0.65      0.647      0.749    no-stress
+                 0.863     0.35       0.866     0.863     0.864      0.749    stress
+Weighted Avg.    0.804     0.291      0.805     0.804     0.804      0.749
+
+SVM
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.43      0.064      0.718     0.43      0.538      0.683    no-stress
+                 0.936     0.57       0.812     0.936     0.869      0.683    stress
+Weighted Avg.    0.796     0.431      0.786     0.796     0.778      0.683
+
+Multilayer Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.636     0.088      0.733     0.636     0.681      0.847    no-stress
+                 0.912     0.364      0.868     0.912     0.889      0.847    stress
+Weighted Avg.    0.836     0.288      0.831     0.836     0.832      0.847
+
+Voted Perceptron
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.258     0.061      0.616     0.258     0.364      0.599    no-stress
+                 0.939     0.742      0.769     0.939     0.845      0.599    stress
+Weighted Avg.    0.751     0.554      0.727     0.751     0.713      0.599
+
+Bayes network
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.576     0.125      0.636     0.576     0.605      0.822    no-stress
+                 0.875     0.424      0.844     0.875     0.859      0.822    stress
+Weighted Avg.    0.792     0.342      0.787     0.792     0.789      0.822
 

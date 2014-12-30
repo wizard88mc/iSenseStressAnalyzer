@@ -69,22 +69,14 @@ public class StressNoStressData
             }
             mean /= arrayIncreases.length;
             
-            double pValue = new TTest().pairedTTest(arrayNoStress, arrayStress);
-            double pValueIncrease = new TTest().tTest(0, arrayIncreases);
+            double pValue = new TTest().pairedTTest(arrayNoStress, arrayStress) / 2;
+            double pValueIncrease = new TTest().tTest(0, arrayIncreases) / 2;
 
-            /*System.out.println("NO stress data: ");
-            for (double value: arrayNoStress) {
-            	System.out.print(value);
-            }
-            System.out.println("Stress data: ");
-            for (double value: arrayStress) {
-            	System.out.print(value);
-            }*/
             System.out.println("TTest: " + pValue);
             System.out.println("TTest increase: " + pValueIncrease);
             System.out.println("Mean difference: " + mean);
             
-            return pValue / 2 <= 0.05;
+            return pValue <= 0.05;
         }
         else
         {

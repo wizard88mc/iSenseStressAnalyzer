@@ -20,11 +20,21 @@ public class SurveyAnalyzer {
             energyAnswers = new ArrayList<>(),
             stressAnswers = new ArrayList<>();
         
+        /**
+         * Adds an answer of a tester to the list of submitted answers
+         * @param valence the reported valence
+         * @param energy the reported energy
+         * @param stress the reported stress
+         */
         public void addValues(double valence, double energy, double stress) {
             valenceAnswers.add(valence); energyAnswers.add(energy);
             stressAnswers.add(stress);
         }
         
+        /**
+         * Calculates the mean value of the valence
+         * @return valence mean value
+         */
         public double getValenceMean() {
             double mean = 0;
             for (Double value: valenceAnswers) {
@@ -33,6 +43,10 @@ public class SurveyAnalyzer {
             return mean / valenceAnswers.size();
         }
         
+        /**
+         * Calculates the mean value of the energy
+         * @return energy mean value
+         */
         public double getEnergyMean() {
             double mean = 0;
             for (Double value: energyAnswers) {
@@ -41,12 +55,44 @@ public class SurveyAnalyzer {
             return mean / energyAnswers.size();
         }
         
+        /**
+         * Calculates the mean value of the stress
+         * @return stress mean value
+         */
         public double getStressMean() {
             double mean = 0;
             for (Double value: stressAnswers) {
                 mean += value;
             }
             return mean / stressAnswers.size();
+        }
+        
+        /**
+         * Calculates the Standard Deviation of a set of values 
+         * @param valence if we want the std of the valence values
+         * @param energy if we want the std of the energy values
+         * @param stress if we wan the std of the stress values
+         * @return the std of the list of values
+         */
+        public double getStd(boolean valence, boolean energy, boolean stress) {
+        	
+        	double std = 0;
+        	ArrayList<Double> toUse = null; double mean = 0;
+        	if (valence) {
+        		toUse = valenceAnswers; mean = getValenceMean();
+        	}
+        	else if (energy) {
+        		toUse = energyAnswers; mean = getEnergyMean();
+        	}
+        	else if (stress) {
+        		toUse = stressAnswers; mean = getStressMean();
+        	}
+        	
+        	for (Double value: toUse) {
+        		std += Math.pow(value - mean, 2);
+        	}
+        	
+        	return Math.sqrt(std / toUse.size());
         }
     }
     
@@ -80,9 +126,9 @@ public class SurveyAnalyzer {
                         survey.getIntStress());
             }
             
-            System.out.println("Average valence: " + toAdd.getValenceMean());
-            System.out.println("Average energy: " + toAdd.getEnergyMean());
-            System.out.println("Average stress: " + toAdd.getStressMean());
+            System.out.println("Average valence: " + toAdd.getValenceMean() + " +- " + toAdd.getStd(true, false, false));
+            System.out.println("Average energy: " + toAdd.getEnergyMean() + " +- " + toAdd.getStd(false, true, false));
+            System.out.println("Average stress: " + toAdd.getStressMean() + " +- " + toAdd.getStd(false, false, true));
             
             resumes.add(toAdd);
         }

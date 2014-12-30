@@ -187,6 +187,17 @@ public class Write extends Exercise
         return new BasicDataStatistic(sizes, false);
     }
     
+    public BasicDataStatistic getRatioPressureSizeData() {
+    	
+    	ArrayList<Double> ratios = new ArrayList<>();
+    	for (Digit digit: digits) {
+    		ratios.add(digit.getPressureBasicData().getAverage() / 
+    				digit.getSizeBasicData().getAverage());
+    	}
+    	
+    	return new BasicDataStatistic(ratios, true);
+    }
+    
     /**
      * Calculates the data statistic for the movement information
      * @return BasicDataStatistic built with movement information
@@ -320,6 +331,7 @@ public class Write extends Exercise
     	ArrayList<String> attributesNames = new ArrayList<>();
     	attributesNames.add("PRESSURE");
     	attributesNames.add("SIZE");
+    	attributesNames.add("RATIO_PRESSURE_SIZE");
     	attributesNames.add("MOVEMENT");
     	attributesNames.add("DURATION");
     	attributesNames.add("TIME_DISTANCE");
