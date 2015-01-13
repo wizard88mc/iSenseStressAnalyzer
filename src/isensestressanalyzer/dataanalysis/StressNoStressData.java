@@ -70,9 +70,10 @@ public class StressNoStressData
             mean /= arrayIncreases.length;
             
             double pValue = new TTest().pairedTTest(arrayNoStress, arrayStress) / 2;
+            double tValue = new TTest().pairedT(arrayNoStress, arrayStress);
             double pValueIncrease = new TTest().tTest(0, arrayIncreases) / 2;
 
-            System.out.println("TTest: " + pValue);
+            System.out.println("TTest: " + pValue + ", (t = " + tValue + ")");
             System.out.println("TTest increase: " + pValueIncrease);
             System.out.println("Mean difference: " + mean);
             

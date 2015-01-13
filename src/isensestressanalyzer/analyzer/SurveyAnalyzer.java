@@ -149,7 +149,8 @@ public class SurveyAnalyzer {
         StressNoStressData.copyMeanValueIntoDoubleArray(secondArray, second.stressAnswers);
         
         System.out.println("TTest between " + stepFirst + " and " +  
-                stepSecond + ": " + new TTest().pairedTTest(firstArray, secondArray));
+                stepSecond + ": " + new TTest().pairedTTest(firstArray, secondArray) / 2 +
+                " t = " + new TTest().pairedT(firstArray, secondArray));
     }
     
     

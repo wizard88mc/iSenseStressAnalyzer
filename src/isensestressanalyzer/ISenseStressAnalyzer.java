@@ -135,9 +135,9 @@ public class ISenseStressAnalyzer
             WriteAnalyzer.performLocalAnalysis(tester);
             SearchAnalyzer.performLocalAnalysis(tester);
             
-            tester.createARFFFileForWriteTask();
-            tester.createARFFFileForSearchTask();
-        	WriteAnalyzer.createHeatMapForDigit(tester, " ");
+            //tester.createARFFFileForWriteTask();
+            //tester.createARFFFileForSearchTask();
+        	//WriteAnalyzer.createHeatMapForDigit(tester, " ");
         }
         
         SurveyAnalyzer.performAnalysis(listTester);
@@ -147,10 +147,10 @@ public class ISenseStressAnalyzer
         WriteAnalyzer.printPercentageSingleFeature();
         SearchAnalyzer.printPercentageSingleFeature();
         
-        Tester.createGlobalARFF(listTester);
+        //Tester.createGlobalARFF(listTester);
         
-        ClassifiersTester tester = new ClassifiersTester(listCreatedFiles);
-        tester.performEvaluation();
+        //ClassifiersTester tester = new ClassifiersTester(listCreatedFiles);
+        //tester.performEvaluation();
     }
     
     /**

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 /**
  * This class represents an Horizontal Scroll during the Search exercise
- * @author Matteo Cimsn
+ * @author Matteo Ciman
  */
 public class HorizontalScroll extends Scroll
 {
