@@ -14,8 +14,8 @@ import java.util.ArrayList;
 public class Survey extends Exercise 
 {
     public Survey(int order, boolean stress, int repetition,
-            int subRepetition, String[] additionalV)
-    {
+            int subRepetition, String[] additionalV) {
+        
         super(order, ExerciseType.SURVEY, stress, repetition, subRepetition,
                 additionalV);
     }
@@ -24,8 +24,7 @@ public class Survey extends Exercise
      * Returns the valence value of the survey
      * @return the valence value
      */
-    public String getValence()
-    {
+    public String getValence() {
         return (String) additionalValues.get(0);
     }
     
@@ -33,8 +32,7 @@ public class Survey extends Exercise
      * Returns the energy value of the survey
      * @return the energy value
      */
-    public String getEnergy()
-    {
+    public String getEnergy() {
         return (String) additionalValues.get(1);
     }
     
@@ -42,8 +40,7 @@ public class Survey extends Exercise
      * Returns the stress value of the survey
      * @return the stress value
      */
-    public String getStress()
-    {
+    public String getStress() {
         return (String) additionalValues.get(2);
     }
     
@@ -72,8 +69,7 @@ public class Survey extends Exercise
     }
     
     @Override
-    public void completeDataAcquisition(Protocol protocol)
-    {
+    public void completeDataAcquisition(Protocol protocol) {
         
     }
 }

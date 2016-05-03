@@ -16,8 +16,8 @@ public class ScrollMovement
     private int oldLeft;
     private int oldTop;
     
-    public ScrollMovement(String logString)
-    {
+    public ScrollMovement(String logString) {
+        
         String[] elements = logString.split(",");
         /**
          * elements[0]: V_SCROLL or H_SCROLL
@@ -30,29 +30,25 @@ public class ScrollMovement
                 Integer.valueOf(elements[3]), Integer.valueOf(elements[4]));
     }
     
-    private void createInstance(int left, int top, int oldLeft, int oldTop)
-    {
+    private void createInstance(int left, int top, int oldLeft, int oldTop) {
+        
         this.left = left; this.top = top; this.oldLeft = oldLeft; 
         this.oldTop = oldTop;
     }
     
-    public int getLeft()
-    {
+    public int getLeft() {
         return this.left;
     }
     
-    public int getTop()
-    {
+    public int getTop() {
         return this.top;
     }
     
-    public int getOldLeft()
-    {
+    public int getOldLeft() {
         return this.oldLeft;
     }
     
-    public int getOldTop()
-    {
+    public int getOldTop() {
         return this.oldTop;
     }
 }

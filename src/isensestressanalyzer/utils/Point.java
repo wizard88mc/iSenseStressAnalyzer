@@ -9,13 +9,12 @@ package isensestressanalyzer.utils;
  * @version 1.0
  * @since   2014-10-17
  */
-public class Point 
-{
-    private final float x;
-    private final float y;
+public class Point {
     
-    public Point(float x, float y)
-    {
+    private final int x;
+    private final int y;
+    
+    public Point(int x, int y) {
         this.x = x; this.y = y;
     }
     
@@ -23,8 +22,7 @@ public class Point
      * Returns the x coordinate of the point
      * @return the x coordinate
      */
-    public float getX()
-    {
+    public int getX() {
         return this.x;
     }
     
@@ -32,8 +30,7 @@ public class Point
      * Returns the y coordinate of the point
      * @return the y coordinate
      */
-    public float getY()
-    {
+    public int getY() {
         return this.y;
     }
 }

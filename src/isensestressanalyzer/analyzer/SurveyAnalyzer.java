@@ -102,7 +102,8 @@ public class SurveyAnalyzer {
         
         for (Tester tester: listTester) {
             
-            ArrayList<Survey> answers = tester.getSurveyListForProtocol(ISenseStressAnalyzer.protocols[0]);
+            ArrayList<Survey> answers = tester.
+                    getSurveyListForProtocol(ISenseStressAnalyzer.PROTOCOLS[0]);
             
             for (int i = 0; i < answers.size(); i++) {
                 if (mListSurveys.size() < i + 1) {
@@ -126,17 +127,24 @@ public class SurveyAnalyzer {
                         survey.getIntStress());
             }
             
-            System.out.println("Average valence: " + toAdd.getValenceMean() + " +- " + toAdd.getStd(true, false, false));
-            System.out.println("Average energy: " + toAdd.getEnergyMean() + " +- " + toAdd.getStd(false, true, false));
-            System.out.println("Average stress: " + toAdd.getStressMean() + " +- " + toAdd.getStd(false, false, true));
+            System.out.println("Average valence: " + toAdd.getValenceMean() + 
+                    " +- " + toAdd.getStd(true, false, false));
+            System.out.println("Average energy: " + toAdd.getEnergyMean() + 
+                    " +- " + toAdd.getStd(false, true, false));
+            System.out.println("Average stress: " + toAdd.getStressMean() + 
+                    " +- " + toAdd.getStd(false, false, true));
             
             resumes.add(toAdd);
         }
         
-        performTestBetweenTwoSurveys(resumes.get(0), resumes.get(1), "Begin", "After relax");
-        performTestBetweenTwoSurveys(resumes.get(2), resumes.get(3), "Before stressor", "After stressor");
-        performTestBetweenTwoSurveys(resumes.get(2), resumes.get(4), "Before stressor", "After stress task");
-        performTestBetweenTwoSurveys(resumes.get(3), resumes.get(4), "After Stressor", "After stress task");	
+        performTestBetweenTwoSurveys(resumes.get(0), resumes.get(1), "Begin", 
+                "After relax");
+        performTestBetweenTwoSurveys(resumes.get(2), resumes.get(3), 
+                "Before stressor", "After stressor");
+        performTestBetweenTwoSurveys(resumes.get(2), resumes.get(4), 
+                "Before stressor", "After stress task");
+        performTestBetweenTwoSurveys(resumes.get(3), resumes.get(4), 
+                "After Stressor", "After stress task");	
     }
     
     private static void performTestBetweenTwoSurveys(FastResumeSurvey first, FastResumeSurvey second, 
@@ -148,9 +156,15 @@ public class SurveyAnalyzer {
         StressNoStressData.copyMeanValueIntoDoubleArray(firstArray, first.stressAnswers);
         StressNoStressData.copyMeanValueIntoDoubleArray(secondArray, second.stressAnswers);
         
+        try {
         System.out.println("TTest between " + stepFirst + " and " +  
                 stepSecond + ": " + new TTest().pairedTTest(firstArray, secondArray) / 2 +
                 " t = " + new TTest().pairedT(firstArray, secondArray));
+        }
+        catch(Exception exc) {
+            System.out.println("Exception in performing test between two surveys");
+            exc.printStackTrace();
+        }
     }
     
     

@@ -11,8 +11,8 @@ import isensestressanalyzer.interaction.Touch;
  * 
  * @author Matteo Ciman
  */
-public class ScreenObject 
-{    
+public class ScreenObject {
+    
     protected final double ID;
     protected final String objectClass;
     protected final Point position;
@@ -22,12 +22,15 @@ public class ScreenObject
     protected final String text;
     
     public ScreenObject(Double id, String objectClass, float x, float y, int width, 
-            int height, int visibility, String text)
-    {
+            int height, int visibility, String text) {
+        
         int indexInterestingClass = objectClass.lastIndexOf(".");
-        this.objectClass = objectClass.substring(indexInterestingClass+1).replace("$", ".");
-        this.ID = id; this.position = new Point(x, y); 
-        this.width = width; this.height = height; this.visibility = visibility;
+        this.objectClass = objectClass.substring(indexInterestingClass+1).
+                replace("$", ".");
+        this.ID = id; 
+        this.position = new Point(Math.round(x), Math.round(y)); 
+        this.width = width; this.height = height; 
+        this.visibility = visibility;
         this.text = text.replace(";", ",");
     }
     
@@ -35,8 +38,7 @@ public class ScreenObject
      * Returns the position of the view on the screen
      * @return the View position
      */
-    public Point getPosition()
-    {
+    public Point getPosition() {
         return this.position;
     }
     
@@ -44,8 +46,7 @@ public class ScreenObject
      * Returns the width of the object
      * @return View width
      */
-    public int getWidth()
-    {
+    public int getWidth() {
         return this.width;
     }
     
@@ -53,9 +54,17 @@ public class ScreenObject
      * Returns the height of the object
      * @return view height 
      */
-    public int getHeight()
-    {
+    public int getHeight() {
         return this.height;
+    }
+    
+    /**
+     * Returns the position of the center of the object
+     * @return a Point as the center of the object
+     */
+    public Point getCenterPosition() {
+        return new Point(this.position.getX() + width / 2, 
+            this.position.getY() + height / 2);
     }
     
     /**
@@ -65,12 +74,12 @@ public class ScreenObject
      * @return 0 if the touch is not always inside the object, otherwise the 
      * evaluation of the first interaction + the evaluation of the last interaction 
      */
-    public float rateTouch(Touch touch)
-    {
-        if (isTouchAlwaysInside(touch))
-        {
+    public float rateTouch(Touch touch) {
+        
+        if (isTouchAlwaysInside(touch)) {
             return rateInteraction(touch.getInteractions().get(0)) + 
-                    rateInteraction(touch.getInteractions().get(touch.getInteractions().size() - 1));
+                rateInteraction(touch.getInteractions()
+                        .get(touch.getInteractions().size() - 1));
         }
         return 0;
     }
@@ -81,11 +90,9 @@ public class ScreenObject
      * @param touch the touch operation to evaluate
      * @return is the touch operation is always inside or not
      */
-    protected boolean isTouchAlwaysInside(Touch touch)
-    {
+    protected boolean isTouchAlwaysInside(Touch touch) {
         boolean isInside = true;
-        for (Interaction interaction: touch.getInteractions())
-        {
+        for (Interaction interaction: touch.getInteractions()) {
             isInside = isInside & isInside(interaction);
         }
         return isInside;
@@ -96,8 +103,7 @@ public class ScreenObject
      * @param interaction the interaction to check
      * @return if the interaction is inside the object or not
      */
-    protected boolean isInside(Interaction interaction)
-    {
+    public boolean isInside(Interaction interaction) {
         return (interaction.getPoint().getX() >= position.getX() && 
                 interaction.getPoint().getX() <= position.getX() + width && 
                 interaction.getPoint().getY() >= position.getY() && 
@@ -112,33 +118,20 @@ public class ScreenObject
      * @param interaction the interaction to evaluate
      * @return 1 if in the center of the object, 0.5 inside, 0 outside
      */
-    protected float rateInteraction(Interaction interaction)
-    {
-        if (interaction.getPoint().getX() >= getRealStartingPointX() + width / 4 && 
-                interaction.getPoint().getX() <= getRealStartingPointX() + (width * 3 / 4) && 
-                interaction.getPoint().getY() >= getRealStartingPointY() + height / 4 && 
-                interaction.getPoint().getY() <= getRealStartingPointY() + height * 3 / 4)
-        {
+    protected float rateInteraction(Interaction interaction) {
+        
+        if (interaction.getPoint().getX() >= this.position.getX()+ width / 4 && 
+                interaction.getPoint().getX() <= this.position.getX()+ (width * 3 / 4) && 
+                interaction.getPoint().getY() >= this.position.getY() + height / 4 && 
+                interaction.getPoint().getY() <= this.position.getY()+ height * 3 / 4) {
             return 1.0F;
         }
-        else 
-        {
+        else {
             return 0;
         }
     }
     
-    protected float getRealStartingPointX()
-    {
-        return this.position.getX();
-    }
-    
-    protected float getRealStartingPointY()
-    {
-        return this.position.getY();
-    }
-    
-    public String getText()
-    {
+    public String getText() {
         return this.text;
     }
     

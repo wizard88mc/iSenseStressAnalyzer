@@ -15,11 +15,13 @@ import java.util.ArrayList;
  * @version 0.1
  * @since   2014-10-16
  */
-public class FilesInputReader extends FileReader
-{
-    public FilesInputReader()
-    {
-        super("input_data_serious");
+public class FilesInputReader extends FileReader {
+    
+    private static final String INPUT_DATA = "input_data_serious";
+    private static final String INPUT_DATA_DEBUG = "input_data_small";
+        
+    public FilesInputReader() {
+        super(INPUT_DATA_DEBUG);
     }
     
     /**
@@ -28,25 +30,21 @@ public class FilesInputReader extends FileReader
      * 
      * @return a list of couples IMEI, timestamp
      */
-    public ArrayList<String> getAllInputFiles()
-    {
+    public ArrayList<String> getAllInputFiles() {
+        
         ArrayList<String> toReturn = new ArrayList<>();
         
-        try
-        {
+        try {
             openFile();
             String line;
-            while ((line = readLine()) != null)
-            {
+            while ((line = readLine()) != null) {
                 toReturn.add(Exercise.replaceDelimiter(line));
             }
         }
-        catch(FileNotFoundException exc)
-        {
+        catch(FileNotFoundException exc) {
             System.out.println(exc.toString());
             exc.printStackTrace();
         }
         return toReturn;
     }
-    
 }

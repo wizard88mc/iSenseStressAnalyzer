@@ -2,7 +2,6 @@ package isensestressanalyzer.filereader;
 
 import isensestressanalyzer.exercise.Exercise;
 import isensestressanalyzer.exercise.Protocol;
-import isensestressanalyzer.interaction.Interaction;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
@@ -16,11 +15,9 @@ import java.util.ArrayList;
  * @version 0.1
  * @since 2014-10-16
  */
-public class TouchReader extends FileReader 
-{
+public class TouchReader extends FileReader {
 
-    public TouchReader(String IMEI, String data) 
-    {
+    public TouchReader(String IMEI, String data) {
         super(IMEI, data, "log_touch_data");
     }
     
@@ -36,12 +33,12 @@ public class TouchReader extends FileReader
      */
     public ArrayList<String> retrieveTouchEventPerExercisePerRepetition(
             Protocol protocol, int exerciseNumber, 
-            String exercise, boolean stress, int repetition)
-    {
+            String exercise, boolean stress, int repetition) {
+        
         ArrayList<String> eventsRecorded = new ArrayList<>();
         
-        try
-        {
+        try {
+            
             openFile();
             
             String titleExerciseLookingFor = buildStringForExerciseTitle(exerciseNumber, 
@@ -64,8 +61,7 @@ public class TouchReader extends FileReader
             
             closeFile();
         }
-        catch(FileNotFoundException exc)
-        {
+        catch(FileNotFoundException exc) {
             System.out.println(exc.toString());
             exc.printStackTrace();
         }

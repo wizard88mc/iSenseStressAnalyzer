@@ -14,8 +14,8 @@ import isensestressanalyzer.utils.Point;
  * @version 0.1
  * @since   2014-10-17
  */
-public class Interaction 
-{
+public class Interaction {
+    
     public enum InteractionType {TOUCH_DOWN, TOUCH_UP, TOUCH_MOVING};
     public static final String TOUCH_DOWN_STRING = "0";
     public static final String TOUCH_UP_STRING = "1";
@@ -28,8 +28,8 @@ public class Interaction
     protected Double pressure;
     protected long firstEventTimestamp;
     
-    public Interaction(String stringInteraction)
-    {
+    public Interaction(String stringInteraction) {
+        
         stringInteraction = Exercise.replaceDelimiter(stringInteraction);
         String[] elements = stringInteraction.split(",");
         /**
@@ -41,44 +41,39 @@ public class Interaction
          * elements[5]: pressure
          * elements[6]: firstEventTimestamp
          */
-        if (elements.length == 7)
-        {
-            this.buildInteraction(elements[0], Long.valueOf(elements[1]), Float.valueOf(elements[2]), 
-                Float.valueOf(elements[3]), Float.valueOf(elements[4]), 
+        if (elements.length == 7) {
+            this.buildInteraction(elements[0], Long.valueOf(elements[1]), 
+                Math.round(Float.valueOf(elements[2])), 
+                Math.round(Float.valueOf(elements[3])), Float.valueOf(elements[4]), 
                 Float.valueOf(elements[5]), Long.valueOf(elements[6]));
         }
-        else 
-        {
+        else {
             this.timestamp = -1;
         }
     }
     
-    protected final void buildInteraction(String interaction, long timestamp, float x, float y, 
-            double size, double pressure, long firstEventTimestamp)
-    {
+    protected final void buildInteraction(String interaction, long timestamp, 
+            int x, int y, double size, double pressure, 
+            long firstEventTimestamp) {
+        
         this.timestamp = timestamp; this.mPoint = new Point(x, y);
         this.size = size; this.pressure = pressure; 
         this.firstEventTimestamp = firstEventTimestamp;
         
-        switch(interaction)
-        {
-            case TOUCH_DOWN_STRING:
-            {
+        switch(interaction) {
+            case TOUCH_DOWN_STRING: {
                 mInteractionType = InteractionType.TOUCH_DOWN;
                 break;
             }
-            case TOUCH_UP_STRING:
-            {
+            case TOUCH_UP_STRING: {
                 mInteractionType = InteractionType.TOUCH_UP;
                 break;
             }
-            case TOUCH_MOVING_STRING:
-            {
+            case TOUCH_MOVING_STRING: {
                 mInteractionType = InteractionType.TOUCH_MOVING;
                 break;
             }
-            default:
-            {
+            default: {
                 mInteractionType = null;
             }
         }
@@ -88,18 +83,27 @@ public class Interaction
      * Returns the position of the interaction
      * @return the interaction Point
      */
-    public Point getPoint()
-    {
+    public Point getPoint() {
         return this.mPoint;
     }
     
-    public boolean isValid()
-    {
+    public boolean isValid() {
         return mInteractionType != null;
     }
     
-    public long getTimestamp()
-    {
+    public long getTimestamp() {
         return this.timestamp;
+    }
+    
+    public boolean isTouchDown() {
+        return isValid() && mInteractionType == InteractionType.TOUCH_DOWN;
+    }
+    
+    public boolean isTouchMove() {
+        return isValid() && mInteractionType == InteractionType.TOUCH_MOVING;
+    }
+    
+    public boolean isTouchUp() {
+        return isValid() && mInteractionType == InteractionType.TOUCH_UP;
     }
 }

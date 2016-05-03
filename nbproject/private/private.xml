@@ -3,16 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/analyzer/WriteAnalysisResume.java</file>
-            <file>file:/Users/matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/filereader/SettingsReader.java</file>
-            <file>file:/Users/matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/utils/ScreenObject.java</file>
-            <file>file:/Users/matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/exercise/Survey.java</file>
-            <file>file:/Users/matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/ISenseStressAnalyzer.java</file>
-            <file>file:/Users/matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/analyzer/SurveyAnalyzer.java</file>
-            <file>file:/Users/matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/tester/Tester.java</file>
-            <file>file:/Users/matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/dataanalysis/StressNoStressData.java</file>
-            <file>file:/Users/matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/analyzer/WriteAnalyzer.java</file>
-            <file>file:/Users/matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/analyzer/SearchAnalyzer.java</file>
+            <file>file:/Users/Matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/dataanalysis/StressorTouchesPositionFeatures.java</file>
+            <file>file:/Users/Matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/exercise/Write.java</file>
+            <file>file:/Users/Matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/ISenseStressAnalyzer.java</file>
+            <file>file:/Users/Matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/interaction/NumberPickerInteraction.java</file>
+            <file>file:/Users/Matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/outputwriter/HeatmapWriter.java</file>
+            <file>file:/Users/Matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/outputwriter/StressorHeatmapWriter.java</file>
+            <file>file:/Users/Matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/heatmap/HeatMapCreator.java</file>
+            <file>file:/Users/Matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/heatmap/StressorTouchesHeatmapCreator.java</file>
+            <file>file:/Users/Matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/heatmap/WriteTouchesHeatmapCreator.java</file>
         </group>
     </open-files>
 </project-private>

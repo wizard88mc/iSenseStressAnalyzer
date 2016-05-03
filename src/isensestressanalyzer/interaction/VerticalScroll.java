@@ -9,11 +9,12 @@ import java.util.ArrayList;
  * 
  * @author Matteo Ciman
  */
-public class VerticalScroll extends Scroll 
-{
+public class VerticalScroll extends Scroll {
+    
     public VerticalScroll(long startTimestamp, long endTimestamp, 
-            ArrayList<Interaction> mListInteraction, ArrayList<ScrollMovement> movements)
-    {
+        ArrayList<Interaction> mListInteraction, 
+        ArrayList<ScrollMovement> movements) {
+        
         super(startTimestamp, endTimestamp, mListInteraction, movements);
     }
     

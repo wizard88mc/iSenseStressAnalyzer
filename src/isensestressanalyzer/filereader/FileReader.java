@@ -10,19 +10,19 @@ import java.util.List;
  *
  * @author Matteo Ciman
  */
-public class FileReader 
-{
+public class FileReader  {
+    
     public static final String FOLDER_WITH_DATA = "data";
     protected File file = null;
     protected BufferedReader reader = null;
     
-    public FileReader(String filename)
-    {
+    public FileReader(String filename) {
+        
         file = new File(FOLDER_WITH_DATA + File.separator + filename + ".csv");
     }
     
-    public FileReader(String IMEI, String data, String postFix)
-    {
+    public FileReader(String IMEI, String data, String postFix) {
+        
         file = new File(FOLDER_WITH_DATA + File.separator 
                 + IMEI + File.separator
                 + IMEI + "_" + data + "_" + postFix + ".csv");
@@ -32,8 +32,7 @@ public class FileReader
      * Opens the file to read
      * @throws FileNotFoundException 
      */
-    public void openFile() throws FileNotFoundException
-    {
+    public void openFile() throws FileNotFoundException {
         reader = new BufferedReader(new java.io.FileReader(file));
     }
     
@@ -41,16 +40,14 @@ public class FileReader
      * Reads a line from the file
      * @return the current line if any, otherwise null
      */
-    public String readLine()
-    {
-        try
-        {
+    public String readLine() {
+        
+        try {
             return reader.readLine();
         }
-        catch(IOException exc)
-        {
+        catch(IOException exc) {
             System.out.println(exc.toString());
-           exc.printStackTrace();
+            exc.printStackTrace();
             return null;
         }
     }
@@ -58,14 +55,12 @@ public class FileReader
     /**
      * Closes the current BufferedReader
      */
-    public void closeFile()
-    {
-        try 
-        {
+    public void closeFile() {
+        
+        try {
             reader.close();
         }
-        catch(IOException exc)
-        {
+        catch(IOException exc) {
             System.out.println(exc.toString());
             exc.printStackTrace();
         }
@@ -80,8 +75,7 @@ public class FileReader
      * @return the title string to look for
      */
     protected String buildStringForExerciseTitle(int exerciseNumber, 
-            String exercise, boolean stress)
-    {
+            String exercise, boolean stress) {
         return "Exercise " + exerciseNumber + ": " + exercise + "(" + stress + ")";
     }
     
@@ -90,8 +84,7 @@ public class FileReader
      * @param repetition the number of the repetition
      * @return the String of the repetition
      */
-    protected String buildStringForRepetition(int repetition)
-    {
+    protected String buildStringForRepetition(int repetition) {
         return "REPETITION " + repetition;
     }
     
@@ -103,12 +96,11 @@ public class FileReader
      * @param startIndex the starting point to search
      * @return the index for the searched string, -1 otherwise
      */
-    protected int searchForStringInList(String string, List<String> lines, int startIndex)
-    {
-        for (int i = startIndex; i < lines.size(); i++)
-        {
-            if (lines.get(i).equals(string))
-            {
+    protected int searchForStringInList(String string, List<String> lines, 
+            int startIndex) {
+        
+        for (int i = startIndex; i < lines.size(); i++) {
+            if (lines.get(i).equals(string)) {
                 return i;
             }
         }

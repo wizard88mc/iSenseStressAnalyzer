@@ -257,49 +257,44 @@ public class Search extends Exercise
          */
         int startIndexTouch = -1; int endIndexTouch = -1;
         for (int i = 0; i < touchInteractions.size() && (startIndexTouch == -1 || 
-                endIndexTouch == -1); i++)
-        {
+                endIndexTouch == -1); i++) {
+            
             if (startIndexTouch == -1 && 
-                    touchInteractions.get(i).contains(startTimestamp))
-            {
+                    touchInteractions.get(i).contains(startTimestamp)) {
                 startIndexTouch = i;
             }
-            if (touchInteractions.get(i).contains(endTimestamp))
-            {
+            if (touchInteractions.get(i).contains(endTimestamp)) {
                 endIndexTouch = i;
             }
         }
         
         if (startIndexTouch != -1 && endIndexTouch != -1
-                && startTimestamp != "" && endTimestamp != "")
-        {
-            for (int i = startIndexTouch; i <= endIndexTouch; i++)
-            {
+            && !startTimestamp.equals("") && !endTimestamp.equals("")) {
+            
+            for (int i = startIndexTouch; i <= endIndexTouch; i++) {
                 listInteractions.add(new Interaction(touchInteractions.get(i)));
             }
 
-            try 
-            {
-            if (vertical)
-            {
-                return new VerticalScroll(Long.valueOf(startTimestamp), 
-                        Long.valueOf(endTimestamp), listInteractions, 
-                        scrollMovements);
+            try {
+                if (vertical) {
+                    
+                    return new VerticalScroll(Long.valueOf(startTimestamp), 
+                            Long.valueOf(endTimestamp), listInteractions, 
+                            scrollMovements);
+                }
+                else {
+                    
+                    return new HorizontalScroll(Long.valueOf(startTimestamp), 
+                            Long.valueOf(endTimestamp), listInteractions, 
+                            scrollMovements);
+                }
             }
-            else
-            {
-                return new HorizontalScroll(Long.valueOf(startTimestamp), 
-                        Long.valueOf(endTimestamp), listInteractions, 
-                        scrollMovements);
-            }
-            }catch(Exception exc)
-            {
+            catch(Exception exc) {
                 exc.printStackTrace();
                 return null;
             }
         }
-        else 
-        {
+        else {
             return null;
         }
     }
@@ -308,8 +303,7 @@ public class Search extends Exercise
      * The touches on the icons
      * @return 
      */
-    public ArrayList<Touch> getClickOnIcons()
-    {
+    public ArrayList<Touch> getClickOnIcons() {
         return this.clicksOnIcons;
     }
     
@@ -317,8 +311,7 @@ public class Search extends Exercise
      * 
      * @return the scroll events on the screen
      */
-    public ArrayList<Scroll> getScrollEvents()
-    {
+    public ArrayList<Scroll> getScrollEvents() {
         return this.mListScroll;
     }
     
@@ -326,13 +319,13 @@ public class Search extends Exercise
      * Calculates pressure data when clicking on icons
      * @return BasicDataStatistic object with pressure data
      */
-    public BasicDataStatistic getAveragePressureBasicData()
-    {
+    public BasicDataStatistic getAveragePressureBasicData() {
+        
         ArrayList<Double> pressure = new ArrayList<>();
-        for (Touch touch: clicksOnIcons)
-        {
+        for (Touch touch: clicksOnIcons) {
             pressure.add(touch.getPressureBasicData().getAverage());
         }
+        
         return new BasicDataStatistic(pressure, false);
     }
     
@@ -340,11 +333,9 @@ public class Search extends Exercise
      * Calculates size data when clicking on icons
      * @return BasicDataStatistic object with size data
      */
-    public BasicDataStatistic getAverageSizeBasicData()
-    {
+    public BasicDataStatistic getAverageSizeBasicData() {
         ArrayList<Double> size = new ArrayList<>();
-        for (Touch touch: clicksOnIcons)
-        {
+        for (Touch touch: clicksOnIcons) {
             size.add(touch.getSizeBasicData().getAverage());
         }
         return new BasicDataStatistic(size, false);
@@ -354,11 +345,9 @@ public class Search extends Exercise
      * Calculates movement data when clicking on icons
      * @return BasicDataStatistic object with movement information
      */
-    public BasicDataStatistic getAverageMovementClicksBasicData()
-    {
+    public BasicDataStatistic getAverageMovementClicksBasicData() {
         ArrayList<Double> movement = new ArrayList<>();
-        for (Touch touch: clicksOnIcons)
-        {
+        for (Touch touch: clicksOnIcons) {
             movement.add(touch.getTouchMovement());
         }
         return new BasicDataStatistic(movement, false);
@@ -374,12 +363,12 @@ public class Search extends Exercise
     	ArrayList<Double> averagePressureData = new ArrayList<>();
     	
     	for (Scroll scroll: mListScroll) {
-    		if (vertical && scroll instanceof VerticalScroll) {
-    			averagePressureData.add(scroll.calculateAveragePressure());
-    		}
-    		else if (!vertical && scroll instanceof HorizontalScroll) {
-    			averagePressureData.add(scroll.calculateAveragePressure());
-    		}
+            if (vertical && scroll instanceof VerticalScroll) {
+                averagePressureData.add(scroll.calculateAveragePressure());
+            }
+            else if (!vertical && scroll instanceof HorizontalScroll) {
+                averagePressureData.add(scroll.calculateAveragePressure());
+            }
     	}
     	return new BasicDataStatistic(averagePressureData, true);
     }
@@ -389,24 +378,22 @@ public class Search extends Exercise
     	ArrayList<Double> averageSizeData = new ArrayList<>();
     	
     	for (Scroll scroll: mListScroll) {
-    		if (vertical && scroll instanceof VerticalScroll) {
-    			averageSizeData.add(scroll.calculateAverageSize());
-    		}
-    		else if (!vertical && scroll instanceof HorizontalScroll) {
-    			averageSizeData.add(scroll.calculateAverageSize());
-    		}
+            if (vertical && scroll instanceof VerticalScroll) {
+                averageSizeData.add(scroll.calculateAverageSize());
+            }
+            else if (!vertical && scroll instanceof HorizontalScroll) {
+                averageSizeData.add(scroll.calculateAverageSize());
+            }
     	}
     	return new BasicDataStatistic(averageSizeData, true);
     }
     
-    public BasicDataStatistic getScrollDeltaDataVertical()
-    {
+    public BasicDataStatistic getScrollDeltaDataVertical() {
+        
         ArrayList<Double> scrollDeltaData = new ArrayList<>();
         
-        for (Scroll scroll: mListScroll)
-        {
-            if (scroll instanceof VerticalScroll)
-            {
+        for (Scroll scroll: mListScroll) {
+            if (scroll instanceof VerticalScroll) {
                 scrollDeltaData.add(scroll.calculateScrollDelta());
             }
         }
@@ -414,14 +401,12 @@ public class Search extends Exercise
         return new BasicDataStatistic(scrollDeltaData, true);
     }
     
-    public BasicDataStatistic getScrollDeltaDataHorizontal()
-    {
+    public BasicDataStatistic getScrollDeltaDataHorizontal() {
+        
         ArrayList<Double> scrollDeltaData = new ArrayList<>();
         
-        for (Scroll scroll: mListScroll)
-        {
-            if (scroll instanceof HorizontalScroll)
-            {
+        for (Scroll scroll: mListScroll) {
+            if (scroll instanceof HorizontalScroll) {
                 scrollDeltaData.add(scroll.calculateScrollDelta());
             }
         }
@@ -429,111 +414,99 @@ public class Search extends Exercise
         return new BasicDataStatistic(scrollDeltaData, true);
     }
     
-    public BasicDataStatistic getScrollTimeLengthData(boolean horizontal)
-    {
+    public BasicDataStatistic getScrollTimeLengthData(boolean horizontal) {
+        
         ArrayList<Double> scrollTimeLengthData = new ArrayList<>();
         
-        for (Scroll scroll: mListScroll)
-        {
-            if (!horizontal && (scroll instanceof VerticalScroll))
-            {
+        for (Scroll scroll: mListScroll) {
+            if (!horizontal && (scroll instanceof VerticalScroll)) {
                 scrollTimeLengthData.add(scroll.calculateScrollTimeLength());
             }
-            else if (horizontal && (scroll instanceof HorizontalScroll))
-            {
+            else if (horizontal && (scroll instanceof HorizontalScroll)) {
                 scrollTimeLengthData.add(scroll.calculateScrollTimeLength());
             }
         }
         return new BasicDataStatistic(scrollTimeLengthData, true);
     }
     
-    public BasicDataStatistic getScrollInteractionLengthData(boolean horizontal)
-    {
+    public BasicDataStatistic getScrollInteractionLengthData(boolean horizontal) {
+        
         ArrayList<Double> scrollInteractionLengthData = new ArrayList<>();
         
-        for (Scroll scroll: mListScroll)
-        {
-            if (!horizontal && (scroll instanceof VerticalScroll))
-            {
-                scrollInteractionLengthData.add(scroll.calculateScrollInteractionLength());
+        for (Scroll scroll: mListScroll) {
+            if (!horizontal && (scroll instanceof VerticalScroll)) {
+                scrollInteractionLengthData.add(scroll.
+                    calculateScrollInteractionLength());
             }
-            else if (horizontal && (scroll instanceof HorizontalScroll))
-            {
-                scrollInteractionLengthData.add(scroll.calculateScrollInteractionLength());
+            else if (horizontal && (scroll instanceof HorizontalScroll)) {
+                scrollInteractionLengthData.add(scroll.
+                    calculateScrollInteractionLength());
             }
         }
         return new BasicDataStatistic(scrollInteractionLengthData, true);
     }
     
-    public BasicDataStatistic getSpeedScrollDeltaData(boolean horizontal)
-    {
+    public BasicDataStatistic getSpeedScrollDeltaData(boolean horizontal) {
+        
         ArrayList<Double> speedScrollDeltaData = new ArrayList<>();
         
-        for (Scroll scroll: mListScroll)
-        {
-            if (!horizontal && (scroll instanceof VerticalScroll))
-            {
+        for (Scroll scroll: mListScroll) {
+            if (!horizontal && (scroll instanceof VerticalScroll)) {
                 speedScrollDeltaData.add(scroll.calculateSpeedScrollDelta());
             }
-            else if (horizontal && (scroll instanceof HorizontalScroll))
-            {
+            else if (horizontal && (scroll instanceof HorizontalScroll)) {
                 speedScrollDeltaData.add(scroll.calculateSpeedScrollDelta());
             }
         }
         return new BasicDataStatistic(speedScrollDeltaData, true);
     }
     
-    public BasicDataStatistic getSpeedScrollInteractionData(boolean horizontal)
-    {
+    public BasicDataStatistic getSpeedScrollInteractionData(boolean horizontal) {
         ArrayList<Double> speedScrollInteractionData = new ArrayList<>();
         
-        for (Scroll scroll: mListScroll)
-        {
-            if (!horizontal && (scroll instanceof VerticalScroll))
-            {
-                speedScrollInteractionData.add(scroll.calculateSpeedScrollInteraction());
+        for (Scroll scroll: mListScroll) {
+            if (!horizontal && (scroll instanceof VerticalScroll)) {
+                speedScrollInteractionData.add(scroll.
+                    calculateSpeedScrollInteraction());
             }
-            else if (horizontal && (scroll instanceof HorizontalScroll))
-            {
-                speedScrollInteractionData.add(scroll.calculateSpeedScrollInteraction());
+            else if (horizontal && (scroll instanceof HorizontalScroll)) {
+                speedScrollInteractionData.add(scroll.
+                    calculateSpeedScrollInteraction());
             }
         }
         return new BasicDataStatistic(speedScrollInteractionData, true);
     }
     
     public BasicDataStatistic getMeanDistanceFromCenterData(boolean horizontal, 
-            PhoneSettings settings)
-    {
+            PhoneSettings settings) {
+        
         ArrayList<Double> meanDistanceFromCenterData = new ArrayList<>();
         
-        for (Scroll scroll: mListScroll)
-        {
-            if (!horizontal && (scroll instanceof VerticalScroll))
-            {
-                meanDistanceFromCenterData.add(scroll.meanDistanceFromPoint((int) settings.getScreenWidth() / 2, 
+        for (Scroll scroll: mListScroll) {
+            if (!horizontal && (scroll instanceof VerticalScroll)) {
+                meanDistanceFromCenterData.add(scroll.
+                    meanDistanceFromPoint((int) settings.getScreenWidth() / 2, 
                         (int) settings.getScreenHeight() / 2));
             }
-            else if (horizontal && (scroll instanceof HorizontalScroll))
-            {
-                meanDistanceFromCenterData.add(scroll.meanDistanceFromPoint((int) settings.getScreenWidth() / 2, 
+            else if (horizontal && (scroll instanceof HorizontalScroll)) {
+                
+                meanDistanceFromCenterData.add(scroll.
+                    meanDistanceFromPoint((int) settings.getScreenWidth() / 2, 
                         (int) settings.getScreenHeight() / 2));
             }
         }
         return new BasicDataStatistic(meanDistanceFromCenterData, false);
     }
     
-    public BasicDataStatistic getMeanDistanceFromTopLeftData(boolean horizontal)
-    {
+    public BasicDataStatistic getMeanDistanceFromTopLeftData(boolean horizontal) {
+        
         ArrayList<Double> meanDistanceFromTopLeftData = new ArrayList<>();
         
-        for (Scroll scroll: mListScroll)
-        {
-            if (!horizontal && (scroll instanceof VerticalScroll))
-            {
+        for (Scroll scroll: mListScroll) {
+            if (!horizontal && (scroll instanceof VerticalScroll)) {
                 meanDistanceFromTopLeftData.add(scroll.meanDistanceFromPoint(0, 0));
             }
-            else if (horizontal && (scroll instanceof HorizontalScroll))
-            {
+            else if (horizontal && (scroll instanceof HorizontalScroll)) {
                 meanDistanceFromTopLeftData.add(scroll.meanDistanceFromPoint(0, 0));
             }
         }
@@ -541,38 +514,40 @@ public class Search extends Exercise
     }
     
     public BasicDataStatistic getLinearityData(boolean horizontal, 
-            PhoneSettings settings)
-    {
+            PhoneSettings settings) {
+        
         ArrayList<Double> linearityData = new ArrayList<>();
         
-        for (Scroll scroll: mListScroll)
-        {
-            if (!horizontal && (scroll instanceof VerticalScroll))
-            {
-                linearityData.add(scroll.calculateLinearity((int) settings.getScreenWidth()));
+        for (Scroll scroll: mListScroll) {
+            if (!horizontal && (scroll instanceof VerticalScroll)) {
+                linearityData.add(scroll.
+                    calculateLinearity((int) settings.getScreenWidth()));
             }
-            else if (horizontal && (scroll instanceof HorizontalScroll))
-            {
-                linearityData.add(scroll.calculateLinearity((int) settings.getScreenHeight()));
+            else if (horizontal && (scroll instanceof HorizontalScroll)) {
+                
+                linearityData.add(scroll.
+                    calculateLinearity((int) settings.getScreenHeight()));
             }
         }
         return new BasicDataStatistic(linearityData, false);
     }
     
     public BasicDataStatistic getLinearityAsSumEveryPointData(boolean horizontal, 
-            PhoneSettings settings)
-    {
+            PhoneSettings settings) {
+        
         ArrayList<Double> linearityAsSumEveryPointData = new ArrayList<>();
         
-        for (Scroll scroll: mListScroll)
-        {
-            if (!horizontal && (scroll instanceof VerticalScroll))
-            {
-                linearityAsSumEveryPointData.add(scroll.calculateLinearityAsSumOfEveryPoint((int) settings.getScreenWidth()));
+        for (Scroll scroll: mListScroll) {
+            if (!horizontal && (scroll instanceof VerticalScroll)) {
+                
+                linearityAsSumEveryPointData.add(scroll.
+                    calculateLinearityAsSumOfEveryPoint(
+                        (int)settings.getScreenWidth()));
             }
-            else if (horizontal && (scroll instanceof HorizontalScroll))
-            {
-                linearityAsSumEveryPointData.add(scroll.calculateLinearityAsSumOfEveryPoint((int) settings.getScreenHeight()));
+            else if (horizontal && (scroll instanceof HorizontalScroll)) {
+                linearityAsSumEveryPointData.add(scroll.
+                    calculateLinearityAsSumOfEveryPoint(
+                        (int) settings.getScreenHeight()));
             }
         }
         return new BasicDataStatistic(linearityAsSumEveryPointData, false);
@@ -589,35 +564,35 @@ public class Search extends Exercise
     	
     	ArrayList<ArrayList<Double>> attributesForAllScrolls = new ArrayList<>();
     	for (Scroll scroll: mListScroll) {
-    		ArrayList<Double> attributes = new ArrayList<>();
-    		if (vertical && scroll instanceof VerticalScroll) {
-    			attributes.add(scroll.calculateAveragePressure());
-    			attributes.add(scroll.calculateAverageSize());
-    			attributes.add(scroll.calculateScrollDelta());
-    			attributes.add(scroll.calculateScrollTimeLength());
-    			attributes.add(scroll.calculateScrollInteractionLength());
-    			attributes.add(scroll.calculateSpeedScrollDelta());
-    			attributes.add(scroll.calculateSpeedScrollInteraction());
-    			attributes.add(scroll.meanDistanceFromPoint((int) settings.getScreenWidth() / 2, (int) settings.getScreenHeight() / 2));
-    			attributes.add(scroll.meanDistanceFromPoint(0, 0));
-    			attributes.add(scroll.calculateLinearity((int) settings.getScreenWidth()));
-    			attributes.add(scroll.calculateLinearityAsSumOfEveryPoint((int) settings.getScreenWidth()));
-    		}
-    		else if (!vertical && scroll instanceof HorizontalScroll) {
-    			attributes.add(scroll.calculateAveragePressure());
-    			attributes.add(scroll.calculateAverageSize());
-    			attributes.add(scroll.calculateScrollDelta());
-    			attributes.add(scroll.calculateScrollTimeLength()); 
-    			attributes.add(scroll.calculateScrollInteractionLength());
-    			attributes.add(scroll.calculateSpeedScrollDelta());
-    			attributes.add(scroll.calculateSpeedScrollInteraction());
-    			attributes.add(scroll.meanDistanceFromPoint((int) settings.getScreenWidth() / 2, (int) settings.getScreenHeight() / 2));
-    			attributes.add(scroll.meanDistanceFromPoint(0, 0));
-    			attributes.add(scroll.calculateLinearity((int) settings.getScreenHeight()));
-    			attributes.add(scroll.calculateLinearityAsSumOfEveryPoint((int) settings.getScreenHeight()));
-    		}
+            ArrayList<Double> attributes = new ArrayList<>();
+            if (vertical && scroll instanceof VerticalScroll) {
+                attributes.add(scroll.calculateAveragePressure());
+                attributes.add(scroll.calculateAverageSize());
+                attributes.add(scroll.calculateScrollDelta());
+                attributes.add(scroll.calculateScrollTimeLength());
+                attributes.add(scroll.calculateScrollInteractionLength());
+                attributes.add(scroll.calculateSpeedScrollDelta());
+                attributes.add(scroll.calculateSpeedScrollInteraction());
+                attributes.add(scroll.meanDistanceFromPoint((int) settings.getScreenWidth() / 2, (int) settings.getScreenHeight() / 2));
+                attributes.add(scroll.meanDistanceFromPoint(0, 0));
+                attributes.add(scroll.calculateLinearity((int) settings.getScreenWidth()));
+                attributes.add(scroll.calculateLinearityAsSumOfEveryPoint((int) settings.getScreenWidth()));
+            }
+            else if (!vertical && scroll instanceof HorizontalScroll) {
+                attributes.add(scroll.calculateAveragePressure());
+                attributes.add(scroll.calculateAverageSize());
+                attributes.add(scroll.calculateScrollDelta());
+                attributes.add(scroll.calculateScrollTimeLength()); 
+                attributes.add(scroll.calculateScrollInteractionLength());
+                attributes.add(scroll.calculateSpeedScrollDelta());
+                attributes.add(scroll.calculateSpeedScrollInteraction());
+                attributes.add(scroll.meanDistanceFromPoint((int) settings.getScreenWidth() / 2, (int) settings.getScreenHeight() / 2));
+                attributes.add(scroll.meanDistanceFromPoint(0, 0));
+                attributes.add(scroll.calculateLinearity((int) settings.getScreenHeight()));
+                attributes.add(scroll.calculateLinearityAsSumOfEveryPoint((int) settings.getScreenHeight()));
+            }
     		
-    		attributesForAllScrolls.add(attributes);
+            attributesForAllScrolls.add(attributes);
     	}
     	
     	return attributesForAllScrolls;
@@ -629,7 +604,7 @@ public class Search extends Exercise
     	if (!vertical) {
     		prefix = "HORIZONTAL";
     	}
-    	ArrayList<String> attributes = new ArrayList<String>();
+    	ArrayList<String> attributes = new ArrayList<>();
     	attributes.add(prefix + "_AVERAGE_PRESSURE");
     	attributes.add(prefix + "_AVERAGE_SIZE");
     	attributes.add(prefix + "_SCROLL_DELTA");

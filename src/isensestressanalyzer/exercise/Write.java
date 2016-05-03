@@ -7,6 +7,7 @@ import isensestressanalyzer.interaction.Digit;
 import isensestressanalyzer.interaction.Interaction;
 import isensestressanalyzer.utils.KeyboardKeyObject;
 import isensestressanalyzer.utils.ScreenObject;
+import isensestressanalyzer.utils.ViewKeyboard;
 
 /**
  * class Writing
@@ -17,13 +18,14 @@ import isensestressanalyzer.utils.ScreenObject;
  * @version 0.1
  * @since   2014-10-16
  */
-public class Write extends Exercise 
-{
+public class Write extends Exercise {
+    
+    private ViewKeyboard keyboard;
     private ArrayList<Digit> digits = null;
     
-    public Write(int order, boolean stress, int repetition, 
-            int subRepetition, String[] additionalV) 
-    {
+    public Write(int order, boolean stress, int repetition, int subRepetition, 
+        String[] additionalV) {
+        
         super(order, ExerciseType.WRITE, stress, repetition, subRepetition,
                 additionalV);
     }
@@ -32,8 +34,7 @@ public class Write extends Exercise
      * Returns the total words to write
      * @return number of words to write
      */
-    public String getTotalWords()
-    {
+    public String getTotalWords() {
         return additionalValues.get(0);
     }
     
@@ -41,8 +42,7 @@ public class Write extends Exercise
      * Returns the number of the correct words written by the user
      * @return number of correct words
      */
-    public String getTotalCorrectWords()
-    {
+    public String getTotalCorrectWords() {
         return additionalValues.get(1);
     }
     
@@ -50,8 +50,7 @@ public class Write extends Exercise
      * Returns the number of wrong words written by the user
      * @return number of wrong words
      */
-    public String getTotalErrors()
-    {
+    public String getTotalErrors() {
         return additionalValues.get(2);
     }
     
@@ -60,8 +59,7 @@ public class Write extends Exercise
      * a character
      * @return the number of times the back buttons was pressed
      */
-    public String getNumberBackButton()
-    {
+    public String getNumberBackButton() {
         return additionalValues.get(3);
     }
     
@@ -70,8 +68,7 @@ public class Write extends Exercise
      * digits
      * @return back_digit / total_digits
      */
-    public Double getRatioBackButtonsOverDigits()
-    {
+    public Double getRatioBackButtonsOverDigits() {
         return Double.valueOf(additionalValues.get(3)) / digits.size();
     }
     
@@ -79,8 +76,7 @@ public class Write extends Exercise
      * Returns the text to write
      * @return the text to write
      */
-    public String getTextToWrite()
-    {
+    public String getTextToWrite() {
         return additionalValues.get(4);
     }
     
@@ -88,8 +84,7 @@ public class Write extends Exercise
      * Returns the text written by the user
      * @return the written text
      */
-    public String getWrittenText()
-    {
+    public String getWrittenText() {
         return additionalValues.get(5);
     }
     
@@ -99,9 +94,79 @@ public class Write extends Exercise
      * information about the digits
      * @param protocol the protocol we are currently considering
      */
-    public void completeDataAcquisition(Protocol protocol)
-    {
+    @Override
+    public void completeDataAcquisition(Protocol protocol) {
+        
         super.completeDataAcquisition(protocol);
+        
+        ArrayList<String> additionalInformationFromLayoutFile = 
+            ISenseStressAnalyzer.mLayoutReader.
+                retrieveAllLayoutInformationPerExercisePerRepetition(protocol, 
+                    order, getBasicString(), stress, repetition);
+        
+        screenObjects = new ArrayList<>();
+        
+        for (String data: additionalInformationFromLayoutFile) {
+            
+            data = replaceDelimiter(data);
+            String elements[] = data.split(",");
+            // Add null at the end of the string if it terminates with a comma
+            if (elements.length != 8) {
+                
+               data += "null";
+               elements = data.split(",");
+            }
+            /**
+             * elements[0]: ID
+             * elements[1]: complete class
+             * elements[2]: x position
+             * elements[3]: y position
+             * elements[4]: width
+             * elements[5]: height
+             * elements[6]: visibility
+             * elements[7]: text / null
+             */
+            /**
+             * The elements is a keyboard object
+             */
+            if (elements[1].contains("KeyboardViewWithInfo")) {
+                
+                keyboard = new ViewKeyboard(Float.valueOf(elements[2]), 
+                    Float.valueOf(elements[3]), Integer.valueOf(elements[4]), 
+                    Integer.valueOf(elements[5]));
+            }
+            
+            /**
+             * The element is a key of the keyboard
+             */
+            if (elements[1].contains("inputmethodservice.Keyboard")) {
+                
+                keyboard.addKey(new KeyboardKeyObject(keyboard, 
+                    Double.valueOf(elements[0]), elements[1], 
+                    Float.valueOf(elements[2]), Float.valueOf(elements[3]), 
+                    Integer.valueOf(elements[4]), Integer.valueOf(elements[5]), 
+                    Integer.valueOf(elements[6]), elements[7]));
+            }
+            /**
+             * Generic object
+             */
+            else if (elements.length == 8) {
+                
+                screenObjects.add(new ScreenObject(Double.valueOf(elements[0]), 
+                    elements[1], Float.valueOf(elements[2]), Float.valueOf(elements[3]), 
+                    Integer.valueOf(elements[4]), Integer.valueOf(elements[5]), 
+                    Integer.valueOf(elements[6]), elements[7]));
+            }
+        }
+        
+        retrieveDigits(protocol);
+    }
+    
+    /**
+     * Retrieves all the digits during the exercise
+     * @param protocol the protocol of the exercise
+     */
+    private void retrieveDigits(Protocol protocol) {
         
         ArrayList<String> touchInteractionsFromTouchFile = 
                 ISenseStressAnalyzer.mTouchReader
@@ -110,10 +175,9 @@ public class Write extends Exercise
         
         digits = new ArrayList<>();
         
-        for (int i = 0; i < touchInteractionsFromTouchFile.size(); i++)
-        {
-            if (touchInteractionsFromTouchFile.get(i).contains("DIGIT"))
-            {
+        for (int i = 0; i < touchInteractionsFromTouchFile.size(); i++) {
+            
+            if (touchInteractionsFromTouchFile.get(i).contains("DIGIT")) {
                 digits.add(createDigit(touchInteractionsFromTouchFile, i));
             }
         }
@@ -127,35 +191,45 @@ public class Write extends Exercise
      * @param index the index to from from backward to build digit info
      * @return a new Digit object with the information about the digit
      */
-    public Digit createDigit(ArrayList<String> touchInteractions, int index)
-    {
+    private Digit createDigit(ArrayList<String> touchInteractions, int index) {
+        
         int startingPoint = index;
         boolean found = false;
         
-        for (int i = index - 1; i >= 0 && !found; i--)
-        {
-            if (touchInteractions.get(i).startsWith("0,"))
-            {
+        for (int i = index - 1; i >= 0 && !found; i--){
+            
+            if (touchInteractions.get(i).startsWith("0,")) {
+                
                 found = true; startingPoint = i;
             }
         }
         
         ArrayList<Interaction> interactions = new ArrayList<>();
         
-        for (int i = startingPoint; i < index; i++)
-        {
+        for (int i = startingPoint; i < index; i++) {
+            
             interactions.add(new Interaction(touchInteractions.get(i)));
         }
         
-        return new Digit((touchInteractions.get(index).split(","))[1], interactions);
+        String text = (touchInteractions.get(index).split(",")[1]).toLowerCase();
+        if (text.equals(" ")) {
+            text = "space";
+        }
+        if (text.equals(".")) {
+            text = "dot";
+        }
+        if (text.equals(",")) {
+            text = "comma";
+        }
+        
+        return new Digit(keyboard.getKeyObject(text), interactions);
     }
     
     /**
      * Returns all the digits of the exercise
      * @return the digits of the exercise
      */
-    public ArrayList<Digit> getDigits()
-    {
+    public ArrayList<Digit> getDigits() {
         return this.digits;
     }
     
@@ -163,13 +237,14 @@ public class Write extends Exercise
      * Calculates the data statistic for pressure information
      * @return BasicDataStatistic built with pressure information
      */
-    public BasicDataStatistic getPressionDigitsBasicData()
-    {
+    public BasicDataStatistic getPressionDigitsBasicData() {
+        
         ArrayList<Double> pressures = new ArrayList<>();
-        for (Digit digit: digits)
-        {
+        for (Digit digit: digits) {
+            
             pressures.add(digit.getPressureBasicData().getAverage());
         }
+        
         return new BasicDataStatistic(pressures, false);
     }
     
@@ -177,11 +252,10 @@ public class Write extends Exercise
      * Calculates the data statistics for size information
      * @return BasicDataStatistic built with size information
      */
-    public BasicDataStatistic getSizeDigitsBasicData()
-    {
+    public BasicDataStatistic getSizeDigitsBasicData() {
+        
         ArrayList<Double> sizes = new ArrayList<>();
-        for (Digit digit: digits)
-        {
+        for (Digit digit: digits) {
             sizes.add(digit.getSizeBasicData().getAverage());
         }
         return new BasicDataStatistic(sizes, false);
@@ -202,11 +276,10 @@ public class Write extends Exercise
      * Calculates the data statistic for the movement information
      * @return BasicDataStatistic built with movement information
      */
-    public BasicDataStatistic getMovementDigitsBasicData()
-    {
+    public BasicDataStatistic getMovementDigitsBasicData() {
+        
         ArrayList<Double> movements = new ArrayList<>();
-        for (Digit digit: digits)
-        {
+        for (Digit digit: digits) {
             movements.add(digit.getTouchMovement());
         }
         return new BasicDataStatistic(movements, false);
@@ -216,11 +289,10 @@ public class Write extends Exercise
      * Calculates the data statistic for the duration information
      * @return BasicDataStatistic built with duration information
      */
-    public BasicDataStatistic getDurationDigitsBasicData()
-    {
+    public BasicDataStatistic getDurationDigitsBasicData() {
+        
         ArrayList<Double> durations = new ArrayList<>();
-        for (Digit digit: digits)
-        {
+        for (Digit digit: digits) {
             durations.add(digit.getTouchDuration());
         }
         return new BasicDataStatistic(durations, false);
@@ -230,16 +302,14 @@ public class Write extends Exercise
      * Calculates the data statistic for the touch precision information
      * @return BasicDataStatistic built with precision information
      */
-    public BasicDataStatistic getTouchPrecisionDigitsBasicData()
-    {
+    public BasicDataStatistic getTouchPrecisionDigitsBasicData() {
+        
         ArrayList<Double> precisions = new ArrayList<>();
-        for (Digit digit: digits)
-        {
+        for (Digit digit: digits) {
+            
             KeyboardKeyObject digitObjectClicked = findKeyboardKeyForDigit(digit);
-            if (digitObjectClicked != null)
-            {
+            if (digitObjectClicked != null) {
                 precisions.add((double) digitObjectClicked.rateTouch(digit));
-                
             }
         }
         return new BasicDataStatistic(precisions, false);
@@ -251,15 +321,14 @@ public class Write extends Exercise
      * @return an evaluation of the digit of the exercise (sum of the points of 
      * each interaction / total number of interactions)
      */
-    public Double rateTouchPrecisionExercise()
-    {
+    public Double rateTouchPrecisionExercise() {
+        
         double rate = 0;
         double maxRate = 0;
-        for (Digit digit: digits)
-        {
+        for (Digit digit: digits) {
+            
             KeyboardKeyObject digitObjectClicked = findKeyboardKeyForDigit(digit);
-            if (digitObjectClicked != null)
-            {
+            if (digitObjectClicked != null) {
                 rate += digitObjectClicked.rateTouch(digit);
                 maxRate += 1;
             }
@@ -267,13 +336,12 @@ public class Write extends Exercise
         return rate / maxRate;
     }
     
-    private KeyboardKeyObject findKeyboardKeyForDigit(Digit digit)
-    {
-        for (ScreenObject screenObject: screenObjects)
-        {
+    private KeyboardKeyObject findKeyboardKeyForDigit(Digit digit) {
+        
+        for (ScreenObject screenObject: screenObjects) {
+            
             if (screenObject instanceof KeyboardKeyObject
-                    && screenObject.getText().equals(digit.getDigitText()))
-            {
+                && screenObject.getText().equals(digit.getDigitText())) {
                 return (KeyboardKeyObject) screenObject;
             }
         }
@@ -284,10 +352,10 @@ public class Write extends Exercise
      * calculates the frequency of digits
      * @return writing time / number of digits
      */
-    public Double calculateDigitsFrequency()
-    {
+    public Double calculateDigitsFrequency() {
+        
         long deltaTime = digits.get(digits.size() - 1).getDigitEnd() - 
-                digits.get(0).getDigitStart();
+            digits.get(0).getDigitStart();
         
         return (double) deltaTime / (double) digits.size();
     }
@@ -297,14 +365,17 @@ public class Write extends Exercise
      * @param character the character to search for
      * @return a list of digits, empty in case of no digits found
      */
-    public ArrayList<Digit> retrieveAllDigitsForAParticularCharacter(String character) {
+    public ArrayList<Digit> getAllDigitsForAParticularCharacter(String character) {
     	
+        if (character.contains("space") || character.contains(" ")) {
+            System.out.println("Space");
+        }
     	ArrayList<Digit> list = new ArrayList<>();
     	
     	for (Digit digit: digits) {
-    		if (digit.getDigitText().equals(character)) {
-    			list.add(digit);
-    		}
+            if (digit.getDigitText().equals(character)) {
+                list.add(digit);
+            }
     	}
     	
     	return list;

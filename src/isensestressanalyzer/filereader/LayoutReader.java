@@ -30,12 +30,12 @@ public class LayoutReader extends FileReader
      */
     public ArrayList<String> retrieveAllLayoutInformationPerExercisePerRepetition(
         Protocol protocol, int exerciseNumber, String exercise, boolean stress, 
-            int repetition)
-    {
+            int repetition) {
+        
         ArrayList<String> layoutInfo = new ArrayList<>();
         
-        try
-        {
+        try {
+            
             openFile();
             
             String titleExerciseLookingFor = buildStringForExerciseTitle(exerciseNumber, 
@@ -49,15 +49,13 @@ public class LayoutReader extends FileReader
             while (!readLine().contains(repetitionLooginkFor)) {}
             
             String line;
-            while ((line = readLine()) != null && !line.contains("*"))
-            {
+            while ((line = readLine()) != null && !line.contains("*")) {
                 layoutInfo.add(line);
             }
             
             closeFile();
         }
-        catch(FileNotFoundException exc)
-        {
+        catch(FileNotFoundException exc) {
             System.out.println(exc.toString());
             exc.printStackTrace();
         }
