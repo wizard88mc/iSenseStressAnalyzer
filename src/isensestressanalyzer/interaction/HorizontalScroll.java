@@ -10,8 +10,9 @@ import java.util.ArrayList;
 public class HorizontalScroll extends Scroll
 {
     public HorizontalScroll(long startTimestamp, long endTimestamp, 
-            ArrayList<Interaction> mListInteraction, ArrayList<ScrollMovement> movements)
-    {
+            ArrayList<Interaction> mListInteraction, 
+            ArrayList<ScrollMovement> movements) {
+        
         super(startTimestamp, endTimestamp, mListInteraction, movements);
     }
     
@@ -22,16 +23,16 @@ public class HorizontalScroll extends Scroll
      * @return the linearity of the scroll
      */
     @Override
-    public Double calculateLinearity(int height)
-    {
-        if (mListInteraction.isEmpty())
-        {
+    public Double calculateLinearity(int height) {
+        
+        if (mListInteraction.isEmpty()) {
             return null;
         }
         Point firstPoint = mListInteraction.get(0).getPoint(),
                 endPoint = mListInteraction.get(mListInteraction.size() - 1).getPoint();
         
-        return (double) Math.abs(firstPoint.getY() - endPoint.getY()); // (float) height;
+        return (double) Math.abs(firstPoint.getY() - endPoint.getY()) / 
+                (double) height; // (float) height;
     }
     
     /**
@@ -42,17 +43,17 @@ public class HorizontalScroll extends Scroll
      * element
      */
     @Override
-    public Double calculateLinearityAsSumOfEveryPoint(int height)
-    {
+    public Double calculateLinearityAsSumOfEveryPoint(int height) {
+        
         double sum = 0; 
-        for (int i = 1; i < mListInteraction.size(); i++)
-        {
+        for (int i = 1; i < mListInteraction.size(); i++) {
+            
             Point before = mListInteraction.get(i - 1).getPoint(),
                     current = mListInteraction.get(i).getPoint();
             
             sum += Math.abs(current.getY() - before.getY());
         }
         
-        return sum; // (float) height;
+        return sum / (double) height; // (float) height;
     }
 }

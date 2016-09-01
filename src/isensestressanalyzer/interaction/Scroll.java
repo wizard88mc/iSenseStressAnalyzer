@@ -54,10 +54,10 @@ public class Scroll {
     	double mean = 0; int counter = 0;
     	
     	for (Interaction interaction: mListInteraction) {
-    		if (interaction.size != 0.0) {
-    			mean += interaction.size;
-    			counter++;
-    		}
+            if (interaction.size != 0.0) {
+                mean += interaction.size;
+                    counter++;
+            }
     	}
     	
     	return mean / counter;
@@ -72,7 +72,7 @@ public class Scroll {
      */
     public double calculateScrollDelta() {
         ScrollMovement first = mListScrollMovement.get(0),
-                last = mListScrollMovement.get(mListScrollMovement.size() - 1);
+            last = mListScrollMovement.get(mListScrollMovement.size() - 1);
         
         return (Math.abs(first.getOldTop() - last.getTop()) + 
                 Math.abs(first.getOldLeft() - last.getLeft()));
@@ -96,10 +96,10 @@ public class Scroll {
         double length = 0; 
         for (int i = 0; i < mListInteraction.size() - 1; i++) {
             Point first = mListInteraction.get(i).getPoint(), 
-                    second = mListInteraction.get(i + 1).getPoint();
+                second = mListInteraction.get(i + 1).getPoint();
             
             length += Math.sqrt(Math.pow(second.getX() - first.getX(), 2) + 
-                    Math.pow(second.getY() - first.getY(), 2));
+                Math.pow(second.getY() - first.getY(), 2));
         }
         return length;
     }

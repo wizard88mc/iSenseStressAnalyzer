@@ -1,0 +1,39 @@
+#!/bin/sh
+### job name
+#PBS -N iSenseStressAnalyzer
+
+### Programma non-rerunable
+#PBS -r n
+
+### Manda un'e-mail a esecuzione terminata:
+#PBS -m ae
+#PBS -M Matteo.Ciman@unige.ch
+
+### Redirezione dello standard output e standard error del programma
+#PBS -e localhost:${HOME}/iSenseStressAnalyzer/print/output.err
+#PBS -o localhost:${HOME}/iSenseStressAnalyzer/print/output.out
+
+### Coda batch
+#PBS -q batch
+
+### Memoria che ci si aspetta che il programma utilizzi
+#PBS -l mem=4g
+
+### Limite di tempo che vogliamo assegnare al nostro job
+#PBS -l walltime=48:00:00
+
+###
+### Mi sposto nella directory di lavoro
+cd ${HOME}/iSenseStressAnalyzer/
+
+### Alcuni comandi di shell che ci spostano nella nostra directory e stampano lo stato 
+### del sistema prima dell'esecuzione
+echo Host di esecuzione: `hostname`
+echo Data: `date`
+echo Directory: `pwd`
+echo Questo job viene eseguito sui seguenti nodi:
+echo `cat $PBS_NODEFILE`
+echo PBS_WORKDIR=$PBS_WORKDIR
+
+### Esecuzione programma
+java -jar iSenseStressAnalyzer.jar 2

@@ -242,16 +242,16 @@ public class Tester {
                 this.getName() + File.separator + "VerticalHorizontalScroll.arff");
 
             if (!fileVertical.exists()) {
-                    fileVertical.getParentFile().mkdirs();
-                    fileVertical.createNewFile();
+                fileVertical.getParentFile().mkdirs();
+                fileVertical.createNewFile();
             }
             if (!fileHorizontal.exists()) {
-                    fileVertical.getParentFile().mkdirs();
-                    fileHorizontal.createNewFile();
+                fileVertical.getParentFile().mkdirs();
+                fileHorizontal.createNewFile();
             }
             if (!fileVerticalHorizontal.exists()) {
-                    fileVerticalHorizontal.getParentFile().mkdirs();
-                    fileVerticalHorizontal.createNewFile();
+                fileVerticalHorizontal.getParentFile().mkdirs();
+                fileVerticalHorizontal.createNewFile();
             }
 
             BufferedWriter writerVertical = 

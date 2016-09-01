@@ -26,7 +26,7 @@ public class SearchAnalyzer extends Analyzer {
         "Linearity vertical", "Linearity horizontal", "Linearity sum every point vertical", 
         "Linearity sum every point horizontal"};
     
-    private static final int[] featuresPassesSingleTest = new int[]{0, 0, 0, 0, 0, 
+    private static final int[] FEATURES_PASSES_SINGLE_TEST = new int[]{0, 0, 0, 0, 0, 
     	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     private static int totalTesters = 0;
     private final ArrayList<SearchAnalysisResume> noStressResumes = new ArrayList<>();
@@ -973,7 +973,7 @@ public class SearchAnalyzer extends Analyzer {
         
         for (int i = 0; i < results.length; i++) {
             if (results[i]) {
-                featuresPassesSingleTest[i]++;
+                FEATURES_PASSES_SINGLE_TEST[i]++;
             }
         }
         totalTesters++;
@@ -983,8 +983,8 @@ public class SearchAnalyzer extends Analyzer {
     	
     	for (int i = 0; i < FEATURES_NAMES.length; i++) {
             System.out.println(FEATURES_NAMES[i] + ": " + 
-                featuresPassesSingleTest[i] + "/" + totalTesters + "(" + 
-                featuresPassesSingleTest[i] * 100 / totalTesters + ")");
+                FEATURES_PASSES_SINGLE_TEST[i] + "/" + totalTesters + "(" + 
+                FEATURES_PASSES_SINGLE_TEST[i] * 100 / totalTesters + ")");
     	}
     }
 }

@@ -1,9 +1,5 @@
 package isensestressanalyzer.heatmap;
 
-import isensestressanalyzer.outputwriter.HeatmapWriter;
-import isensestressanalyzer.ISenseStressAnalyzer;
-import isensestressanalyzer.exercise.Write;
-import isensestressanalyzer.filereader.DigitsHeatmapReader;
 import isensestressanalyzer.interaction.Digit;
 import isensestressanalyzer.interaction.Interaction;
 import isensestressanalyzer.tester.Tester;
@@ -24,8 +20,6 @@ public class HeatMapCreator {
         this.tester = tester;
     }
     
-    
-    
     /**
      * For each digit, it completes the heatmap adding each digit over it
      * @param heatmap the heatmap we have to complete
@@ -44,14 +38,10 @@ public class HeatMapCreator {
             for (Interaction interaction: listInteractions) {
 
                 int xPosition = Math.round(interaction.getPoint().getX() 
-                    - targetObject.getPosition().getX() 
-                    - digit.getKeyClicked().getKeyboard().getPosition()
-                        .getX());
+                    - targetObject.getPosition().getX());
 
                 int yPosition = Math.round(interaction.getPoint().getY() 
-                    - targetObject.getPosition().getY()
-                    - digit.getKeyClicked().getKeyboard().getPosition()
-                        .getY());
+                    - targetObject.getPosition().getY());
 
                 if (yPosition >=0 && xPosition >= 0 && 
                     xPosition < heatmap.size() && 
@@ -67,7 +57,9 @@ public class HeatMapCreator {
             ArrayList<ArrayList<Double>> heatmap) {
             
         Double centerValue = heatmap.get(xPosition).get(yPosition);
-        heatmap.get(xPosition).set(yPosition, centerValue + touchSize);
+        if (centerValue + touchSize < heatmap.get(xPosition).size()) {
+            heatmap.get(xPosition).set(yPosition, centerValue + touchSize);
+        }
         
         for (int i = 1; i < touchSize; i++) {
             

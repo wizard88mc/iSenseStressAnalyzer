@@ -12,7 +12,8 @@ import java.util.List;
  */
 public class FileReader  {
     
-    public static final String FOLDER_WITH_DATA = "data";
+    public static final String FOLDER_WITH_DATA = "data" + File.separator + 
+        "input";
     protected File file = null;
     protected BufferedReader reader = null;
     

@@ -295,8 +295,8 @@ public class StressorTouchesHeatmapCreator extends HeatMapCreator {
             int yPoint = Math.round(interaction.getPoint().getY() - 
                     numberPicker.getPosition().getY());
             
-            if (xPoint >= 0 && xPoint < numberPicker.getWidth() && 
-                yPoint >= 0 && yPoint < numberPicker.getHeight()) {
+            if (xPoint >= 0 && xPoint < heatmap.size() && 
+                yPoint >= 0 && yPoint < heatmap.get(xPoint).size()) {
                 
                 updateHeatmapScore(xPoint, yPoint, digitSize, heatmap);
             }

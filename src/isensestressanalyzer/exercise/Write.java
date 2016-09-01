@@ -367,9 +367,6 @@ public class Write extends Exercise {
      */
     public ArrayList<Digit> getAllDigitsForAParticularCharacter(String character) {
     	
-        if (character.contains("space") || character.contains(" ")) {
-            System.out.println("Space");
-        }
     	ArrayList<Digit> list = new ArrayList<>();
     	
     	for (Digit digit: digits) {

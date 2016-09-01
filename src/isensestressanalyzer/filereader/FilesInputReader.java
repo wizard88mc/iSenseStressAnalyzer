@@ -21,7 +21,7 @@ public class FilesInputReader extends FileReader {
     private static final String INPUT_DATA_DEBUG = "input_data_small";
         
     public FilesInputReader() {
-        super(INPUT_DATA_DEBUG);
+        super(INPUT_DATA);
     }
     
     /**

@@ -324,4 +324,14 @@ public class MathUtils {
         return stringFeatures;
     }
     
+    /**
+     * Calculates the percentage variation
+     * @param oldVale the old value
+     * @param newValue the new value
+     * @return the percentage variation, both positive or negative
+     */
+    public static Double calculatePercentageVariation(Double oldVale, Double newValue) {
+        
+        return (newValue - oldVale) / oldVale * 100;
+    }
 }

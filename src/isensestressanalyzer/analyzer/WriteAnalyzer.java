@@ -20,9 +20,10 @@ public class WriteAnalyzer extends Analyzer {
         "Digits precision", "Ratio BACK over all digits", 
         "Ratio wrong words over all words", "Digits time distance"};
     
-    private static final int[] featurePassesTestForTester = new int[]{0, 0, 0, 0, 0, 
-    	0, 0, 0, 0};
+    private static final int[] FEATURE_PASSES_TEST_FOR_TESTER = new int[]{0, 0, 
+        0, 0, 0, 0, 0, 0, 0};
     private static int totalTesters = 0;
+    
     private final ArrayList<WriteAnalysisResume> noStressResumes = new ArrayList<>();
     private final ArrayList<WriteAnalysisResume> stressResumes = new ArrayList<>();
     /**
@@ -502,7 +503,7 @@ public class WriteAnalyzer extends Analyzer {
         
         for (int i = 0; i < results.length; i++) {
         	if (results[i]) {
-        		featurePassesTestForTester[i]++;
+        		FEATURE_PASSES_TEST_FOR_TESTER[i]++;
         	}
         }
         
@@ -510,14 +511,14 @@ public class WriteAnalyzer extends Analyzer {
     }
     
     /**
-     * Prints for how many tester the feature has a statistical significance
+     * Prints for how many tester the feature has a significant difference
      */
     public static void printPercentageSingleFeature() {
     	
     	for (int i = 0; i < FEATURES_NAME.length; i++) {
             System.out.println(FEATURES_NAME[i] + ": " + 
-                featurePassesTestForTester[i] + "/" + totalTesters + "(" + 
-                featurePassesTestForTester[i] * 100 / totalTesters + ")");
+                FEATURE_PASSES_TEST_FOR_TESTER[i] + "/" + totalTesters + "(" + 
+                FEATURE_PASSES_TEST_FOR_TESTER[i] * 100 / totalTesters + ")");
     	}
     }
     

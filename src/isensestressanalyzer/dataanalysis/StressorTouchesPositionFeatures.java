@@ -5,11 +5,13 @@ import isensestressanalyzer.exercise.Stressor;
 import isensestressanalyzer.interaction.Interaction;
 import isensestressanalyzer.interaction.NumberPickerInteraction;
 import isensestressanalyzer.outputwriter.StressorDistanceWriter;
+import isensestressanalyzer.outputwriter.TTestStressorTaskFeaturesOutputWriter;
 import isensestressanalyzer.tester.Tester;
 import isensestressanalyzer.utils.MathUtils;
 import isensestressanalyzer.utils.Point;
 import isensestressanalyzer.utils.ScreenObject;
 import java.util.ArrayList;
+import org.apache.commons.math3.stat.inference.TTest;
 
 /**
  *
@@ -17,23 +19,65 @@ import java.util.ArrayList;
  */
 public class StressorTouchesPositionFeatures {
     
-    private static StressorDistanceWriter outputWriter;
+    private class BeginMiddleEndValues {
+        public Double begin, middle, end;
+    }
     
-    private static ArrayList<Double> averageDistanceFromCenter = new ArrayList<>(), 
+    private class FeaturesValuesForTester {
+        public BeginMiddleEndValues averageDistanceFromCenter = new BeginMiddleEndValues(),
+            averageLength = new BeginMiddleEndValues(), 
+            averageRatioOverBottom = new BeginMiddleEndValues(),
+            averageAreaRectangle = new BeginMiddleEndValues(),
+            averageLinearity = new BeginMiddleEndValues();
+    }
+    
+    private ArrayList<Double> averageDistanceFromCenter = new ArrayList<>(), 
         averageLength = new ArrayList<>(), 
         averageRatioOverBottom = new ArrayList<>(), 
         averageAreaRectangle = new ArrayList<>(), 
         averageLinearity = new ArrayList<>();
     
-    public static void workWithNumberPickers(ArrayList<Tester> listTesters) {
+    private final ArrayList<FeaturesValuesForTester> 
+            testersFeaturesValuesFirstSetStressorTasks = new ArrayList<>(),
+            testersFeaturesValuesSecondSetStressorTasks = new ArrayList<>(), 
+            testersFeaturesValuesThirdSetStressorTasks = new ArrayList<>();
+    
+    private StressorDistanceWriter outputWriter;
+            
+    public void workWithNumberPickers(ArrayList<Tester> listTesters) {
+            
+        /**
+         * Different grouping methods correspond to different way of grouping
+         * together the four NumberPickers
+         */
+        workWithFirstGrouping(listTesters);
+
+        workWithSecondGrouping(listTesters);
+
+        workWithThirdGrouping(listTesters);
+
+        workWithFourthGrouping(listTesters);
+    }
+    
+    /**
+     * First grouping: each NumberPicker is alone and makes a group
+     * @param listTesters the list of testers
+     */
+    private void workWithFirstGrouping(ArrayList<Tester> listTesters) {
         
-        outputWriter = new StressorDistanceWriter();
+        System.out.println("Working with first Stressor Grouping");
         
-        int counter = 1;
+        outputWriter = new StressorDistanceWriter(0);
+        
+        testersFeaturesValuesFirstSetStressorTasks.clear();
+        testersFeaturesValuesSecondSetStressorTasks.clear();
+        testersFeaturesValuesThirdSetStressorTasks.clear();
+        
+        int counter = 0;
         for (Tester tester: listTesters) {
             
-            System.out.println("Working with NumberPickers - Tester " + 
-                counter + "/" + listTesters.size());
+            System.out.println("Tester " + (counter + 1) +  "/" + 
+                listTesters.size());
             
             outputWriter.writeIMEI(tester.getName());
             
@@ -42,92 +86,203 @@ public class StressorTouchesPositionFeatures {
             
             ArrayList<ScreenObject> numberPickers = listStressors.get(0)
                 .getNumberPickers();
-            
-            workWithFirstGrouping(listStressors, numberPickers);
-            workWithSecondGrouping(listStressors, numberPickers);
-            workWithThirdGrouping(listStressors, numberPickers);
-            workWithFourthGrouping(listStressors, numberPickers);
-            
-            outputWriter.endParticipant();
+        
+            ArrayList<ArrayList<ScreenObject>> firstGrouping = new ArrayList<>();
+            firstGrouping.add(new ArrayList<ScreenObject>());
+            firstGrouping.add(new ArrayList<ScreenObject>());
+            firstGrouping.add(new ArrayList<ScreenObject>());
+            firstGrouping.add(new ArrayList<ScreenObject>());
+
+            firstGrouping.get(0).add(numberPickers.get(0));
+            firstGrouping.get(1).add(numberPickers.get(1));
+            firstGrouping.get(2).add(numberPickers.get(2));
+            firstGrouping.get(3).add(numberPickers.get(3));
+
+            testersFeaturesValuesFirstSetStressorTasks.
+                add(firstMiddleLastStressor(firstGrouping, listStressors));
+            testersFeaturesValuesSecondSetStressorTasks.
+                add(aroundFirstMiddleLastStressor(firstGrouping, listStressors));
+            testersFeaturesValuesThirdSetStressorTasks.
+                add(threeGroupOfStressorTasks(firstGrouping, listStressors));
             
             counter++;
+            
+            outputWriter.endParticipant();
         }
         
         outputWriter.close();
-    }
-    
-    private static void workWithFirstGrouping(ArrayList<Stressor> listStressors, 
-            ArrayList<ScreenObject> numberPickers) {
         
-        ArrayList<ArrayList<ScreenObject>> firstGrouping = new ArrayList<>();
-        firstGrouping.add(new ArrayList<ScreenObject>());
-        firstGrouping.add(new ArrayList<ScreenObject>());
-        firstGrouping.add(new ArrayList<ScreenObject>());
-        firstGrouping.add(new ArrayList<ScreenObject>());
-        
-        firstGrouping.get(0).add(numberPickers.get(0));
-        firstGrouping.get(1).add(numberPickers.get(1));
-        firstGrouping.get(2).add(numberPickers.get(2));
-        firstGrouping.get(3).add(numberPickers.get(3));
-        
-        firstMiddleLastStressor(firstGrouping, listStressors);
-        aroundFirstMiddleLastStressor(firstGrouping, listStressors);
-    }
-    
-    private static void workWithSecondGrouping(ArrayList<Stressor> listStressors, 
-            ArrayList<ScreenObject> numberPickers) {
-        
-        ArrayList<ArrayList<ScreenObject>> secondGrouping = new ArrayList<>();
-        secondGrouping.add(new ArrayList<ScreenObject>());
-        secondGrouping.add(new ArrayList<ScreenObject>());
-        
-        secondGrouping.get(0).add(numberPickers.get(0));
-        secondGrouping.get(0).add(numberPickers.get(1));
-        
-        secondGrouping.get(1).add(numberPickers.get(2));
-        secondGrouping.get(1).add(numberPickers.get(3));
-        
-        firstMiddleLastStressor(secondGrouping, listStressors);
-        aroundFirstMiddleLastStressor(secondGrouping, listStressors);
-    }
-    
-    private static void workWithThirdGrouping(ArrayList<Stressor> listStressors, 
-            ArrayList<ScreenObject> numberPickers) {
-        
-        ArrayList<ArrayList<ScreenObject>> thirdGrouping = new ArrayList<>();
-        thirdGrouping.add(new ArrayList<ScreenObject>());
-        
-        thirdGrouping.get(0).addAll(numberPickers);
-        
-        firstMiddleLastStressor(thirdGrouping, listStressors);
-        aroundFirstMiddleLastStressor(thirdGrouping, listStressors);
-    }
-    
-    private static void workWithFourthGrouping(ArrayList<Stressor> listStressors, 
-            ArrayList<ScreenObject> numberPickers) {
-        
-        ArrayList<ArrayList<ScreenObject>> fourthGrouping = new ArrayList<>();
-        fourthGrouping.add(new ArrayList<ScreenObject>());
-        fourthGrouping.add(new ArrayList<ScreenObject>());
-        fourthGrouping.add(new ArrayList<ScreenObject>());
-        
-        fourthGrouping.get(0).add(numberPickers.get(0));
-        
-        fourthGrouping.get(1).add(numberPickers.get(1));
-        fourthGrouping.get(1).add(numberPickers.get(2));
-        
-        fourthGrouping.get(2).add(numberPickers.get(3));
-        
-        firstMiddleLastStressor(fourthGrouping, listStressors);
-        aroundFirstMiddleLastStressor(fourthGrouping, listStressors);
+        workWithFeaturesToPrepareForTTest(0);
     }
     
     /**
-     * 
-     * @param listNumberPickers how I want to group NumberPickers
-     * @param listStressors 
+     * Second grouping: First and second + Third and Fourth
+     * @param listTesters: list of testers
      */
-    private static void firstMiddleLastStressor(ArrayList<ArrayList<ScreenObject>> listNumberPickers, 
+    private void workWithSecondGrouping(ArrayList<Tester> listTesters) {
+        
+        System.out.println("Working with second Stressor Task Grouping");
+        
+        outputWriter = new StressorDistanceWriter(1);
+        
+        testersFeaturesValuesFirstSetStressorTasks.clear();
+        testersFeaturesValuesSecondSetStressorTasks.clear();
+        testersFeaturesValuesThirdSetStressorTasks.clear();
+        
+        int counter = 0;
+        for (Tester tester: listTesters) {
+            
+            System.out.println("Tester " + (counter + 1) + "/" + 
+                listTesters.size());
+        
+            outputWriter.writeIMEI(tester.getName());
+            
+            ArrayList<Stressor> listStressors = tester.
+                getStressorExercisesForProtocol(ISenseStressAnalyzer.PROTOCOLS[0]);
+        
+            ArrayList<ScreenObject> numberPickers = listStressors.get(0).
+                getNumberPickers();
+            
+            ArrayList<ArrayList<ScreenObject>> secondGrouping = new ArrayList<>();
+            secondGrouping.add(new ArrayList<ScreenObject>());
+            secondGrouping.add(new ArrayList<ScreenObject>());
+
+            secondGrouping.get(0).add(numberPickers.get(0));
+            secondGrouping.get(0).add(numberPickers.get(1));
+
+            secondGrouping.get(1).add(numberPickers.get(2));
+            secondGrouping.get(1).add(numberPickers.get(3));
+        
+            testersFeaturesValuesFirstSetStressorTasks.
+                add(firstMiddleLastStressor(secondGrouping, listStressors));
+            testersFeaturesValuesSecondSetStressorTasks.
+                add(aroundFirstMiddleLastStressor(secondGrouping, listStressors));
+            testersFeaturesValuesThirdSetStressorTasks.
+                add(threeGroupOfStressorTasks(secondGrouping, listStressors));
+            
+            counter++;
+            
+            outputWriter.endParticipant();
+        }
+        
+        outputWriter.close();
+        
+        workWithFeaturesToPrepareForTTest(1);
+    }
+    
+    /**
+     * Third Grouping: First and Second and Third and Fourth
+     * @param listTesters the list of Stressor Task
+     */
+    private void workWithThirdGrouping(ArrayList<Tester> listTesters) {
+        
+        System.out.println("Working with second Stressor Grouping");
+        
+        outputWriter = new StressorDistanceWriter(2);
+        
+        testersFeaturesValuesFirstSetStressorTasks.clear();
+        testersFeaturesValuesSecondSetStressorTasks.clear();
+        testersFeaturesValuesThirdSetStressorTasks.clear();
+        
+        int counter = 0;
+        for (Tester tester: listTesters) {
+            
+            System.out.println("Tester " + (counter + 1) + "/" + 
+                listTesters.size());
+            
+            outputWriter.writeIMEI(tester.getName());
+            
+            ArrayList<Stressor> listStressors = tester.
+                getStressorExercisesForProtocol(ISenseStressAnalyzer.PROTOCOLS[0]);
+            
+            ArrayList<ScreenObject> numberPickers = listStressors.get(0).
+                getNumberPickers();
+            
+            ArrayList<ArrayList<ScreenObject>> thirdGrouping = new ArrayList<>();
+            thirdGrouping.add(new ArrayList<ScreenObject>());
+
+            thirdGrouping.get(0).addAll(numberPickers);
+        
+            testersFeaturesValuesFirstSetStressorTasks.
+                add(firstMiddleLastStressor(thirdGrouping, listStressors));
+            testersFeaturesValuesSecondSetStressorTasks.
+                add(aroundFirstMiddleLastStressor(thirdGrouping, listStressors));
+            testersFeaturesValuesThirdSetStressorTasks.
+                add(threeGroupOfStressorTasks(thirdGrouping, listStressors));
+            
+            counter++;
+            
+            outputWriter.endParticipant();
+        }
+        
+        outputWriter.close();
+        
+        workWithFeaturesToPrepareForTTest(2);
+    }
+    
+    /**
+     * Fourth Grouping: First + Second and Third + Fourth
+     * @param listStressors
+     * @param numberPickers 
+     */
+    private void workWithFourthGrouping(ArrayList<Tester> listTesters) {
+        
+        System.out.println("Working with fourth Stressor Grouping");
+        
+        outputWriter = new StressorDistanceWriter(3);
+        
+        testersFeaturesValuesFirstSetStressorTasks.clear();
+        testersFeaturesValuesSecondSetStressorTasks.clear();
+        testersFeaturesValuesThirdSetStressorTasks.clear();
+        
+        int counter = 0;
+        for (Tester tester: listTesters) {
+            
+            System.out.println("Tester " + (counter + 1) + "/" + 
+                listTesters.size());
+        
+            outputWriter.writeIMEI(tester.getName());
+            
+            ArrayList<Stressor> listStressors = tester.
+                getStressorExercisesForProtocol(ISenseStressAnalyzer.PROTOCOLS[0]);
+            
+            ArrayList<ScreenObject> numberPickers = listStressors.get(0).
+                getNumberPickers();
+        
+            ArrayList<ArrayList<ScreenObject>> fourthGrouping = new ArrayList<>();
+            fourthGrouping.add(new ArrayList<ScreenObject>());
+            fourthGrouping.add(new ArrayList<ScreenObject>());
+            fourthGrouping.add(new ArrayList<ScreenObject>());
+
+            fourthGrouping.get(0).add(numberPickers.get(0));
+
+            fourthGrouping.get(1).add(numberPickers.get(1));
+            fourthGrouping.get(1).add(numberPickers.get(2));
+
+            fourthGrouping.get(2).add(numberPickers.get(3));
+            
+            testersFeaturesValuesFirstSetStressorTasks.
+                add(firstMiddleLastStressor(fourthGrouping, listStressors));
+            testersFeaturesValuesSecondSetStressorTasks.
+                add(aroundFirstMiddleLastStressor(fourthGrouping, listStressors));
+            testersFeaturesValuesThirdSetStressorTasks.
+                add(threeGroupOfStressorTasks(fourthGrouping, listStressors));
+        
+            counter++;
+            outputWriter.endParticipant();
+        }
+        
+        outputWriter.close();
+        
+        workWithFeaturesToPrepareForTTest(3);
+    }
+    
+    /**
+     * Analyzes the first, middle and last Stressor Task
+     * @param listNumberPickers how NumberPickers are grouped
+     * @param listStressors the list of the Stressor Tasks
+     */
+    private FeaturesValuesForTester firstMiddleLastStressor(ArrayList<ArrayList<ScreenObject>> listNumberPickers, 
             ArrayList<Stressor> listStressors) {
         
         ArrayList<ArrayList<Stressor>> exerciseToAnalyze = new ArrayList<>();
@@ -139,10 +294,15 @@ public class StressorTouchesPositionFeatures {
         exerciseToAnalyze.get(1).add(listStressors.get(listStressors.size() / 2));
         exerciseToAnalyze.get(2).add(listStressors.get(listStressors.size() - 1));
         
-        workWithStressors(exerciseToAnalyze, listNumberPickers);
+        return workWithStressors(exerciseToAnalyze, listNumberPickers);
     }
     
-    private static void aroundFirstMiddleLastStressor(ArrayList<ArrayList<ScreenObject>> 
+    /**
+     * Analyzes the first + 2, middle +- 1, last -2
+     * @param listNumberPickers how NumberPicker widgets are grouped
+     * @param listStressors the list of Stressor Task
+     */
+    private FeaturesValuesForTester aroundFirstMiddleLastStressor(ArrayList<ArrayList<ScreenObject>> 
         listNumberPickers, ArrayList<Stressor> listStressors) {
         
         ArrayList<ArrayList<Stressor>> exerciseToAnalyze = new ArrayList<>();
@@ -162,16 +322,49 @@ public class StressorTouchesPositionFeatures {
         exerciseToAnalyze.get(2).add(listStressors.get(listStressors.size() - 2));
         exerciseToAnalyze.get(2).add(listStressors.get(listStressors.size() - 1));
         
-        workWithStressors(exerciseToAnalyze, listNumberPickers);
+        return workWithStressors(exerciseToAnalyze, listNumberPickers);
     }
     
-    private static void workWithStressors(ArrayList<ArrayList<Stressor>> exercisesToAnalyze, 
+    private FeaturesValuesForTester threeGroupOfStressorTasks(ArrayList<ArrayList<ScreenObject>>
+        listNumberPickers, ArrayList<Stressor> listStressors) {
+        
+        ArrayList<ArrayList<Stressor>> exerciseToAnalyze = new ArrayList<>();
+        exerciseToAnalyze.add(new ArrayList<Stressor>());
+        exerciseToAnalyze.add(new ArrayList<Stressor>());
+        exerciseToAnalyze.add(new ArrayList<Stressor>());
+        
+        int elements = listStressors.size() / 3;
+        int firstEnd = 0 + elements + 1, secondStart = firstEnd, 
+            secondEnd = secondStart + elements + 1,thirdStart = secondEnd;
+        
+        exerciseToAnalyze.get(0).addAll(listStressors.subList(0, firstEnd));
+        
+        exerciseToAnalyze.get(1).addAll(listStressors.subList(secondStart, secondEnd));
+        
+        exerciseToAnalyze.get(2).addAll(listStressors.subList(thirdStart, listStressors.size()));
+        
+        return workWithStressors(exerciseToAnalyze, listNumberPickers);
+    }
+    
+    /**
+     * Takes the Stressor Task and the grouping method and calculates the features
+     * @param exercisesToAnalyze
+     * @param listNumberPickers 
+     */
+    private FeaturesValuesForTester workWithStressors(ArrayList<ArrayList<Stressor>> exercisesToAnalyze, 
         ArrayList<ArrayList<ScreenObject>> listNumberPickers) {
+        
+        FeaturesValuesForTester finalValues = new FeaturesValuesForTester();
             
-        for (ArrayList<Stressor> exercises: exercisesToAnalyze) {
+        for (int i = 0; i < exercisesToAnalyze.size(); i++) {
             /**
              * Exercises are the ones to analyze and to write the final result
              */
+            ArrayList<Double> valueAverageDistanceFromCenter = new ArrayList<>(),
+                valueAverageLength = new ArrayList<>(), 
+                valueAverageRatioOverBottom = new ArrayList<>(),
+                valueAverageAreaRectangle = new ArrayList<>(),
+                valueAverageLinearity = new ArrayList<>();
             
             for (ArrayList<ScreenObject> numberPickers: listNumberPickers) {
                 /**
@@ -183,27 +376,84 @@ public class StressorTouchesPositionFeatures {
                 averageAreaRectangle = new ArrayList<>();
                 averageLinearity = new ArrayList<>();
                 
-                workWithStressorsAndNumberPickers(exercises, numberPickers);
+                workWithStressorsAndNumberPickers(exercisesToAnalyze.get(i), 
+                    numberPickers);
             
-                outputWriter.writeDistanceCenter(MathUtils.DECIMAL_FORMAT.format(
-                    MathUtils.calculateStatisticInformation(averageDistanceFromCenter)[0]));
+                Double averageValue = MathUtils.
+                    calculateStatisticInformation(averageDistanceFromCenter)[0];
+                outputWriter.writeDistanceCenter(MathUtils.DECIMAL_FORMAT.
+                    format(averageValue));
+                valueAverageDistanceFromCenter.add(averageValue);
 
-                outputWriter.writeAverageLength(MathUtils.DECIMAL_FORMAT.format(
-                    MathUtils.calculateStatisticInformation(averageLength)[0]));
+                averageValue = MathUtils.
+                    calculateStatisticInformation(averageLength)[0];
+                outputWriter.writeAverageLength(MathUtils.DECIMAL_FORMAT.
+                    format(averageValue));
+                valueAverageLength.add(averageValue);
 
-                outputWriter.writeRatioOverBottom(MathUtils.DECIMAL_FORMAT.format(
-                    MathUtils.calculateStatisticInformation(averageRatioOverBottom)[0]));
+                averageValue = MathUtils.
+                    calculateStatisticInformation(averageRatioOverBottom)[0];
+                outputWriter.writeRatioOverBottom(MathUtils.DECIMAL_FORMAT.
+                    format(averageValue));
+                valueAverageRatioOverBottom.add(averageValue);
 
-                outputWriter.writeAreaRectangle(MathUtils.DECIMAL_FORMAT.format(
-                    MathUtils.calculateStatisticInformation(averageAreaRectangle)[0]));
+                averageValue = MathUtils.
+                    calculateStatisticInformation(averageAreaRectangle)[0];
+                outputWriter.writeAreaRectangle(MathUtils.DECIMAL_FORMAT.
+                    format(averageValue));
+                            
+                valueAverageAreaRectangle.add(averageValue);
 
-                outputWriter.writeLinearity(MathUtils.DECIMAL_FORMAT.format(
-                    MathUtils.calculateStatisticInformation(averageLinearity)[0]));
+                averageValue = MathUtils.
+                    calculateStatisticInformation(averageLinearity)[0];
+                outputWriter.writeLinearity(MathUtils.DECIMAL_FORMAT.
+                    format(averageValue));
+                valueAverageLinearity.add(averageValue);
+            }
+            
+            Double finalAverageDistanceFromCenter = MathUtils.
+                    calculateStatisticInformation(valueAverageDistanceFromCenter)[0],
+                finalAverageLength = MathUtils.
+                    calculateStatisticInformation(valueAverageLength)[0],
+                finalAverageRatioOverBottom = MathUtils.
+                    calculateStatisticInformation(valueAverageRatioOverBottom)[0],
+                finalAverageAreaRectangle = MathUtils.
+                    calculateStatisticInformation(valueAverageAreaRectangle)[0],
+                finalAverageLinearity = MathUtils.
+                    calculateStatisticInformation(valueAverageLinearity)[0];
+                
+            switch (i) {
+                case 0: {
+                    finalValues.averageDistanceFromCenter.begin = finalAverageDistanceFromCenter;
+                    finalValues.averageLength.begin = finalAverageLength;
+                    finalValues.averageRatioOverBottom.begin = finalAverageRatioOverBottom;
+                    finalValues.averageAreaRectangle.begin = finalAverageAreaRectangle;
+                    finalValues.averageLinearity.begin = finalAverageLinearity;
+                    break;
+                }
+                case 1: {
+                    finalValues.averageDistanceFromCenter.middle = finalAverageDistanceFromCenter;
+                    finalValues.averageLength.middle = finalAverageLength;
+                    finalValues.averageRatioOverBottom.middle = finalAverageRatioOverBottom;
+                    finalValues.averageAreaRectangle.middle = finalAverageAreaRectangle;
+                    finalValues.averageLinearity.middle = finalAverageLinearity;
+                    break;
+                }
+                case 2: {
+                    finalValues.averageDistanceFromCenter.end = finalAverageDistanceFromCenter;
+                    finalValues.averageLength.end = finalAverageLength;
+                    finalValues.averageRatioOverBottom.end = finalAverageRatioOverBottom;
+                    finalValues.averageAreaRectangle.end = finalAverageAreaRectangle;
+                    finalValues.averageLinearity.end = finalAverageLinearity;
+                    break;
+                }
             }
         }
+        
+        return finalValues;
     }
     
-    private static void workWithStressorsAndNumberPickers(
+    private void workWithStressorsAndNumberPickers(
             ArrayList<Stressor> stressors, ArrayList<ScreenObject> numberPickers) {
         
         for (Stressor stressor: stressors) {
@@ -214,12 +464,12 @@ public class StressorTouchesPositionFeatures {
     }
     
     /**
-     * Calculates the different features for 
+     * Calculates the different features for the stressor task
      * @param stressor the Stressor exercise
      * @param object the considered NumberPicker
      * @return the average distances from the center 
      */
-    private static void workWithStressorAndScreenObject(Stressor stressor,
+    private void workWithStressorAndScreenObject(Stressor stressor,
         ScreenObject object) {
 
         ArrayList<Double> distances = new ArrayList<>();
@@ -227,7 +477,9 @@ public class StressorTouchesPositionFeatures {
                 ratios = new ArrayList<>(), rectangles = new ArrayList<>(), 
                 linearity = new ArrayList<>();
         
-        for (NumberPickerInteraction interaction: stressor.getNumberPickerInteractions()) {
+        for (NumberPickerInteraction interaction: 
+                stressor.getNumberPickerInteractions()) {
+            
             if (interaction.isInside(object)) {
                 distances.add(calculateAverageDistanceFromCenter(object, 
                     interaction.getListInteractions()));
@@ -373,4 +625,123 @@ public class StressorTouchesPositionFeatures {
             Math.pow(x.getY() - y.getY(), 2));
     }
     
+    private void workWithFeaturesToPrepareForTTest(int groupingIndex) {
+        
+        TTestStressorTaskFeaturesOutputWriter ttestWriter = 
+            new TTestStressorTaskFeaturesOutputWriter(groupingIndex);
+        
+        /**
+         * Iterating on each feature 
+         */
+        /**
+         * First feature: average distance from center
+         */
+        ArrayList<BeginMiddleEndValues> valuesFirst = new ArrayList<>(), 
+                valuesSecond = new ArrayList<>(), valuesThird = new ArrayList<>();
+        for (int i = 0; i < testersFeaturesValuesFirstSetStressorTasks.size(); i++) { 
+            
+            valuesFirst.add(testersFeaturesValuesFirstSetStressorTasks.get(i).averageDistanceFromCenter);
+            valuesSecond.add(testersFeaturesValuesSecondSetStressorTasks.get(i).averageDistanceFromCenter);
+            valuesThird.add(testersFeaturesValuesThirdSetStressorTasks.get(i).averageDistanceFromCenter);
+        }
+        ttestWriter.writeFeatureName("Average distance from center");
+        workWithFeatureForTTest(valuesFirst, ttestWriter);
+        workWithFeatureForTTest(valuesSecond, ttestWriter);
+        workWithFeatureForTTest(valuesThird, ttestWriter);
+        ttestWriter.endFeatureTests();
+        
+        /**
+         * Second feature: average length
+         */
+        valuesFirst.clear(); valuesSecond.clear(); valuesThird.clear();
+        for (int i = 0; i < testersFeaturesValuesFirstSetStressorTasks.size(); i++) {
+            
+            valuesFirst.add(testersFeaturesValuesFirstSetStressorTasks.get(i).averageLength);
+            valuesSecond.add(testersFeaturesValuesSecondSetStressorTasks.get(i).averageLength);
+            valuesThird.add(testersFeaturesValuesThirdSetStressorTasks.get(i).averageLength);
+        }
+        ttestWriter.writeFeatureName("Average length");
+        workWithFeatureForTTest(valuesFirst, ttestWriter);
+        workWithFeatureForTTest(valuesSecond, ttestWriter);
+        workWithFeatureForTTest(valuesThird, ttestWriter);
+        ttestWriter.endFeatureTests();
+        
+        /**
+         * Third feature: average ratio over bottom
+         */
+        valuesFirst.clear(); valuesSecond.clear(); valuesThird.clear();
+        for (int i = 0; i < testersFeaturesValuesFirstSetStressorTasks.size(); i++) {
+            
+            valuesFirst.add(testersFeaturesValuesFirstSetStressorTasks.get(i).averageRatioOverBottom);
+            valuesSecond.add(testersFeaturesValuesSecondSetStressorTasks.get(i).averageRatioOverBottom);
+            valuesThird.add(testersFeaturesValuesThirdSetStressorTasks.get(i).averageRatioOverBottom);
+        }
+        ttestWriter.writeFeatureName("Average ratio over bottom");
+        workWithFeatureForTTest(valuesFirst, ttestWriter);
+        workWithFeatureForTTest(valuesSecond, ttestWriter);
+        workWithFeatureForTTest(valuesThird, ttestWriter);
+        ttestWriter.endFeatureTests();
+        
+        /**
+         * Fourth feature: average area rectangle
+         */
+        valuesFirst.clear(); valuesSecond.clear(); valuesThird.clear();
+        for (int i = 0; i < testersFeaturesValuesFirstSetStressorTasks.size(); i++) {
+            
+            valuesFirst.add(testersFeaturesValuesFirstSetStressorTasks.get(i).averageAreaRectangle);
+            valuesSecond.add(testersFeaturesValuesSecondSetStressorTasks.get(i).averageAreaRectangle);
+            valuesThird.add(testersFeaturesValuesThirdSetStressorTasks.get(i).averageAreaRectangle);
+        }
+        ttestWriter.writeFeatureName("Average are rectangle");
+        workWithFeatureForTTest(valuesFirst, ttestWriter);
+        workWithFeatureForTTest(valuesSecond, ttestWriter);
+        workWithFeatureForTTest(valuesThird, ttestWriter);
+        ttestWriter.endFeatureTests();
+        
+        /**
+         * Fifth feature: average linearity
+         */
+        valuesFirst.clear(); valuesSecond.clear(); valuesThird.clear();
+        for (int i = 0; i < testersFeaturesValuesFirstSetStressorTasks.size(); i++) {
+            
+            valuesFirst.add(testersFeaturesValuesFirstSetStressorTasks.get(i).averageLinearity);
+            valuesSecond.add(testersFeaturesValuesSecondSetStressorTasks.get(i).averageLinearity);
+            valuesThird.add(testersFeaturesValuesFirstSetStressorTasks.get(i).averageLinearity);
+        }
+        ttestWriter.writeFeatureName("Average linearity");
+        workWithFeatureForTTest(valuesFirst, ttestWriter);
+        workWithFeatureForTTest(valuesSecond, ttestWriter);
+        workWithFeatureForTTest(valuesThird, ttestWriter);
+        ttestWriter.endFeatureTests();
+        
+        ttestWriter.close();
+    }
+    /**
+     * Performs TTest with features values of begin, middle end Stressor Tasks
+     * @param beginValues the list of values at the beginning
+     * @param middleValues the list of values in the middle
+     * @param endValues the list of values at the end
+     * @param writer the output writer
+     */
+    private void workWithFeatureForTTest(ArrayList<BeginMiddleEndValues> values, 
+            TTestStressorTaskFeaturesOutputWriter writer) {
+        
+        ArrayList<Double> beginValues = new ArrayList<>(), middleValues = new ArrayList<>(), 
+            endValues = new ArrayList<>();
+        
+        for (BeginMiddleEndValues threeValues: values) {
+            beginValues.add(threeValues.begin); middleValues.add(threeValues.middle);
+            endValues.add(threeValues.end);
+        }
+        
+        double[] arrayBeginValues = MathUtils.convertToArrayDouble(beginValues), 
+            arrayMiddleValues = MathUtils.convertToArrayDouble(middleValues),
+            arrayEndValues = MathUtils.convertToArrayDouble(endValues);
+        
+        Double beginMiddle = new TTest().pairedTTest(arrayBeginValues, arrayMiddleValues),
+            beginEnd = new TTest().pairedTTest(arrayBeginValues, arrayEndValues),
+            middleEnd = new TTest().pairedTTest(arrayMiddleValues, arrayEndValues);
+        
+        writer.writeTTest(beginMiddle, beginEnd, middleEnd);
+    }
 }

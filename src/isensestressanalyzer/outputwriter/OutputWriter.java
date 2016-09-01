@@ -15,4 +15,6 @@ public class OutputWriter {
     protected static final String FOLDER_HEATMAP_DIGIT_SIZE = "digit_size";
     protected static final String FOLDER_WRITE_DATA_DISTANCES = "write_data_distances";
     protected static final String FOLDER_STRESSOR_FEATURES = "stressor_features";
+    protected static final String[] FOLDER_NAMES_GROUPING = {"First Grouping", 
+        "Second Grouping", "Third Grouping", "Fourth Grouping"};
 }

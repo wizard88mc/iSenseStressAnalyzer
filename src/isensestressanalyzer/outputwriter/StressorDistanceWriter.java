@@ -16,24 +16,25 @@ public class StressorDistanceWriter extends OutputWriter {
     private BufferedWriter writerDistanceFromCenter, writerAverageLength, 
         writerRatioOverUnder, writerAverageAreaRectangle, writerAverageLinearity;
     
-    public StressorDistanceWriter() {
+    public StressorDistanceWriter(int groupingIndex) {
         
         try {
-            fileDistanceFromCenter = new File(OUTPUT_FOLDER + 
+            
+            String basePath = OUTPUT_FOLDER + 
                 FOLDER_STRESSOR_FEATURES + File.separator + 
+                FOLDER_NAMES_GROUPING[groupingIndex] + File.separator;
+            
+            fileDistanceFromCenter = new File(basePath + 
                 "average_distance_from_center.csv");
-            fileAverageLength = new File(OUTPUT_FOLDER + 
-                FOLDER_STRESSOR_FEATURES + File.separator + 
-                "average_length.csv");
-            fileRatioOverUnder = new File(OUTPUT_FOLDER + 
-                FOLDER_STRESSOR_FEATURES + File.separator + 
+            
+            fileAverageLength = new File(basePath + "average_length.csv");
+            
+            fileRatioOverUnder = new File(basePath + 
                 "average_ratio_space_over_under.csv");
-            fileRectangleArea = new File(OUTPUT_FOLDER + 
-                FOLDER_STRESSOR_FEATURES + File.separator + 
-                "average_area_rectangle.csv");
-            fileLinearity = new File(OUTPUT_FOLDER + 
-                FOLDER_STRESSOR_FEATURES + File.separator + 
-                "average_linearity.csv");
+            
+            fileRectangleArea = new File(basePath + "average_area_rectangle.csv");
+            
+            fileLinearity = new File(basePath +  "average_linearity.csv");
             
             if (!fileDistanceFromCenter.exists()) {
                 fileDistanceFromCenter.getParentFile().mkdirs();
@@ -69,6 +70,7 @@ public class StressorDistanceWriter extends OutputWriter {
     }
     
     public void writeIMEI(String imei) {
+        
         try {
             writerDistanceFromCenter.write(imei);
             writerDistanceFromCenter.flush();
@@ -91,6 +93,10 @@ public class StressorDistanceWriter extends OutputWriter {
         }
     }
     
+    /**
+     * Writes on the output file the distance from the center
+     * @param distanceFromCenter 
+     */
     public void writeDistanceCenter(String distanceFromCenter) {
         try {
             writerDistanceFromCenter.write("," + distanceFromCenter);
@@ -102,6 +108,10 @@ public class StressorDistanceWriter extends OutputWriter {
         }
     }
     
+    /**
+     * Writes on the output file the average length
+     * @param length 
+     */
     public void writeAverageLength(String length) {
         try {
             writerAverageLength.write("," + length);
@@ -112,6 +122,10 @@ public class StressorDistanceWriter extends OutputWriter {
         }
     }
     
+    /**
+     * Writes on the output file the ratio of the points over and under the center
+     * @param ratio 
+     */
     public void writeRatioOverBottom(String ratio) {
         try {
             writerRatioOverUnder.write("," + ratio);
@@ -122,6 +136,10 @@ public class StressorDistanceWriter extends OutputWriter {
         }
     }
     
+    /**
+     * Writes on the output file the area of the rectangle
+     * @param area 
+     */
     public void writeAreaRectangle(String area) {
         try {
             writerAverageAreaRectangle.write("," + area);
@@ -132,6 +150,10 @@ public class StressorDistanceWriter extends OutputWriter {
         }
     }
     
+    /**
+     * Writes on the output file the linearity
+     * @param linearity 
+     */
     public void writeLinearity(String linearity) {
         try {
             writerAverageLinearity.write("," + linearity);

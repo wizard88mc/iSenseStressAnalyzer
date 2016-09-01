@@ -2,10 +2,7 @@ package isensestressanalyzer;
 
 import isensestressanalyzer.analyzer.SearchAnalyzer;
 import isensestressanalyzer.analyzer.SurveyAnalyzer;
-import isensestressanalyzer.analyzer.WriteAnalysisResume;
 import isensestressanalyzer.analyzer.WriteAnalyzer;
-import isensestressanalyzer.classifiers.ClassifiersTester;
-import isensestressanalyzer.dataanalysis.StressNoStressData;
 import isensestressanalyzer.dataanalysis.StressorTouchesPositionFeatures;
 import isensestressanalyzer.dataanalysis.WriteTouchesPositionFeatures;
 import isensestressanalyzer.exercise.Exercise;
@@ -16,7 +13,6 @@ import isensestressanalyzer.filereader.LayoutReader;
 import isensestressanalyzer.filereader.RotationSensorReader;
 import isensestressanalyzer.filereader.SettingsReader;
 import isensestressanalyzer.filereader.TouchReader;
-import isensestressanalyzer.heatmap.HeatMapCreator;
 import isensestressanalyzer.heatmap.StressorTouchesHeatmapCreator;
 import isensestressanalyzer.heatmap.WriteTouchesHeatmapCreator;
 import isensestressanalyzer.tester.Test;
@@ -33,8 +29,8 @@ import java.util.ArrayList;
  */
 public class ISenseStressAnalyzer {
     
-    private static final String STATISTICAL_ANALYSIS = "statistical_analysis";
-    private static final String HEATMAP = "heatmap";
+    private static final String STATISTICAL_ANALYSIS = "1";
+    private static final String HEATMAP = "2";
     
     public static FilesInputReader mFilesInputReader = null;
     public static SettingsReader mSettingsReader = null;
@@ -116,7 +112,7 @@ public class ISenseStressAnalyzer {
                         ArrayList<Exercise> listExercises = 
                             mSettingsReader.getExercisesResults(protocol);
                         
-                        clearWrongExercises(listExercises);
+                        cleanWrongExercises(listExercises);
 
                         for (Exercise exercise: listExercises) {
                             
@@ -154,7 +150,7 @@ public class ISenseStressAnalyzer {
                 SearchAnalyzer.performLocalAnalysis(tester);
 
                 //tester.createARFFFileForWriteTask();
-                //tester.createARFFFileForSearchTask();
+                tester.createARFFFileForSearchTask();
                     //WriteAnalyzer.createHeatMapForDigit(tester, " ");
             }
 
@@ -173,7 +169,7 @@ public class ISenseStressAnalyzer {
         if (args[0].contains(HEATMAP)) {
             
             System.out.println("*** Working on Distance Features for Stressor ***");
-            StressorTouchesPositionFeatures.workWithNumberPickers(listTester);
+            new StressorTouchesPositionFeatures().workWithNumberPickers(listTester);
             
             System.out.println("*** Creating Heatmap for Stressor ***");
             int counter = 1;
@@ -204,6 +200,7 @@ public class ISenseStressAnalyzer {
                     new WriteTouchesHeatmapCreator(tester);
                 mapCreator.createHeatMapForAllDigits();
             }
+            
         }
     }
     
@@ -211,7 +208,7 @@ public class ISenseStressAnalyzer {
      * Eliminates all the exercises that do not respect minimum requirements
      * @param exercises the list of exercises to test
      */
-    private static void clearWrongExercises(ArrayList<Exercise> exercises) {
+    private static void cleanWrongExercises(ArrayList<Exercise> exercises) {
         
         ArrayList<Exercise> exercisesToEliminate = new ArrayList<>();
         

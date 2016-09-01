@@ -18,14 +18,14 @@ public class DigitsHeatmapReader {
     
     private static final String SETTINGS_FOLDER = "settings";
     private static final String DIGITS_HEATMAP = "digits_heatmap.csv";
-    public static final String FOLDER_WITH_DATA = "data";
     
     public static ArrayList<String> getDigitsForHeathmap() {
         
         ArrayList<String> digits = new ArrayList<>();
         
         try {
-            File file = new File(FOLDER_WITH_DATA + File.separator + 
+                File file = new File(isensestressanalyzer.filereader.
+                    FileReader.FOLDER_WITH_DATA + File.separator + 
                 SETTINGS_FOLDER + File.separator + DIGITS_HEATMAP);
             
             BufferedReader reader  = new BufferedReader(new FileReader(file));
