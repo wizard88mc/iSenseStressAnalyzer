@@ -11,8 +11,16 @@ import java.util.ArrayList;
  *
  * @author Matteo
  */
-public class Feature {
+public abstract class Feature {
     
+    protected String featureName;
+    
+    public Feature(String name) {
+        this.featureName = name;
+    }
+    
+    public abstract Double[] calculateFeatureValues(Tester tester, String digits, 
+            boolean stress);
     /**
      * Calculates the distance between two points
      * @param first the first point
@@ -46,5 +54,9 @@ public class Feature {
         }
         
         return listDigits;
+    }
+    
+    protected String getFeatureName() {
+        return this.featureName;
     }
 }

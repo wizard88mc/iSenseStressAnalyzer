@@ -11,7 +11,18 @@ import java.util.ArrayList;
  */
 public class AveragePressureOverSize extends Feature {
     
-    public Double[] calculateAveragePressureOverSize(Tester tester, 
+    public AveragePressureOverSize() {
+        super("Average_Pressure_Over_Size");
+    }
+    
+    @Override
+    public Double[] calculateFeatureValues(Tester tester, String digits, 
+            boolean stress) {
+        
+        return calculateAveragePressureOverSize(tester, digits, stress);
+    }
+    
+    private Double[] calculateAveragePressureOverSize(Tester tester, 
         String digits, boolean stress) {
         
         ArrayList<Digit> listDigits = getListDigits(tester, digits, stress);

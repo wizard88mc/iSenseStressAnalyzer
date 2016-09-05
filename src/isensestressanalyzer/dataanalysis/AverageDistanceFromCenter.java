@@ -1,6 +1,5 @@
 package isensestressanalyzer.dataanalysis;
 
-import isensestressanalyzer.ISenseStressAnalyzer;
 import isensestressanalyzer.exercise.Write;
 import isensestressanalyzer.interaction.Digit;
 import isensestressanalyzer.interaction.Interaction;
@@ -14,6 +13,17 @@ import java.util.ArrayList;
  */
 public class AverageDistanceFromCenter extends Feature {
     
+    public AverageDistanceFromCenter() {
+        super("Average_Distance_From_Center");
+    }
+    
+    @Override
+    public Double[] calculateFeatureValues(Tester tester, String digits, 
+            boolean stress) {
+        
+        return calculateAverageDistanceFromCenter(tester, digits, stress);
+    }
+    
     /**
      * Calculates the average distance of the touches from the center of the 
      * key of the keyboard
@@ -23,7 +33,7 @@ public class AverageDistanceFromCenter extends Feature {
      * @return [average, variance, standard deviation] if there are any digits, 
      * null otherwise
      */
-    public Double[] calculateAverageDistanceFromCenter(Tester tester, 
+    private Double[] calculateAverageDistanceFromCenter(Tester tester, 
             String digits, boolean stress) {
         
         ArrayList<Digit> listDigits = getListDigits(tester, digits, stress);

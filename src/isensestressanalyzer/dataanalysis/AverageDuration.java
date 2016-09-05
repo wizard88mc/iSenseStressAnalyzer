@@ -10,8 +10,19 @@ import java.util.ArrayList;
  * @author Matteo
  */
 public class AverageDuration extends Feature {
+    
+    public AverageDuration() {
+        super("Average_Duration");
+    }
 
-    public Double[] calculateAverageDuration(Tester tester, String digits, 
+    @Override
+    public Double[] calculateFeatureValues(Tester tester, String digits, 
+            boolean stress) {
+        
+        return calculateAverageDuration(tester, digits, stress);
+    }
+    
+    private Double[] calculateAverageDuration(Tester tester, String digits, 
         boolean stress) {
         
         ArrayList<Digit> listDigits = getListDigits(tester, digits, stress);

@@ -11,7 +11,18 @@ import java.util.ArrayList;
  */
 public class AverageSize extends Feature {
     
-    public Double[] calculateAverageSize(Tester tester, String digits, 
+    public AverageSize() {
+        super("Average_Touch_Size");
+    }
+    
+    @Override
+    public Double[] calculateFeatureValues(Tester tester, String digits, 
+            boolean stress) {
+        
+        return calculateAverageSize(tester, digits, stress);
+    }
+    
+    private Double[] calculateAverageSize(Tester tester, String digits, 
         boolean stress) {
         
         ArrayList<Digit> listDigits = getListDigits(tester, digits, stress);

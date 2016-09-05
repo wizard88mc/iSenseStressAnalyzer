@@ -9,19 +9,19 @@ import java.io.IOException;
  *
  * @author Matteo
  */
-public class TTestTouchDistanceWriter extends OutputWriter {
+public class TTestTouchDigitsAnalysis extends OutputWriter {
     
-    private static final String OUTPUT_FILE_NAME = 
-        "ttest_write_touch_distance.csv";
+    private static final String OUTPUT_FILE_NAME_BASE = 
+        "ttest_";
     
     private File outputFile;
     private BufferedWriter outputWriter;
     
-    public TTestTouchDistanceWriter() {
+    public TTestTouchDigitsAnalysis(String outputFileName) {
         
         try {
             outputFile = new File(OUTPUT_FOLDER + FOLDER_WRITE_DATA_DISTANCES + 
-                File.separator + OUTPUT_FILE_NAME);
+                File.separator + OUTPUT_FILE_NAME_BASE + outputFileName + ".csv");
             
             if (!outputFile.exists()) {
                 outputFile.getParentFile().mkdirs();
@@ -38,14 +38,12 @@ public class TTestTouchDistanceWriter extends OutputWriter {
     /**
      * Writes the result of the tTest
      * @param digit the considered digit
-     * @param tTestEachPoint the result of the ttest for each point distance
-     * @param tTestCenter the result of the ttest for center distance
+     * @param result the result of the TTest
      */
-    public void writeTTestResult(String digit, String tTestEachPoint, 
-            String tTestCenter) {
+    public void writeTTestResult(String digit, String result) {
         
         try {
-            outputWriter.write(digit + "," + tTestEachPoint + "," + tTestCenter);
+            outputWriter.write(digit + "," + result);
             outputWriter.newLine(); outputWriter.flush();
         }
         catch(IOException exc) {

@@ -15,6 +15,16 @@ import java.util.ArrayList;
  */
 public class AverageDistanceBetweenEachPoints extends Feature {
     
+    public AverageDistanceBetweenEachPoints() {
+        super("Average_Distance_Between_Each_Point");
+    }
+    
+    @Override
+    public Double[] calculateFeatureValues(Tester tester, String digits, 
+            boolean stress) {
+        
+        return calculateAverageDistanceBetweenTouchPoints(tester, digits, stress);
+    }
     /**
      * Calculates the average distance between all the touch points during 
      * the write exercises
@@ -25,7 +35,7 @@ public class AverageDistanceBetweenEachPoints extends Feature {
      * @return [average, variance, standard_deviation] if more than zero digits, 
      * null otherwise
      */
-    public Double[] calculateAverageDistanceBetweenTouchPoints(Tester tester, 
+    private Double[] calculateAverageDistanceBetweenTouchPoints(Tester tester, 
             String digits, boolean stress) {
         
         String[] listCharacters = digits.split(",");

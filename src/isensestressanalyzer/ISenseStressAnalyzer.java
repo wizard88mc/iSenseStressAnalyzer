@@ -4,7 +4,7 @@ import isensestressanalyzer.analyzer.SearchAnalyzer;
 import isensestressanalyzer.analyzer.SurveyAnalyzer;
 import isensestressanalyzer.analyzer.WriteAnalyzer;
 import isensestressanalyzer.dataanalysis.StressorTouchesPositionFeatures;
-import isensestressanalyzer.dataanalysis.WriteTouchesPositionFeatures;
+import isensestressanalyzer.dataanalysis.WriteKeyboardFeatures;
 import isensestressanalyzer.exercise.Exercise;
 import isensestressanalyzer.exercise.Protocol;
 import isensestressanalyzer.exercise.Write;
@@ -187,7 +187,7 @@ public class ISenseStressAnalyzer {
             }
             
             System.out.println("*** Working on Key Distances Features ***");
-            WriteTouchesPositionFeatures.workOnKeyDistances(listTester);
+            new WriteKeyboardFeatures().workOnKeyDistances(listTester);
             
             System.out.println("*** Creating Heatmap for Digits ***");
             counter = 1;
