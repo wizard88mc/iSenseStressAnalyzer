@@ -19,7 +19,11 @@ public class AveragePressure extends Feature {
     public Double[] calculateFeatureValues(Tester tester, String digits, 
             boolean stress) {
         
-        return calculateAveragePressure(tester, digits, stress);
+        Double[] values = calculateAveragePressure(tester, digits, stress);
+        if (values != null) {
+            System.out.println("Pressure value: " + values[0]);
+        }
+        return values;
     }
     
     private Double[] calculateAveragePressure(Tester tester, 

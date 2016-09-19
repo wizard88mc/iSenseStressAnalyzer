@@ -12,9 +12,10 @@ import java.io.IOException;
 public class StressorDistanceWriter extends OutputWriter {
     
     private File fileDistanceFromCenter, fileAverageLength, fileRatioOverUnder, 
-        fileRectangleArea, fileLinearity;
+        fileRectangleArea, fileLinearity, fileSize, filePressure, fileTimeDuration;
     private BufferedWriter writerDistanceFromCenter, writerAverageLength, 
-        writerRatioOverUnder, writerAverageAreaRectangle, writerAverageLinearity;
+        writerRatioOverUnder, writerAverageAreaRectangle, writerAverageLinearity, 
+        writerSize, writerPressure, writerTimeDuration;
     
     public StressorDistanceWriter(int groupingIndex) {
         
@@ -36,6 +37,10 @@ public class StressorDistanceWriter extends OutputWriter {
             
             fileLinearity = new File(basePath +  "average_linearity.csv");
             
+            fileSize = new File(basePath + "average_size.csv");
+            filePressure = new File(basePath + "average_pressure.csv");
+            fileTimeDuration = new File(basePath + "average_time_duration.csv");
+            
             if (!fileDistanceFromCenter.exists()) {
                 fileDistanceFromCenter.getParentFile().mkdirs();
             }
@@ -51,6 +56,15 @@ public class StressorDistanceWriter extends OutputWriter {
             if (!fileLinearity.exists()) {
                 fileLinearity.getParentFile().mkdirs();
             }
+            if (!fileSize.exists()) {
+                fileSize.getParentFile().mkdirs();
+            }
+            if (!filePressure.exists()) {
+                filePressure.getParentFile().mkdirs();
+            }
+            if (!fileTimeDuration.exists()) {
+                fileTimeDuration.getParentFile().mkdirs();
+            }
             
             writerDistanceFromCenter = new BufferedWriter(new 
                 FileWriter(fileDistanceFromCenter));
@@ -62,6 +76,9 @@ public class StressorDistanceWriter extends OutputWriter {
                 FileWriter(fileRectangleArea));
             writerAverageLinearity = new BufferedWriter(new 
                 FileWriter(fileLinearity));
+            writerSize = new BufferedWriter(new FileWriter(fileSize));
+            writerPressure = new BufferedWriter(new FileWriter(filePressure));
+            writerTimeDuration = new BufferedWriter(new FileWriter(fileTimeDuration));
         }
         catch(IOException exc) {
             System.out.println("IOException in creating BufferedWriter");
@@ -86,6 +103,15 @@ public class StressorDistanceWriter extends OutputWriter {
             
             writerAverageLinearity.write(imei);
             writerAverageLinearity.flush();
+            
+            writerSize.write(imei);
+            writerSize.flush();
+            
+            writerPressure.write(imei);
+            writerPressure.flush();
+            
+            writerTimeDuration.write(imei);
+            writerTimeDuration.flush();
         }
         catch(IOException exc) {
             System.out.println("IOException in writing IMEI");
@@ -164,6 +190,36 @@ public class StressorDistanceWriter extends OutputWriter {
         }
     }
     
+    public void writeSize(String size) {
+        try {
+            writerSize.write("," + size);
+            writerSize.flush();
+        }
+        catch(IOException exc) {
+            exc.printStackTrace();
+        }
+    }
+    
+    public void writePressure(String pressure) {
+        try {
+            writerPressure.write("," + pressure);
+            writerPressure.flush();
+        }
+        catch(IOException exc) {
+            exc.printStackTrace();
+        }
+    }
+    
+    public void writeTimeDuration(String time) {
+        try {
+            writerTimeDuration.write("," + time);
+            writerTimeDuration.flush();
+        }
+        catch(IOException exc) {
+            exc.printStackTrace();
+        }
+    }
+    
     public void endParticipant() {
         try {
             writerDistanceFromCenter.newLine(); writerDistanceFromCenter.flush();
@@ -171,6 +227,9 @@ public class StressorDistanceWriter extends OutputWriter {
             writerRatioOverUnder.newLine(); writerRatioOverUnder.flush();
             writerAverageAreaRectangle.newLine(); writerAverageAreaRectangle.flush();
             writerAverageLinearity.newLine(); writerAverageLinearity.flush();
+            writerSize.newLine();writerSize.flush();
+            writerPressure.newLine(); writerPressure.flush();
+            writerTimeDuration.newLine(); writerTimeDuration.flush();
         }
         catch(IOException exc) {
             exc.printStackTrace();
@@ -184,6 +243,9 @@ public class StressorDistanceWriter extends OutputWriter {
             writerRatioOverUnder.flush(); writerRatioOverUnder.close();
             writerAverageAreaRectangle.flush(); writerAverageAreaRectangle.close();
             writerAverageLinearity.flush(); writerAverageLinearity.close();
+            writerSize.flush(); writerSize.close();
+            writerPressure.flush(); writerPressure.close();
+            writerTimeDuration.flush(); writerTimeDuration.close();
         }
         catch(IOException exc) {
             exc.printStackTrace();

@@ -95,6 +95,14 @@ public class Interaction {
         return this.timestamp;
     }
     
+    public double getSize() {
+        return this.size;
+    }
+    
+    public double  getPressure() {
+        return this.pressure;
+    }
+    
     public boolean isTouchDown() {
         return isValid() && mInteractionType == InteractionType.TOUCH_DOWN;
     }

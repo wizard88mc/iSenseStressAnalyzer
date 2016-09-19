@@ -585,4 +585,24 @@ public class Tester {
         }
         return toReturn;
     }
+    
+    public Double countNumberOfOccurrencesForDigit(String digits, boolean stress) {
+        
+        String[] listCharacters = digits.split(",");
+        Double counter = 0.0;
+        
+        ArrayList<Write> listWriteExercises = 
+            getWriteExercisesForProtocol(ISenseStressAnalyzer.PROTOCOLS[0]);
+        
+        for (String character: listCharacters) {
+            for (Write writeExercise: listWriteExercises) {
+                if (stress == writeExercise.stress()) {
+                    counter += writeExercise.
+                        getAllDigitsForAParticularCharacter(character).size();
+                }
+            }
+        }
+        
+        return counter;
+    }
 }

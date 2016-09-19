@@ -39,11 +39,15 @@ public class TTestTouchDigitsAnalysis extends OutputWriter {
      * Writes the result of the tTest
      * @param digit the considered digit
      * @param result the result of the TTest
+     * @param occurrencesNoStress the number of occurrences of the digit in no stress
+     * @param occurrencesStress the number of occurrences of the digit in stress
      */
-    public void writeTTestResult(String digit, String result) {
+    public void writeTTestResult(String digit, String result, 
+            String occurrencesNoStress, String occurrencesStress) {
         
         try {
-            outputWriter.write(digit + "," + result);
+            outputWriter.write(digit + "," + result + "," + 
+                occurrencesNoStress + "," + occurrencesStress);
             outputWriter.newLine(); outputWriter.flush();
         }
         catch(IOException exc) {

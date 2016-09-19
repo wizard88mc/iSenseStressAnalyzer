@@ -42,20 +42,6 @@ public class ISenseStressAnalyzer {
     /**
      * List of the possible protocols followed
      */
-    /*public static final Protocol protocols[] = new Protocol[]{
-        new Protocol("SURVEY,false", "RELAX,false", "SURVEY,false", "SEARCH,false",
-            "WRITE,false","SURVEY,false","STRESSOR,true","SURVEY,false","SEARCH,true",
-            "WRITE,true","SURVEY,false"), 
-        new Protocol("SURVEY,false", "RELAX,false","SURVEY,false","SEARCH,false",
-            "WRITE,false","SURVEY,false","STRESSOR,false","SEARCH,true","WRITE,true",
-            "SURVEY,false"), 
-        new Protocol("SURVEY,false", "RELAX,false","SURVEY,false","SEARCH,false",
-            "WRITE,false","SURVEY,false","STRESSOR,true","SURVEY,false","SEARCH,false",
-            "WRITE,false","SURVEY,false"), 
-        new Protocol("SURVEY,false", "RELAX,false", "SURVEY,false", "SEARCH,false", 
-            "WRITE,false","SURVEY,false", "WAIT_SECOND_STEP,false","STRESSOR,true",
-            "SURVEY,false","SEARCH,true","WRITE,true","SURVEY,false")
-    };*/
     
     public static final Protocol PROTOCOLS[] = new Protocol[] {
         new Protocol("SURVEY,false", "RELAX,false","SURVEY,false","SEARCH,false",

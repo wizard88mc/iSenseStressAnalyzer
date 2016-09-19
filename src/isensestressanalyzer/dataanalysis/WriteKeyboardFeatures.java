@@ -31,6 +31,9 @@ public class WriteKeyboardFeatures {
             ArrayList<String> digitsToConsider = 
                 DigitsHeatmapReader.getDigitsForHeathmap();
             
+            ArrayList<Double> digitsOccurrenceNoStress = new ArrayList<>(),
+                    digitsOccurrenceStress = new ArrayList<>();
+            
             for (Tester tester: listTesters) {
 
                 outputWriter.writeIMEI(tester.getName());
@@ -43,11 +46,27 @@ public class WriteKeyboardFeatures {
                         featureValueNoStress.add(new ArrayList<Double>());
                         featureValueStress.add(new ArrayList<Double>());
                     }
+                    
+                    if (digitsOccurrenceNoStress.size() < digitsToConsider.size()) {
+                        
+                        digitsOccurrenceNoStress.add(0.0);
+                        digitsOccurrenceStress.add(0.0);
+                    }
+                    
+                    Double currentValueNoStress = digitsOccurrenceNoStress.get(i) + 
+                        tester.countNumberOfOccurrencesForDigit(digitsToConsider.get(i), false),
+                        currentValueStress = digitsOccurrenceStress.get(i) + 
+                            tester.countNumberOfOccurrencesForDigit(digitsToConsider.get(i), true);
+                    
+                    digitsOccurrenceNoStress.set(i, currentValueNoStress);
+                    digitsOccurrenceStress.set(i, currentValueStress);
 
                     Double[] statisticsNoStress = feature.
-                            calculateFeatureValues(tester, digitsToConsider.get(i), false),
+                            calculateFeatureValues(tester, 
+                                digitsToConsider.get(i), false),
                         statisticsStress = feature.
-                            calculateFeatureValues(tester, digitsToConsider.get(i), true);
+                            calculateFeatureValues(tester, 
+                                digitsToConsider.get(i), true);
 
                     if (statisticsNoStress != null && 
                         statisticsStress != null) {
@@ -62,7 +81,8 @@ public class WriteKeyboardFeatures {
                                 calculatePercentageVariation(statisticsNoStress[0], 
                                     statisticsStress[0]);
 
-                        outputWriter.addValue(MathUtils.DECIMAL_FORMAT.format(percentageChange));
+                        outputWriter.addValue(MathUtils.DECIMAL_FORMAT.
+                                format(percentageChange));
 
                         featureValueNoStress.get(i).
                                 add(statisticsNoStress[0]);
@@ -89,8 +109,9 @@ public class WriteKeyboardFeatures {
              * Performing steps for the tTest
              */
             performtTestForDigits(digitsToConsider, tTestWriter, 
-                    featureValueNoStress, featureValueStress);
-            }
+                    featureValueNoStress, featureValueStress, 
+                    digitsOccurrenceNoStress, digitsOccurrenceStress);
+        }
     }
     
     /**
@@ -110,7 +131,9 @@ public class WriteKeyboardFeatures {
     private static void performtTestForDigits(ArrayList<String> listDigits, 
         TTestTouchDigitsAnalysis writer,
         ArrayList<ArrayList<Double>> featureValuesNoStress, 
-        ArrayList<ArrayList<Double>> featureValueStress) {
+        ArrayList<ArrayList<Double>> featureValueStress, 
+        ArrayList<Double> digitsOccurrenceNoStress, 
+        ArrayList<Double> digitsOccurrenceStress){
         
         for (int i = 0; i < listDigits.size(); i++) {
         
@@ -126,7 +149,14 @@ public class WriteKeyboardFeatures {
                     valuesStress);
 
             writer.writeTTestResult(listDigits.get(i), 
-                MathUtils.DECIMAL_FORMAT.format(tValuePoints));
+                MathUtils.DECIMAL_FORMAT.format(tValuePoints), 
+                String.valueOf(digitsOccurrenceNoStress.get(i)), 
+                String.valueOf(digitsOccurrenceStress.get(i)));
+            }
+            else {
+                writer.writeTTestResult(listDigits.get(i), "-", 
+                    String.valueOf(digitsOccurrenceNoStress.get(i)), 
+                    String.valueOf(digitsOccurrenceStress.get(i)));
             }
         }
         

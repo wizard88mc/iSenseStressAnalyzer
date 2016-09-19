@@ -19,7 +19,11 @@ public class AverageSize extends Feature {
     public Double[] calculateFeatureValues(Tester tester, String digits, 
             boolean stress) {
         
-        return calculateAverageSize(tester, digits, stress);
+        Double[] values = calculateAverageSize(tester, digits, stress);
+        if (values != null) {
+            System.out.println("Average size: " + values[0]);
+        }
+        return values;
     }
     
     private Double[] calculateAverageSize(Tester tester, String digits, 

@@ -20,7 +20,9 @@ import org.apache.commons.math3.stat.inference.TTest;
 public class StressorTouchesPositionFeatures {
     
     private class BeginMiddleEndValues {
-        public Double begin, middle, end;
+        public ArrayList<Double> begin = new ArrayList<>(), 
+                middle = new ArrayList<>(), 
+                end = new ArrayList<>();
     }
     
     private class FeaturesValuesForTester {
@@ -28,14 +30,20 @@ public class StressorTouchesPositionFeatures {
             averageLength = new BeginMiddleEndValues(), 
             averageRatioOverBottom = new BeginMiddleEndValues(),
             averageAreaRectangle = new BeginMiddleEndValues(),
-            averageLinearity = new BeginMiddleEndValues();
+            averageLinearity = new BeginMiddleEndValues(), 
+            averageSize = new BeginMiddleEndValues(), 
+            averagePressure = new BeginMiddleEndValues(), 
+            averageTimeDuration = new BeginMiddleEndValues();
     }
     
     private ArrayList<Double> averageDistanceFromCenter = new ArrayList<>(), 
         averageLength = new ArrayList<>(), 
         averageRatioOverBottom = new ArrayList<>(), 
         averageAreaRectangle = new ArrayList<>(), 
-        averageLinearity = new ArrayList<>();
+        averageLinearity = new ArrayList<>(), 
+        averageSize = new ArrayList<>(), 
+        averagePressure = new ArrayList<>(), 
+        averageTimeDuration = new ArrayList<>();
     
     private final ArrayList<FeaturesValuesForTester> 
             testersFeaturesValuesFirstSetStressorTasks = new ArrayList<>(),
@@ -364,17 +372,27 @@ public class StressorTouchesPositionFeatures {
                 valueAverageLength = new ArrayList<>(), 
                 valueAverageRatioOverBottom = new ArrayList<>(),
                 valueAverageAreaRectangle = new ArrayList<>(),
-                valueAverageLinearity = new ArrayList<>();
+                valueAverageLinearity = new ArrayList<>(), 
+                valueAverageSize = new ArrayList<>(), 
+                valueAveragePressure = new ArrayList<>(), 
+                valueAverageTimeDuration = new ArrayList<>();
             
             for (ArrayList<ScreenObject> numberPickers: listNumberPickers) {
                 /**
                  * numberPickers are the NumberPickers to combine together
+                 */
+                /**
+                 * These values are used to store together all the values 
+                 * of the numberPickers
                  */
                 averageDistanceFromCenter = new ArrayList<>();
                 averageLength = new ArrayList<>();
                 averageRatioOverBottom = new ArrayList<>();
                 averageAreaRectangle = new ArrayList<>();
                 averageLinearity = new ArrayList<>();
+                averageSize = new ArrayList<>();
+                averagePressure = new ArrayList<>();
+                averageTimeDuration = new ArrayList<>();
                 
                 workWithStressorsAndNumberPickers(exercisesToAnalyze.get(i), 
                     numberPickers);
@@ -400,8 +418,7 @@ public class StressorTouchesPositionFeatures {
                 averageValue = MathUtils.
                     calculateStatisticInformation(averageAreaRectangle)[0];
                 outputWriter.writeAreaRectangle(MathUtils.DECIMAL_FORMAT.
-                    format(averageValue));
-                            
+                    format(averageValue));           
                 valueAverageAreaRectangle.add(averageValue);
 
                 averageValue = MathUtils.
@@ -409,42 +426,55 @@ public class StressorTouchesPositionFeatures {
                 outputWriter.writeLinearity(MathUtils.DECIMAL_FORMAT.
                     format(averageValue));
                 valueAverageLinearity.add(averageValue);
+                
+                averageValue = MathUtils.
+                    calculateStatisticInformation(averageSize)[0];
+                outputWriter.writeSize(MathUtils.DECIMAL_FORMAT.format(averageValue));
+                valueAverageSize.add(averageValue);
+                
+                averageValue = MathUtils.
+                    calculateStatisticInformation(averagePressure)[0];
+                outputWriter.writePressure(MathUtils.DECIMAL_FORMAT.format(averageValue));
+                valueAveragePressure.add(averageValue);
+                
+                averageValue = MathUtils.
+                    calculateStatisticInformation(averageTimeDuration)[0];
+                outputWriter.writeTimeDuration(MathUtils.DECIMAL_FORMAT.format(averageValue));
+                valueAverageTimeDuration.add(averageValue);
             }
-            
-            Double finalAverageDistanceFromCenter = MathUtils.
-                    calculateStatisticInformation(valueAverageDistanceFromCenter)[0],
-                finalAverageLength = MathUtils.
-                    calculateStatisticInformation(valueAverageLength)[0],
-                finalAverageRatioOverBottom = MathUtils.
-                    calculateStatisticInformation(valueAverageRatioOverBottom)[0],
-                finalAverageAreaRectangle = MathUtils.
-                    calculateStatisticInformation(valueAverageAreaRectangle)[0],
-                finalAverageLinearity = MathUtils.
-                    calculateStatisticInformation(valueAverageLinearity)[0];
                 
             switch (i) {
                 case 0: {
-                    finalValues.averageDistanceFromCenter.begin = finalAverageDistanceFromCenter;
-                    finalValues.averageLength.begin = finalAverageLength;
-                    finalValues.averageRatioOverBottom.begin = finalAverageRatioOverBottom;
-                    finalValues.averageAreaRectangle.begin = finalAverageAreaRectangle;
-                    finalValues.averageLinearity.begin = finalAverageLinearity;
+                    finalValues.averageDistanceFromCenter.begin = valueAverageDistanceFromCenter;
+                    finalValues.averageLength.begin = valueAverageLength;
+                    finalValues.averageRatioOverBottom.begin = valueAverageRatioOverBottom;
+                    finalValues.averageAreaRectangle.begin = valueAverageAreaRectangle;
+                    finalValues.averageLinearity.begin = valueAverageLinearity;
+                    finalValues.averageSize.begin = valueAverageSize;
+                    finalValues.averagePressure.begin = valueAveragePressure;
+                    finalValues.averageTimeDuration.begin = valueAverageTimeDuration;
                     break;
                 }
                 case 1: {
-                    finalValues.averageDistanceFromCenter.middle = finalAverageDistanceFromCenter;
-                    finalValues.averageLength.middle = finalAverageLength;
-                    finalValues.averageRatioOverBottom.middle = finalAverageRatioOverBottom;
-                    finalValues.averageAreaRectangle.middle = finalAverageAreaRectangle;
-                    finalValues.averageLinearity.middle = finalAverageLinearity;
+                    finalValues.averageDistanceFromCenter.middle = valueAverageDistanceFromCenter;
+                    finalValues.averageLength.middle = valueAverageLength;
+                    finalValues.averageRatioOverBottom.middle = valueAverageRatioOverBottom;
+                    finalValues.averageAreaRectangle.middle = valueAverageAreaRectangle;
+                    finalValues.averageLinearity.middle = valueAverageLinearity;
+                    finalValues.averageSize.middle = valueAverageSize;
+                    finalValues.averagePressure.middle = valueAveragePressure;
+                    finalValues.averageTimeDuration.middle = valueAverageTimeDuration;
                     break;
                 }
                 case 2: {
-                    finalValues.averageDistanceFromCenter.end = finalAverageDistanceFromCenter;
-                    finalValues.averageLength.end = finalAverageLength;
-                    finalValues.averageRatioOverBottom.end = finalAverageRatioOverBottom;
-                    finalValues.averageAreaRectangle.end = finalAverageAreaRectangle;
-                    finalValues.averageLinearity.end = finalAverageLinearity;
+                    finalValues.averageDistanceFromCenter.end = valueAverageDistanceFromCenter;
+                    finalValues.averageLength.end = valueAverageLength;
+                    finalValues.averageRatioOverBottom.end = valueAverageRatioOverBottom;
+                    finalValues.averageAreaRectangle.end = valueAverageAreaRectangle;
+                    finalValues.averageLinearity.end = valueAverageLinearity;
+                    finalValues.averageSize.end = valueAverageSize;
+                    finalValues.averagePressure.end = valueAveragePressure;
+                    finalValues.averageTimeDuration.end = valueAverageTimeDuration;
                     break;
                 }
             }
@@ -472,10 +502,11 @@ public class StressorTouchesPositionFeatures {
     private void workWithStressorAndScreenObject(Stressor stressor,
         ScreenObject object) {
 
-        ArrayList<Double> distances = new ArrayList<>();
-        ArrayList<Double> lengths = new ArrayList<>(), 
-                ratios = new ArrayList<>(), rectangles = new ArrayList<>(), 
-                linearity = new ArrayList<>();
+        ArrayList<Double> distances = new ArrayList<>(), 
+            lengths = new ArrayList<>(), ratios = new ArrayList<>(), 
+            rectangles = new ArrayList<>(), linearity = new ArrayList<>(), 
+            size = new ArrayList<>(), pressure = new ArrayList<>(), 
+            time = new ArrayList<>();
         
         for (NumberPickerInteraction interaction: 
                 stressor.getNumberPickerInteractions()) {
@@ -491,6 +522,12 @@ public class StressorTouchesPositionFeatures {
                     interaction.getListInteractions()));
                 linearity.add(calculateLinearity(object, 
                     interaction.getListInteractions()));
+                size.add(calculateSize(object, 
+                    interaction.getListInteractions()));
+                pressure.add(calculatePressure(object, 
+                    interaction.getListInteractions()));
+                time.add(calculateTimeDuration(object, 
+                    interaction.getListInteractions()));
             }
         }
         
@@ -500,6 +537,9 @@ public class StressorTouchesPositionFeatures {
         averageRatioOverBottom.add(MathUtils.calculateStatisticInformation(ratios)[0]);
         averageAreaRectangle.add(MathUtils.calculateStatisticInformation(rectangles)[0]);
         averageLinearity.add(MathUtils.calculateStatisticInformation(linearity)[0]);
+        averageSize.add(MathUtils.calculateStatisticInformation(size)[0]);
+        averagePressure.add(MathUtils.calculateStatisticInformation(pressure)[0]);
+        averageTimeDuration.add(MathUtils.calculateStatisticInformation(time)[0]);
     }
     
     /**
@@ -508,7 +548,7 @@ public class StressorTouchesPositionFeatures {
      * @param interactions the list of interactions
      * @return the average distance from the center
      */
-    private static double calculateAverageDistanceFromCenter(ScreenObject object, 
+    private double calculateAverageDistanceFromCenter(ScreenObject object, 
             ArrayList<Interaction> interactions) {
         
         Point center = object.getCenterPosition();
@@ -523,7 +563,7 @@ public class StressorTouchesPositionFeatures {
         return MathUtils.calculateStatisticInformation(distances)[0];
     }
     
-    private static double calculateLength(ScreenObject object, 
+    private double calculateLength(ScreenObject object, 
             ArrayList<Interaction> interactions) {
         
         double length = 0.0;
@@ -540,7 +580,7 @@ public class StressorTouchesPositionFeatures {
         return length;
     }
     
-    private static double calculateRatioOverUnder(ScreenObject object, 
+    private double calculateRatioOverUnder(ScreenObject object, 
             ArrayList<Interaction> interactions) {
         
         ArrayList<Interaction> over = new ArrayList<>(), 
@@ -571,7 +611,7 @@ public class StressorTouchesPositionFeatures {
         return distanceOver / distanceUnder;
     }
     
-    private static double calculateAreaRectangle(ScreenObject object, 
+    private double calculateAreaRectangle(ScreenObject object, 
             ArrayList<Interaction> interactions) {
         
         Point top = interactions.get(0).getPoint(), 
@@ -592,7 +632,7 @@ public class StressorTouchesPositionFeatures {
         return base * height;
     }
     
-    private static double calculateLinearity(ScreenObject object, 
+    private double calculateLinearity(ScreenObject object, 
             ArrayList<Interaction> interactions) {
         
         ArrayList<Interaction> toUse = new ArrayList<>();
@@ -623,6 +663,55 @@ public class StressorTouchesPositionFeatures {
         
         return Math.sqrt(Math.pow(x.getX() - y.getX(), 2) + 
             Math.pow(x.getY() - y.getY(), 2));
+    }
+    
+    public double calculateSize(ScreenObject object, 
+            ArrayList<Interaction> interactions) {
+        
+        int elements = 0; double size = 0;
+        for (Interaction interaction: interactions) {
+            if (object.isInside(interaction)) {
+                size += interaction.getSize();
+                elements++;
+            }
+        }
+        
+        return size / (double) elements;
+    }
+    
+    public double calculatePressure(ScreenObject object, 
+            ArrayList<Interaction> interactions) {
+        
+        int elements = 0; double pressure = 0;
+        for (Interaction interaction: interactions) {
+            if (object.isInside(interaction)) {
+                pressure += interaction.getPressure();
+                elements++;
+            }
+        }
+        
+        return pressure / (double)elements;
+    }
+    
+    public double calculateTimeDuration(ScreenObject object, 
+            ArrayList<Interaction> interactions) {
+        
+        Interaction first = interactions.get(0), 
+            last = interactions.get(interactions.size() - 1);
+        int index = 1;
+        
+        while (!object.isInside(first)) {
+            first = interactions.get(index);
+            index++;
+        }
+        
+        index = interactions.size() - 2;
+        while (!object.isInside(last)) {
+            last = interactions.get(index);
+            index--;
+        }
+        
+        return last.getTimestamp() - first.getTimestamp();
     }
     
     private void workWithFeaturesToPrepareForTTest(int groupingIndex) {
@@ -692,7 +781,7 @@ public class StressorTouchesPositionFeatures {
             valuesSecond.add(testersFeaturesValuesSecondSetStressorTasks.get(i).averageAreaRectangle);
             valuesThird.add(testersFeaturesValuesThirdSetStressorTasks.get(i).averageAreaRectangle);
         }
-        ttestWriter.writeFeatureName("Average are rectangle");
+        ttestWriter.writeFeatureName("Average area rectangle");
         workWithFeatureForTTest(valuesFirst, ttestWriter);
         workWithFeatureForTTest(valuesSecond, ttestWriter);
         workWithFeatureForTTest(valuesThird, ttestWriter);
@@ -714,6 +803,54 @@ public class StressorTouchesPositionFeatures {
         workWithFeatureForTTest(valuesThird, ttestWriter);
         ttestWriter.endFeatureTests();
         
+        /**
+         * Sixth feature: average size
+         */
+        valuesFirst.clear(); valuesSecond.clear(); valuesThird.clear();
+        for (int i = 0; i < testersFeaturesValuesFirstSetStressorTasks.size(); i++) {
+            
+            valuesFirst.add(testersFeaturesValuesFirstSetStressorTasks.get(i).averageSize);
+            valuesSecond.add(testersFeaturesValuesSecondSetStressorTasks.get(i).averageSize);
+            valuesThird.add(testersFeaturesValuesThirdSetStressorTasks.get(i).averageSize);
+        }
+        ttestWriter.writeFeatureName("Average Size");
+        workWithFeatureForTTest(valuesFirst, ttestWriter);
+        workWithFeatureForTTest(valuesSecond, ttestWriter);
+        workWithFeatureForTTest(valuesThird, ttestWriter);
+        ttestWriter.endFeatureTests();
+        
+        /**
+         * Seventh feature: average pressure
+         */
+        valuesFirst.clear(); valuesSecond.clear(); valuesThird.clear();
+        for (int i = 0; i < testersFeaturesValuesFirstSetStressorTasks.size(); i++) {
+            
+            valuesFirst.add(testersFeaturesValuesFirstSetStressorTasks.get(i).averagePressure);
+            valuesSecond.add(testersFeaturesValuesSecondSetStressorTasks.get(i).averagePressure);
+            valuesThird.add(testersFeaturesValuesThirdSetStressorTasks.get(i).averagePressure);
+        }
+        ttestWriter.writeFeatureName("Average Pressure");
+        workWithFeatureForTTest(valuesFirst, ttestWriter);
+        workWithFeatureForTTest(valuesSecond, ttestWriter);
+        workWithFeatureForTTest(valuesThird, ttestWriter);
+        ttestWriter.endFeatureTests();
+        
+        /**
+         * Eight feature: average time duration
+         */
+        valuesFirst.clear(); valuesSecond.clear(); valuesThird.clear();
+        for (int i = 0; i < testersFeaturesValuesFirstSetStressorTasks.size(); i++) {
+            
+            valuesFirst.add(testersFeaturesValuesFirstSetStressorTasks.get(i).averageTimeDuration);
+            valuesSecond.add(testersFeaturesValuesSecondSetStressorTasks.get(i).averageTimeDuration);
+            valuesThird.add(testersFeaturesValuesThirdSetStressorTasks.get(i).averageTimeDuration);
+        }
+        ttestWriter.writeFeatureName("Average time duration");
+        workWithFeatureForTTest(valuesFirst, ttestWriter);
+        workWithFeatureForTTest(valuesSecond, ttestWriter);
+        workWithFeatureForTTest(valuesThird, ttestWriter);
+        ttestWriter.endFeatureTests();
+        
         ttestWriter.close();
     }
     /**
@@ -729,19 +866,35 @@ public class StressorTouchesPositionFeatures {
         ArrayList<Double> beginValues = new ArrayList<>(), middleValues = new ArrayList<>(), 
             endValues = new ArrayList<>();
         
-        for (BeginMiddleEndValues threeValues: values) {
-            beginValues.add(threeValues.begin); middleValues.add(threeValues.middle);
-            endValues.add(threeValues.end);
+        /**
+         * Iterating over all the NumberPickers
+         */
+        for (int i = 0; i < values.get(0).begin.size(); i++) {
+            
+            /**
+             * Retrieving all the values BEGIN, MIDDLE and END 
+             */
+            for (BeginMiddleEndValues threeValues: values) {
+                beginValues.add(threeValues.begin.get(i)); middleValues.add(threeValues.middle.get(i));
+                endValues.add(threeValues.end.get(i));
+            }
+
+            double[] arrayBeginValues = MathUtils.convertToArrayDouble(beginValues), 
+                arrayMiddleValues = MathUtils.convertToArrayDouble(middleValues),
+                arrayEndValues = MathUtils.convertToArrayDouble(endValues);
+
+            if (arrayBeginValues.length >= 2 && arrayMiddleValues.length >= 2 
+                && arrayEndValues.length >= 2) {  
+
+                Double beginMiddle = new TTest().pairedTTest(arrayBeginValues, arrayMiddleValues),
+                    beginEnd = new TTest().pairedTTest(arrayBeginValues, arrayEndValues),
+                    middleEnd = new TTest().pairedTTest(arrayMiddleValues, arrayEndValues);
+
+                writer.writeTTest(beginMiddle, beginEnd, middleEnd);
+            }
+            else {
+                writer.writeTTest(-1, -1, -1);
+            }
         }
-        
-        double[] arrayBeginValues = MathUtils.convertToArrayDouble(beginValues), 
-            arrayMiddleValues = MathUtils.convertToArrayDouble(middleValues),
-            arrayEndValues = MathUtils.convertToArrayDouble(endValues);
-        
-        Double beginMiddle = new TTest().pairedTTest(arrayBeginValues, arrayMiddleValues),
-            beginEnd = new TTest().pairedTTest(arrayBeginValues, arrayEndValues),
-            middleEnd = new TTest().pairedTTest(arrayMiddleValues, arrayEndValues);
-        
-        writer.writeTTest(beginMiddle, beginEnd, middleEnd);
     }
 }
