@@ -2,13 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/Users/Matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/dataanalysis/StressorTouchesPositionFeatures.java</file>
-            <file>file:/Users/Matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/ISenseStressAnalyzer.java</file>
-            <file>file:/Users/Matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/outputwriter/StressorDistanceWriter.java</file>
-            <file>file:/Users/Matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/outputwriter/TTestStressorTaskFeaturesOutputWriter.java</file>
-            <file>file:/Users/Matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/interaction/Interaction.java</file>
-            <file>file:/Users/Matteo/Documents/NetBeansProjects/iSenseStressAnalyzer/src/isensestressanalyzer/dataanalysis/WriteKeyboardFeatures.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
